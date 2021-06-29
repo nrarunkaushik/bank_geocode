@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6e18971278d04f40b59bf9832c235cf9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6e18971278d04f40b59bf9832c235cf9" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MANIPUR Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(24)</li><li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(15)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(14)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(9)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(6)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(5)</li><li><span style='background:turquoise;opacity:0.7;'></span>PUNJAB AND SIND BANK(5)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(4)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(3)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(1)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>MANIPUR(87)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_6e18971278d04f40b59bf9832c235cf9 = L.map(
+                "map_6e18971278d04f40b59bf9832c235cf9",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_98a4e15bba3a44c898660c60ca5a0844 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+            map_6e18971278d04f40b59bf9832c235cf9.fitBounds(
+                [[24.3333, 93.1544], [25.5, 94.3667]],
+                {}
+            );
+        
+    
+            var circle_marker_691d8bfe1b0048d3b3c781200193d443 = L.circleMarker(
+                [24.8817, 93.6927],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_af48438258d446ac9cbe95c7a968f58b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b4188724c9044e0893227337e73c880 = $(`<div id="html_3b4188724c9044e0893227337e73c880" style="width: 100.0%; height: 100.0%;">KHOUPUM, NONEY, MANIPUR</div>`)[0];
+            popup_af48438258d446ac9cbe95c7a968f58b.setContent(html_3b4188724c9044e0893227337e73c880);
+        
+
+        circle_marker_691d8bfe1b0048d3b3c781200193d443.bindPopup(popup_af48438258d446ac9cbe95c7a968f58b)
+        ;
+
+        
+    
+    
+            var circle_marker_e3ada0205f254486be341c5bac9d73ef = L.circleMarker(
+                [25.1167, 94.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_ce8d08be16fc48c0beeb1744b275b315 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1fb5e85c16ec4a25a30dd93cdea88d21 = $(`<div id="html_1fb5e85c16ec4a25a30dd93cdea88d21" style="width: 100.0%; height: 100.0%;">UKHRUL MAIN BAZAR, UKHRUL, MANIPUR</div>`)[0];
+            popup_ce8d08be16fc48c0beeb1744b275b315.setContent(html_1fb5e85c16ec4a25a30dd93cdea88d21);
+        
+
+        circle_marker_e3ada0205f254486be341c5bac9d73ef.bindPopup(popup_ce8d08be16fc48c0beeb1744b275b315)
+        ;
+
+        
+    
+    
+            var circle_marker_c7268f4543134b9aac0ebf01f3eea5a4 = L.circleMarker(
+                [25.1167, 94.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_b781af8c56d848e090abe178dd8f3184 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c64dbfe85b8403ab360737192ece0c7 = $(`<div id="html_5c64dbfe85b8403ab360737192ece0c7" style="width: 100.0%; height: 100.0%;">UKHRUL MINI SECRETARIAT, UKHRUL, MANIPUR</div>`)[0];
+            popup_b781af8c56d848e090abe178dd8f3184.setContent(html_5c64dbfe85b8403ab360737192ece0c7);
+        
+
+        circle_marker_c7268f4543134b9aac0ebf01f3eea5a4.bindPopup(popup_b781af8c56d848e090abe178dd8f3184)
+        ;
+
+        
+    
+    
+            var circle_marker_4afc4a30afe84bdb9700f07d3c48009c = L.circleMarker(
+                [25.1167, 94.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_92375744c6d247e8aa8db0cdaa46fd2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0522ad548eb4f2eb13f7b3b64137bd0 = $(`<div id="html_a0522ad548eb4f2eb13f7b3b64137bd0" style="width: 100.0%; height: 100.0%;">UKHRUL, UKHRUL, MANIPUR</div>`)[0];
+            popup_92375744c6d247e8aa8db0cdaa46fd2d.setContent(html_a0522ad548eb4f2eb13f7b3b64137bd0);
+        
+
+        circle_marker_4afc4a30afe84bdb9700f07d3c48009c.bindPopup(popup_92375744c6d247e8aa8db0cdaa46fd2d)
+        ;
+
+        
+    
+    
+            var circle_marker_8fc111aca21544ea80e679a38afe7692 = L.circleMarker(
+                [24.9667, 93.55],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_3b5b89cb901e4502af9684d2f0d178ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29e4aa74dd624e9cb42f61ff580596b2 = $(`<div id="html_29e4aa74dd624e9cb42f61ff580596b2" style="width: 100.0%; height: 100.0%;">TAMENGLONG, TAMENGLONG, MANIPUR</div>`)[0];
+            popup_3b5b89cb901e4502af9684d2f0d178ed.setContent(html_29e4aa74dd624e9cb42f61ff580596b2);
+        
+
+        circle_marker_8fc111aca21544ea80e679a38afe7692.bindPopup(popup_3b5b89cb901e4502af9684d2f0d178ed)
+        ;
+
+        
+    
+    
+            var circle_marker_6e7af7f652df4ebaaba1c9747d15190b = L.circleMarker(
+                [24.9667, 93.55],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_1920f87d79dc46c2be6e029e76e1ac73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_510328dc406144d48fe686ef25194050 = $(`<div id="html_510328dc406144d48fe686ef25194050" style="width: 100.0%; height: 100.0%;">TAMENGLONG BAZAR, TAMENGLONG, MANIPUR</div>`)[0];
+            popup_1920f87d79dc46c2be6e029e76e1ac73.setContent(html_510328dc406144d48fe686ef25194050);
+        
+
+        circle_marker_6e7af7f652df4ebaaba1c9747d15190b.bindPopup(popup_1920f87d79dc46c2be6e029e76e1ac73)
+        ;
+
+        
+    
+    
+            var circle_marker_eb20301e3cbe44fa8a0297c7182a6b11 = L.circleMarker(
+                [24.9667, 93.55],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_d706bf06ba87459a8d8a4171abeb2043 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_055f9b61d8fe4992a9b2e87ec50ea149 = $(`<div id="html_055f9b61d8fe4992a9b2e87ec50ea149" style="width: 100.0%; height: 100.0%;">TAMENGLONG, TAMENGLONG, MANIPUR</div>`)[0];
+            popup_d706bf06ba87459a8d8a4171abeb2043.setContent(html_055f9b61d8fe4992a9b2e87ec50ea149);
+        
+
+        circle_marker_eb20301e3cbe44fa8a0297c7182a6b11.bindPopup(popup_d706bf06ba87459a8d8a4171abeb2043)
+        ;
+
+        
+    
+    
+            var circle_marker_f085dc5a90e24bb1ae04ca2756b31050 = L.circleMarker(
+                [24.5, 93.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_5010f603c8f54588995a7dba25162327 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e28846935a54ff197034442f82f940b = $(`<div id="html_8e28846935a54ff197034442f82f940b" style="width: 100.0%; height: 100.0%;">SAMULAMLAN, CHURACHANDPUR, MANIPUR</div>`)[0];
+            popup_5010f603c8f54588995a7dba25162327.setContent(html_8e28846935a54ff197034442f82f940b);
+        
+
+        circle_marker_f085dc5a90e24bb1ae04ca2756b31050.bindPopup(popup_5010f603c8f54588995a7dba25162327)
+        ;
+
+        
+    
+    
+            var circle_marker_2fd13bf0bf4a4e69be64b039cac74c2a = L.circleMarker(
+                [24.6944, 93.7944],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_ab110467790a41da8d5f8d4f1199f480 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f617a29a94e4d31ae5c5d2b1b3784a2 = $(`<div id="html_7f617a29a94e4d31ae5c5d2b1b3784a2" style="width: 100.0%; height: 100.0%;">CHANDEL BAZAR, CHANDEL, MANIPUR</div>`)[0];
+            popup_ab110467790a41da8d5f8d4f1199f480.setContent(html_7f617a29a94e4d31ae5c5d2b1b3784a2);
+        
+
+        circle_marker_2fd13bf0bf4a4e69be64b039cac74c2a.bindPopup(popup_ab110467790a41da8d5f8d4f1199f480)
+        ;
+
+        
+    
+    
+            var circle_marker_c099141ab5994b1398ce98e806c35c16 = L.circleMarker(
+                [25.5, 94.1333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_cb7fcb54a77a4365a1f1f4acac0baf57 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e94e7503efe4a0bb6529679612c47d7 = $(`<div id="html_9e94e7503efe4a0bb6529679612c47d7" style="width: 100.0%; height: 100.0%;">MAO, KANGPOKPI, MANIPUR</div>`)[0];
+            popup_cb7fcb54a77a4365a1f1f4acac0baf57.setContent(html_9e94e7503efe4a0bb6529679612c47d7);
+        
+
+        circle_marker_c099141ab5994b1398ce98e806c35c16.bindPopup(popup_cb7fcb54a77a4365a1f1f4acac0baf57)
+        ;
+
+        
+    
+    
+            var circle_marker_9953a97ec0604533a42bc690ceb86e67 = L.circleMarker(
+                [24.4065, 93.3452],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_0a4c28b9c09243e491d063fde5aa79e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_577c86d8da954c1b96c18d93ef8a268c = $(`<div id="html_577c86d8da954c1b96c18d93ef8a268c" style="width: 100.0%; height: 100.0%;">POROMPAT, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_0a4c28b9c09243e491d063fde5aa79e5.setContent(html_577c86d8da954c1b96c18d93ef8a268c);
+        
+
+        circle_marker_9953a97ec0604533a42bc690ceb86e67.bindPopup(popup_0a4c28b9c09243e491d063fde5aa79e5)
+        ;
+
+        
+    
+    
+            var circle_marker_f97633ff64a24db38ac1b0966480a866 = L.circleMarker(
+                [24.4065, 93.3452],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_d666bc749292495d946461b2a988e7d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5c887f0cab94ecb827f4da34cfaa619 = $(`<div id="html_b5c887f0cab94ecb827f4da34cfaa619" style="width: 100.0%; height: 100.0%;">POROMPAT, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_d666bc749292495d946461b2a988e7d9.setContent(html_b5c887f0cab94ecb827f4da34cfaa619);
+        
+
+        circle_marker_f97633ff64a24db38ac1b0966480a866.bindPopup(popup_d666bc749292495d946461b2a988e7d9)
+        ;
+
+        
+    
+    
+            var circle_marker_9023773129eb42e8b273c70fe5cc093d = L.circleMarker(
+                [24.4065, 93.3452],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_06d47ca47faf4d428e419d44a9855314 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a695ac184ea54957b49d5613e7d687fd = $(`<div id="html_a695ac184ea54957b49d5613e7d687fd" style="width: 100.0%; height: 100.0%;">POROMPAT, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_06d47ca47faf4d428e419d44a9855314.setContent(html_a695ac184ea54957b49d5613e7d687fd);
+        
+
+        circle_marker_9023773129eb42e8b273c70fe5cc093d.bindPopup(popup_06d47ca47faf4d428e419d44a9855314)
+        ;
+
+        
+    
+    
+            var circle_marker_f1af5e4c91fa487ea1e5d6df35837aec = L.circleMarker(
+                [24.6333, 93.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_3acc0192d49444139812e4950d0f0f97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_17c1d5a6d15d4628845c1aefc975e340 = $(`<div id="html_17c1d5a6d15d4628845c1aefc975e340" style="width: 100.0%; height: 100.0%;">THINUNGEI, BISHENPUR, MANIPUR</div>`)[0];
+            popup_3acc0192d49444139812e4950d0f0f97.setContent(html_17c1d5a6d15d4628845c1aefc975e340);
+        
+
+        circle_marker_f1af5e4c91fa487ea1e5d6df35837aec.bindPopup(popup_3acc0192d49444139812e4950d0f0f97)
+        ;
+
+        
+    
+    
+            var circle_marker_b32c1897f6ee4b93b63c0156edbfdaa8 = L.circleMarker(
+                [24.6333, 93.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_0806b3ca05d94e7fae15f1e6e80a6a67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_106da6cfd87f4e49836cb0caae7f322a = $(`<div id="html_106da6cfd87f4e49836cb0caae7f322a" style="width: 100.0%; height: 100.0%;">BISHENPUR LOKTAK, BISHENPUR, MANIPUR</div>`)[0];
+            popup_0806b3ca05d94e7fae15f1e6e80a6a67.setContent(html_106da6cfd87f4e49836cb0caae7f322a);
+        
+
+        circle_marker_b32c1897f6ee4b93b63c0156edbfdaa8.bindPopup(popup_0806b3ca05d94e7fae15f1e6e80a6a67)
+        ;
+
+        
+    
+    
+            var circle_marker_104d77b2d31641288bc23e9f06300ba7 = L.circleMarker(
+                [24.6333, 93.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_b07a052381ba4d8f9b0d828d24584276 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f19526c93309423db1891179fc4e8878 = $(`<div id="html_f19526c93309423db1891179fc4e8878" style="width: 100.0%; height: 100.0%;">BISHNUPUR, BISHENPUR, MANIPUR</div>`)[0];
+            popup_b07a052381ba4d8f9b0d828d24584276.setContent(html_f19526c93309423db1891179fc4e8878);
+        
+
+        circle_marker_104d77b2d31641288bc23e9f06300ba7.bindPopup(popup_b07a052381ba4d8f9b0d828d24584276)
+        ;
+
+        
+    
+    
+            var circle_marker_b6aae3ba3799483982d9116e6fc927d3 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_aa59c7dc95c9424aae7540ddb8b590b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b24f8d4adde4d27bb353e8bb8c70713 = $(`<div id="html_3b24f8d4adde4d27bb353e8bb8c70713" style="width: 100.0%; height: 100.0%;">SAIKUL - CHANPAI ISLAND, SENAPATI, MANIPUR</div>`)[0];
+            popup_aa59c7dc95c9424aae7540ddb8b590b9.setContent(html_3b24f8d4adde4d27bb353e8bb8c70713);
+        
+
+        circle_marker_b6aae3ba3799483982d9116e6fc927d3.bindPopup(popup_aa59c7dc95c9424aae7540ddb8b590b9)
+        ;
+
+        
+    
+    
+            var circle_marker_356778bd5f144497819dc9155136e665 = L.circleMarker(
+                [25.0285, 94.1033],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_ea8364e7ded24841912292745e35a3f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44648b56af3947598f3ec4adc7206fcf = $(`<div id="html_44648b56af3947598f3ec4adc7206fcf" style="width: 100.0%; height: 100.0%;">SAIKUL PENGEI ROAD, SENAPATI, MANIPUR</div>`)[0];
+            popup_ea8364e7ded24841912292745e35a3f6.setContent(html_44648b56af3947598f3ec4adc7206fcf);
+        
+
+        circle_marker_356778bd5f144497819dc9155136e665.bindPopup(popup_ea8364e7ded24841912292745e35a3f6)
+        ;
+
+        
+    
+    
+            var circle_marker_2ff09084a41f4cdaa0e7e354ce348670 = L.circleMarker(
+                [24.7733, 93.7033],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_9e6975c713db4f008e30c166bbaaa3c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b827ce049fb468d9071e92df208002f = $(`<div id="html_8b827ce049fb468d9071e92df208002f" style="width: 100.0%; height: 100.0%;">PHUNGYAR, KAMJONG, MANIPUR</div>`)[0];
+            popup_9e6975c713db4f008e30c166bbaaa3c7.setContent(html_8b827ce049fb468d9071e92df208002f);
+        
+
+        circle_marker_2ff09084a41f4cdaa0e7e354ce348670.bindPopup(popup_9e6975c713db4f008e30c166bbaaa3c7)
+        ;
+
+        
+    
+    
+            var circle_marker_b6923d85139b46d1939bd3ecbd98a2a0 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_a5766fabbd4647048ab516fbdbd84b89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9658f863a6d846d7a277c13d175211d0 = $(`<div id="html_9658f863a6d846d7a277c13d175211d0" style="width: 100.0%; height: 100.0%;">LEIMAKHONG, KANGPOKPI, MANIPUR</div>`)[0];
+            popup_a5766fabbd4647048ab516fbdbd84b89.setContent(html_9658f863a6d846d7a277c13d175211d0);
+        
+
+        circle_marker_b6923d85139b46d1939bd3ecbd98a2a0.bindPopup(popup_a5766fabbd4647048ab516fbdbd84b89)
+        ;
+
+        
+    
+    
+            var circle_marker_ac0d016a1a84441d9cb8b12d0c1ae3de = L.circleMarker(
+                [24.4065, 93.3452],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_1d279ce08d8446f894e9649ff489bb91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff3b009ea9204b419a6ae15c4021c6cf = $(`<div id="html_ff3b009ea9204b419a6ae15c4021c6cf" style="width: 100.0%; height: 100.0%;">KONGBA, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_1d279ce08d8446f894e9649ff489bb91.setContent(html_ff3b009ea9204b419a6ae15c4021c6cf);
+        
+
+        circle_marker_ac0d016a1a84441d9cb8b12d0c1ae3de.bindPopup(popup_1d279ce08d8446f894e9649ff489bb91)
+        ;
+
+        
+    
+    
+            var circle_marker_0cb4d5ab44934ae4aaf62a3ed6524628 = L.circleMarker(
+                [24.6816, 93.1544],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_cee797b2d472418fbddcb42d3eed2a0a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9c9f87bf8a9414d9cf954dfb83e8256 = $(`<div id="html_a9c9f87bf8a9414d9cf954dfb83e8256" style="width: 100.0%; height: 100.0%;">YUREMBAM, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_cee797b2d472418fbddcb42d3eed2a0a.setContent(html_a9c9f87bf8a9414d9cf954dfb83e8256);
+        
+
+        circle_marker_0cb4d5ab44934ae4aaf62a3ed6524628.bindPopup(popup_cee797b2d472418fbddcb42d3eed2a0a)
+        ;
+
+        
+    
+    
+            var circle_marker_2e02b24c7aca4f748953baf0372f6349 = L.circleMarker(
+                [24.3333, 93.6667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_763acc37e4494906ba053dffad262d22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5912f0985dae4c81b467821e6cf42181 = $(`<div id="html_5912f0985dae4c81b467821e6cf42181" style="width: 100.0%; height: 100.0%;">CHURACHANDPUR, CHURACHANDPUR, MANIPUR</div>`)[0];
+            popup_763acc37e4494906ba053dffad262d22.setContent(html_5912f0985dae4c81b467821e6cf42181);
+        
+
+        circle_marker_2e02b24c7aca4f748953baf0372f6349.bindPopup(popup_763acc37e4494906ba053dffad262d22)
+        ;
+
+        
+    
+    
+            var circle_marker_ddf5d39af4d24dd09611358fb37d0af5 = L.circleMarker(
+                [24.3333, 93.6667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_aa553f2267b34fea9b7845606f87e720 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f425533bf63a407693e31f455e78549d = $(`<div id="html_f425533bf63a407693e31f455e78549d" style="width: 100.0%; height: 100.0%;">CHURACHANDPUR, CHURACHANDPUR, MANIPUR</div>`)[0];
+            popup_aa553f2267b34fea9b7845606f87e720.setContent(html_f425533bf63a407693e31f455e78549d);
+        
+
+        circle_marker_ddf5d39af4d24dd09611358fb37d0af5.bindPopup(popup_aa553f2267b34fea9b7845606f87e720)
+        ;
+
+        
+    
+    
+            var circle_marker_8245e2906b9846bc959fb2a7bbab8065 = L.circleMarker(
+                [24.3333, 93.6667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_60f25e266fc940a591f7e9ead9ac1aa3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b75a11ffbf145d7824b03947909a6fe = $(`<div id="html_5b75a11ffbf145d7824b03947909a6fe" style="width: 100.0%; height: 100.0%;">CHURACHANDPUR, CHURACHANDPUR, MANIPUR</div>`)[0];
+            popup_60f25e266fc940a591f7e9ead9ac1aa3.setContent(html_5b75a11ffbf145d7824b03947909a6fe);
+        
+
+        circle_marker_8245e2906b9846bc959fb2a7bbab8065.bindPopup(popup_60f25e266fc940a591f7e9ead9ac1aa3)
+        ;
+
+        
+    
+    
+            var circle_marker_ef280bb37cd044f2acf38c4fad9a81f7 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_ee972ea220044726afd3dda00f967972 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a12ba94cc7c640b6bc36c29f4e59983a = $(`<div id="html_a12ba94cc7c640b6bc36c29f4e59983a" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_ee972ea220044726afd3dda00f967972.setContent(html_a12ba94cc7c640b6bc36c29f4e59983a);
+        
+
+        circle_marker_ef280bb37cd044f2acf38c4fad9a81f7.bindPopup(popup_ee972ea220044726afd3dda00f967972)
+        ;
+
+        
+    
+    
+            var circle_marker_07b88541103d4c5d86efdae21d2fdc65 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_7d2a235335ae481eb648c54c64911654 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_04fe7f4968b040b09d05e88ac6b89c5b = $(`<div id="html_04fe7f4968b040b09d05e88ac6b89c5b" style="width: 100.0%; height: 100.0%;">CHECKON BAZAR IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_7d2a235335ae481eb648c54c64911654.setContent(html_04fe7f4968b040b09d05e88ac6b89c5b);
+        
+
+        circle_marker_07b88541103d4c5d86efdae21d2fdc65.bindPopup(popup_7d2a235335ae481eb648c54c64911654)
+        ;
+
+        
+    
+    
+            var circle_marker_93554b9491b94224bffaeb6c085268a9 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_b6b5a59737b8415e9e5fdcca6e7b8c63 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4eb82a83c06c4b2b88a85dff788c90d2 = $(`<div id="html_4eb82a83c06c4b2b88a85dff788c90d2" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_b6b5a59737b8415e9e5fdcca6e7b8c63.setContent(html_4eb82a83c06c4b2b88a85dff788c90d2);
+        
+
+        circle_marker_93554b9491b94224bffaeb6c085268a9.bindPopup(popup_b6b5a59737b8415e9e5fdcca6e7b8c63)
+        ;
+
+        
+    
+    
+            var circle_marker_2164b7aeaddd42778e4ebd334ee78f0e = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_8e76ef0dc9824ea5a511e3ff5f84c8ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23e34556bdfc4769b76a09661b346e7c = $(`<div id="html_23e34556bdfc4769b76a09661b346e7c" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_8e76ef0dc9824ea5a511e3ff5f84c8ac.setContent(html_23e34556bdfc4769b76a09661b346e7c);
+        
+
+        circle_marker_2164b7aeaddd42778e4ebd334ee78f0e.bindPopup(popup_8e76ef0dc9824ea5a511e3ff5f84c8ac)
+        ;
+
+        
+    
+    
+            var circle_marker_f57841babae94de2b310c108ab5e3c36 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_eeca6f51c3dd4fb1ae5304c98a2d9eb4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c239e56322c743c9a42cf30b63e6adf8 = $(`<div id="html_c239e56322c743c9a42cf30b63e6adf8" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_eeca6f51c3dd4fb1ae5304c98a2d9eb4.setContent(html_c239e56322c743c9a42cf30b63e6adf8);
+        
+
+        circle_marker_f57841babae94de2b310c108ab5e3c36.bindPopup(popup_eeca6f51c3dd4fb1ae5304c98a2d9eb4)
+        ;
+
+        
+    
+    
+            var circle_marker_bc3f00b7254043b4bb4644cc42b5be5d = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_6e1c044035024fad847627c89f52245b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac20b0470ffb4470bdabe33d0b190e59 = $(`<div id="html_ac20b0470ffb4470bdabe33d0b190e59" style="width: 100.0%; height: 100.0%;">IMPHAL, THANGAL BAZAR, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_6e1c044035024fad847627c89f52245b.setContent(html_ac20b0470ffb4470bdabe33d0b190e59);
+        
+
+        circle_marker_bc3f00b7254043b4bb4644cc42b5be5d.bindPopup(popup_6e1c044035024fad847627c89f52245b)
+        ;
+
+        
+    
+    
+            var circle_marker_bd2f802aad2947c6a35679d8fd29776b = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_dcd92979faec42b9819aef41a56579b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7067ac5076b84381808889f79cc82612 = $(`<div id="html_7067ac5076b84381808889f79cc82612" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_dcd92979faec42b9819aef41a56579b8.setContent(html_7067ac5076b84381808889f79cc82612);
+        
+
+        circle_marker_bd2f802aad2947c6a35679d8fd29776b.bindPopup(popup_dcd92979faec42b9819aef41a56579b8)
+        ;
+
+        
+    
+    
+            var circle_marker_498965826a77405297851a65d587bd9f = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_d7d6f67f68ac45e88924c65ffddf9a71 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6653c8dde12f40b3b3a47babb25ad502 = $(`<div id="html_6653c8dde12f40b3b3a47babb25ad502" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_d7d6f67f68ac45e88924c65ffddf9a71.setContent(html_6653c8dde12f40b3b3a47babb25ad502);
+        
+
+        circle_marker_498965826a77405297851a65d587bd9f.bindPopup(popup_d7d6f67f68ac45e88924c65ffddf9a71)
+        ;
+
+        
+    
+    
+            var circle_marker_147899705bd14d8c981d3f4e06c78292 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_1a2b66714f3147f3864532412ba791bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f987c5ba6d3543188c0adb11cf5ce9b6 = $(`<div id="html_f987c5ba6d3543188c0adb11cf5ce9b6" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_1a2b66714f3147f3864532412ba791bb.setContent(html_f987c5ba6d3543188c0adb11cf5ce9b6);
+        
+
+        circle_marker_147899705bd14d8c981d3f4e06c78292.bindPopup(popup_1a2b66714f3147f3864532412ba791bb)
+        ;
+
+        
+    
+    
+            var circle_marker_2b31f37193f744708edc72be0060a021 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_ca57851bc46745dfac660b998ce4bf43 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6823b4f795594227b7456069455f4a23 = $(`<div id="html_6823b4f795594227b7456069455f4a23" style="width: 100.0%; height: 100.0%;">MANIPUR UNIVERSITY, IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_ca57851bc46745dfac660b998ce4bf43.setContent(html_6823b4f795594227b7456069455f4a23);
+        
+
+        circle_marker_2b31f37193f744708edc72be0060a021.bindPopup(popup_ca57851bc46745dfac660b998ce4bf43)
+        ;
+
+        
+    
+    
+            var circle_marker_1238b74fb298428ba6ccb4d2f5fb49df = L.circleMarker(
+                [24.4065, 93.3452],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_c524bf24c3e94d9b838e81b300946b1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_964156a424fa4491aefd3502166e59db = $(`<div id="html_964156a424fa4491aefd3502166e59db" style="width: 100.0%; height: 100.0%;">SINGJAMEI, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_c524bf24c3e94d9b838e81b300946b1f.setContent(html_964156a424fa4491aefd3502166e59db);
+        
+
+        circle_marker_1238b74fb298428ba6ccb4d2f5fb49df.bindPopup(popup_c524bf24c3e94d9b838e81b300946b1f)
+        ;
+
+        
+    
+    
+            var circle_marker_27ad6ed498c647edb1facfee421c76f1 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_06c1a2a23d354f93b3a41253544de880 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9c30fee238a4288812603a6b54c7365 = $(`<div id="html_f9c30fee238a4288812603a6b54c7365" style="width: 100.0%; height: 100.0%;">IMPHAL (WEST), IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_06c1a2a23d354f93b3a41253544de880.setContent(html_f9c30fee238a4288812603a6b54c7365);
+        
+
+        circle_marker_27ad6ed498c647edb1facfee421c76f1.bindPopup(popup_06c1a2a23d354f93b3a41253544de880)
+        ;
+
+        
+    
+    
+            var circle_marker_d87ef1ac19134485b69675fb7db6094e = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_6d6c76847925401891ae4df72e77d5b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fac932afb58a451f8c9389c6fcaab8a4 = $(`<div id="html_fac932afb58a451f8c9389c6fcaab8a4" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_6d6c76847925401891ae4df72e77d5b3.setContent(html_fac932afb58a451f8c9389c6fcaab8a4);
+        
+
+        circle_marker_d87ef1ac19134485b69675fb7db6094e.bindPopup(popup_6d6c76847925401891ae4df72e77d5b3)
+        ;
+
+        
+    
+    
+            var circle_marker_8fb9d88800324fde9b6bd5e353ae8782 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_0994cd3643454077b38fff936808db52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15cd041212894711aefb9be1f4083e6c = $(`<div id="html_15cd041212894711aefb9be1f4083e6c" style="width: 100.0%; height: 100.0%;">M G AVENUE, IMPHAL CITY, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_0994cd3643454077b38fff936808db52.setContent(html_15cd041212894711aefb9be1f4083e6c);
+        
+
+        circle_marker_8fb9d88800324fde9b6bd5e353ae8782.bindPopup(popup_0994cd3643454077b38fff936808db52)
+        ;
+
+        
+    
+    
+            var circle_marker_7446736a550b41b086c44319480db9d5 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_9008afe43aa74a46996c267d05d59c66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc0325ca85664e1ea317f9c002664651 = $(`<div id="html_dc0325ca85664e1ea317f9c002664651" style="width: 100.0%; height: 100.0%;">NIT MANIPUR, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_9008afe43aa74a46996c267d05d59c66.setContent(html_dc0325ca85664e1ea317f9c002664651);
+        
+
+        circle_marker_7446736a550b41b086c44319480db9d5.bindPopup(popup_9008afe43aa74a46996c267d05d59c66)
+        ;
+
+        
+    
+    
+            var circle_marker_408a9ebb19d14baa8c581ade63d8bea4 = L.circleMarker(
+                [25.3583, 94.075],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_4e17e303bbde457f8fdb00f7544a27eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc34742d3d884e1986d145ef0b3ba713 = $(`<div id="html_dc34742d3d884e1986d145ef0b3ba713" style="width: 100.0%; height: 100.0%;">RIMS, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_4e17e303bbde457f8fdb00f7544a27eb.setContent(html_dc34742d3d884e1986d145ef0b3ba713);
+        
+
+        circle_marker_408a9ebb19d14baa8c581ade63d8bea4.bindPopup(popup_4e17e303bbde457f8fdb00f7544a27eb)
+        ;
+
+        
+    
+    
+            var circle_marker_42e7b5393ed1487f89edbb207e446721 = L.circleMarker(
+                [24.4065, 93.3452],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_ea047a3c088440c9bd85b0dd30ca2dec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8da1ac44315240928f07757fd9ecc405 = $(`<div id="html_8da1ac44315240928f07757fd9ecc405" style="width: 100.0%; height: 100.0%;">SINGJAMAI, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_ea047a3c088440c9bd85b0dd30ca2dec.setContent(html_8da1ac44315240928f07757fd9ecc405);
+        
+
+        circle_marker_42e7b5393ed1487f89edbb207e446721.bindPopup(popup_ea047a3c088440c9bd85b0dd30ca2dec)
+        ;
+
+        
+    
+    
+            var circle_marker_53a86b5757904ee99bd112e7f82582e8 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_e662fce507184414863f73bf16c34511 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab86a16f382f4806ac2f9d64feda03d2 = $(`<div id="html_ab86a16f382f4806ac2f9d64feda03d2" style="width: 100.0%; height: 100.0%;">LAMPHELPAT, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_e662fce507184414863f73bf16c34511.setContent(html_ab86a16f382f4806ac2f9d64feda03d2);
+        
+
+        circle_marker_53a86b5757904ee99bd112e7f82582e8.bindPopup(popup_e662fce507184414863f73bf16c34511)
+        ;
+
+        
+    
+    
+            var circle_marker_880b0a1e81554c6b821b05a656684659 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_925d7226a9534eb8b442ce45cb0bd330 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9e52b3b495a4a1b85effc14aa959435 = $(`<div id="html_a9e52b3b495a4a1b85effc14aa959435" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_925d7226a9534eb8b442ce45cb0bd330.setContent(html_a9e52b3b495a4a1b85effc14aa959435);
+        
+
+        circle_marker_880b0a1e81554c6b821b05a656684659.bindPopup(popup_925d7226a9534eb8b442ce45cb0bd330)
+        ;
+
+        
+    
+    
+            var circle_marker_f50b6142aad443c89db67e9d080cf9d4 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_95b0ecd14cf748eeae77cce8ab579098 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_87f85ef61f7d4d6c80c8374431cb78dd = $(`<div id="html_87f85ef61f7d4d6c80c8374431cb78dd" style="width: 100.0%; height: 100.0%;">PAONA BAZAR, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_95b0ecd14cf748eeae77cce8ab579098.setContent(html_87f85ef61f7d4d6c80c8374431cb78dd);
+        
+
+        circle_marker_f50b6142aad443c89db67e9d080cf9d4.bindPopup(popup_95b0ecd14cf748eeae77cce8ab579098)
+        ;
+
+        
+    
+    
+            var circle_marker_e8f8711634fa450eb0cf6878ab26da3c = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_ae7a8851a5ce4516b92bdd6cdac790b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ee1c8a4436141a598f73c94fdbd3bfd = $(`<div id="html_7ee1c8a4436141a598f73c94fdbd3bfd" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_ae7a8851a5ce4516b92bdd6cdac790b6.setContent(html_7ee1c8a4436141a598f73c94fdbd3bfd);
+        
+
+        circle_marker_e8f8711634fa450eb0cf6878ab26da3c.bindPopup(popup_ae7a8851a5ce4516b92bdd6cdac790b6)
+        ;
+
+        
+    
+    
+            var circle_marker_28148774be124c48a929754e908e1f29 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_182f05fde81d4877ade55ee45f67633b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_333d673967e1406da366593d4d7ac8a4 = $(`<div id="html_333d673967e1406da366593d4d7ac8a4" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_182f05fde81d4877ade55ee45f67633b.setContent(html_333d673967e1406da366593d4d7ac8a4);
+        
+
+        circle_marker_28148774be124c48a929754e908e1f29.bindPopup(popup_182f05fde81d4877ade55ee45f67633b)
+        ;
+
+        
+    
+    
+            var circle_marker_f73dd46c3e4d4b0fa1b68c2aba4dcae5 = L.circleMarker(
+                [25.3, 94.05],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_d5c65c6cae5349bfb1820cfee993358d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b486332f2dd41c89994f5cb5bfe7e40 = $(`<div id="html_5b486332f2dd41c89994f5cb5bfe7e40" style="width: 100.0%; height: 100.0%;">SENAPATI, SENAPATI, MANIPUR</div>`)[0];
+            popup_d5c65c6cae5349bfb1820cfee993358d.setContent(html_5b486332f2dd41c89994f5cb5bfe7e40);
+        
+
+        circle_marker_f73dd46c3e4d4b0fa1b68c2aba4dcae5.bindPopup(popup_d5c65c6cae5349bfb1820cfee993358d)
+        ;
+
+        
+    
+    
+            var circle_marker_c9a85534c94341cb8666ae5fd19e9171 = L.circleMarker(
+                [25.3, 94.05],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_2e2247b27f6e4ee694e464709e7eda55 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_016558a15ad84654982edfdc6405f965 = $(`<div id="html_016558a15ad84654982edfdc6405f965" style="width: 100.0%; height: 100.0%;">SENAPATI BAZAR, SENAPATI, MANIPUR</div>`)[0];
+            popup_2e2247b27f6e4ee694e464709e7eda55.setContent(html_016558a15ad84654982edfdc6405f965);
+        
+
+        circle_marker_c9a85534c94341cb8666ae5fd19e9171.bindPopup(popup_2e2247b27f6e4ee694e464709e7eda55)
+        ;
+
+        
+    
+    
+            var circle_marker_ccf3c4ee3094429a89b4de3eecb9a740 = L.circleMarker(
+                [25.3, 94.05],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_1faf2e3678ad4eae88a7aac00d609527 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c1eac1c58d04ce38c01405f37ca8174 = $(`<div id="html_7c1eac1c58d04ce38c01405f37ca8174" style="width: 100.0%; height: 100.0%;">SENAPATI TOWN, SENAPATI, MANIPUR</div>`)[0];
+            popup_1faf2e3678ad4eae88a7aac00d609527.setContent(html_7c1eac1c58d04ce38c01405f37ca8174);
+        
+
+        circle_marker_ccf3c4ee3094429a89b4de3eecb9a740.bindPopup(popup_1faf2e3678ad4eae88a7aac00d609527)
+        ;
+
+        
+    
+    
+            var circle_marker_b62f2e7c96fb4419861339f6952aa808 = L.circleMarker(
+                [25.3, 94.05],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_77ab9c3bc7e04433ae2cd3505987d8f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee3c2762384a43118889f6d49e63610e = $(`<div id="html_ee3c2762384a43118889f6d49e63610e" style="width: 100.0%; height: 100.0%;">SENAPATI, SENAPATI, MANIPUR</div>`)[0];
+            popup_77ab9c3bc7e04433ae2cd3505987d8f3.setContent(html_ee3c2762384a43118889f6d49e63610e);
+        
+
+        circle_marker_b62f2e7c96fb4419861339f6952aa808.bindPopup(popup_77ab9c3bc7e04433ae2cd3505987d8f3)
+        ;
+
+        
+    
+    
+            var circle_marker_a8b8b64e2e9545c9a8a89c743541c389 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_1a1c1bd9ef7b42f39a15e710e44aac41 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_30c705f1629a45a5a0096f1af41d4d87 = $(`<div id="html_30c705f1629a45a5a0096f1af41d4d87" style="width: 100.0%; height: 100.0%;">LAMGLONG BAZAR, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_1a1c1bd9ef7b42f39a15e710e44aac41.setContent(html_30c705f1629a45a5a0096f1af41d4d87);
+        
+
+        circle_marker_a8b8b64e2e9545c9a8a89c743541c389.bindPopup(popup_1a1c1bd9ef7b42f39a15e710e44aac41)
+        ;
+
+        
+    
+    
+            var circle_marker_e281971d35ce4042a03c0f9415a8498c = L.circleMarker(
+                [25.3583, 94.075],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_2f9d008d7309448a9bc1bf3cb0a48b76 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a87d03b8fd5f41c5acc9e3118e445297 = $(`<div id="html_a87d03b8fd5f41c5acc9e3118e445297" style="width: 100.0%; height: 100.0%;">KAKCHING BAZAR, KAKCHING, MANIPUR</div>`)[0];
+            popup_2f9d008d7309448a9bc1bf3cb0a48b76.setContent(html_a87d03b8fd5f41c5acc9e3118e445297);
+        
+
+        circle_marker_e281971d35ce4042a03c0f9415a8498c.bindPopup(popup_2f9d008d7309448a9bc1bf3cb0a48b76)
+        ;
+
+        
+    
+    
+            var circle_marker_e0b68bde1d1e4600823063d93b0bd41e = L.circleMarker(
+                [25.3583, 94.075],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_72c077eba149460797e4e7e833366d97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb2d95dbcd964177939bdff6c61b9400 = $(`<div id="html_cb2d95dbcd964177939bdff6c61b9400" style="width: 100.0%; height: 100.0%;">KAKCHING, KAKCHING, MANIPUR</div>`)[0];
+            popup_72c077eba149460797e4e7e833366d97.setContent(html_cb2d95dbcd964177939bdff6c61b9400);
+        
+
+        circle_marker_e0b68bde1d1e4600823063d93b0bd41e.bindPopup(popup_72c077eba149460797e4e7e833366d97)
+        ;
+
+        
+    
+    
+            var circle_marker_e55aaa28ced446d3a613fcfeb06a23d7 = L.circleMarker(
+                [25.3583, 94.075],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_1aaa3b82960c4e8897ac83031dfe04d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d2aa96b86144e9081042f37e71c716e = $(`<div id="html_5d2aa96b86144e9081042f37e71c716e" style="width: 100.0%; height: 100.0%;">KAKCHING, KAKCHING, MANIPUR</div>`)[0];
+            popup_1aaa3b82960c4e8897ac83031dfe04d3.setContent(html_5d2aa96b86144e9081042f37e71c716e);
+        
+
+        circle_marker_e55aaa28ced446d3a613fcfeb06a23d7.bindPopup(popup_1aaa3b82960c4e8897ac83031dfe04d3)
+        ;
+
+        
+    
+    
+            var circle_marker_d2595d336be34a318b8f985ad77cbf45 = L.circleMarker(
+                [24.5833, 93.8889],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_192b6f015c444bc58d73cc2ba1a2b73c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8beadd0ff6f41d78142cde55955b01e = $(`<div id="html_a8beadd0ff6f41d78142cde55955b01e" style="width: 100.0%; height: 100.0%;">SINGHAT, CHURACHANDPUR, MANIPUR</div>`)[0];
+            popup_192b6f015c444bc58d73cc2ba1a2b73c.setContent(html_a8beadd0ff6f41d78142cde55955b01e);
+        
+
+        circle_marker_d2595d336be34a318b8f985ad77cbf45.bindPopup(popup_192b6f015c444bc58d73cc2ba1a2b73c)
+        ;
+
+        
+    
+    
+            var circle_marker_b43bfe99a860495ca64337a51ee34d25 = L.circleMarker(
+                [24.9574, 94.0242],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_6a5c776f9ad245b9adb772bab6bf6bac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b5127f29a9c420e90fe28f960b72194 = $(`<div id="html_1b5127f29a9c420e90fe28f960b72194" style="width: 100.0%; height: 100.0%;">SAINIK SCHOOL, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_6a5c776f9ad245b9adb772bab6bf6bac.setContent(html_1b5127f29a9c420e90fe28f960b72194);
+        
+
+        circle_marker_b43bfe99a860495ca64337a51ee34d25.bindPopup(popup_6a5c776f9ad245b9adb772bab6bf6bac)
+        ;
+
+        
+    
+    
+            var circle_marker_8d827d40d5454e71beeb53ccc06f8321 = L.circleMarker(
+                [24.75, 93.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_72b0447d61e14d02a43cf1a08fcc8f02 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c7d72cac994436b9035b136b8c2da97 = $(`<div id="html_8c7d72cac994436b9035b136b8c2da97" style="width: 100.0%; height: 100.0%;">CHANGANGEI, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_72b0447d61e14d02a43cf1a08fcc8f02.setContent(html_8c7d72cac994436b9035b136b8c2da97);
+        
+
+        circle_marker_8d827d40d5454e71beeb53ccc06f8321.bindPopup(popup_72b0447d61e14d02a43cf1a08fcc8f02)
+        ;
+
+        
+    
+    
+            var circle_marker_ed7fe2d3bab2401ca9bbcb3b9cd457b8 = L.circleMarker(
+                [24.5833, 93.8889],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_9f68b8973b924db5ac213ca4e08ed306 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99667a3dd10646b7b6f3dfd13a5fc4f4 = $(`<div id="html_99667a3dd10646b7b6f3dfd13a5fc4f4" style="width: 100.0%; height: 100.0%;">MACHI, TENGNOUPAL, MANIPUR</div>`)[0];
+            popup_9f68b8973b924db5ac213ca4e08ed306.setContent(html_99667a3dd10646b7b6f3dfd13a5fc4f4);
+        
+
+        circle_marker_ed7fe2d3bab2401ca9bbcb3b9cd457b8.bindPopup(popup_9f68b8973b924db5ac213ca4e08ed306)
+        ;
+
+        
+    
+    
+            var circle_marker_f3298743bbd04eb7b1371a91788174a5 = L.circleMarker(
+                [24.6944, 93.7944],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_91ab11fc16644544b2da6d521efad103 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d46d741f959a4ecc831e286493bb2bb8 = $(`<div id="html_d46d741f959a4ecc831e286493bb2bb8" style="width: 100.0%; height: 100.0%;">KONGPOKPI, SENAPATI, MANIPUR</div>`)[0];
+            popup_91ab11fc16644544b2da6d521efad103.setContent(html_d46d741f959a4ecc831e286493bb2bb8);
+        
+
+        circle_marker_f3298743bbd04eb7b1371a91788174a5.bindPopup(popup_91ab11fc16644544b2da6d521efad103)
+        ;
+
+        
+    
+    
+            var circle_marker_a9818d4fe075471fb87754e9b1913c05 = L.circleMarker(
+                [24.5, 93.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_2fd1f2f0e9f04db8a197876613d4f7a8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d0a38a2d8b64bd28c22d63b3be255f7 = $(`<div id="html_6d0a38a2d8b64bd28c22d63b3be255f7" style="width: 100.0%; height: 100.0%;">MOIRANG, BISHENPUR, MANIPUR</div>`)[0];
+            popup_2fd1f2f0e9f04db8a197876613d4f7a8.setContent(html_6d0a38a2d8b64bd28c22d63b3be255f7);
+        
+
+        circle_marker_a9818d4fe075471fb87754e9b1913c05.bindPopup(popup_2fd1f2f0e9f04db8a197876613d4f7a8)
+        ;
+
+        
+    
+    
+            var circle_marker_a97eda401cf74d6e9e73d9cb2b0632de = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_d394246df28744219ec87143cc96da1c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25001095dca4437db074173daf52b825 = $(`<div id="html_25001095dca4437db074173daf52b825" style="width: 100.0%; height: 100.0%;">URIPOK (IMPHAL), IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_d394246df28744219ec87143cc96da1c.setContent(html_25001095dca4437db074173daf52b825);
+        
+
+        circle_marker_a97eda401cf74d6e9e73d9cb2b0632de.bindPopup(popup_d394246df28744219ec87143cc96da1c)
+        ;
+
+        
+    
+    
+            var circle_marker_72199dbc6eff4ac79b2b8485c05cca7a = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_6111d8cd16e54bff842c8f6c8f6562c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4c9d471d8be44630aa702a6c9ef18b01 = $(`<div id="html_4c9d471d8be44630aa702a6c9ef18b01" style="width: 100.0%; height: 100.0%;">JIRIBAM, JIRIBAM, MANIPUR</div>`)[0];
+            popup_6111d8cd16e54bff842c8f6c8f6562c2.setContent(html_4c9d471d8be44630aa702a6c9ef18b01);
+        
+
+        circle_marker_72199dbc6eff4ac79b2b8485c05cca7a.bindPopup(popup_6111d8cd16e54bff842c8f6c8f6562c2)
+        ;
+
+        
+    
+    
+            var circle_marker_9395e027c2e84afcb8361bb23da461b4 = L.circleMarker(
+                [24.3333, 93.6667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_30cfdf17d91644299e6a7e863693583c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9246b153a8964bd093a7ffefb45c9363 = $(`<div id="html_9246b153a8964bd093a7ffefb45c9363" style="width: 100.0%; height: 100.0%;">CHURACHANDPUR, CHURACHANDPUR, MANIPUR</div>`)[0];
+            popup_30cfdf17d91644299e6a7e863693583c.setContent(html_9246b153a8964bd093a7ffefb45c9363);
+        
+
+        circle_marker_9395e027c2e84afcb8361bb23da461b4.bindPopup(popup_30cfdf17d91644299e6a7e863693583c)
+        ;
+
+        
+    
+    
+            var circle_marker_ccfd256c385344f2ae42e844ff7f2b33 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_ee99f68ab8f242ad85a9d27137393618 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1555f800302b4d4eabfb8f815f536a4f = $(`<div id="html_1555f800302b4d4eabfb8f815f536a4f" style="width: 100.0%; height: 100.0%;">LDM Imphal East, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_ee99f68ab8f242ad85a9d27137393618.setContent(html_1555f800302b4d4eabfb8f815f536a4f);
+        
+
+        circle_marker_ccfd256c385344f2ae42e844ff7f2b33.bindPopup(popup_ee99f68ab8f242ad85a9d27137393618)
+        ;
+
+        
+    
+    
+            var circle_marker_4dea4246b9614813b98707dd17892c4e = L.circleMarker(
+                [24.6333, 93.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_3ca9dc436cc14423bece12ef540d9a6a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f00bf5d075e40e4bfd5d0f3c1402f55 = $(`<div id="html_2f00bf5d075e40e4bfd5d0f3c1402f55" style="width: 100.0%; height: 100.0%;">PHUBALA, BISHENPUR, MANIPUR</div>`)[0];
+            popup_3ca9dc436cc14423bece12ef540d9a6a.setContent(html_2f00bf5d075e40e4bfd5d0f3c1402f55);
+        
+
+        circle_marker_4dea4246b9614813b98707dd17892c4e.bindPopup(popup_3ca9dc436cc14423bece12ef540d9a6a)
+        ;
+
+        
+    
+    
+            var circle_marker_7e3e69426fdc427784cfbf49f3a76547 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_2faf557b676849f7af6e10a8c9e5d852 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44695155afdc40d790b86e9e43cc53e2 = $(`<div id="html_44695155afdc40d790b86e9e43cc53e2" style="width: 100.0%; height: 100.0%;">MANTRIPUKHRI, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_2faf557b676849f7af6e10a8c9e5d852.setContent(html_44695155afdc40d790b86e9e43cc53e2);
+        
+
+        circle_marker_7e3e69426fdc427784cfbf49f3a76547.bindPopup(popup_2faf557b676849f7af6e10a8c9e5d852)
+        ;
+
+        
+    
+    
+            var circle_marker_1229ceb72a9c4a22bb790fffac876c28 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_5cea378cd2e94efba53410b2b8795e7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5543817ae2442288398932e610c04a0 = $(`<div id="html_d5543817ae2442288398932e610c04a0" style="width: 100.0%; height: 100.0%;">GOVERNERS ROAD,IMPHAL, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_5cea378cd2e94efba53410b2b8795e7f.setContent(html_d5543817ae2442288398932e610c04a0);
+        
+
+        circle_marker_1229ceb72a9c4a22bb790fffac876c28.bindPopup(popup_5cea378cd2e94efba53410b2b8795e7f)
+        ;
+
+        
+    
+    
+            var circle_marker_887a66bb0e754012af7fbf3300818b34 = L.circleMarker(
+                [24.4065, 93.3452],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_476e4cfdec774668ba7bbb8701bf2ced = L.popup({"maxWidth": "100%"});
+
+        
+            var html_224ad76a657f4f0f891b08ce1a5f7766 = $(`<div id="html_224ad76a657f4f0f891b08ce1a5f7766" style="width: 100.0%; height: 100.0%;">A.T.LINES(BOC POINT), IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_476e4cfdec774668ba7bbb8701bf2ced.setContent(html_224ad76a657f4f0f891b08ce1a5f7766);
+        
+
+        circle_marker_887a66bb0e754012af7fbf3300818b34.bindPopup(popup_476e4cfdec774668ba7bbb8701bf2ced)
+        ;
+
+        
+    
+    
+            var circle_marker_341ef42922904892b53ba378c9943409 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_92b538b0770643069d071a0e3ce98ca7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b8631f78527b497b9addb27f3bbe74c1 = $(`<div id="html_b8631f78527b497b9addb27f3bbe74c1" style="width: 100.0%; height: 100.0%;">MANTRIPUKHRI, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_92b538b0770643069d071a0e3ce98ca7.setContent(html_b8631f78527b497b9addb27f3bbe74c1);
+        
+
+        circle_marker_341ef42922904892b53ba378c9943409.bindPopup(popup_92b538b0770643069d071a0e3ce98ca7)
+        ;
+
+        
+    
+    
+            var circle_marker_a84c13704de44fcfb2487617bf05caf6 = L.circleMarker(
+                [24.5833, 93.8889],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_a5e720f4b0724ca583e3bb66270389bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_28cbe52b095449e08dd6d6dc67fbafae = $(`<div id="html_28cbe52b095449e08dd6d6dc67fbafae" style="width: 100.0%; height: 100.0%;">MOREH, TENGNOUPAL, MANIPUR</div>`)[0];
+            popup_a5e720f4b0724ca583e3bb66270389bd.setContent(html_28cbe52b095449e08dd6d6dc67fbafae);
+        
+
+        circle_marker_a84c13704de44fcfb2487617bf05caf6.bindPopup(popup_a5e720f4b0724ca583e3bb66270389bd)
+        ;
+
+        
+    
+    
+            var circle_marker_5bc6013e7e684b12950532378c1701d6 = L.circleMarker(
+                [24.5833, 93.8889],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_8c1f6ac9816f409b869c5281ecc316f1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa5a30c770a842f8a15c9969b312f1b7 = $(`<div id="html_fa5a30c770a842f8a15c9969b312f1b7" style="width: 100.0%; height: 100.0%;">MOREH, TENGNOUPAL, MANIPUR</div>`)[0];
+            popup_8c1f6ac9816f409b869c5281ecc316f1.setContent(html_fa5a30c770a842f8a15c9969b312f1b7);
+        
+
+        circle_marker_5bc6013e7e684b12950532378c1701d6.bindPopup(popup_8c1f6ac9816f409b869c5281ecc316f1)
+        ;
+
+        
+    
+    
+            var circle_marker_8665a9993d364feea0cd5a22ba4b2192 = L.circleMarker(
+                [24.5833, 93.8889],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_26c38e066a9c457c841c63cb06c2c5a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c8d15f9e4c64f278c54778359ae2c7f = $(`<div id="html_1c8d15f9e4c64f278c54778359ae2c7f" style="width: 100.0%; height: 100.0%;">KANGLATONGBI, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_26c38e066a9c457c841c63cb06c2c5a1.setContent(html_1c8d15f9e4c64f278c54778359ae2c7f);
+        
+
+        circle_marker_8665a9993d364feea0cd5a22ba4b2192.bindPopup(popup_26c38e066a9c457c841c63cb06c2c5a1)
+        ;
+
+        
+    
+    
+            var circle_marker_5e033d1df0384ae9af8552a9f5e605f0 = L.circleMarker(
+                [24.6333, 94.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_2f29b33f53a8464fbc81aac98754059c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3bea1dc1b683477b86af7ea09ae04762 = $(`<div id="html_3bea1dc1b683477b86af7ea09ae04762" style="width: 100.0%; height: 100.0%;">THOUBAL, THOUBAL, MANIPUR</div>`)[0];
+            popup_2f29b33f53a8464fbc81aac98754059c.setContent(html_3bea1dc1b683477b86af7ea09ae04762);
+        
+
+        circle_marker_5e033d1df0384ae9af8552a9f5e605f0.bindPopup(popup_2f29b33f53a8464fbc81aac98754059c)
+        ;
+
+        
+    
+    
+            var circle_marker_216b143e8f6c4387b5e3adb98251539c = L.circleMarker(
+                [24.6333, 94.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_f6a20348b2984d298e14c52326b29d72 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27904698e1834ff9b6a9916664d66e89 = $(`<div id="html_27904698e1834ff9b6a9916664d66e89" style="width: 100.0%; height: 100.0%;">THOUBAL, THOUBAL, MANIPUR</div>`)[0];
+            popup_f6a20348b2984d298e14c52326b29d72.setContent(html_27904698e1834ff9b6a9916664d66e89);
+        
+
+        circle_marker_216b143e8f6c4387b5e3adb98251539c.bindPopup(popup_f6a20348b2984d298e14c52326b29d72)
+        ;
+
+        
+    
+    
+            var circle_marker_045e325980c543e49587d7190801170e = L.circleMarker(
+                [24.6333, 94.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_1bca0dd0986741ea9ef64e1e7d2f051e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dab6117650fb45baa24ebc283640d1c4 = $(`<div id="html_dab6117650fb45baa24ebc283640d1c4" style="width: 100.0%; height: 100.0%;">THOUBAL, THOUBAL, MANIPUR</div>`)[0];
+            popup_1bca0dd0986741ea9ef64e1e7d2f051e.setContent(html_dab6117650fb45baa24ebc283640d1c4);
+        
+
+        circle_marker_045e325980c543e49587d7190801170e.bindPopup(popup_1bca0dd0986741ea9ef64e1e7d2f051e)
+        ;
+
+        
+    
+    
+            var circle_marker_0b02dccba77c4d748b9ec28ce2920717 = L.circleMarker(
+                [24.6333, 94.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_35ef50cbf38846a1a2010c2fdacd74c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73e46b5278fd41cdbf73acd55534f7ff = $(`<div id="html_73e46b5278fd41cdbf73acd55534f7ff" style="width: 100.0%; height: 100.0%;">THOUBAL, THOUBAL, MANIPUR</div>`)[0];
+            popup_35ef50cbf38846a1a2010c2fdacd74c4.setContent(html_73e46b5278fd41cdbf73acd55534f7ff);
+        
+
+        circle_marker_0b02dccba77c4d748b9ec28ce2920717.bindPopup(popup_35ef50cbf38846a1a2010c2fdacd74c4)
+        ;
+
+        
+    
+    
+            var circle_marker_bdfa1186973e4b0191955f4c91a21a0f = L.circleMarker(
+                [24.6333, 94.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_e318309a2f9649e48a098e88478baadc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d2032eb505e42858ab6517a2c4bee89 = $(`<div id="html_1d2032eb505e42858ab6517a2c4bee89" style="width: 100.0%; height: 100.0%;">THOUBAL, THOUBAL, MANIPUR</div>`)[0];
+            popup_e318309a2f9649e48a098e88478baadc.setContent(html_1d2032eb505e42858ab6517a2c4bee89);
+        
+
+        circle_marker_bdfa1186973e4b0191955f4c91a21a0f.bindPopup(popup_e318309a2f9649e48a098e88478baadc)
+        ;
+
+        
+    
+    
+            var circle_marker_a723316625ce4614aa68ab133173dbd3 = L.circleMarker(
+                [24.6333, 94.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_bb0dce44e7f94b50821a8bdee9a63648 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6623799f24d414caf920580b5145352 = $(`<div id="html_b6623799f24d414caf920580b5145352" style="width: 100.0%; height: 100.0%;">THOUBAL, THOUBAL, MANIPUR</div>`)[0];
+            popup_bb0dce44e7f94b50821a8bdee9a63648.setContent(html_b6623799f24d414caf920580b5145352);
+        
+
+        circle_marker_a723316625ce4614aa68ab133173dbd3.bindPopup(popup_bb0dce44e7f94b50821a8bdee9a63648)
+        ;
+
+        
+    
+    
+            var circle_marker_67847c8647d641c1965f6cdbbac98088 = L.circleMarker(
+                [24.75, 93.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_c02673f035374a46bb9ef56e09891fec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18591a77fdd84c94bab7634e325204a4 = $(`<div id="html_18591a77fdd84c94bab7634e325204a4" style="width: 100.0%; height: 100.0%;">FCS GODOWN SANGAIPROU, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_c02673f035374a46bb9ef56e09891fec.setContent(html_18591a77fdd84c94bab7634e325204a4);
+        
+
+        circle_marker_67847c8647d641c1965f6cdbbac98088.bindPopup(popup_c02673f035374a46bb9ef56e09891fec)
+        ;
+
+        
+    
+    
+            var circle_marker_260c0f76b1ff4d089f3b31cb81d17ee1 = L.circleMarker(
+                [24.3333, 93.6667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_3dd911c7eaf8410bab8e17f8ecbe36f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d28027b604c4674b46f74a83922378d = $(`<div id="html_8d28027b604c4674b46f74a83922378d" style="width: 100.0%; height: 100.0%;">CHURA CHANDPUR, CHURACHANDPUR, MANIPUR</div>`)[0];
+            popup_3dd911c7eaf8410bab8e17f8ecbe36f5.setContent(html_8d28027b604c4674b46f74a83922378d);
+        
+
+        circle_marker_260c0f76b1ff4d089f3b31cb81d17ee1.bindPopup(popup_3dd911c7eaf8410bab8e17f8ecbe36f5)
+        ;
+
+        
+    
+    
+            var circle_marker_e4ee3f5496c04ef38e6d86c53b0e8193 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_9dc4503c512247c3a6dc7316bb16642b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5f52ed46aba4676a38da8adfab788ca = $(`<div id="html_a5f52ed46aba4676a38da8adfab788ca" style="width: 100.0%; height: 100.0%;">LAIPHAM SIPHAI, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_9dc4503c512247c3a6dc7316bb16642b.setContent(html_a5f52ed46aba4676a38da8adfab788ca);
+        
+
+        circle_marker_e4ee3f5496c04ef38e6d86c53b0e8193.bindPopup(popup_9dc4503c512247c3a6dc7316bb16642b)
+        ;
+
+        
+    
+    
+            var circle_marker_1b16873892ab4d808466fdc64fb57024 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_f4117e6a4801476b89664d53b1542016 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_631b9a08d3d64044b414d627e4f1c4b3 = $(`<div id="html_631b9a08d3d64044b414d627e4f1c4b3" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_f4117e6a4801476b89664d53b1542016.setContent(html_631b9a08d3d64044b414d627e4f1c4b3);
+        
+
+        circle_marker_1b16873892ab4d808466fdc64fb57024.bindPopup(popup_f4117e6a4801476b89664d53b1542016)
+        ;
+
+        
+    
+    
+            var circle_marker_931925e4634640f8afa31056d280759c = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_28958fe2d09343b3a66b114f4f68721a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8471ae0c6214dd3a68d9d253292ff15 = $(`<div id="html_c8471ae0c6214dd3a68d9d253292ff15" style="width: 100.0%; height: 100.0%;">IMPHAL, IMPHAL WEST, MANIPUR</div>`)[0];
+            popup_28958fe2d09343b3a66b114f4f68721a.setContent(html_c8471ae0c6214dd3a68d9d253292ff15);
+        
+
+        circle_marker_931925e4634640f8afa31056d280759c.bindPopup(popup_28958fe2d09343b3a66b114f4f68721a)
+        ;
+
+        
+    
+    
+            var circle_marker_4b1ffb4abadd491498552614e2f065b8 = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_9d08d79dd41047a79456468b3b2ae234 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56c0171839484a12ba8e27bb6892d08a = $(`<div id="html_56c0171839484a12ba8e27bb6892d08a" style="width: 100.0%; height: 100.0%;">DEULAH LAND, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_9d08d79dd41047a79456468b3b2ae234.setContent(html_56c0171839484a12ba8e27bb6892d08a);
+        
+
+        circle_marker_4b1ffb4abadd491498552614e2f065b8.bindPopup(popup_9d08d79dd41047a79456468b3b2ae234)
+        ;
+
+        
+    
+    
+            var circle_marker_ca9fe14b3d7742948ae8c066bcfca07d = L.circleMarker(
+                [24.8512, 93.8464],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_f20b75f6ed93411ba79c85ad11c82ccc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7dc5a4a035b4d528b76d3f38f01c5d1 = $(`<div id="html_f7dc5a4a035b4d528b76d3f38f01c5d1" style="width: 100.0%; height: 100.0%;">KHURAI SAJOR LEIKAI, IMPHAL EAST, MANIPUR</div>`)[0];
+            popup_f20b75f6ed93411ba79c85ad11c82ccc.setContent(html_f7dc5a4a035b4d528b76d3f38f01c5d1);
+        
+
+        circle_marker_ca9fe14b3d7742948ae8c066bcfca07d.bindPopup(popup_f20b75f6ed93411ba79c85ad11c82ccc)
+        ;
+
+        
+    
+    
+            var circle_marker_3a8e686dc13747449569e7d550a591cd = L.circleMarker(
+                [24.6333, 94.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_6e18971278d04f40b59bf9832c235cf9);
+        
+    
+        var popup_e2f47e5ee5244352ab9a295b9108de99 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4af3605890df40bb97aa0b2906dd5ff9 = $(`<div id="html_4af3605890df40bb97aa0b2906dd5ff9" style="width: 100.0%; height: 100.0%;">KHEKMAN, THOUBAL, MANIPUR</div>`)[0];
+            popup_e2f47e5ee5244352ab9a295b9108de99.setContent(html_4af3605890df40bb97aa0b2906dd5ff9);
+        
+
+        circle_marker_3a8e686dc13747449569e7d550a591cd.bindPopup(popup_e2f47e5ee5244352ab9a295b9108de99)
+        ;
+
+        
+    
+</script>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e213f11832a143a89c271fc6df7f4514 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e213f11832a143a89c271fc6df7f4514" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIZORAM Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(9)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(6)</li><li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(5)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(3)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(2)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(2)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(1)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(1)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(1)</li><li><span style='background:turquoise;opacity:0.7;'></span>PUNJAB AND SIND BANK(1)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>MIZORAM(32)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_e213f11832a143a89c271fc6df7f4514 = L.map(
+                "map_e213f11832a143a89c271fc6df7f4514",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f1114af9a5514a34b7bf5bf51a255c0d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+            map_e213f11832a143a89c271fc6df7f4514.fitBounds(
+                [[21.8782, 84.638], [23.784, 92.899]],
+                {}
+            );
+        
+    
+            var circle_marker_fefef873359d4dc1bbc7baf851b3064a = L.circleMarker(
+                [23.3, 92.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_d231a12682474dd8adcfc3cf851c2cbd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45dfbd8018a04916b0c9a3ffccac455c = $(`<div id="html_45dfbd8018a04916b0c9a3ffccac455c" style="width: 100.0%; height: 100.0%;">SERCHHIP, SERCHHIP, MIZORAM</div>`)[0];
+            popup_d231a12682474dd8adcfc3cf851c2cbd.setContent(html_45dfbd8018a04916b0c9a3ffccac455c);
+        
+
+        circle_marker_fefef873359d4dc1bbc7baf851b3064a.bindPopup(popup_d231a12682474dd8adcfc3cf851c2cbd)
+        ;
+
+        
+    
+    
+            var circle_marker_efbeab4277e0400d9b394d18ad7a651d = L.circleMarker(
+                [23.6167, 92.6],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_b9bc924dc66d4a51bcecc6b99a2cf2ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c9e13ff313dd4034b6aca652fe0fe9f2 = $(`<div id="html_c9e13ff313dd4034b6aca652fe0fe9f2" style="width: 100.0%; height: 100.0%;">CHAMPHAI, CHAMPHAI, MIZORAM</div>`)[0];
+            popup_b9bc924dc66d4a51bcecc6b99a2cf2ec.setContent(html_c9e13ff313dd4034b6aca652fe0fe9f2);
+        
+
+        circle_marker_efbeab4277e0400d9b394d18ad7a651d.bindPopup(popup_b9bc924dc66d4a51bcecc6b99a2cf2ec)
+        ;
+
+        
+    
+    
+            var circle_marker_adc4a5cad85745c88ea234432babcdfa = L.circleMarker(
+                [23.6167, 92.6],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_3d7bd2b59de64542ba01aaf55200d3e0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_604dfb824e084537abe47ea52c10a343 = $(`<div id="html_604dfb824e084537abe47ea52c10a343" style="width: 100.0%; height: 100.0%;">CHAMPHAI, CHAMPHAI, MIZORAM</div>`)[0];
+            popup_3d7bd2b59de64542ba01aaf55200d3e0.setContent(html_604dfb824e084537abe47ea52c10a343);
+        
+
+        circle_marker_adc4a5cad85745c88ea234432babcdfa.bindPopup(popup_3d7bd2b59de64542ba01aaf55200d3e0)
+        ;
+
+        
+    
+    
+            var circle_marker_291a6142e6364a85976e85176a9be71d = L.circleMarker(
+                [23.6583, 92.8667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_3ef8e3a022ea41b7ace12ddfb1eebd3f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1a1235c1599448caef95f660833d4bc = $(`<div id="html_e1a1235c1599448caef95f660833d4bc" style="width: 100.0%; height: 100.0%;">CIJWS VAIRENGTE, KOLASIB, MIZORAM</div>`)[0];
+            popup_3ef8e3a022ea41b7ace12ddfb1eebd3f.setContent(html_e1a1235c1599448caef95f660833d4bc);
+        
+
+        circle_marker_291a6142e6364a85976e85176a9be71d.bindPopup(popup_3ef8e3a022ea41b7ace12ddfb1eebd3f)
+        ;
+
+        
+    
+    
+            var circle_marker_7a4387050bc8425e8e86af79af1326a4 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_3b1b9ae7e1b442be9c66d127e3ad7619 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd0f579f76304700bfe4b4f3afe7e8d9 = $(`<div id="html_dd0f579f76304700bfe4b4f3afe7e8d9" style="width: 100.0%; height: 100.0%;">ZORAM MEDICAL COLLEGE, AIZAWL, MIZORAM</div>`)[0];
+            popup_3b1b9ae7e1b442be9c66d127e3ad7619.setContent(html_dd0f579f76304700bfe4b4f3afe7e8d9);
+        
+
+        circle_marker_7a4387050bc8425e8e86af79af1326a4.bindPopup(popup_3b1b9ae7e1b442be9c66d127e3ad7619)
+        ;
+
+        
+    
+    
+            var circle_marker_dbf1e338035a45148bf09e43c470df2b = L.circleMarker(
+                [22.8833, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_2b52ccb3ad0e433483e410bdb8a3ad3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9a6b296f32844fea6f9d5c36639956a = $(`<div id="html_d9a6b296f32844fea6f9d5c36639956a" style="width: 100.0%; height: 100.0%;">LUNGLEI, LUNGLEI, MIZORAM</div>`)[0];
+            popup_2b52ccb3ad0e433483e410bdb8a3ad3e.setContent(html_d9a6b296f32844fea6f9d5c36639956a);
+        
+
+        circle_marker_dbf1e338035a45148bf09e43c470df2b.bindPopup(popup_2b52ccb3ad0e433483e410bdb8a3ad3e)
+        ;
+
+        
+    
+    
+            var circle_marker_73adaff7210442f29b8e090fda05945e = L.circleMarker(
+                [22.8833, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_71b04ff8f0a64cfd932661424e15e784 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_948741dc42c846b1b0acb0b0d0952568 = $(`<div id="html_948741dc42c846b1b0acb0b0d0952568" style="width: 100.0%; height: 100.0%;">LUNGLEI, LUNGLEI, MIZORAM</div>`)[0];
+            popup_71b04ff8f0a64cfd932661424e15e784.setContent(html_948741dc42c846b1b0acb0b0d0952568);
+        
+
+        circle_marker_73adaff7210442f29b8e090fda05945e.bindPopup(popup_71b04ff8f0a64cfd932661424e15e784)
+        ;
+
+        
+    
+    
+            var circle_marker_d2374625a72d48dda67a4b7bcc619bd7 = L.circleMarker(
+                [22.5325, 92.899],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_8b6b8968d1c945079774e598fadee1c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_532e90a924e94532bb4bee99c665348b = $(`<div id="html_532e90a924e94532bb4bee99c665348b" style="width: 100.0%; height: 100.0%;">LAWNGTLAI, LAWNGTLAI, MIZORAM</div>`)[0];
+            popup_8b6b8968d1c945079774e598fadee1c5.setContent(html_532e90a924e94532bb4bee99c665348b);
+        
+
+        circle_marker_d2374625a72d48dda67a4b7bcc619bd7.bindPopup(popup_8b6b8968d1c945079774e598fadee1c5)
+        ;
+
+        
+    
+    
+            var circle_marker_28ead09d37c64a8f917864534f392151 = L.circleMarker(
+                [22.5325, 92.899],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_a7387f4b1f9a412ab5ac6b828991f524 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c5efe43b3ff46f5934018689c247467 = $(`<div id="html_3c5efe43b3ff46f5934018689c247467" style="width: 100.0%; height: 100.0%;">LAWNGTLAI, LAWNGTLAI, MIZORAM</div>`)[0];
+            popup_a7387f4b1f9a412ab5ac6b828991f524.setContent(html_3c5efe43b3ff46f5934018689c247467);
+        
+
+        circle_marker_28ead09d37c64a8f917864534f392151.bindPopup(popup_a7387f4b1f9a412ab5ac6b828991f524)
+        ;
+
+        
+    
+    
+            var circle_marker_dc6c10ea17ee49d1bc6a40ee8895c81a = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_27b9bc1e84c2491ea06e1f2ee285d562 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b08be3c87bb04fff90b520c27011309d = $(`<div id="html_b08be3c87bb04fff90b520c27011309d" style="width: 100.0%; height: 100.0%;">KOLASIB, KOLASIB, MIZORAM</div>`)[0];
+            popup_27b9bc1e84c2491ea06e1f2ee285d562.setContent(html_b08be3c87bb04fff90b520c27011309d);
+        
+
+        circle_marker_dc6c10ea17ee49d1bc6a40ee8895c81a.bindPopup(popup_27b9bc1e84c2491ea06e1f2ee285d562)
+        ;
+
+        
+    
+    
+            var circle_marker_912e35abad09401fbd0f3f0b1fe80681 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_4a3a352709104a1eaae947a92da37071 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d60bd0da061e4035bfcc3f58b0136421 = $(`<div id="html_d60bd0da061e4035bfcc3f58b0136421" style="width: 100.0%; height: 100.0%;">KOLASIB, KOLASIB, MIZORAM</div>`)[0];
+            popup_4a3a352709104a1eaae947a92da37071.setContent(html_d60bd0da061e4035bfcc3f58b0136421);
+        
+
+        circle_marker_912e35abad09401fbd0f3f0b1fe80681.bindPopup(popup_4a3a352709104a1eaae947a92da37071)
+        ;
+
+        
+    
+    
+            var circle_marker_7e7fa0c1ff4d476bbdf09dd57228c8c9 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_05a5da567e5244a1aca5622cdb5b6b25 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90b19a7075c14ef2802aa4353f1b6142 = $(`<div id="html_90b19a7075c14ef2802aa4353f1b6142" style="width: 100.0%; height: 100.0%;">KOLASIB, KOLASIB, MIZORAM</div>`)[0];
+            popup_05a5da567e5244a1aca5622cdb5b6b25.setContent(html_90b19a7075c14ef2802aa4353f1b6142);
+        
+
+        circle_marker_7e7fa0c1ff4d476bbdf09dd57228c8c9.bindPopup(popup_05a5da567e5244a1aca5622cdb5b6b25)
+        ;
+
+        
+    
+    
+            var circle_marker_f38aa891d3c64204a3e7b8a5b86f146d = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_c720061c92e140ceae7e79d29ba1cdc5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53a4abab2f7d43b2b8a5351c01abb272 = $(`<div id="html_53a4abab2f7d43b2b8a5351c01abb272" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_c720061c92e140ceae7e79d29ba1cdc5.setContent(html_53a4abab2f7d43b2b8a5351c01abb272);
+        
+
+        circle_marker_f38aa891d3c64204a3e7b8a5b86f146d.bindPopup(popup_c720061c92e140ceae7e79d29ba1cdc5)
+        ;
+
+        
+    
+    
+            var circle_marker_1bca8a6aa93b41f58079a1065ce682bc = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_96595d9a68c442ddac98e4d54c0cbea5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d406d2a8ced4744902c6ec70a863460 = $(`<div id="html_6d406d2a8ced4744902c6ec70a863460" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_96595d9a68c442ddac98e4d54c0cbea5.setContent(html_6d406d2a8ced4744902c6ec70a863460);
+        
+
+        circle_marker_1bca8a6aa93b41f58079a1065ce682bc.bindPopup(popup_96595d9a68c442ddac98e4d54c0cbea5)
+        ;
+
+        
+    
+    
+            var circle_marker_f9700f5a945843a88bddbded6aa5663d = L.circleMarker(
+                [21.8782, 84.638],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_dd99b51414cc476e81822d934b655443 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15621b33b7a84b2f8605f54083c2fea3 = $(`<div id="html_15621b33b7a84b2f8605f54083c2fea3" style="width: 100.0%; height: 100.0%;">AIZAWAL, AIZAWL, MIZORAM</div>`)[0];
+            popup_dd99b51414cc476e81822d934b655443.setContent(html_15621b33b7a84b2f8605f54083c2fea3);
+        
+
+        circle_marker_f9700f5a945843a88bddbded6aa5663d.bindPopup(popup_dd99b51414cc476e81822d934b655443)
+        ;
+
+        
+    
+    
+            var circle_marker_3274ee4fb3e14a4f9ffb3a4d0bdfec39 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_36f3e6979c764b3a8f9a33a6c440ff54 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee319587f339489f80cb285e29b22f60 = $(`<div id="html_ee319587f339489f80cb285e29b22f60" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_36f3e6979c764b3a8f9a33a6c440ff54.setContent(html_ee319587f339489f80cb285e29b22f60);
+        
+
+        circle_marker_3274ee4fb3e14a4f9ffb3a4d0bdfec39.bindPopup(popup_36f3e6979c764b3a8f9a33a6c440ff54)
+        ;
+
+        
+    
+    
+            var circle_marker_ab499ecf8fab4d6ab9a99d4732b31568 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_d139b8f433834110b49bdd0c5ed30f13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5742ee9f3244a9e8144e8df4c252e00 = $(`<div id="html_a5742ee9f3244a9e8144e8df4c252e00" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_d139b8f433834110b49bdd0c5ed30f13.setContent(html_a5742ee9f3244a9e8144e8df4c252e00);
+        
+
+        circle_marker_ab499ecf8fab4d6ab9a99d4732b31568.bindPopup(popup_d139b8f433834110b49bdd0c5ed30f13)
+        ;
+
+        
+    
+    
+            var circle_marker_b35c4313b9a641a2a78bdd553f485385 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_42998d880d0d4c3e8c35b49633c53543 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6b67aa919364aaeb5599efd2ffd65e9 = $(`<div id="html_d6b67aa919364aaeb5599efd2ffd65e9" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_42998d880d0d4c3e8c35b49633c53543.setContent(html_d6b67aa919364aaeb5599efd2ffd65e9);
+        
+
+        circle_marker_b35c4313b9a641a2a78bdd553f485385.bindPopup(popup_42998d880d0d4c3e8c35b49633c53543)
+        ;
+
+        
+    
+    
+            var circle_marker_4b7307dd2b704c458310f7fcd684d4c4 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_3ebfcb134878414c9c2d7f297ace7c35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97a33706d99b4116b7095ede6cb5743f = $(`<div id="html_97a33706d99b4116b7095ede6cb5743f" style="width: 100.0%; height: 100.0%;">ZARKAWT, AIZAWL, MIZORAM</div>`)[0];
+            popup_3ebfcb134878414c9c2d7f297ace7c35.setContent(html_97a33706d99b4116b7095ede6cb5743f);
+        
+
+        circle_marker_4b7307dd2b704c458310f7fcd684d4c4.bindPopup(popup_3ebfcb134878414c9c2d7f297ace7c35)
+        ;
+
+        
+    
+    
+            var circle_marker_d5d33d500dd74a7084a7ef9a50fbfc79 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_30ac13f09e934e14b6f88bc85713257c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0ec247cb488403abc89c2a919bd0cba = $(`<div id="html_c0ec247cb488403abc89c2a919bd0cba" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_30ac13f09e934e14b6f88bc85713257c.setContent(html_c0ec247cb488403abc89c2a919bd0cba);
+        
+
+        circle_marker_d5d33d500dd74a7084a7ef9a50fbfc79.bindPopup(popup_30ac13f09e934e14b6f88bc85713257c)
+        ;
+
+        
+    
+    
+            var circle_marker_c3905d56e19d4b4a80d25c09d6e02b4c = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_9918ec3c12434ad0b76190b670252acf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3da056a8b4194b8e9cd6f1f7ca60ea77 = $(`<div id="html_3da056a8b4194b8e9cd6f1f7ca60ea77" style="width: 100.0%; height: 100.0%;">UPPER REPUBLIC, AIZAWL, MIZORAM</div>`)[0];
+            popup_9918ec3c12434ad0b76190b670252acf.setContent(html_3da056a8b4194b8e9cd6f1f7ca60ea77);
+        
+
+        circle_marker_c3905d56e19d4b4a80d25c09d6e02b4c.bindPopup(popup_9918ec3c12434ad0b76190b670252acf)
+        ;
+
+        
+    
+    
+            var circle_marker_662f875a1dde41f698b9998c43d9b00d = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_77b2e18264154325b9af7bc0748172ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78ef2407b5b14cd2ad49ce1b19eff91c = $(`<div id="html_78ef2407b5b14cd2ad49ce1b19eff91c" style="width: 100.0%; height: 100.0%;">KHATALA, AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_77b2e18264154325b9af7bc0748172ed.setContent(html_78ef2407b5b14cd2ad49ce1b19eff91c);
+        
+
+        circle_marker_662f875a1dde41f698b9998c43d9b00d.bindPopup(popup_77b2e18264154325b9af7bc0748172ed)
+        ;
+
+        
+    
+    
+            var circle_marker_dd0234bb4bd04ede96e89a83f9e1b983 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_64cf25dadf134f9bb48455cba8f60300 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95184af35b1949858a6364d6e338b253 = $(`<div id="html_95184af35b1949858a6364d6e338b253" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_64cf25dadf134f9bb48455cba8f60300.setContent(html_95184af35b1949858a6364d6e338b253);
+        
+
+        circle_marker_dd0234bb4bd04ede96e89a83f9e1b983.bindPopup(popup_64cf25dadf134f9bb48455cba8f60300)
+        ;
+
+        
+    
+    
+            var circle_marker_dcce6fa00e5a4a8eb0cb9611fe1c9096 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_7c120caac07f4561929676e8e290bacf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8ae742ada914b9ba19a761bf0a1c1c1 = $(`<div id="html_a8ae742ada914b9ba19a761bf0a1c1c1" style="width: 100.0%; height: 100.0%;">RIPANS, AIZAWL, MIZORAM</div>`)[0];
+            popup_7c120caac07f4561929676e8e290bacf.setContent(html_a8ae742ada914b9ba19a761bf0a1c1c1);
+        
+
+        circle_marker_dcce6fa00e5a4a8eb0cb9611fe1c9096.bindPopup(popup_7c120caac07f4561929676e8e290bacf)
+        ;
+
+        
+    
+    
+            var circle_marker_bc39cd98c99247ca941d63c669209892 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_95e1b15092f649d69adc77bc847c0573 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19e896d1ee0b452890fb1d025ffd6e2f = $(`<div id="html_19e896d1ee0b452890fb1d025ffd6e2f" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_95e1b15092f649d69adc77bc847c0573.setContent(html_19e896d1ee0b452890fb1d025ffd6e2f);
+        
+
+        circle_marker_bc39cd98c99247ca941d63c669209892.bindPopup(popup_95e1b15092f649d69adc77bc847c0573)
+        ;
+
+        
+    
+    
+            var circle_marker_462de44b1a3f4e86a4a1eb7c1b74f963 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_97c77c6f68ea4115bfd8713f53e7fb2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32e308ccf5c948d6a0695c32642e98d8 = $(`<div id="html_32e308ccf5c948d6a0695c32642e98d8" style="width: 100.0%; height: 100.0%;">KHATLA, AIZAWL, MIZORAM</div>`)[0];
+            popup_97c77c6f68ea4115bfd8713f53e7fb2f.setContent(html_32e308ccf5c948d6a0695c32642e98d8);
+        
+
+        circle_marker_462de44b1a3f4e86a4a1eb7c1b74f963.bindPopup(popup_97c77c6f68ea4115bfd8713f53e7fb2f)
+        ;
+
+        
+    
+    
+            var circle_marker_69c6045e5f0644f592b5718fc4279492 = L.circleMarker(
+                [21.8782, 84.638],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_aa32f86f1e5749e185a08312cb6b69e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f6fc78025b847a3b595e8dd27bce139 = $(`<div id="html_9f6fc78025b847a3b595e8dd27bce139" style="width: 100.0%; height: 100.0%;">MIZORAM UNIVERSITY, AIZAWL, MIZORAM</div>`)[0];
+            popup_aa32f86f1e5749e185a08312cb6b69e6.setContent(html_9f6fc78025b847a3b595e8dd27bce139);
+        
+
+        circle_marker_69c6045e5f0644f592b5718fc4279492.bindPopup(popup_aa32f86f1e5749e185a08312cb6b69e6)
+        ;
+
+        
+    
+    
+            var circle_marker_f24025997a314422ac6d0cb1a627fcfb = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_b5141d899fdb4106aaa3d70f384a414a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7402775d65e9452db7f4e17c852759e5 = $(`<div id="html_7402775d65e9452db7f4e17c852759e5" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_b5141d899fdb4106aaa3d70f384a414a.setContent(html_7402775d65e9452db7f4e17c852759e5);
+        
+
+        circle_marker_f24025997a314422ac6d0cb1a627fcfb.bindPopup(popup_b5141d899fdb4106aaa3d70f384a414a)
+        ;
+
+        
+    
+    
+            var circle_marker_ad01bc8dad0a4928a1c431df2a7298c9 = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_2f76aff6bff54e9e8cd5047af71a89da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3418d5cb37034a7a95404a7495aae8b0 = $(`<div id="html_3418d5cb37034a7a95404a7495aae8b0" style="width: 100.0%; height: 100.0%;">AIZWAL, AIZAWL, MIZORAM</div>`)[0];
+            popup_2f76aff6bff54e9e8cd5047af71a89da.setContent(html_3418d5cb37034a7a95404a7495aae8b0);
+        
+
+        circle_marker_ad01bc8dad0a4928a1c431df2a7298c9.bindPopup(popup_2f76aff6bff54e9e8cd5047af71a89da)
+        ;
+
+        
+    
+    
+            var circle_marker_194dc9690b7b46699a48fa8c99b871ac = L.circleMarker(
+                [22.8833, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_79bf60e0ea5e4a7bb25d3381ccce94cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53e327c9de6a493ea8df0b2fe83fde53 = $(`<div id="html_53e327c9de6a493ea8df0b2fe83fde53" style="width: 100.0%; height: 100.0%;">THUAMPUI, LUNGLEI, MIZORAM</div>`)[0];
+            popup_79bf60e0ea5e4a7bb25d3381ccce94cd.setContent(html_53e327c9de6a493ea8df0b2fe83fde53);
+        
+
+        circle_marker_194dc9690b7b46699a48fa8c99b871ac.bindPopup(popup_79bf60e0ea5e4a7bb25d3381ccce94cd)
+        ;
+
+        
+    
+    
+            var circle_marker_f6cd1c4411f94d7e8a06d60953f2af64 = L.circleMarker(
+                [23.784, 92.7784],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_48131bc621f24478898e30128b680870 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ed30882a0fe4fa5aab69463179a4c06 = $(`<div id="html_6ed30882a0fe4fa5aab69463179a4c06" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_48131bc621f24478898e30128b680870.setContent(html_6ed30882a0fe4fa5aab69463179a4c06);
+        
+
+        circle_marker_f6cd1c4411f94d7e8a06d60953f2af64.bindPopup(popup_48131bc621f24478898e30128b680870)
+        ;
+
+        
+    
+    
+            var circle_marker_937500e87fa642f7b60b32c12a6aa47e = L.circleMarker(
+                [23.75, 92.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e213f11832a143a89c271fc6df7f4514);
+        
+    
+        var popup_72db7f8d289e418a8538b4acf257db10 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e18546a21f14487a9f50d97788b6c9ed = $(`<div id="html_e18546a21f14487a9f50d97788b6c9ed" style="width: 100.0%; height: 100.0%;">AIZAWL, AIZAWL, MIZORAM</div>`)[0];
+            popup_72db7f8d289e418a8538b4acf257db10.setContent(html_e18546a21f14487a9f50d97788b6c9ed);
+        
+
+        circle_marker_937500e87fa642f7b60b32c12a6aa47e.bindPopup(popup_72db7f8d289e418a8538b4acf257db10)
+        ;
+
+        
+    
+</script>

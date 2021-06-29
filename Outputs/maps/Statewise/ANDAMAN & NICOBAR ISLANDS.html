@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bc57d94274cc475da05bc99c3d935f8b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_bc57d94274cc475da05bc99c3d935f8b" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANDAMAN & NICOBAR ISLANDS Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(13)</li><li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(5)</li><li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(4)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(2)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(2)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(1)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(1)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(1)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(1)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>ANDAMAN & NICOBAR ISLANDS(31)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_bc57d94274cc475da05bc99c3d935f8b = L.map(
+                "map_bc57d94274cc475da05bc99c3d935f8b",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_80fa2e746cc543269aaa5af763b34d9e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+            map_bc57d94274cc475da05bc99c3d935f8b.fitBounds(
+                [[11.6667, 92.7167], [13.2667, 93.0]],
+                {}
+            );
+        
+    
+            var circle_marker_c4c3cdee50a347a0b695391458e7b6f0 = L.circleMarker(
+                [13.2667, 93.0],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_f9433ec238fe4b459d615a61fe46c14d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bea9b061bc1a43fbbed1197c618d00fb = $(`<div id="html_bea9b061bc1a43fbbed1197c618d00fb" style="width: 100.0%; height: 100.0%;">DIGLIPUR, NORTH AND MIDDLE ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_f9433ec238fe4b459d615a61fe46c14d.setContent(html_bea9b061bc1a43fbbed1197c618d00fb);
+        
+
+        circle_marker_c4c3cdee50a347a0b695391458e7b6f0.bindPopup(popup_f9433ec238fe4b459d615a61fe46c14d)
+        ;
+
+        
+    
+    
+            var circle_marker_f97c2331a5c642849bd5b6e7c9c930ef = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_f39648ae99b84105b151e074ae074280 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_54ca5cf6e2ae4001bcaf7cb3aa23b7d2 = $(`<div id="html_54ca5cf6e2ae4001bcaf7cb3aa23b7d2" style="width: 100.0%; height: 100.0%;">FERARGANJ, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_f39648ae99b84105b151e074ae074280.setContent(html_54ca5cf6e2ae4001bcaf7cb3aa23b7d2);
+        
+
+        circle_marker_f97c2331a5c642849bd5b6e7c9c930ef.bindPopup(popup_f39648ae99b84105b151e074ae074280)
+        ;
+
+        
+    
+    
+            var circle_marker_870b94c198654315a42f7494a157372e = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_85779ee46be6452a9df83893bdcaca10 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1b2e2cc990e4f2db12489cb45c41338 = $(`<div id="html_c1b2e2cc990e4f2db12489cb45c41338" style="width: 100.0%; height: 100.0%;">PROTHRAPUR BRANCH, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_85779ee46be6452a9df83893bdcaca10.setContent(html_c1b2e2cc990e4f2db12489cb45c41338);
+        
+
+        circle_marker_870b94c198654315a42f7494a157372e.bindPopup(popup_85779ee46be6452a9df83893bdcaca10)
+        ;
+
+        
+    
+    
+            var circle_marker_f50beafdaaf84cb494d969d369a64927 = L.circleMarker(
+                [12.9917, 92.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_3a264c26208b455580ded3d3b17a4174 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba939be5ec734aa2b0a4788b81183a30 = $(`<div id="html_ba939be5ec734aa2b0a4788b81183a30" style="width: 100.0%; height: 100.0%;">RANGAT (LONG ISLAND, ANDAMAN & NICOBAR), NORTH AND MIDDLE ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_3a264c26208b455580ded3d3b17a4174.setContent(html_ba939be5ec734aa2b0a4788b81183a30);
+        
+
+        circle_marker_f50beafdaaf84cb494d969d369a64927.bindPopup(popup_3a264c26208b455580ded3d3b17a4174)
+        ;
+
+        
+    
+    
+            var circle_marker_894ccc8fb8af4ea9b00fd182f6afd782 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_e038a3baeb2d4c15a153b00e00d365da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c84b1744538647b684bf78a2a3e43975 = $(`<div id="html_c84b1744538647b684bf78a2a3e43975" style="width: 100.0%; height: 100.0%;">GARACHARMA, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_e038a3baeb2d4c15a153b00e00d365da.setContent(html_c84b1744538647b684bf78a2a3e43975);
+        
+
+        circle_marker_894ccc8fb8af4ea9b00fd182f6afd782.bindPopup(popup_e038a3baeb2d4c15a153b00e00d365da)
+        ;
+
+        
+    
+    
+            var circle_marker_fdc184e54d4d4c3f9a31d945a09bf5c9 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_3b9b715488a748dc827937e09efb69b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aede975f7b9e4248a2c65c7d0372828f = $(`<div id="html_aede975f7b9e4248a2c65c7d0372828f" style="width: 100.0%; height: 100.0%;">GARACHARMA, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_3b9b715488a748dc827937e09efb69b7.setContent(html_aede975f7b9e4248a2c65c7d0372828f);
+        
+
+        circle_marker_fdc184e54d4d4c3f9a31d945a09bf5c9.bindPopup(popup_3b9b715488a748dc827937e09efb69b7)
+        ;
+
+        
+    
+    
+            var circle_marker_5df9c5ca7f4a42bfbef0e5391b6f4b45 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_5e7283c377e74bb497ea23d995f257a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2284a8d14314286b23f249cf1967924 = $(`<div id="html_f2284a8d14314286b23f249cf1967924" style="width: 100.0%; height: 100.0%;">GARACHARMA, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_5e7283c377e74bb497ea23d995f257a4.setContent(html_f2284a8d14314286b23f249cf1967924);
+        
+
+        circle_marker_5df9c5ca7f4a42bfbef0e5391b6f4b45.bindPopup(popup_5e7283c377e74bb497ea23d995f257a4)
+        ;
+
+        
+    
+    
+            var circle_marker_03c2b6e7ce11438194503c2b8563cb45 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_2a6e5512a66643a98f605e07d2c67018 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4adb11abfd2485cadc2f31737f5be9d = $(`<div id="html_c4adb11abfd2485cadc2f31737f5be9d" style="width: 100.0%; height: 100.0%;">GARACHARMA, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_2a6e5512a66643a98f605e07d2c67018.setContent(html_c4adb11abfd2485cadc2f31737f5be9d);
+        
+
+        circle_marker_03c2b6e7ce11438194503c2b8563cb45.bindPopup(popup_2a6e5512a66643a98f605e07d2c67018)
+        ;
+
+        
+    
+    
+            var circle_marker_b3e507ca2a3b402ea5ddeca9701df411 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_6dd74592950a447db6b6c1be1e8dd10d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b131b4cd7d69442880bffeb44cb061bc = $(`<div id="html_b131b4cd7d69442880bffeb44cb061bc" style="width: 100.0%; height: 100.0%;">GARACHARAMA, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_6dd74592950a447db6b6c1be1e8dd10d.setContent(html_b131b4cd7d69442880bffeb44cb061bc);
+        
+
+        circle_marker_b3e507ca2a3b402ea5ddeca9701df411.bindPopup(popup_6dd74592950a447db6b6c1be1e8dd10d)
+        ;
+
+        
+    
+    
+            var circle_marker_112f8333d7ca4b37b177fa5b5f66be73 = L.circleMarker(
+                [12.1967, 92.82],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_deacd1426dee4f07b50eb74c7cba6d24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4210e423f5447568782efc379c9b25c = $(`<div id="html_d4210e423f5447568782efc379c9b25c" style="width: 100.0%; height: 100.0%;">CAMPBELL BAY, NICOBAR, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_deacd1426dee4f07b50eb74c7cba6d24.setContent(html_d4210e423f5447568782efc379c9b25c);
+        
+
+        circle_marker_112f8333d7ca4b37b177fa5b5f66be73.bindPopup(popup_deacd1426dee4f07b50eb74c7cba6d24)
+        ;
+
+        
+    
+    
+            var circle_marker_a2359bb174b140f6b038a47e93d2a27c = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_d52ce99310824ab3b358a912ca3bc3f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2473dcce7e52448da6492810f4f8d145 = $(`<div id="html_2473dcce7e52448da6492810f4f8d145" style="width: 100.0%; height: 100.0%;">BAMBOOFLAT, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_d52ce99310824ab3b358a912ca3bc3f9.setContent(html_2473dcce7e52448da6492810f4f8d145);
+        
+
+        circle_marker_a2359bb174b140f6b038a47e93d2a27c.bindPopup(popup_d52ce99310824ab3b358a912ca3bc3f9)
+        ;
+
+        
+    
+    
+            var circle_marker_361fbb22ed4e4c089d851378918449db = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_548d42882fab492a9ace90d9b1bc3b9d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a92bbcb482ea43af9eee73ec5ef20751 = $(`<div id="html_a92bbcb482ea43af9eee73ec5ef20751" style="width: 100.0%; height: 100.0%;">PORT-BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_548d42882fab492a9ace90d9b1bc3b9d.setContent(html_a92bbcb482ea43af9eee73ec5ef20751);
+        
+
+        circle_marker_361fbb22ed4e4c089d851378918449db.bindPopup(popup_548d42882fab492a9ace90d9b1bc3b9d)
+        ;
+
+        
+    
+    
+            var circle_marker_800003869d154d659e305726dc102dbd = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_c105c8b64d994d6f88fdbee9d0c897ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fec43fb515c4543988a37826c96d2ce = $(`<div id="html_8fec43fb515c4543988a37826c96d2ce" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_c105c8b64d994d6f88fdbee9d0c897ed.setContent(html_8fec43fb515c4543988a37826c96d2ce);
+        
+
+        circle_marker_800003869d154d659e305726dc102dbd.bindPopup(popup_c105c8b64d994d6f88fdbee9d0c897ed)
+        ;
+
+        
+    
+    
+            var circle_marker_42115ac179574a75b51b911888a2b785 = L.circleMarker(
+                [11.6833, 92.7167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_c6fc341b0016451aad0e1cc08e1e89c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d1162489883400595d256b677965538 = $(`<div id="html_3d1162489883400595d256b677965538" style="width: 100.0%; height: 100.0%;">PORT BLAIR-DELANIPUR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_c6fc341b0016451aad0e1cc08e1e89c4.setContent(html_3d1162489883400595d256b677965538);
+        
+
+        circle_marker_42115ac179574a75b51b911888a2b785.bindPopup(popup_c6fc341b0016451aad0e1cc08e1e89c4)
+        ;
+
+        
+    
+    
+            var circle_marker_351f239a4c314f7393a75b199a5f4eab = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_934a83e1c4894379b0433cadb8a83d5c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_86abed73c8124251895c2c7383dcf6c6 = $(`<div id="html_86abed73c8124251895c2c7383dcf6c6" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_934a83e1c4894379b0433cadb8a83d5c.setContent(html_86abed73c8124251895c2c7383dcf6c6);
+        
+
+        circle_marker_351f239a4c314f7393a75b199a5f4eab.bindPopup(popup_934a83e1c4894379b0433cadb8a83d5c)
+        ;
+
+        
+    
+    
+            var circle_marker_35e232deecc9452eaf691d7e1d575bd5 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_c6438bee79284d61bcfd749f2d3394de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c323e500cb5343bbb1f1b8b73fd4ad59 = $(`<div id="html_c323e500cb5343bbb1f1b8b73fd4ad59" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_c6438bee79284d61bcfd749f2d3394de.setContent(html_c323e500cb5343bbb1f1b8b73fd4ad59);
+        
+
+        circle_marker_35e232deecc9452eaf691d7e1d575bd5.bindPopup(popup_c6438bee79284d61bcfd749f2d3394de)
+        ;
+
+        
+    
+    
+            var circle_marker_605591e0520b45afabb8370c82152772 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_dbd65ef62b3b4e858761becdaba19d7d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3beea287f3ea4b75b4948508331029f2 = $(`<div id="html_3beea287f3ea4b75b4948508331029f2" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_dbd65ef62b3b4e858761becdaba19d7d.setContent(html_3beea287f3ea4b75b4948508331029f2);
+        
+
+        circle_marker_605591e0520b45afabb8370c82152772.bindPopup(popup_dbd65ef62b3b4e858761becdaba19d7d)
+        ;
+
+        
+    
+    
+            var circle_marker_440021bca9d74a6cb8cb2a108dad66c1 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_e793e890f16945b596c38d8fce89a11c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c38023d9c444916a4bc5a350fe8ad3e = $(`<div id="html_9c38023d9c444916a4bc5a350fe8ad3e" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_e793e890f16945b596c38d8fce89a11c.setContent(html_9c38023d9c444916a4bc5a350fe8ad3e);
+        
+
+        circle_marker_440021bca9d74a6cb8cb2a108dad66c1.bindPopup(popup_e793e890f16945b596c38d8fce89a11c)
+        ;
+
+        
+    
+    
+            var circle_marker_5532100ca09b43c29d6a963185b546a9 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_3c78c70e3266457b8bfa7f02592e165d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e34e8aa95b334023a0a4c29d3135a708 = $(`<div id="html_e34e8aa95b334023a0a4c29d3135a708" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_3c78c70e3266457b8bfa7f02592e165d.setContent(html_e34e8aa95b334023a0a4c29d3135a708);
+        
+
+        circle_marker_5532100ca09b43c29d6a963185b546a9.bindPopup(popup_3c78c70e3266457b8bfa7f02592e165d)
+        ;
+
+        
+    
+    
+            var circle_marker_d35bf71df5d44b36a76b77ed80f77999 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_da01ac208a844caab4316199ea4182f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c154d2cb6574d51ae03276593b8c188 = $(`<div id="html_8c154d2cb6574d51ae03276593b8c188" style="width: 100.0%; height: 100.0%;">PORT BLAIR DOLLYGUNJ, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_da01ac208a844caab4316199ea4182f8.setContent(html_8c154d2cb6574d51ae03276593b8c188);
+        
+
+        circle_marker_d35bf71df5d44b36a76b77ed80f77999.bindPopup(popup_da01ac208a844caab4316199ea4182f8)
+        ;
+
+        
+    
+    
+            var circle_marker_0a63674cd66840139f8eadae9e424b91 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_574bfc6b9d52404da0ed0c18bc2a1a62 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_490643709fdc4489a1537f7db6f57cdc = $(`<div id="html_490643709fdc4489a1537f7db6f57cdc" style="width: 100.0%; height: 100.0%;">PORT BLAIR - ABERDEEN BAZAR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_574bfc6b9d52404da0ed0c18bc2a1a62.setContent(html_490643709fdc4489a1537f7db6f57cdc);
+        
+
+        circle_marker_0a63674cd66840139f8eadae9e424b91.bindPopup(popup_574bfc6b9d52404da0ed0c18bc2a1a62)
+        ;
+
+        
+    
+    
+            var circle_marker_cbe5802a11fc463b9ecf8fe8391dc7ff = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_ee5e349fdc844368893b80af0d97fd92 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f311a71e4fc4a76887909ed35132f81 = $(`<div id="html_5f311a71e4fc4a76887909ed35132f81" style="width: 100.0%; height: 100.0%;">PAHARGAON (PORT BLAIR), SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_ee5e349fdc844368893b80af0d97fd92.setContent(html_5f311a71e4fc4a76887909ed35132f81);
+        
+
+        circle_marker_cbe5802a11fc463b9ecf8fe8391dc7ff.bindPopup(popup_ee5e349fdc844368893b80af0d97fd92)
+        ;
+
+        
+    
+    
+            var circle_marker_cc1671918a404c96bbdfd272df829154 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_9173e4e0de2c49c79a8d77c213d844aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a165a10f556451bb31f7127bd85e9d9 = $(`<div id="html_8a165a10f556451bb31f7127bd85e9d9" style="width: 100.0%; height: 100.0%;">JUNGLY GHAT(PORT BLAIR), SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_9173e4e0de2c49c79a8d77c213d844aa.setContent(html_8a165a10f556451bb31f7127bd85e9d9);
+        
+
+        circle_marker_cc1671918a404c96bbdfd272df829154.bindPopup(popup_9173e4e0de2c49c79a8d77c213d844aa)
+        ;
+
+        
+    
+    
+            var circle_marker_dba918ef3a074f85adb1a4cf418af567 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_204fd1d492fe43c5a65978739d6ef6e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c5ca571ba4e4b29b7563fd8cc700bd5 = $(`<div id="html_3c5ca571ba4e4b29b7563fd8cc700bd5" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_204fd1d492fe43c5a65978739d6ef6e1.setContent(html_3c5ca571ba4e4b29b7563fd8cc700bd5);
+        
+
+        circle_marker_dba918ef3a074f85adb1a4cf418af567.bindPopup(popup_204fd1d492fe43c5a65978739d6ef6e1)
+        ;
+
+        
+    
+    
+            var circle_marker_2997a693cd424198ab3b89bed8fffeca = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_cac99b8f8715441fa430d02048080899 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88ca1af62b6f4077892ff28a0be56af9 = $(`<div id="html_88ca1af62b6f4077892ff28a0be56af9" style="width: 100.0%; height: 100.0%;">DIRECTORATE OF HEALTH SERVICES (DHS), PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_cac99b8f8715441fa430d02048080899.setContent(html_88ca1af62b6f4077892ff28a0be56af9);
+        
+
+        circle_marker_2997a693cd424198ab3b89bed8fffeca.bindPopup(popup_cac99b8f8715441fa430d02048080899)
+        ;
+
+        
+    
+    
+            var circle_marker_244d91a30bc545b8a7a167cd628c1655 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_063028fcdca44875ae6b911877a0b0d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c35ea3db68094e4c9d3a63ca66a5a48f = $(`<div id="html_c35ea3db68094e4c9d3a63ca66a5a48f" style="width: 100.0%; height: 100.0%;">SECRETARIAT, PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_063028fcdca44875ae6b911877a0b0d7.setContent(html_c35ea3db68094e4c9d3a63ca66a5a48f);
+        
+
+        circle_marker_244d91a30bc545b8a7a167cd628c1655.bindPopup(popup_063028fcdca44875ae6b911877a0b0d7)
+        ;
+
+        
+    
+    
+            var circle_marker_26b63ced585040eab9c30da5693fc1c0 = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_e658e148239d4e61846823e71732e6fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c97fe95e6044605b094e88a62503cc1 = $(`<div id="html_2c97fe95e6044605b094e88a62503cc1" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_e658e148239d4e61846823e71732e6fa.setContent(html_2c97fe95e6044605b094e88a62503cc1);
+        
+
+        circle_marker_26b63ced585040eab9c30da5693fc1c0.bindPopup(popup_e658e148239d4e61846823e71732e6fa)
+        ;
+
+        
+    
+    
+            var circle_marker_d87b001671304c43b20be7a938cacc3e = L.circleMarker(
+                [11.6833, 92.7167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_c950c9fe03db410eab83bd802d21f125 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a08a755251c14c208d30779a2370f99b = $(`<div id="html_a08a755251c14c208d30779a2370f99b" style="width: 100.0%; height: 100.0%;">PORT BLAIR, MES HADDO, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_c950c9fe03db410eab83bd802d21f125.setContent(html_a08a755251c14c208d30779a2370f99b);
+        
+
+        circle_marker_d87b001671304c43b20be7a938cacc3e.bindPopup(popup_c950c9fe03db410eab83bd802d21f125)
+        ;
+
+        
+    
+    
+            var circle_marker_ea9007d1f5444434a0803c8c4b476e77 = L.circleMarker(
+                [11.6833, 92.7167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_69f33a697ae7466fabe8ec01e53ac603 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_71a8df2fa07e433bb113c6efebf01b10 = $(`<div id="html_71a8df2fa07e433bb113c6efebf01b10" style="width: 100.0%; height: 100.0%;">CUSTOMER ACQUISITION CENTRE ANDAMAN AND NICOBAR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_69f33a697ae7466fabe8ec01e53ac603.setContent(html_71a8df2fa07e433bb113c6efebf01b10);
+        
+
+        circle_marker_ea9007d1f5444434a0803c8c4b476e77.bindPopup(popup_69f33a697ae7466fabe8ec01e53ac603)
+        ;
+
+        
+    
+    
+            var circle_marker_0952a6609f9c45a39c1c717bdf4939ac = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_ba69fcfb3e084be886e247d99439d8e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_793984eb8d17493892486f951e6a39d6 = $(`<div id="html_793984eb8d17493892486f951e6a39d6" style="width: 100.0%; height: 100.0%;">NEIL KENDRA, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_ba69fcfb3e084be886e247d99439d8e5.setContent(html_793984eb8d17493892486f951e6a39d6);
+        
+
+        circle_marker_0952a6609f9c45a39c1c717bdf4939ac.bindPopup(popup_ba69fcfb3e084be886e247d99439d8e5)
+        ;
+
+        
+    
+    
+            var circle_marker_fc4df83c97f2406cafdfb337434b81bc = L.circleMarker(
+                [11.6667, 92.7333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_bc57d94274cc475da05bc99c3d935f8b);
+        
+    
+        var popup_a7dd794bf8d64a5ab8fdc46e22937e5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c3695dacb73d4af3bd662760ef4e4fbf = $(`<div id="html_c3695dacb73d4af3bd662760ef4e4fbf" style="width: 100.0%; height: 100.0%;">PORT BLAIR, SOUTH ANDAMAN, ANDAMAN & NICOBAR ISLANDS</div>`)[0];
+            popup_a7dd794bf8d64a5ab8fdc46e22937e5b.setContent(html_c3695dacb73d4af3bd662760ef4e4fbf);
+        
+
+        circle_marker_fc4df83c97f2406cafdfb337434b81bc.bindPopup(popup_a7dd794bf8d64a5ab8fdc46e22937e5b)
+        ;
+
+        
+    
+</script>

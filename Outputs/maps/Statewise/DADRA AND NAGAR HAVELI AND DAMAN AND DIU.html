@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_837b5642de414df6b7234c22091f5e78 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_837b5642de414df6b7234c22091f5e78" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DADRA AND NAGAR HAVELI AND DAMAN AND DIU Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(18)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(6)</li><li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(5)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(5)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(3)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(3)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(3)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(3)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(2)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>DADRA AND NAGAR HAVELI AND DAMAN AND DIU(49)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_837b5642de414df6b7234c22091f5e78 = L.map(
+                "map_837b5642de414df6b7234c22091f5e78",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b60ae1b8431e46a3a58999896becbc7c = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+            map_837b5642de414df6b7234c22091f5e78.fitBounds(
+                [[20.2167, 70.9833], [20.9432, 73.1147]],
+                {}
+            );
+        
+    
+            var circle_marker_efc8e0fb88dc49eba53a1b2c32d968f4 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_c4fddec1b2c64c58b7f3b055b096a83d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_702222115d3d42c6a581593c23b7e019 = $(`<div id="html_702222115d3d42c6a581593c23b7e019" style="width: 100.0%; height: 100.0%;">MANDONI, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_c4fddec1b2c64c58b7f3b055b096a83d.setContent(html_702222115d3d42c6a581593c23b7e019);
+        
+
+        circle_marker_efc8e0fb88dc49eba53a1b2c32d968f4.bindPopup(popup_c4fddec1b2c64c58b7f3b055b096a83d)
+        ;
+
+        
+    
+    
+            var circle_marker_d844b981126e43a0949258ae53ad26c7 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_ee61a28a0b844b79aa93ce92ba59392f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a54762e833ed4ae0b4058f78ad96b7b8 = $(`<div id="html_a54762e833ed4ae0b4058f78ad96b7b8" style="width: 100.0%; height: 100.0%;">RAKHOLI, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_ee61a28a0b844b79aa93ce92ba59392f.setContent(html_a54762e833ed4ae0b4058f78ad96b7b8);
+        
+
+        circle_marker_d844b981126e43a0949258ae53ad26c7.bindPopup(popup_ee61a28a0b844b79aa93ce92ba59392f)
+        ;
+
+        
+    
+    
+            var circle_marker_1bac8a6cbf2845a4a57340ab030c91f4 = L.circleMarker(
+                [20.2167, 73.05],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_92fd43b887a44e13bdd60acd7035c9bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_abdc16cc09124389bc3a77284f7d3beb = $(`<div id="html_abdc16cc09124389bc3a77284f7d3beb" style="width: 100.0%; height: 100.0%;">DAPADA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_92fd43b887a44e13bdd60acd7035c9bc.setContent(html_abdc16cc09124389bc3a77284f7d3beb);
+        
+
+        circle_marker_1bac8a6cbf2845a4a57340ab030c91f4.bindPopup(popup_92fd43b887a44e13bdd60acd7035c9bc)
+        ;
+
+        
+    
+    
+            var circle_marker_cffcd81641ef455b8ce453126217d0f0 = L.circleMarker(
+                [20.4185, 73.1147],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_233b2afd8c60432794ab0ea0a43a8d67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a886482da4943428681b48eb8cd3681 = $(`<div id="html_9a886482da4943428681b48eb8cd3681" style="width: 100.0%; height: 100.0%;">DADRA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_233b2afd8c60432794ab0ea0a43a8d67.setContent(html_9a886482da4943428681b48eb8cd3681);
+        
+
+        circle_marker_cffcd81641ef455b8ce453126217d0f0.bindPopup(popup_233b2afd8c60432794ab0ea0a43a8d67)
+        ;
+
+        
+    
+    
+            var circle_marker_ed7b0804480d4d69a938f36649b36a86 = L.circleMarker(
+                [20.4185, 73.1147],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_f2c336545c7749e8bbe7e908ff650edd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36e353d27a0548bc96f44354a788ef79 = $(`<div id="html_36e353d27a0548bc96f44354a788ef79" style="width: 100.0%; height: 100.0%;">DADRA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_f2c336545c7749e8bbe7e908ff650edd.setContent(html_36e353d27a0548bc96f44354a788ef79);
+        
+
+        circle_marker_ed7b0804480d4d69a938f36649b36a86.bindPopup(popup_f2c336545c7749e8bbe7e908ff650edd)
+        ;
+
+        
+    
+    
+            var circle_marker_05a1a32d8cf94189b5c7ac3fdb4d4c70 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_09d7ffbd0eb54a6b985d8c4276836b3b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e461fdfdfa2649e4ae5ea73fec8a1b6e = $(`<div id="html_e461fdfdfa2649e4ae5ea73fec8a1b6e" style="width: 100.0%; height: 100.0%;">DADRA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_09d7ffbd0eb54a6b985d8c4276836b3b.setContent(html_e461fdfdfa2649e4ae5ea73fec8a1b6e);
+        
+
+        circle_marker_05a1a32d8cf94189b5c7ac3fdb4d4c70.bindPopup(popup_09d7ffbd0eb54a6b985d8c4276836b3b)
+        ;
+
+        
+    
+    
+            var circle_marker_0071e1f260854320992ea97157525adc = L.circleMarker(
+                [20.3233, 72.93],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_fae0dc909eb44545b5840f582cb91255 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15ce7b2e642a4a88b943e707a5103963 = $(`<div id="html_15ce7b2e642a4a88b943e707a5103963" style="width: 100.0%; height: 100.0%;">MOTI DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_fae0dc909eb44545b5840f582cb91255.setContent(html_15ce7b2e642a4a88b943e707a5103963);
+        
+
+        circle_marker_0071e1f260854320992ea97157525adc.bindPopup(popup_fae0dc909eb44545b5840f582cb91255)
+        ;
+
+        
+    
+    
+            var circle_marker_78a8f9c74f864bfa9a8d9c006bcb477b = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_fa34895c6c2c4628af5cbc9e53bf2c1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7cbd1d1def4f487aa0d440b0070d7763 = $(`<div id="html_7cbd1d1def4f487aa0d440b0070d7763" style="width: 100.0%; height: 100.0%;">SME BRANCH, DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_fa34895c6c2c4628af5cbc9e53bf2c1f.setContent(html_7cbd1d1def4f487aa0d440b0070d7763);
+        
+
+        circle_marker_78a8f9c74f864bfa9a8d9c006bcb477b.bindPopup(popup_fa34895c6c2c4628af5cbc9e53bf2c1f)
+        ;
+
+        
+    
+    
+            var circle_marker_b4fda3c46e5b4b198e3a1c947a2d84b9 = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_63028c5fa3294ef1a028eef5b4fccc1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13f18d154fab4242bd9f3e16041f202c = $(`<div id="html_13f18d154fab4242bd9f3e16041f202c" style="width: 100.0%; height: 100.0%;">DAMAN(U.T.), DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_63028c5fa3294ef1a028eef5b4fccc1d.setContent(html_13f18d154fab4242bd9f3e16041f202c);
+        
+
+        circle_marker_b4fda3c46e5b4b198e3a1c947a2d84b9.bindPopup(popup_63028c5fa3294ef1a028eef5b4fccc1d)
+        ;
+
+        
+    
+    
+            var circle_marker_e6e3405171674eb9ad977db6d8878f21 = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_53a29819ffaf4374ba0fc49340b66bab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_137f7c331a4b4e3591e7cf536cff7963 = $(`<div id="html_137f7c331a4b4e3591e7cf536cff7963" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_53a29819ffaf4374ba0fc49340b66bab.setContent(html_137f7c331a4b4e3591e7cf536cff7963);
+        
+
+        circle_marker_e6e3405171674eb9ad977db6d8878f21.bindPopup(popup_53a29819ffaf4374ba0fc49340b66bab)
+        ;
+
+        
+    
+    
+            var circle_marker_277dcfee44de4092af6c46b25065b6ec = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_bde857b3deb24bd08f9c34e5796e90b5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_402d015e24424cad8856a2c3416f729a = $(`<div id="html_402d015e24424cad8856a2c3416f729a" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_bde857b3deb24bd08f9c34e5796e90b5.setContent(html_402d015e24424cad8856a2c3416f729a);
+        
+
+        circle_marker_277dcfee44de4092af6c46b25065b6ec.bindPopup(popup_bde857b3deb24bd08f9c34e5796e90b5)
+        ;
+
+        
+    
+    
+            var circle_marker_d7cdf88abf9c4b9099ab95b3466259d4 = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_8188ccb0c3694420b978bf55e191924e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a49398a6b494a7e81d5559406aee5a6 = $(`<div id="html_9a49398a6b494a7e81d5559406aee5a6" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_8188ccb0c3694420b978bf55e191924e.setContent(html_9a49398a6b494a7e81d5559406aee5a6);
+        
+
+        circle_marker_d7cdf88abf9c4b9099ab95b3466259d4.bindPopup(popup_8188ccb0c3694420b978bf55e191924e)
+        ;
+
+        
+    
+    
+            var circle_marker_6013f2d4057a4c39a50a61968f138ede = L.circleMarker(
+                [20.3233, 72.93],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_de86f1303fc842f9afccda687193c6c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b9d6145432a4c5bb5fbf0c66833d534 = $(`<div id="html_2b9d6145432a4c5bb5fbf0c66833d534" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_de86f1303fc842f9afccda687193c6c5.setContent(html_2b9d6145432a4c5bb5fbf0c66833d534);
+        
+
+        circle_marker_6013f2d4057a4c39a50a61968f138ede.bindPopup(popup_de86f1303fc842f9afccda687193c6c5)
+        ;
+
+        
+    
+    
+            var circle_marker_d196b561ef494b01b1799af7ea7ab2ee = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_d1a1b56955da4c15ab17e365d407b118 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_80fee562eddf4546a8e3ca136bfb8f3b = $(`<div id="html_80fee562eddf4546a8e3ca136bfb8f3b" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_d1a1b56955da4c15ab17e365d407b118.setContent(html_80fee562eddf4546a8e3ca136bfb8f3b);
+        
+
+        circle_marker_d196b561ef494b01b1799af7ea7ab2ee.bindPopup(popup_d1a1b56955da4c15ab17e365d407b118)
+        ;
+
+        
+    
+    
+            var circle_marker_580461b298414b62bc8b94b013be3d7c = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_7ca25e5e459744c090b172cf82a88847 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_38e5f103198747219271384c41faeff7 = $(`<div id="html_38e5f103198747219271384c41faeff7" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_7ca25e5e459744c090b172cf82a88847.setContent(html_38e5f103198747219271384c41faeff7);
+        
+
+        circle_marker_580461b298414b62bc8b94b013be3d7c.bindPopup(popup_7ca25e5e459744c090b172cf82a88847)
+        ;
+
+        
+    
+    
+            var circle_marker_00d90734c0764ee8b509e07e0a802760 = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_2f4d53703c1c4087ad0315e522574ac7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf142546263343b6828e86724dafb9c2 = $(`<div id="html_cf142546263343b6828e86724dafb9c2" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_2f4d53703c1c4087ad0315e522574ac7.setContent(html_cf142546263343b6828e86724dafb9c2);
+        
+
+        circle_marker_00d90734c0764ee8b509e07e0a802760.bindPopup(popup_2f4d53703c1c4087ad0315e522574ac7)
+        ;
+
+        
+    
+    
+            var circle_marker_aa9901bccb4843c2910db60fbc526b56 = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_414fa0ccbb3a4bf1bf0449f8e2dc6d96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72c06279a61d46c98bfdfa9fb95f783f = $(`<div id="html_72c06279a61d46c98bfdfa9fb95f783f" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_414fa0ccbb3a4bf1bf0449f8e2dc6d96.setContent(html_72c06279a61d46c98bfdfa9fb95f783f);
+        
+
+        circle_marker_aa9901bccb4843c2910db60fbc526b56.bindPopup(popup_414fa0ccbb3a4bf1bf0449f8e2dc6d96)
+        ;
+
+        
+    
+    
+            var circle_marker_bfa370d158d541c3a62156373c8a950d = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_6422f4d31ffa454f916779d7045acb09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90d76146d98f4423bd74f8792759c4ed = $(`<div id="html_90d76146d98f4423bd74f8792759c4ed" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_6422f4d31ffa454f916779d7045acb09.setContent(html_90d76146d98f4423bd74f8792759c4ed);
+        
+
+        circle_marker_bfa370d158d541c3a62156373c8a950d.bindPopup(popup_6422f4d31ffa454f916779d7045acb09)
+        ;
+
+        
+    
+    
+            var circle_marker_0e79365f8d104b96a60add43a19fc867 = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_7de5fb3dd55e478c8f445075aa2000d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0613571bc644b218ae3b2c2b59df5b6 = $(`<div id="html_c0613571bc644b218ae3b2c2b59df5b6" style="width: 100.0%; height: 100.0%;">BHIMPORE, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_7de5fb3dd55e478c8f445075aa2000d8.setContent(html_c0613571bc644b218ae3b2c2b59df5b6);
+        
+
+        circle_marker_0e79365f8d104b96a60add43a19fc867.bindPopup(popup_7de5fb3dd55e478c8f445075aa2000d8)
+        ;
+
+        
+    
+    
+            var circle_marker_de2f6dd1d4644666942b6e9004c972dd = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_3f7ebed5052c48f1a715bc9a94848c78 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60a2ea72ac6d4cc2bc111585ed6b902c = $(`<div id="html_60a2ea72ac6d4cc2bc111585ed6b902c" style="width: 100.0%; height: 100.0%;">BHIMPORE, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_3f7ebed5052c48f1a715bc9a94848c78.setContent(html_60a2ea72ac6d4cc2bc111585ed6b902c);
+        
+
+        circle_marker_de2f6dd1d4644666942b6e9004c972dd.bindPopup(popup_3f7ebed5052c48f1a715bc9a94848c78)
+        ;
+
+        
+    
+    
+            var circle_marker_ce1cc55806f54358a6a7b5b8d7b3e24d = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_cb02597318b647c59a857ea44c943544 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a54537da55d049fdabc4a21d2fe5e816 = $(`<div id="html_a54537da55d049fdabc4a21d2fe5e816" style="width: 100.0%; height: 100.0%;">KHANVEL, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_cb02597318b647c59a857ea44c943544.setContent(html_a54537da55d049fdabc4a21d2fe5e816);
+        
+
+        circle_marker_ce1cc55806f54358a6a7b5b8d7b3e24d.bindPopup(popup_cb02597318b647c59a857ea44c943544)
+        ;
+
+        
+    
+    
+            var circle_marker_e4ddf8e154614e9c85170f782d348354 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_5ba87c7492724691bffafafb37ab4d67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f2b240f9b7744dd9310559154da977b = $(`<div id="html_1f2b240f9b7744dd9310559154da977b" style="width: 100.0%; height: 100.0%;">KILVANI, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_5ba87c7492724691bffafafb37ab4d67.setContent(html_1f2b240f9b7744dd9310559154da977b);
+        
+
+        circle_marker_e4ddf8e154614e9c85170f782d348354.bindPopup(popup_5ba87c7492724691bffafafb37ab4d67)
+        ;
+
+        
+    
+    
+            var circle_marker_4f54c97c9348479fb27a0e802f951c2e = L.circleMarker(
+                [20.7, 70.9833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_241cd15cee3245b7bfabdd78e1f47056 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff03ac545d1a44f194968a821b0dd86b = $(`<div id="html_ff03ac545d1a44f194968a821b0dd86b" style="width: 100.0%; height: 100.0%;">DIU, DIU, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_241cd15cee3245b7bfabdd78e1f47056.setContent(html_ff03ac545d1a44f194968a821b0dd86b);
+        
+
+        circle_marker_4f54c97c9348479fb27a0e802f951c2e.bindPopup(popup_241cd15cee3245b7bfabdd78e1f47056)
+        ;
+
+        
+    
+    
+            var circle_marker_e7c82bb3d8c6471b8701899023ce27df = L.circleMarker(
+                [20.7, 70.9833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_c71c892f19334bc2b8c855f1fe78f436 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dded99aaed8e42168a4514674665c9ac = $(`<div id="html_dded99aaed8e42168a4514674665c9ac" style="width: 100.0%; height: 100.0%;">DIU, DIU, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_c71c892f19334bc2b8c855f1fe78f436.setContent(html_dded99aaed8e42168a4514674665c9ac);
+        
+
+        circle_marker_e7c82bb3d8c6471b8701899023ce27df.bindPopup(popup_c71c892f19334bc2b8c855f1fe78f436)
+        ;
+
+        
+    
+    
+            var circle_marker_d90b54eaeca7495c9050431b7d545024 = L.circleMarker(
+                [20.7, 70.9833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_76694c48da814d949ebfad7c8aa39733 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61e231fe3b9d4db0bf4ae43f3fe64397 = $(`<div id="html_61e231fe3b9d4db0bf4ae43f3fe64397" style="width: 100.0%; height: 100.0%;">DIU, DIU, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_76694c48da814d949ebfad7c8aa39733.setContent(html_61e231fe3b9d4db0bf4ae43f3fe64397);
+        
+
+        circle_marker_d90b54eaeca7495c9050431b7d545024.bindPopup(popup_76694c48da814d949ebfad7c8aa39733)
+        ;
+
+        
+    
+    
+            var circle_marker_045ad521567f40648a58352affb6d07b = L.circleMarker(
+                [20.7, 70.9833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_146be40727ef4228b0fafe8738da6715 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ec0aa81f7b8463b8a462a6f65880da3 = $(`<div id="html_7ec0aa81f7b8463b8a462a6f65880da3" style="width: 100.0%; height: 100.0%;">DIU, DIU, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_146be40727ef4228b0fafe8738da6715.setContent(html_7ec0aa81f7b8463b8a462a6f65880da3);
+        
+
+        circle_marker_045ad521567f40648a58352affb6d07b.bindPopup(popup_146be40727ef4228b0fafe8738da6715)
+        ;
+
+        
+    
+    
+            var circle_marker_c5505ac2d95e4a75a0ed32ab13a1a9ae = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_e43e89e9b6ea4690a1ee47d4487cf1d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc51aecebaf44fdd8b38dc3401dacffc = $(`<div id="html_bc51aecebaf44fdd8b38dc3401dacffc" style="width: 100.0%; height: 100.0%;">DUDHANI, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_e43e89e9b6ea4690a1ee47d4487cf1d5.setContent(html_bc51aecebaf44fdd8b38dc3401dacffc);
+        
+
+        circle_marker_c5505ac2d95e4a75a0ed32ab13a1a9ae.bindPopup(popup_e43e89e9b6ea4690a1ee47d4487cf1d5)
+        ;
+
+        
+    
+    
+            var circle_marker_db9d57f3db9e4e5183e86c9106a4244b = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_1ca5e93982504c3fbbf43f65acbf70dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e32879437d54dd98cc41fea52fbe8af = $(`<div id="html_3e32879437d54dd98cc41fea52fbe8af" style="width: 100.0%; height: 100.0%;">NAROLI, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_1ca5e93982504c3fbbf43f65acbf70dd.setContent(html_3e32879437d54dd98cc41fea52fbe8af);
+        
+
+        circle_marker_db9d57f3db9e4e5183e86c9106a4244b.bindPopup(popup_1ca5e93982504c3fbbf43f65acbf70dd)
+        ;
+
+        
+    
+    
+            var circle_marker_ecde966cd645454d9a5511d83c8844be = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_6321ad49829f4a2a887bb7f725969b91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb10569705e54650a2e73f51a0928b16 = $(`<div id="html_bb10569705e54650a2e73f51a0928b16" style="width: 100.0%; height: 100.0%;">MOTA RANDHA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_6321ad49829f4a2a887bb7f725969b91.setContent(html_bb10569705e54650a2e73f51a0928b16);
+        
+
+        circle_marker_ecde966cd645454d9a5511d83c8844be.bindPopup(popup_6321ad49829f4a2a887bb7f725969b91)
+        ;
+
+        
+    
+    
+            var circle_marker_7b0c7e9566534d008aed35276885694f = L.circleMarker(
+                [20.9432, 71.0823],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_f4cc4ba45ef04ea0b7454a295b0f7c86 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_913adbe8d26a407f9e6d593b2a5d2795 = $(`<div id="html_913adbe8d26a407f9e6d593b2a5d2795" style="width: 100.0%; height: 100.0%;">VANAKBARA, DIU, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_f4cc4ba45ef04ea0b7454a295b0f7c86.setContent(html_913adbe8d26a407f9e6d593b2a5d2795);
+        
+
+        circle_marker_7b0c7e9566534d008aed35276885694f.bindPopup(popup_f4cc4ba45ef04ea0b7454a295b0f7c86)
+        ;
+
+        
+    
+    
+            var circle_marker_cf09238c09384cda83165e8143ee2a5a = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_024c206e3fb6443eaab974f9d551b366 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fae1711a4db045fab7544264ab9f3a5f = $(`<div id="html_fae1711a4db045fab7544264ab9f3a5f" style="width: 100.0%; height: 100.0%;">SILVASA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_024c206e3fb6443eaab974f9d551b366.setContent(html_fae1711a4db045fab7544264ab9f3a5f);
+        
+
+        circle_marker_cf09238c09384cda83165e8143ee2a5a.bindPopup(popup_024c206e3fb6443eaab974f9d551b366)
+        ;
+
+        
+    
+    
+            var circle_marker_f13f883742ba4faaa9823a0c1e6b2d0b = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_0a7580b5925549afbaf02f9118686e8a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61fca2ca230749ca982204be3b7e5f42 = $(`<div id="html_61fca2ca230749ca982204be3b7e5f42" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_0a7580b5925549afbaf02f9118686e8a.setContent(html_61fca2ca230749ca982204be3b7e5f42);
+        
+
+        circle_marker_f13f883742ba4faaa9823a0c1e6b2d0b.bindPopup(popup_0a7580b5925549afbaf02f9118686e8a)
+        ;
+
+        
+    
+    
+            var circle_marker_46e1b48553794c768bd4781fd3b827c2 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_ddf12af80a8f4e6587b3edcf2e61f582 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_492f7a591e80456fbcf2d6602b145724 = $(`<div id="html_492f7a591e80456fbcf2d6602b145724" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_ddf12af80a8f4e6587b3edcf2e61f582.setContent(html_492f7a591e80456fbcf2d6602b145724);
+        
+
+        circle_marker_46e1b48553794c768bd4781fd3b827c2.bindPopup(popup_ddf12af80a8f4e6587b3edcf2e61f582)
+        ;
+
+        
+    
+    
+            var circle_marker_4d79e4721e5d4ef6811b2702d00ba064 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_6b2d11cb4e484c3a825d657e13838e59 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_017288fae7614d069065ce53e2110303 = $(`<div id="html_017288fae7614d069065ce53e2110303" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_6b2d11cb4e484c3a825d657e13838e59.setContent(html_017288fae7614d069065ce53e2110303);
+        
+
+        circle_marker_4d79e4721e5d4ef6811b2702d00ba064.bindPopup(popup_6b2d11cb4e484c3a825d657e13838e59)
+        ;
+
+        
+    
+    
+            var circle_marker_53fa4974f5da4b09aae273ad9a1d7145 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_8eb3bb2bb42a4047be8bfd0732fdf24e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a04aada6d82b45179b86943714402ed9 = $(`<div id="html_a04aada6d82b45179b86943714402ed9" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_8eb3bb2bb42a4047be8bfd0732fdf24e.setContent(html_a04aada6d82b45179b86943714402ed9);
+        
+
+        circle_marker_53fa4974f5da4b09aae273ad9a1d7145.bindPopup(popup_8eb3bb2bb42a4047be8bfd0732fdf24e)
+        ;
+
+        
+    
+    
+            var circle_marker_0b94b32c8638450dafe1f58797e3b097 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_a7215f74749b4b04b292bae18a6f186e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61b641f5dd6a4589b02b9be19f7e395b = $(`<div id="html_61b641f5dd6a4589b02b9be19f7e395b" style="width: 100.0%; height: 100.0%;">SILVASA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_a7215f74749b4b04b292bae18a6f186e.setContent(html_61b641f5dd6a4589b02b9be19f7e395b);
+        
+
+        circle_marker_0b94b32c8638450dafe1f58797e3b097.bindPopup(popup_a7215f74749b4b04b292bae18a6f186e)
+        ;
+
+        
+    
+    
+            var circle_marker_2580c31affa94d718de1e2dbf5d058ff = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_5d565a1f9fd94e859e61b81e19cae9c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d008048764fc49e6974e7cc864405b92 = $(`<div id="html_d008048764fc49e6974e7cc864405b92" style="width: 100.0%; height: 100.0%;">SILVASA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_5d565a1f9fd94e859e61b81e19cae9c4.setContent(html_d008048764fc49e6974e7cc864405b92);
+        
+
+        circle_marker_2580c31affa94d718de1e2dbf5d058ff.bindPopup(popup_5d565a1f9fd94e859e61b81e19cae9c4)
+        ;
+
+        
+    
+    
+            var circle_marker_aa0c5e37377d4d60ada9ea50348f972a = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_6d8dc1f2a6d34667912237ff59a067e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3db97f0e47c43f0b07a6666d08ebecd = $(`<div id="html_e3db97f0e47c43f0b07a6666d08ebecd" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_6d8dc1f2a6d34667912237ff59a067e8.setContent(html_e3db97f0e47c43f0b07a6666d08ebecd);
+        
+
+        circle_marker_aa0c5e37377d4d60ada9ea50348f972a.bindPopup(popup_6d8dc1f2a6d34667912237ff59a067e8)
+        ;
+
+        
+    
+    
+            var circle_marker_779ee5fdb3e54b65ae45e1cccc0c4190 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_e2261711fd8b4d0eb01b2b176a5f66ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e79dd9770b4b4b468ffd57b8c0d0be0d = $(`<div id="html_e79dd9770b4b4b468ffd57b8c0d0be0d" style="width: 100.0%; height: 100.0%;">MAIN ROAD, SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_e2261711fd8b4d0eb01b2b176a5f66ab.setContent(html_e79dd9770b4b4b468ffd57b8c0d0be0d);
+        
+
+        circle_marker_779ee5fdb3e54b65ae45e1cccc0c4190.bindPopup(popup_e2261711fd8b4d0eb01b2b176a5f66ab)
+        ;
+
+        
+    
+    
+            var circle_marker_483b6006a87141a38330fc5575a6b615 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_8c59c14400c54159895bd830e238a91e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_613c53fe76cc47df97b59c13fae75a37 = $(`<div id="html_613c53fe76cc47df97b59c13fae75a37" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_8c59c14400c54159895bd830e238a91e.setContent(html_613c53fe76cc47df97b59c13fae75a37);
+        
+
+        circle_marker_483b6006a87141a38330fc5575a6b615.bindPopup(popup_8c59c14400c54159895bd830e238a91e)
+        ;
+
+        
+    
+    
+            var circle_marker_f3957be7c83a420b8bb767a493e82807 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_9023f8f6429746c9b27a6ce63483af7a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2502812a0cbf4828b3ecf2529d3de114 = $(`<div id="html_2502812a0cbf4828b3ecf2529d3de114" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_9023f8f6429746c9b27a6ce63483af7a.setContent(html_2502812a0cbf4828b3ecf2529d3de114);
+        
+
+        circle_marker_f3957be7c83a420b8bb767a493e82807.bindPopup(popup_9023f8f6429746c9b27a6ce63483af7a)
+        ;
+
+        
+    
+    
+            var circle_marker_fe8e9e75a0e94e27904516da00008c93 = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_47f1008fdf4a40d48f8afbe9a0ff0ac0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e45d3a2bb5b46188622a759155ad84d = $(`<div id="html_2e45d3a2bb5b46188622a759155ad84d" style="width: 100.0%; height: 100.0%;">NAROLI, SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_47f1008fdf4a40d48f8afbe9a0ff0ac0.setContent(html_2e45d3a2bb5b46188622a759155ad84d);
+        
+
+        circle_marker_fe8e9e75a0e94e27904516da00008c93.bindPopup(popup_47f1008fdf4a40d48f8afbe9a0ff0ac0)
+        ;
+
+        
+    
+    
+            var circle_marker_7e91eed6f9ce4239bbc17c557934540e = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_5b8fcac80a3f4f99951109978c79eb2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7925d213c43a4479bcb4b1924fef5eb1 = $(`<div id="html_7925d213c43a4479bcb4b1924fef5eb1" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_5b8fcac80a3f4f99951109978c79eb2d.setContent(html_7925d213c43a4479bcb4b1924fef5eb1);
+        
+
+        circle_marker_7e91eed6f9ce4239bbc17c557934540e.bindPopup(popup_5b8fcac80a3f4f99951109978c79eb2d)
+        ;
+
+        
+    
+    
+            var circle_marker_2526ae17bd3c47a5a60d015dc86b9cbf = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_a90b2806a0f74531962eafe20b21f34f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_884f5aa434d24c16b35bdf647fe52066 = $(`<div id="html_884f5aa434d24c16b35bdf647fe52066" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_a90b2806a0f74531962eafe20b21f34f.setContent(html_884f5aa434d24c16b35bdf647fe52066);
+        
+
+        circle_marker_2526ae17bd3c47a5a60d015dc86b9cbf.bindPopup(popup_a90b2806a0f74531962eafe20b21f34f)
+        ;
+
+        
+    
+    
+            var circle_marker_fd0568eb8c894cac9d9670d32750a9cd = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_2dc036ed88e94dd5b9f85c4ff1b4dbc0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a19b81a6f95f4f98b55725ba8cea05c1 = $(`<div id="html_a19b81a6f95f4f98b55725ba8cea05c1" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_2dc036ed88e94dd5b9f85c4ff1b4dbc0.setContent(html_a19b81a6f95f4f98b55725ba8cea05c1);
+        
+
+        circle_marker_fd0568eb8c894cac9d9670d32750a9cd.bindPopup(popup_2dc036ed88e94dd5b9f85c4ff1b4dbc0)
+        ;
+
+        
+    
+    
+            var circle_marker_5d5db5a801c94b37a8fe265794c0e7f2 = L.circleMarker(
+                [20.4167, 72.85],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_fd2f26c17def4c0ab4b6eac11dd360ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_233db188689942fe9af4a540e5e2453e = $(`<div id="html_233db188689942fe9af4a540e5e2453e" style="width: 100.0%; height: 100.0%;">DAMAN, DAMAN, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_fd2f26c17def4c0ab4b6eac11dd360ba.setContent(html_233db188689942fe9af4a540e5e2453e);
+        
+
+        circle_marker_5d5db5a801c94b37a8fe265794c0e7f2.bindPopup(popup_fd2f26c17def4c0ab4b6eac11dd360ba)
+        ;
+
+        
+    
+    
+            var circle_marker_4c254fee99594cb1a7fcb1facbc8a0bf = L.circleMarker(
+                [20.2833, 72.95],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_1a3428b7ba4a423a94a1d4d1f4447af4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29a81f560d514408a3b2cc3264ee840b = $(`<div id="html_29a81f560d514408a3b2cc3264ee840b" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_1a3428b7ba4a423a94a1d4d1f4447af4.setContent(html_29a81f560d514408a3b2cc3264ee840b);
+        
+
+        circle_marker_4c254fee99594cb1a7fcb1facbc8a0bf.bindPopup(popup_1a3428b7ba4a423a94a1d4d1f4447af4)
+        ;
+
+        
+    
+    
+            var circle_marker_bb6ca50855c8423f958c882aceb1e34c = L.circleMarker(
+                [20.2737915, 72.9404157],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_0d8fdb4e59324b1c96075f191825ec8d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ea21011009c496fa6799e36b582f48e = $(`<div id="html_9ea21011009c496fa6799e36b582f48e" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_0d8fdb4e59324b1c96075f191825ec8d.setContent(html_9ea21011009c496fa6799e36b582f48e);
+        
+
+        circle_marker_bb6ca50855c8423f958c882aceb1e34c.bindPopup(popup_0d8fdb4e59324b1c96075f191825ec8d)
+        ;
+
+        
+    
+    
+            var circle_marker_98d65527184447c2814a85a8aa4bf7d6 = L.circleMarker(
+                [20.2737915, 72.9404157],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_837b5642de414df6b7234c22091f5e78);
+        
+    
+        var popup_6041fba788454306a96d0bb18b37b13a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3dde311e405542578573b2b4b4d9317d = $(`<div id="html_3dde311e405542578573b2b4b4d9317d" style="width: 100.0%; height: 100.0%;">SILVASSA, DADRA&NAGAR HAVELI, DADRA AND NAGAR HAVELI AND DAMAN AND DIU</div>`)[0];
+            popup_6041fba788454306a96d0bb18b37b13a.setContent(html_3dde311e405542578573b2b4b4d9317d);
+        
+
+        circle_marker_98d65527184447c2814a85a8aa4bf7d6.bindPopup(popup_6041fba788454306a96d0bb18b37b13a)
+        ;
+
+        
+    
+</script>

@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1376f2d3e9954589b772a97b20cb8c42 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1376f2d3e9954589b772a97b20cb8c42" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PUDUCHERRY Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(37)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(22)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(16)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(11)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(10)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(8)</li><li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(7)</li><li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(5)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(4)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(1)</li><li><span style='background:turquoise;opacity:0.7;'></span>PUNJAB AND SIND BANK(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>PUDUCHERRY(122)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_1376f2d3e9954589b772a97b20cb8c42 = L.map(
+                "map_1376f2d3e9954589b772a97b20cb8c42",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5e393b2081a141de9264273d50fc8a4b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+            map_1376f2d3e9954589b772a97b20cb8c42.fitBounds(
+                [[10.9167, 75.5333], [16.7333, 82.2167]],
+                {}
+            );
+        
+    
+            var circle_marker_762c14496c274243887e7a585fbf9db1 = L.circleMarker(
+                [12.3081, 79.7056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_5d43c1dd87e94914b27a9d29838e4555 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1aa1dd51eba44ca2bc6933356bdcb803 = $(`<div id="html_1aa1dd51eba44ca2bc6933356bdcb803" style="width: 100.0%; height: 100.0%;">KOODAPAKKAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_5d43c1dd87e94914b27a9d29838e4555.setContent(html_1aa1dd51eba44ca2bc6933356bdcb803);
+        
+
+        circle_marker_762c14496c274243887e7a585fbf9db1.bindPopup(popup_5d43c1dd87e94914b27a9d29838e4555)
+        ;
+
+        
+    
+    
+            var circle_marker_ef9aa1159afe46359b50681e3644ec5b = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_bf1a3c23562a4b35ac801e66bfe09ec4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f84272221704bc78f762b7b74a190d6 = $(`<div id="html_3f84272221704bc78f762b7b74a190d6" style="width: 100.0%; height: 100.0%;">TIRUNALLAR, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_bf1a3c23562a4b35ac801e66bfe09ec4.setContent(html_3f84272221704bc78f762b7b74a190d6);
+        
+
+        circle_marker_ef9aa1159afe46359b50681e3644ec5b.bindPopup(popup_bf1a3c23562a4b35ac801e66bfe09ec4)
+        ;
+
+        
+    
+    
+            var circle_marker_aee8e6bb14cd4f42880d5ec2f7d3a2e2 = L.circleMarker(
+                [10.9167, 79.8],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_bea97441899448e88b18941c519b5fb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d2d904c9c7b4ca29c827b08c8c2224e = $(`<div id="html_6d2d904c9c7b4ca29c827b08c8c2224e" style="width: 100.0%; height: 100.0%;">TIRUNALLAR, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_bea97441899448e88b18941c519b5fb8.setContent(html_6d2d904c9c7b4ca29c827b08c8c2224e);
+        
+
+        circle_marker_aee8e6bb14cd4f42880d5ec2f7d3a2e2.bindPopup(popup_bea97441899448e88b18941c519b5fb8)
+        ;
+
+        
+    
+    
+            var circle_marker_b0b4cbe134b94e44987184df29890978 = L.circleMarker(
+                [10.9167, 79.8],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_8db50bf6c05d4a9fb495acf1167b30bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fabbbc766c874417b25d8423f698fa47 = $(`<div id="html_fabbbc766c874417b25d8423f698fa47" style="width: 100.0%; height: 100.0%;">THIRUNALLAR BRANCH, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_8db50bf6c05d4a9fb495acf1167b30bd.setContent(html_fabbbc766c874417b25d8423f698fa47);
+        
+
+        circle_marker_b0b4cbe134b94e44987184df29890978.bindPopup(popup_8db50bf6c05d4a9fb495acf1167b30bd)
+        ;
+
+        
+    
+    
+            var circle_marker_d356ba0f37984fc9a6cfd7017c620bf7 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_43809c7f3e294279963aef330f1a681b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_159ac10c6be54d3390f31ad070fecf73 = $(`<div id="html_159ac10c6be54d3390f31ad070fecf73" style="width: 100.0%; height: 100.0%;">REDDIARPALAYAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_43809c7f3e294279963aef330f1a681b.setContent(html_159ac10c6be54d3390f31ad070fecf73);
+        
+
+        circle_marker_d356ba0f37984fc9a6cfd7017c620bf7.bindPopup(popup_43809c7f3e294279963aef330f1a681b)
+        ;
+
+        
+    
+    
+            var circle_marker_d65bec70bb4d482d8cae1022a0f66927 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_f6b24199b75648ae8206c777ddebcd9e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1153309aab4144258e95efa2936d4748 = $(`<div id="html_1153309aab4144258e95efa2936d4748" style="width: 100.0%; height: 100.0%;">LAWSPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_f6b24199b75648ae8206c777ddebcd9e.setContent(html_1153309aab4144258e95efa2936d4748);
+        
+
+        circle_marker_d65bec70bb4d482d8cae1022a0f66927.bindPopup(popup_f6b24199b75648ae8206c777ddebcd9e)
+        ;
+
+        
+    
+    
+            var circle_marker_a0d7c0397be54592bb4411d66887bf2c = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_e16ecdf0b31e4cfabc17e2a92ce4fcee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef59bbd3f694467c81d55d01e9bb95d0 = $(`<div id="html_ef59bbd3f694467c81d55d01e9bb95d0" style="width: 100.0%; height: 100.0%;">METTUPALAYAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_e16ecdf0b31e4cfabc17e2a92ce4fcee.setContent(html_ef59bbd3f694467c81d55d01e9bb95d0);
+        
+
+        circle_marker_a0d7c0397be54592bb4411d66887bf2c.bindPopup(popup_e16ecdf0b31e4cfabc17e2a92ce4fcee)
+        ;
+
+        
+    
+    
+            var circle_marker_8d5c88a727a84a4c9d96b25999f5c718 = L.circleMarker(
+                [10.9434, 79.7558],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_45f252cf869d4b70bb55d28bb288fbb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb59db40b05c4814afb8d46bfc78f1c2 = $(`<div id="html_bb59db40b05c4814afb8d46bfc78f1c2" style="width: 100.0%; height: 100.0%;">KIZHAMANAI, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_45f252cf869d4b70bb55d28bb288fbb8.setContent(html_bb59db40b05c4814afb8d46bfc78f1c2);
+        
+
+        circle_marker_8d5c88a727a84a4c9d96b25999f5c718.bindPopup(popup_45f252cf869d4b70bb55d28bb288fbb8)
+        ;
+
+        
+    
+    
+            var circle_marker_e095ad1e13dc45e08e33a8dbcdb143dd = L.circleMarker(
+                [11.7, 75.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d26692e27ca043ccba730434b24d1e64 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_072b14896c7f4ef1bcf7d49bfbcb7738 = $(`<div id="html_072b14896c7f4ef1bcf7d49bfbcb7738" style="width: 100.0%; height: 100.0%;">MAHE, MAHE, PUDUCHERRY</div>`)[0];
+            popup_d26692e27ca043ccba730434b24d1e64.setContent(html_072b14896c7f4ef1bcf7d49bfbcb7738);
+        
+
+        circle_marker_e095ad1e13dc45e08e33a8dbcdb143dd.bindPopup(popup_d26692e27ca043ccba730434b24d1e64)
+        ;
+
+        
+    
+    
+            var circle_marker_ee2334bddf8e422a89d40e30ee888dc3 = L.circleMarker(
+                [11.425, 75.675],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d1ab367c0e5c49a99bf617063f7bd399 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e79be81f23a744ecadb414ac2f91221c = $(`<div id="html_e79be81f23a744ecadb414ac2f91221c" style="width: 100.0%; height: 100.0%;">PALLUR, MAHE, PUDUCHERRY</div>`)[0];
+            popup_d1ab367c0e5c49a99bf617063f7bd399.setContent(html_e79be81f23a744ecadb414ac2f91221c);
+        
+
+        circle_marker_ee2334bddf8e422a89d40e30ee888dc3.bindPopup(popup_d1ab367c0e5c49a99bf617063f7bd399)
+        ;
+
+        
+    
+    
+            var circle_marker_cebe08a3516349b683f36b647e67e531 = L.circleMarker(
+                [11.7, 75.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_b67433f6b3c44901a82f0271e006afc2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ad6164f19b74bb2b55726d0fbb444e4 = $(`<div id="html_1ad6164f19b74bb2b55726d0fbb444e4" style="width: 100.0%; height: 100.0%;">MAHE, MAHE, PUDUCHERRY</div>`)[0];
+            popup_b67433f6b3c44901a82f0271e006afc2.setContent(html_1ad6164f19b74bb2b55726d0fbb444e4);
+        
+
+        circle_marker_cebe08a3516349b683f36b647e67e531.bindPopup(popup_b67433f6b3c44901a82f0271e006afc2)
+        ;
+
+        
+    
+    
+            var circle_marker_b3db9ecddc754f349341ecbcb7479fca = L.circleMarker(
+                [11.15, 75.8167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_7ff9fb5bb61948d4a42d8dbee0d48f85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5e0bb2c228f4e57b196455bd3e41b13 = $(`<div id="html_f5e0bb2c228f4e57b196455bd3e41b13" style="width: 100.0%; height: 100.0%;">MAHE, MAHE, PUDUCHERRY</div>`)[0];
+            popup_7ff9fb5bb61948d4a42d8dbee0d48f85.setContent(html_f5e0bb2c228f4e57b196455bd3e41b13);
+        
+
+        circle_marker_b3db9ecddc754f349341ecbcb7479fca.bindPopup(popup_7ff9fb5bb61948d4a42d8dbee0d48f85)
+        ;
+
+        
+    
+    
+            var circle_marker_bda2b93dfba440ae848cb84a1d0959c3 = L.circleMarker(
+                [11.7, 75.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_1c5285c16ed949a09b743c6fd29d290f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6eac0fb98694001ab17ef58a5706e19 = $(`<div id="html_b6eac0fb98694001ab17ef58a5706e19" style="width: 100.0%; height: 100.0%;">MAHE, MAHE, PUDUCHERRY</div>`)[0];
+            popup_1c5285c16ed949a09b743c6fd29d290f.setContent(html_b6eac0fb98694001ab17ef58a5706e19);
+        
+
+        circle_marker_bda2b93dfba440ae848cb84a1d0959c3.bindPopup(popup_1c5285c16ed949a09b743c6fd29d290f)
+        ;
+
+        
+    
+    
+            var circle_marker_ca59713db96d483db62366a779d92ca6 = L.circleMarker(
+                [11.7, 75.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_58fe64d2441245b0b0da04be04744f15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2512161bfd974ece8fd45b20a36bddcb = $(`<div id="html_2512161bfd974ece8fd45b20a36bddcb" style="width: 100.0%; height: 100.0%;">MAHE, MAHE, PUDUCHERRY</div>`)[0];
+            popup_58fe64d2441245b0b0da04be04744f15.setContent(html_2512161bfd974ece8fd45b20a36bddcb);
+        
+
+        circle_marker_ca59713db96d483db62366a779d92ca6.bindPopup(popup_58fe64d2441245b0b0da04be04744f15)
+        ;
+
+        
+    
+    
+            var circle_marker_e3c9045c3db247279b3fb3a6d6f169fe = L.circleMarker(
+                [11.7, 75.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_235b6e9ac2e3463080797135ea8bab4a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78e191aea11e4bdc9fd8764d81bcbb10 = $(`<div id="html_78e191aea11e4bdc9fd8764d81bcbb10" style="width: 100.0%; height: 100.0%;">MAHE, MAHE, PUDUCHERRY</div>`)[0];
+            popup_235b6e9ac2e3463080797135ea8bab4a.setContent(html_78e191aea11e4bdc9fd8764d81bcbb10);
+        
+
+        circle_marker_e3c9045c3db247279b3fb3a6d6f169fe.bindPopup(popup_235b6e9ac2e3463080797135ea8bab4a)
+        ;
+
+        
+    
+    
+            var circle_marker_5483b883f0f54c1da108f846f85e7661 = L.circleMarker(
+                [11.725, 79.4833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_0daf70fcd0c0481dad13492c238250a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7397143a5677427188dc4a56ec85e349 = $(`<div id="html_7397143a5677427188dc4a56ec85e349" style="width: 100.0%; height: 100.0%;">KURUVINATHAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_0daf70fcd0c0481dad13492c238250a1.setContent(html_7397143a5677427188dc4a56ec85e349);
+        
+
+        circle_marker_5483b883f0f54c1da108f846f85e7661.bindPopup(popup_0daf70fcd0c0481dad13492c238250a1)
+        ;
+
+        
+    
+    
+            var circle_marker_7931062555aa4e1f8d0531d4365a9aa3 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_1c5cf4f0d89245b8b62c5ab4dcedba2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7bda5518e3a476a87976d9c02879677 = $(`<div id="html_e7bda5518e3a476a87976d9c02879677" style="width: 100.0%; height: 100.0%;">EMBALAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_1c5cf4f0d89245b8b62c5ab4dcedba2d.setContent(html_e7bda5518e3a476a87976d9c02879677);
+        
+
+        circle_marker_7931062555aa4e1f8d0531d4365a9aa3.bindPopup(popup_1c5cf4f0d89245b8b62c5ab4dcedba2d)
+        ;
+
+        
+    
+    
+            var circle_marker_af0ab54165554266bd6e1cdab7908125 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_5c53613c281145109d7638adf82004aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2fb88b5fed6460c9bfd4efeaf62e462 = $(`<div id="html_c2fb88b5fed6460c9bfd4efeaf62e462" style="width: 100.0%; height: 100.0%;">TIRUKANOOR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_5c53613c281145109d7638adf82004aa.setContent(html_c2fb88b5fed6460c9bfd4efeaf62e462);
+        
+
+        circle_marker_af0ab54165554266bd6e1cdab7908125.bindPopup(popup_5c53613c281145109d7638adf82004aa)
+        ;
+
+        
+    
+    
+            var circle_marker_3319480928aa4c2098a8f2f45cb5e7ec = L.circleMarker(
+                [16.7333, 82.2167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_f9094a64d1fb43b0b762b4f16f31ce90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e69ba0d2dab453c8518d2a9f26bc51d = $(`<div id="html_5e69ba0d2dab453c8518d2a9f26bc51d" style="width: 100.0%; height: 100.0%;">YANAM, YANAM, PUDUCHERRY</div>`)[0];
+            popup_f9094a64d1fb43b0b762b4f16f31ce90.setContent(html_5e69ba0d2dab453c8518d2a9f26bc51d);
+        
+
+        circle_marker_3319480928aa4c2098a8f2f45cb5e7ec.bindPopup(popup_f9094a64d1fb43b0b762b4f16f31ce90)
+        ;
+
+        
+    
+    
+            var circle_marker_d6a0ceba908944b08e0d340051e1cf64 = L.circleMarker(
+                [16.7333, 82.2167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_29f471de520449d0aece80b3614cf1c9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_879c9d685c8b4953826cc3d702f4cf55 = $(`<div id="html_879c9d685c8b4953826cc3d702f4cf55" style="width: 100.0%; height: 100.0%;">YANAM BRANCH, YANAM, PUDUCHERRY</div>`)[0];
+            popup_29f471de520449d0aece80b3614cf1c9.setContent(html_879c9d685c8b4953826cc3d702f4cf55);
+        
+
+        circle_marker_d6a0ceba908944b08e0d340051e1cf64.bindPopup(popup_29f471de520449d0aece80b3614cf1c9)
+        ;
+
+        
+    
+    
+            var circle_marker_0bb2e14a6acb4f23b81341dcef7e4161 = L.circleMarker(
+                [16.7333, 82.2167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_bdf35a81afaf45118ba133ce90ecf612 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_539fa19e065d4127a2d31cb475a8d89a = $(`<div id="html_539fa19e065d4127a2d31cb475a8d89a" style="width: 100.0%; height: 100.0%;">YANAM, YANAM, PUDUCHERRY</div>`)[0];
+            popup_bdf35a81afaf45118ba133ce90ecf612.setContent(html_539fa19e065d4127a2d31cb475a8d89a);
+        
+
+        circle_marker_0bb2e14a6acb4f23b81341dcef7e4161.bindPopup(popup_bdf35a81afaf45118ba133ce90ecf612)
+        ;
+
+        
+    
+    
+            var circle_marker_bee929e0e4004216afb02353c1588a73 = L.circleMarker(
+                [16.7333, 82.2167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_831ba39e64194472b03c355a7d2b650b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fdd0a03e66194b9ebd208a05912130c6 = $(`<div id="html_fdd0a03e66194b9ebd208a05912130c6" style="width: 100.0%; height: 100.0%;">YANAM, YANAM, PUDUCHERRY</div>`)[0];
+            popup_831ba39e64194472b03c355a7d2b650b.setContent(html_fdd0a03e66194b9ebd208a05912130c6);
+        
+
+        circle_marker_bee929e0e4004216afb02353c1588a73.bindPopup(popup_831ba39e64194472b03c355a7d2b650b)
+        ;
+
+        
+    
+    
+            var circle_marker_a4d04ea30efa4abcb1ac2dea4498f2fa = L.circleMarker(
+                [16.7333, 82.2167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_286bdc374d714efba2e52ab0ae7db6c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a12ded1e4433473bae99b345d1e15361 = $(`<div id="html_a12ded1e4433473bae99b345d1e15361" style="width: 100.0%; height: 100.0%;">YANAM, YANAM, PUDUCHERRY</div>`)[0];
+            popup_286bdc374d714efba2e52ab0ae7db6c6.setContent(html_a12ded1e4433473bae99b345d1e15361);
+        
+
+        circle_marker_a4d04ea30efa4abcb1ac2dea4498f2fa.bindPopup(popup_286bdc374d714efba2e52ab0ae7db6c6)
+        ;
+
+        
+    
+    
+            var circle_marker_c329e874a3444825a79eb7b154fceac5 = L.circleMarker(
+                [10.9167, 79.8167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_9410db3afda349e4afb757a97676ea70 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2792d6d88ece4f12a6f4a6e8bc0a6c33 = $(`<div id="html_2792d6d88ece4f12a6f4a6e8bc0a6c33" style="width: 100.0%; height: 100.0%;">POOVAM, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_9410db3afda349e4afb757a97676ea70.setContent(html_2792d6d88ece4f12a6f4a6e8bc0a6c33);
+        
+
+        circle_marker_c329e874a3444825a79eb7b154fceac5.bindPopup(popup_9410db3afda349e4afb757a97676ea70)
+        ;
+
+        
+    
+    
+            var circle_marker_cac417b2528346849f0cb7af36e1054e = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_bf83921af06f4fcdb1fbad79fbcdc1fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4443554bdd804759aea0967f85fd4682 = $(`<div id="html_4443554bdd804759aea0967f85fd4682" style="width: 100.0%; height: 100.0%;">MICROSATE BRANCH, PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_bf83921af06f4fcdb1fbad79fbcdc1fe.setContent(html_4443554bdd804759aea0967f85fd4682);
+        
+
+        circle_marker_cac417b2528346849f0cb7af36e1054e.bindPopup(popup_bf83921af06f4fcdb1fbad79fbcdc1fe)
+        ;
+
+        
+    
+    
+            var circle_marker_c150d70c5449444d92550c87d55767e9 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_14e4b85f0040492fad32984a0de7a4d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45de11f6413c436a8abf2464a1342b62 = $(`<div id="html_45de11f6413c436a8abf2464a1342b62" style="width: 100.0%; height: 100.0%;">KADHIRKAMAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_14e4b85f0040492fad32984a0de7a4d7.setContent(html_45de11f6413c436a8abf2464a1342b62);
+        
+
+        circle_marker_c150d70c5449444d92550c87d55767e9.bindPopup(popup_14e4b85f0040492fad32984a0de7a4d7)
+        ;
+
+        
+    
+    
+            var circle_marker_3436cf16c38d4291b2d26d315118936e = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_6cb397b07e3149f7bafb153058827483 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7068dcf7ba747a388c4daecb7ad1972 = $(`<div id="html_d7068dcf7ba747a388c4daecb7ad1972" style="width: 100.0%; height: 100.0%;">PONDICHERRY HOUSING BOARD, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_6cb397b07e3149f7bafb153058827483.setContent(html_d7068dcf7ba747a388c4daecb7ad1972);
+        
+
+        circle_marker_3436cf16c38d4291b2d26d315118936e.bindPopup(popup_6cb397b07e3149f7bafb153058827483)
+        ;
+
+        
+    
+    
+            var circle_marker_f3c9cf1c4e804b46970fb7741b8e29bd = L.circleMarker(
+                [11.9347, 79.5307],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_13f537e79b02445787bdfe9e2e1dd176 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_536707c1ac5a460080a2ab4f1550c814 = $(`<div id="html_536707c1ac5a460080a2ab4f1550c814" style="width: 100.0%; height: 100.0%;">PONDICHERRY - PONDICHERRY ENGG. COLLEGE, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_13f537e79b02445787bdfe9e2e1dd176.setContent(html_536707c1ac5a460080a2ab4f1550c814);
+        
+
+        circle_marker_f3c9cf1c4e804b46970fb7741b8e29bd.bindPopup(popup_13f537e79b02445787bdfe9e2e1dd176)
+        ;
+
+        
+    
+    
+            var circle_marker_fc4d06f4fd92415892fc7a4de237871c = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_ff5bd7c223f74ed0a45e0ac0186be2ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44e237fb65834543b654ed2ac8d7cf2a = $(`<div id="html_44e237fb65834543b654ed2ac8d7cf2a" style="width: 100.0%; height: 100.0%;">100 FEET ROAD, PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_ff5bd7c223f74ed0a45e0ac0186be2ac.setContent(html_44e237fb65834543b654ed2ac8d7cf2a);
+        
+
+        circle_marker_fc4d06f4fd92415892fc7a4de237871c.bindPopup(popup_ff5bd7c223f74ed0a45e0ac0186be2ac)
+        ;
+
+        
+    
+    
+            var circle_marker_6e4ca6ff7a0f4ef58518e182566e5ffd = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_a153e095b51947578c879b86c54d0b92 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b5e13c3f29743b1938068cc08d0e089 = $(`<div id="html_6b5e13c3f29743b1938068cc08d0e089" style="width: 100.0%; height: 100.0%;">PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_a153e095b51947578c879b86c54d0b92.setContent(html_6b5e13c3f29743b1938068cc08d0e089);
+        
+
+        circle_marker_6e4ca6ff7a0f4ef58518e182566e5ffd.bindPopup(popup_a153e095b51947578c879b86c54d0b92)
+        ;
+
+        
+    
+    
+            var circle_marker_42fb0d420e3a4382b1812f6e5b97a1cf = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_ed2c81c95dd741a09d9c6c3a8264574c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_41685dd17b1441ea96dac6be6d60417a = $(`<div id="html_41685dd17b1441ea96dac6be6d60417a" style="width: 100.0%; height: 100.0%;">PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_ed2c81c95dd741a09d9c6c3a8264574c.setContent(html_41685dd17b1441ea96dac6be6d60417a);
+        
+
+        circle_marker_42fb0d420e3a4382b1812f6e5b97a1cf.bindPopup(popup_ed2c81c95dd741a09d9c6c3a8264574c)
+        ;
+
+        
+    
+    
+            var circle_marker_db4febb1569740e4bd842045b0a3252f = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_810f73f6d5534f809263476560115625 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba28b9c4735448ea8d958d27177d31e1 = $(`<div id="html_ba28b9c4735448ea8d958d27177d31e1" style="width: 100.0%; height: 100.0%;">PONDICHERRY MAN, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_810f73f6d5534f809263476560115625.setContent(html_ba28b9c4735448ea8d958d27177d31e1);
+        
+
+        circle_marker_db4febb1569740e4bd842045b0a3252f.bindPopup(popup_810f73f6d5534f809263476560115625)
+        ;
+
+        
+    
+    
+            var circle_marker_ab130c5d57ad45fda62187aacd0dc874 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_3989cdb2d2dd4c279a063bd8e18238cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0679e3a6623f4f9fb3d408e667dd3f91 = $(`<div id="html_0679e3a6623f4f9fb3d408e667dd3f91" style="width: 100.0%; height: 100.0%;">PONDICHERRY UNIVERSITY BRANCH, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_3989cdb2d2dd4c279a063bd8e18238cd.setContent(html_0679e3a6623f4f9fb3d408e667dd3f91);
+        
+
+        circle_marker_ab130c5d57ad45fda62187aacd0dc874.bindPopup(popup_3989cdb2d2dd4c279a063bd8e18238cd)
+        ;
+
+        
+    
+    
+            var circle_marker_5f2e5cc7f970438895f85f3241945c11 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_f4d6996e1f1d4036bb2e85fed479d696 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53ff648a6ac84a26afdc903b06a7218a = $(`<div id="html_53ff648a6ac84a26afdc903b06a7218a" style="width: 100.0%; height: 100.0%;">PONDICHERRY-MISSION ST., PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_f4d6996e1f1d4036bb2e85fed479d696.setContent(html_53ff648a6ac84a26afdc903b06a7218a);
+        
+
+        circle_marker_5f2e5cc7f970438895f85f3241945c11.bindPopup(popup_f4d6996e1f1d4036bb2e85fed479d696)
+        ;
+
+        
+    
+    
+            var circle_marker_6d294fe766404fd78bc1acdff172f6a4 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_cdd38146baa249e186ac8818d27b5977 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8494c675cf544260a22242f1f0d4a473 = $(`<div id="html_8494c675cf544260a22242f1f0d4a473" style="width: 100.0%; height: 100.0%;">PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_cdd38146baa249e186ac8818d27b5977.setContent(html_8494c675cf544260a22242f1f0d4a473);
+        
+
+        circle_marker_6d294fe766404fd78bc1acdff172f6a4.bindPopup(popup_cdd38146baa249e186ac8818d27b5977)
+        ;
+
+        
+    
+    
+            var circle_marker_5944d419401c44ea80936b4d1079e0ed = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_8f163094f1154440933a381d0e5cd8bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e781a537a5147abac34c8dd04e23ecf = $(`<div id="html_5e781a537a5147abac34c8dd04e23ecf" style="width: 100.0%; height: 100.0%;">PONDICHERRY-DUPLEIX ST., PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_8f163094f1154440933a381d0e5cd8bd.setContent(html_5e781a537a5147abac34c8dd04e23ecf);
+        
+
+        circle_marker_5944d419401c44ea80936b4d1079e0ed.bindPopup(popup_8f163094f1154440933a381d0e5cd8bd)
+        ;
+
+        
+    
+    
+            var circle_marker_b2f684700f2e48e7b853733ce22d44a6 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_0604664b4e544dc6b1cfe1ee2ec0ab55 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0bc285f3a62f4b5a8d123cb6f2280a03 = $(`<div id="html_0bc285f3a62f4b5a8d123cb6f2280a03" style="width: 100.0%; height: 100.0%;">PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_0604664b4e544dc6b1cfe1ee2ec0ab55.setContent(html_0bc285f3a62f4b5a8d123cb6f2280a03);
+        
+
+        circle_marker_b2f684700f2e48e7b853733ce22d44a6.bindPopup(popup_0604664b4e544dc6b1cfe1ee2ec0ab55)
+        ;
+
+        
+    
+    
+            var circle_marker_bc369ce7f09c47ad9f75d66234db7e1c = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_494d6c889ad146c7aa47f2fc89bad519 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1d190fa006b4e81847c7c68addb7012 = $(`<div id="html_d1d190fa006b4e81847c7c68addb7012" style="width: 100.0%; height: 100.0%;">MUDALIARPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_494d6c889ad146c7aa47f2fc89bad519.setContent(html_d1d190fa006b4e81847c7c68addb7012);
+        
+
+        circle_marker_bc369ce7f09c47ad9f75d66234db7e1c.bindPopup(popup_494d6c889ad146c7aa47f2fc89bad519)
+        ;
+
+        
+    
+    
+            var circle_marker_f1512ff90a614c3c9458db6e9e05a9be = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d6ce5d1bb6ad422b84489a820f6c419f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_804b356a3ecc46dabad4b42906fbcbac = $(`<div id="html_804b356a3ecc46dabad4b42906fbcbac" style="width: 100.0%; height: 100.0%;">100 FEET ROAD PANDICHER Y BR., PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_d6ce5d1bb6ad422b84489a820f6c419f.setContent(html_804b356a3ecc46dabad4b42906fbcbac);
+        
+
+        circle_marker_f1512ff90a614c3c9458db6e9e05a9be.bindPopup(popup_d6ce5d1bb6ad422b84489a820f6c419f)
+        ;
+
+        
+    
+    
+            var circle_marker_3dfa302608e64724a3fb2b767850ea31 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_401a9b1ba6d2431eabfeb9966cdbf3c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8080e4b42404c408b345311db6a19a0 = $(`<div id="html_e8080e4b42404c408b345311db6a19a0" style="width: 100.0%; height: 100.0%;">ARIYAMKUPPAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_401a9b1ba6d2431eabfeb9966cdbf3c7.setContent(html_e8080e4b42404c408b345311db6a19a0);
+        
+
+        circle_marker_3dfa302608e64724a3fb2b767850ea31.bindPopup(popup_401a9b1ba6d2431eabfeb9966cdbf3c7)
+        ;
+
+        
+    
+    
+            var circle_marker_046a9b6ae2a54a9d93db5558e6c302e6 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d1f475bf04d446ccaa7bb33d7b0ffcab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bef4aa35cf744fca8d190cd3bb871ecd = $(`<div id="html_bef4aa35cf744fca8d190cd3bb871ecd" style="width: 100.0%; height: 100.0%;">KAMARAJ SALAI, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_d1f475bf04d446ccaa7bb33d7b0ffcab.setContent(html_bef4aa35cf744fca8d190cd3bb871ecd);
+        
+
+        circle_marker_046a9b6ae2a54a9d93db5558e6c302e6.bindPopup(popup_d1f475bf04d446ccaa7bb33d7b0ffcab)
+        ;
+
+        
+    
+    
+            var circle_marker_409a0cac23dd4593890858ece6b5ec1f = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_0d428f07c4a842d1bc469cb1f0c1d9e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e321042adb9c4da6aba7d5c599cb9d03 = $(`<div id="html_e321042adb9c4da6aba7d5c599cb9d03" style="width: 100.0%; height: 100.0%;">PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_0d428f07c4a842d1bc469cb1f0c1d9e6.setContent(html_e321042adb9c4da6aba7d5c599cb9d03);
+        
+
+        circle_marker_409a0cac23dd4593890858ece6b5ec1f.bindPopup(popup_0d428f07c4a842d1bc469cb1f0c1d9e6)
+        ;
+
+        
+    
+    
+            var circle_marker_130c4311329a41c5981ab830df0f0c21 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_b998ca29e38048bd80d851b2671ee313 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac2b3424e8654f01bcb1ac08228cf9ba = $(`<div id="html_ac2b3424e8654f01bcb1ac08228cf9ba" style="width: 100.0%; height: 100.0%;">PONDICGERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_b998ca29e38048bd80d851b2671ee313.setContent(html_ac2b3424e8654f01bcb1ac08228cf9ba);
+        
+
+        circle_marker_130c4311329a41c5981ab830df0f0c21.bindPopup(popup_b998ca29e38048bd80d851b2671ee313)
+        ;
+
+        
+    
+    
+            var circle_marker_1587edb46dc64dc2bde165d29a94f129 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_93c0effe5d2942ebba30e37887ce91e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3570e164eebf40228b8714c8f857b4c4 = $(`<div id="html_3570e164eebf40228b8714c8f857b4c4" style="width: 100.0%; height: 100.0%;">PONDICHERRY-J.N.STREET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_93c0effe5d2942ebba30e37887ce91e1.setContent(html_3570e164eebf40228b8714c8f857b4c4);
+        
+
+        circle_marker_1587edb46dc64dc2bde165d29a94f129.bindPopup(popup_93c0effe5d2942ebba30e37887ce91e1)
+        ;
+
+        
+    
+    
+            var circle_marker_2089e69ec5464562801d0a19839c8066 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_937a9572a3b34cc9a5ed90edb84f9e4c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dab6371390f94baf990d4e8c72dbfa43 = $(`<div id="html_dab6371390f94baf990d4e8c72dbfa43" style="width: 100.0%; height: 100.0%;">PONDICHERRY, VILLIANUR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_937a9572a3b34cc9a5ed90edb84f9e4c.setContent(html_dab6371390f94baf990d4e8c72dbfa43);
+        
+
+        circle_marker_2089e69ec5464562801d0a19839c8066.bindPopup(popup_937a9572a3b34cc9a5ed90edb84f9e4c)
+        ;
+
+        
+    
+    
+            var circle_marker_9acc5530a621418d834ba0447a8ce2e8 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_a253ef7e8bc24a9f864e395ff9d1f3b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd191035e9c9457d99d8a90788a67194 = $(`<div id="html_fd191035e9c9457d99d8a90788a67194" style="width: 100.0%; height: 100.0%;">REDDIARPALAYAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_a253ef7e8bc24a9f864e395ff9d1f3b3.setContent(html_fd191035e9c9457d99d8a90788a67194);
+        
+
+        circle_marker_9acc5530a621418d834ba0447a8ce2e8.bindPopup(popup_a253ef7e8bc24a9f864e395ff9d1f3b3)
+        ;
+
+        
+    
+    
+            var circle_marker_58b6ed583e29438787c2628ff11c2ee3 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_72b108c5111d487e97da59c085982ab5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fbb3036d24f41f6ad3bf9fa63eb1aad = $(`<div id="html_6fbb3036d24f41f6ad3bf9fa63eb1aad" style="width: 100.0%; height: 100.0%;">PUDUCHERRY TOWN, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_72b108c5111d487e97da59c085982ab5.setContent(html_6fbb3036d24f41f6ad3bf9fa63eb1aad);
+        
+
+        circle_marker_58b6ed583e29438787c2628ff11c2ee3.bindPopup(popup_72b108c5111d487e97da59c085982ab5)
+        ;
+
+        
+    
+    
+            var circle_marker_bd0083f427974fa897f973501be3cdbf = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_72316abfdf7240cea1b2b625987b9d0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02f29fd92a1b420a91d8d4ab08e37ea9 = $(`<div id="html_02f29fd92a1b420a91d8d4ab08e37ea9" style="width: 100.0%; height: 100.0%;">PUDUCHERRY KALAPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_72316abfdf7240cea1b2b625987b9d0e.setContent(html_02f29fd92a1b420a91d8d4ab08e37ea9);
+        
+
+        circle_marker_bd0083f427974fa897f973501be3cdbf.bindPopup(popup_72316abfdf7240cea1b2b625987b9d0e)
+        ;
+
+        
+    
+    
+            var circle_marker_252bcb410ac64701bdb342bf82a42cb3 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_8c1dc83809c041bfafd2265392279a5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2778b6eccfc9464b8a38466e2df109bd = $(`<div id="html_2778b6eccfc9464b8a38466e2df109bd" style="width: 100.0%; height: 100.0%;">PUDUCHERRY REDDIAR PALAYAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_8c1dc83809c041bfafd2265392279a5b.setContent(html_2778b6eccfc9464b8a38466e2df109bd);
+        
+
+        circle_marker_252bcb410ac64701bdb342bf82a42cb3.bindPopup(popup_8c1dc83809c041bfafd2265392279a5b)
+        ;
+
+        
+    
+    
+            var circle_marker_847e3fec564e47f8a74d6aeecab8e7c1 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_1643aaffd194464790431a7c6de000d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_133fe803965d45958f6130e448081839 = $(`<div id="html_133fe803965d45958f6130e448081839" style="width: 100.0%; height: 100.0%;">PONDICHERRY INSTITUTE OF MEDICAL SCIENCES, PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_1643aaffd194464790431a7c6de000d1.setContent(html_133fe803965d45958f6130e448081839);
+        
+
+        circle_marker_847e3fec564e47f8a74d6aeecab8e7c1.bindPopup(popup_1643aaffd194464790431a7c6de000d1)
+        ;
+
+        
+    
+    
+            var circle_marker_bbe0a2bb704d4c719cdba338f66e05f0 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_ce6a30d6f25040229fb594ef4c65b014 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0e956e0da6f44388c8f2e3bcf1517a3 = $(`<div id="html_d0e956e0da6f44388c8f2e3bcf1517a3" style="width: 100.0%; height: 100.0%;">PONDICHERRY-MUTHIALPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_ce6a30d6f25040229fb594ef4c65b014.setContent(html_d0e956e0da6f44388c8f2e3bcf1517a3);
+        
+
+        circle_marker_bbe0a2bb704d4c719cdba338f66e05f0.bindPopup(popup_ce6a30d6f25040229fb594ef4c65b014)
+        ;
+
+        
+    
+    
+            var circle_marker_68a434044ac64480b3dfedd1d2333919 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_79535608875d4f5e9261b89de9fc8fe2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf8446b2ffbd43be8eba6febc1261aec = $(`<div id="html_cf8446b2ffbd43be8eba6febc1261aec" style="width: 100.0%; height: 100.0%;">ORLEANPET, PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_79535608875d4f5e9261b89de9fc8fe2.setContent(html_cf8446b2ffbd43be8eba6febc1261aec);
+        
+
+        circle_marker_68a434044ac64480b3dfedd1d2333919.bindPopup(popup_79535608875d4f5e9261b89de9fc8fe2)
+        ;
+
+        
+    
+    
+            var circle_marker_b9e5b29d5d5a4d128254e8a40c9740c7 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_4f0ff27e2b9346f8b1dacb7ef9758327 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f996815fcf854df7af6d0b13fe9d2698 = $(`<div id="html_f996815fcf854df7af6d0b13fe9d2698" style="width: 100.0%; height: 100.0%;">PONDICHERRY, LAWSPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_4f0ff27e2b9346f8b1dacb7ef9758327.setContent(html_f996815fcf854df7af6d0b13fe9d2698);
+        
+
+        circle_marker_b9e5b29d5d5a4d128254e8a40c9740c7.bindPopup(popup_4f0ff27e2b9346f8b1dacb7ef9758327)
+        ;
+
+        
+    
+    
+            var circle_marker_29a0deee181e432cb1c1dfbab56c1666 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_e83b3d34129e41e39f8f35abc3a3d2c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe15016204eb4e88925db3e86eae3b89 = $(`<div id="html_fe15016204eb4e88925db3e86eae3b89" style="width: 100.0%; height: 100.0%;">ANGLO FRENCH TEXTILES, PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_e83b3d34129e41e39f8f35abc3a3d2c8.setContent(html_fe15016204eb4e88925db3e86eae3b89);
+        
+
+        circle_marker_29a0deee181e432cb1c1dfbab56c1666.bindPopup(popup_e83b3d34129e41e39f8f35abc3a3d2c8)
+        ;
+
+        
+    
+    
+            var circle_marker_e91577745c734bd78809c9cb87c21f5d = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_7ce1cd6f92ac41b2b3a09e51000dd5e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f025162b6014bf5a8653a4181b9825f = $(`<div id="html_0f025162b6014bf5a8653a4181b9825f" style="width: 100.0%; height: 100.0%;">SPECIALISED SME BRANCH, PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_7ce1cd6f92ac41b2b3a09e51000dd5e4.setContent(html_0f025162b6014bf5a8653a4181b9825f);
+        
+
+        circle_marker_e91577745c734bd78809c9cb87c21f5d.bindPopup(popup_7ce1cd6f92ac41b2b3a09e51000dd5e4)
+        ;
+
+        
+    
+    
+            var circle_marker_aa3caba4aa434bd5919c14270b6dc939 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_f86a9b414f9d42d384fe938a007cafe0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_488c5876369d4de785cd6cb1bb038f4a = $(`<div id="html_488c5876369d4de785cd6cb1bb038f4a" style="width: 100.0%; height: 100.0%;">PONDICHERRY - KADIRKAMAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_f86a9b414f9d42d384fe938a007cafe0.setContent(html_488c5876369d4de785cd6cb1bb038f4a);
+        
+
+        circle_marker_aa3caba4aa434bd5919c14270b6dc939.bindPopup(popup_f86a9b414f9d42d384fe938a007cafe0)
+        ;
+
+        
+    
+    
+            var circle_marker_5d099183900d40f7b24d1b9cbb9a4546 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_0a9004a4ec024119b16a4e247ba8151a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_98b13c3884e14c78ad80aa9a7211306a = $(`<div id="html_98b13c3884e14c78ad80aa9a7211306a" style="width: 100.0%; height: 100.0%;">PONDICHERRY - ARIYANKUPPAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_0a9004a4ec024119b16a4e247ba8151a.setContent(html_98b13c3884e14c78ad80aa9a7211306a);
+        
+
+        circle_marker_5d099183900d40f7b24d1b9cbb9a4546.bindPopup(popup_0a9004a4ec024119b16a4e247ba8151a)
+        ;
+
+        
+    
+    
+            var circle_marker_ff88f7a0a218438ea892db97146f8077 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_6df3c5a226d0498e957ed6f3df062507 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3aa558c8854d41dea60b18bd128c3114 = $(`<div id="html_3aa558c8854d41dea60b18bd128c3114" style="width: 100.0%; height: 100.0%;">PONDICHERRY, MUDALIARPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_6df3c5a226d0498e957ed6f3df062507.setContent(html_3aa558c8854d41dea60b18bd128c3114);
+        
+
+        circle_marker_ff88f7a0a218438ea892db97146f8077.bindPopup(popup_6df3c5a226d0498e957ed6f3df062507)
+        ;
+
+        
+    
+    
+            var circle_marker_6ed17ed6972f4731a365baf622515a89 = L.circleMarker(
+                [11.725, 79.4833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_3ff485366dfe4118a3a5cce007aa1307 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1397f4a781794b618eb76a8ae7977c09 = $(`<div id="html_1397f4a781794b618eb76a8ae7977c09" style="width: 100.0%; height: 100.0%;">PONDICHERRY - BAHOUR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_3ff485366dfe4118a3a5cce007aa1307.setContent(html_1397f4a781794b618eb76a8ae7977c09);
+        
+
+        circle_marker_6ed17ed6972f4731a365baf622515a89.bindPopup(popup_3ff485366dfe4118a3a5cce007aa1307)
+        ;
+
+        
+    
+    
+            var circle_marker_aa7ba5aa8f1d47ee9acde0aac5dac1b3 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d82388d475b74e2693728d5bca5d9def = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d02502d179b042e2b82717ec7e10de77 = $(`<div id="html_d02502d179b042e2b82717ec7e10de77" style="width: 100.0%; height: 100.0%;">MOOLAKULAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_d82388d475b74e2693728d5bca5d9def.setContent(html_d02502d179b042e2b82717ec7e10de77);
+        
+
+        circle_marker_aa7ba5aa8f1d47ee9acde0aac5dac1b3.bindPopup(popup_d82388d475b74e2693728d5bca5d9def)
+        ;
+
+        
+    
+    
+            var circle_marker_76b7c8c0df814651b9517dccbe99276a = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_9eee8c84a3fa4db0ae97dc6697258666 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36a877beec324ed9b879f27d09340fc1 = $(`<div id="html_36a877beec324ed9b879f27d09340fc1" style="width: 100.0%; height: 100.0%;">MUTHIALPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_9eee8c84a3fa4db0ae97dc6697258666.setContent(html_36a877beec324ed9b879f27d09340fc1);
+        
+
+        circle_marker_76b7c8c0df814651b9517dccbe99276a.bindPopup(popup_9eee8c84a3fa4db0ae97dc6697258666)
+        ;
+
+        
+    
+    
+            var circle_marker_faf2457d776843a8b57df6eee9c69e46 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_78988a4d03de41808f100318e1636d53 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0966fee856f0486a93dca55322be6e6c = $(`<div id="html_0966fee856f0486a93dca55322be6e6c" style="width: 100.0%; height: 100.0%;">RETAIL ASSETS HUB PUDUCHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_78988a4d03de41808f100318e1636d53.setContent(html_0966fee856f0486a93dca55322be6e6c);
+        
+
+        circle_marker_faf2457d776843a8b57df6eee9c69e46.bindPopup(popup_78988a4d03de41808f100318e1636d53)
+        ;
+
+        
+    
+    
+            var circle_marker_a7f5a5de3389487eb2e7b55564742c82 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_87c8b49d475c4a15bb81e7ea82e54a7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bce0dcf35d9c432d956d43e850a5a128 = $(`<div id="html_bce0dcf35d9c432d956d43e850a5a128" style="width: 100.0%; height: 100.0%;">RAJIV GANDHI COLLEGE OF VETERINARY & ANIMAL SCIENCES,PONDICHERY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_87c8b49d475c4a15bb81e7ea82e54a7c.setContent(html_bce0dcf35d9c432d956d43e850a5a128);
+        
+
+        circle_marker_a7f5a5de3389487eb2e7b55564742c82.bindPopup(popup_87c8b49d475c4a15bb81e7ea82e54a7c)
+        ;
+
+        
+    
+    
+            var circle_marker_d3a703567b804c69b5d70155e985d954 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d8f77abe9fee4e93bc324425c563d5b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93194f4fb8244464965f905cd434779e = $(`<div id="html_93194f4fb8244464965f905cd434779e" style="width: 100.0%; height: 100.0%;">BUSSY STREET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_d8f77abe9fee4e93bc324425c563d5b8.setContent(html_93194f4fb8244464965f905cd434779e);
+        
+
+        circle_marker_d3a703567b804c69b5d70155e985d954.bindPopup(popup_d8f77abe9fee4e93bc324425c563d5b8)
+        ;
+
+        
+    
+    
+            var circle_marker_62df64c5b9bf4be79710a27b964e4288 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_356100f0ac054107857ae88cd05b1e3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36349ba9c6d840a4a700edbd7d0216b4 = $(`<div id="html_36349ba9c6d840a4a700edbd7d0216b4" style="width: 100.0%; height: 100.0%;">JIPMER PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_356100f0ac054107857ae88cd05b1e3e.setContent(html_36349ba9c6d840a4a700edbd7d0216b4);
+        
+
+        circle_marker_62df64c5b9bf4be79710a27b964e4288.bindPopup(popup_356100f0ac054107857ae88cd05b1e3e)
+        ;
+
+        
+    
+    
+            var circle_marker_fe892e94a23f4f8889afdb07bf543fe8 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_723becaa3e5541deaff5b56d83b551e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89c3f55325b14c17a989a490fd74dd8e = $(`<div id="html_89c3f55325b14c17a989a490fd74dd8e" style="width: 100.0%; height: 100.0%;">PUDHUCHERRY NRI, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_723becaa3e5541deaff5b56d83b551e3.setContent(html_89c3f55325b14c17a989a490fd74dd8e);
+        
+
+        circle_marker_fe892e94a23f4f8889afdb07bf543fe8.bindPopup(popup_723becaa3e5541deaff5b56d83b551e3)
+        ;
+
+        
+    
+    
+            var circle_marker_712efdd2f1594df6bea2be97d31ae009 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d82425b7b53a4375818bc2455b60b6c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_432718f4eda143238c9894a95996207d = $(`<div id="html_432718f4eda143238c9894a95996207d" style="width: 100.0%; height: 100.0%;">J.N.ST.PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_d82425b7b53a4375818bc2455b60b6c6.setContent(html_432718f4eda143238c9894a95996207d);
+        
+
+        circle_marker_712efdd2f1594df6bea2be97d31ae009.bindPopup(popup_d82425b7b53a4375818bc2455b60b6c6)
+        ;
+
+        
+    
+    
+            var circle_marker_32432112978844fcb81a29a656c0da5a = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_89624ac8e7f44bbe8d95a33368c9f8a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8193c679ae1e44109ab0a886b77ae61f = $(`<div id="html_8193c679ae1e44109ab0a886b77ae61f" style="width: 100.0%; height: 100.0%;">PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_89624ac8e7f44bbe8d95a33368c9f8a4.setContent(html_8193c679ae1e44109ab0a886b77ae61f);
+        
+
+        circle_marker_32432112978844fcb81a29a656c0da5a.bindPopup(popup_89624ac8e7f44bbe8d95a33368c9f8a4)
+        ;
+
+        
+    
+    
+            var circle_marker_337608087c294eb5877e9dc163053c98 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_2db0909408cf4d90b8b2074a3a4ad577 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ec3058225c94fc8b8227154e1bad86a = $(`<div id="html_8ec3058225c94fc8b8227154e1bad86a" style="width: 100.0%; height: 100.0%;">PONDICHERRY-REDDIARPALAYAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_2db0909408cf4d90b8b2074a3a4ad577.setContent(html_8ec3058225c94fc8b8227154e1bad86a);
+        
+
+        circle_marker_337608087c294eb5877e9dc163053c98.bindPopup(popup_2db0909408cf4d90b8b2074a3a4ad577)
+        ;
+
+        
+    
+    
+            var circle_marker_4817f58da9634069824811ebb36d0650 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_4699bde9e9844d448fc38b0b7dbf66fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ea827ce10a347bd83b362db492f44fc = $(`<div id="html_3ea827ce10a347bd83b362db492f44fc" style="width: 100.0%; height: 100.0%;">PONDICHERY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_4699bde9e9844d448fc38b0b7dbf66fe.setContent(html_3ea827ce10a347bd83b362db492f44fc);
+        
+
+        circle_marker_4817f58da9634069824811ebb36d0650.bindPopup(popup_4699bde9e9844d448fc38b0b7dbf66fe)
+        ;
+
+        
+    
+    
+            var circle_marker_c1cd77dbce684482b298e1796744c6b2 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_9070432ed8c9414f9aa3728e3bc4ba6a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7de379e2d7bc437da2901ec21d71f09a = $(`<div id="html_7de379e2d7bc437da2901ec21d71f09a" style="width: 100.0%; height: 100.0%;">KATHIRKAMAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_9070432ed8c9414f9aa3728e3bc4ba6a.setContent(html_7de379e2d7bc437da2901ec21d71f09a);
+        
+
+        circle_marker_c1cd77dbce684482b298e1796744c6b2.bindPopup(popup_9070432ed8c9414f9aa3728e3bc4ba6a)
+        ;
+
+        
+    
+    
+            var circle_marker_7d78cc21b07e4df895611631e3dc3f51 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_4806414e6e0f42399ce8c26450ec9bd6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05b5e67c4cab4bd69867c02939fef77e = $(`<div id="html_05b5e67c4cab4bd69867c02939fef77e" style="width: 100.0%; height: 100.0%;">PONDICHERRY BAZAR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_4806414e6e0f42399ce8c26450ec9bd6.setContent(html_05b5e67c4cab4bd69867c02939fef77e);
+        
+
+        circle_marker_7d78cc21b07e4df895611631e3dc3f51.bindPopup(popup_4806414e6e0f42399ce8c26450ec9bd6)
+        ;
+
+        
+    
+    
+            var circle_marker_20ba3a43b95d470b9f9207d3ddbd400e = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_58a641ed82f94084853ab4ee48042bac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db983f718b094da2b28e533a4e4b42f4 = $(`<div id="html_db983f718b094da2b28e533a4e4b42f4" style="width: 100.0%; height: 100.0%;">PUDUCHERRY-ARUMPARTHAPURAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_58a641ed82f94084853ab4ee48042bac.setContent(html_db983f718b094da2b28e533a4e4b42f4);
+        
+
+        circle_marker_20ba3a43b95d470b9f9207d3ddbd400e.bindPopup(popup_58a641ed82f94084853ab4ee48042bac)
+        ;
+
+        
+    
+    
+            var circle_marker_7f9517b77ae74f799aa51d17473cbc6c = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_ced41279190541f69f879645125315e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3cfffcf0775b47e08fad66c68dce95f3 = $(`<div id="html_3cfffcf0775b47e08fad66c68dce95f3" style="width: 100.0%; height: 100.0%;">ZONAL OFFICE, PUDUCHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_ced41279190541f69f879645125315e7.setContent(html_3cfffcf0775b47e08fad66c68dce95f3);
+        
+
+        circle_marker_7f9517b77ae74f799aa51d17473cbc6c.bindPopup(popup_ced41279190541f69f879645125315e7)
+        ;
+
+        
+    
+    
+            var circle_marker_9daa0d42622b4e20b6585a02a0c4158a = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_660a9837260a4d1f80b155cf2a1ba22b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f0645b8d09442eea9a26e3e560e26d1 = $(`<div id="html_4f0645b8d09442eea9a26e3e560e26d1" style="width: 100.0%; height: 100.0%;">R.O.-PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_660a9837260a4d1f80b155cf2a1ba22b.setContent(html_4f0645b8d09442eea9a26e3e560e26d1);
+        
+
+        circle_marker_9daa0d42622b4e20b6585a02a0c4158a.bindPopup(popup_660a9837260a4d1f80b155cf2a1ba22b)
+        ;
+
+        
+    
+    
+            var circle_marker_7d52807399624dfc9f409cd44c7ed7aa = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_6080337490da40f9a0b18f127a8938b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2ab8f16394c14b07bd30d3f0c1dc0c89 = $(`<div id="html_2ab8f16394c14b07bd30d3f0c1dc0c89" style="width: 100.0%; height: 100.0%;">CACPC-PONDICHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_6080337490da40f9a0b18f127a8938b6.setContent(html_2ab8f16394c14b07bd30d3f0c1dc0c89);
+        
+
+        circle_marker_7d52807399624dfc9f409cd44c7ed7aa.bindPopup(popup_6080337490da40f9a0b18f127a8938b6)
+        ;
+
+        
+    
+    
+            var circle_marker_b14dc21e663041a99654d4607a2c3e98 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_2836c5f0e7a5495bad3bf3ba0cfd181e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1bb280bb18534c8a82669b5c8affb868 = $(`<div id="html_1bb280bb18534c8a82669b5c8affb868" style="width: 100.0%; height: 100.0%;">REGIONAL OFFICE PUDUCHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_2836c5f0e7a5495bad3bf3ba0cfd181e.setContent(html_1bb280bb18534c8a82669b5c8affb868);
+        
+
+        circle_marker_b14dc21e663041a99654d4607a2c3e98.bindPopup(popup_2836c5f0e7a5495bad3bf3ba0cfd181e)
+        ;
+
+        
+    
+    
+            var circle_marker_b57b542b107f4ddb8092d91f37d1f861 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_695ff2271ed6475fa9da94800debd4d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9f6e8f47980408ab3b8bfc55e6e3ad5 = $(`<div id="html_d9f6e8f47980408ab3b8bfc55e6e3ad5" style="width: 100.0%; height: 100.0%;">RAMPC PUDUCHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_695ff2271ed6475fa9da94800debd4d9.setContent(html_d9f6e8f47980408ab3b8bfc55e6e3ad5);
+        
+
+        circle_marker_b57b542b107f4ddb8092d91f37d1f861.bindPopup(popup_695ff2271ed6475fa9da94800debd4d9)
+        ;
+
+        
+    
+    
+            var circle_marker_ef9bbc3ba60047c6909a5447df84f300 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_c943278af1014d57b8e213eb74f86ba5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c1942e4beb3461b8696cfe8dbaa4094 = $(`<div id="html_9c1942e4beb3461b8696cfe8dbaa4094" style="width: 100.0%; height: 100.0%;">LEAD BANK CELL PUDUCHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_c943278af1014d57b8e213eb74f86ba5.setContent(html_9c1942e4beb3461b8696cfe8dbaa4094);
+        
+
+        circle_marker_ef9bbc3ba60047c6909a5447df84f300.bindPopup(popup_c943278af1014d57b8e213eb74f86ba5)
+        ;
+
+        
+    
+    
+            var circle_marker_0dbb59794dc24ad0b595f9843aac8128 = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_0efd3220172042b88f66830cbb53f7b5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34f04777d59b492aa31f1af7af10bc27 = $(`<div id="html_34f04777d59b492aa31f1af7af10bc27" style="width: 100.0%; height: 100.0%;">KARAIKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_0efd3220172042b88f66830cbb53f7b5.setContent(html_34f04777d59b492aa31f1af7af10bc27);
+        
+
+        circle_marker_0dbb59794dc24ad0b595f9843aac8128.bindPopup(popup_0efd3220172042b88f66830cbb53f7b5)
+        ;
+
+        
+    
+    
+            var circle_marker_7f30ada68ab647a4a37d09da418783e9 = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_15abb94ccf60469ba649e4ec0877b36d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f476e452c75b45d197535212291d280d = $(`<div id="html_f476e452c75b45d197535212291d280d" style="width: 100.0%; height: 100.0%;">KARAIKAL-CHURCH ST., KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_15abb94ccf60469ba649e4ec0877b36d.setContent(html_f476e452c75b45d197535212291d280d);
+        
+
+        circle_marker_7f30ada68ab647a4a37d09da418783e9.bindPopup(popup_15abb94ccf60469ba649e4ec0877b36d)
+        ;
+
+        
+    
+    
+            var circle_marker_931247236b5740a48e8bb987d009850f = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_63173b68c25643378951185b782ea5e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a0f9e19814d41dbb605b3077d396872 = $(`<div id="html_1a0f9e19814d41dbb605b3077d396872" style="width: 100.0%; height: 100.0%;">KARAIKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_63173b68c25643378951185b782ea5e3.setContent(html_1a0f9e19814d41dbb605b3077d396872);
+        
+
+        circle_marker_931247236b5740a48e8bb987d009850f.bindPopup(popup_63173b68c25643378951185b782ea5e3)
+        ;
+
+        
+    
+    
+            var circle_marker_7753b3691e624d9ba96ddb3e58f3b975 = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_71c7f83a2c2f4ce3a9647bf13534e939 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56ef0bc9f3eb4a92a6a7c405c82d5ce6 = $(`<div id="html_56ef0bc9f3eb4a92a6a7c405c82d5ce6" style="width: 100.0%; height: 100.0%;">KARAIKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_71c7f83a2c2f4ce3a9647bf13534e939.setContent(html_56ef0bc9f3eb4a92a6a7c405c82d5ce6);
+        
+
+        circle_marker_7753b3691e624d9ba96ddb3e58f3b975.bindPopup(popup_71c7f83a2c2f4ce3a9647bf13534e939)
+        ;
+
+        
+    
+    
+            var circle_marker_ea4788bd2f37450e87f4e06c9a232bc5 = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_3e4baa0703d241528eb9bffcc62f122b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9b873221c3c412d8af8d7f963609ba3 = $(`<div id="html_f9b873221c3c412d8af8d7f963609ba3" style="width: 100.0%; height: 100.0%;">KARAIKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_3e4baa0703d241528eb9bffcc62f122b.setContent(html_f9b873221c3c412d8af8d7f963609ba3);
+        
+
+        circle_marker_ea4788bd2f37450e87f4e06c9a232bc5.bindPopup(popup_3e4baa0703d241528eb9bffcc62f122b)
+        ;
+
+        
+    
+    
+            var circle_marker_3d2843c35de24245844b1ee3a24215d2 = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_239ae669f7dd4327851ee0f7468f5acd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f8e6ed5c8e2a416bb86eb24f2ecec39f = $(`<div id="html_f8e6ed5c8e2a416bb86eb24f2ecec39f" style="width: 100.0%; height: 100.0%;">KARAIKAL BRANCH, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_239ae669f7dd4327851ee0f7468f5acd.setContent(html_f8e6ed5c8e2a416bb86eb24f2ecec39f);
+        
+
+        circle_marker_3d2843c35de24245844b1ee3a24215d2.bindPopup(popup_239ae669f7dd4327851ee0f7468f5acd)
+        ;
+
+        
+    
+    
+            var circle_marker_4bca32ad7dbf4c7c8bbc639e4a589005 = L.circleMarker(
+                [10.9709, 79.7717],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_03316a701a8b49ad994ca51756edf87e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ad167b1dd4b45f99440c85105cd8647 = $(`<div id="html_0ad167b1dd4b45f99440c85105cd8647" style="width: 100.0%; height: 100.0%;">PERUNTHALAIVAR KAMARAJ INSTITUTE OF ENGINEERING AND TECHNOLOGY (PKIET), KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_03316a701a8b49ad994ca51756edf87e.setContent(html_0ad167b1dd4b45f99440c85105cd8647);
+        
+
+        circle_marker_4bca32ad7dbf4c7c8bbc639e4a589005.bindPopup(popup_03316a701a8b49ad994ca51756edf87e)
+        ;
+
+        
+    
+    
+            var circle_marker_a1abad38d1234654b487c0cd7b3ae5ab = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_318a8c1817b7412aa72af68cd98c3cd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3fd27d393eb543ed9c8c30cf0df8d7e5 = $(`<div id="html_3fd27d393eb543ed9c8c30cf0df8d7e5" style="width: 100.0%; height: 100.0%;">KARAIKKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_318a8c1817b7412aa72af68cd98c3cd4.setContent(html_3fd27d393eb543ed9c8c30cf0df8d7e5);
+        
+
+        circle_marker_a1abad38d1234654b487c0cd7b3ae5ab.bindPopup(popup_318a8c1817b7412aa72af68cd98c3cd4)
+        ;
+
+        
+    
+    
+            var circle_marker_2fe8655d9e5342309221f79124bb7225 = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_7f6c34d3b7ce491e8ff7537475a4c813 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f11a11fbda5942228092569268340e33 = $(`<div id="html_f11a11fbda5942228092569268340e33" style="width: 100.0%; height: 100.0%;">KARAIKKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_7f6c34d3b7ce491e8ff7537475a4c813.setContent(html_f11a11fbda5942228092569268340e33);
+        
+
+        circle_marker_2fe8655d9e5342309221f79124bb7225.bindPopup(popup_7f6c34d3b7ce491e8ff7537475a4c813)
+        ;
+
+        
+    
+    
+            var circle_marker_71798ed6bbde4488afdc2170e83ed5d4 = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_5cb7297a6d3942c9bb1b8ff09871eb05 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11626b0171c94c16b874095b598678d1 = $(`<div id="html_11626b0171c94c16b874095b598678d1" style="width: 100.0%; height: 100.0%;">KARAIKKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_5cb7297a6d3942c9bb1b8ff09871eb05.setContent(html_11626b0171c94c16b874095b598678d1);
+        
+
+        circle_marker_71798ed6bbde4488afdc2170e83ed5d4.bindPopup(popup_5cb7297a6d3942c9bb1b8ff09871eb05)
+        ;
+
+        
+    
+    
+            var circle_marker_5eee1e3d66d14c7881b5320a74b4562b = L.circleMarker(
+                [10.9167, 79.8167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_78ac4406c6be4a9e9e594638167dce5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b0ed70c0e944f50b072a3286d90cff4 = $(`<div id="html_6b0ed70c0e944f50b072a3286d90cff4" style="width: 100.0%; height: 100.0%;">KARAIKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_78ac4406c6be4a9e9e594638167dce5b.setContent(html_6b0ed70c0e944f50b072a3286d90cff4);
+        
+
+        circle_marker_5eee1e3d66d14c7881b5320a74b4562b.bindPopup(popup_78ac4406c6be4a9e9e594638167dce5b)
+        ;
+
+        
+    
+    
+            var circle_marker_9f295ff551d4427d966ac88d1ece2881 = L.circleMarker(
+                [10.9167, 79.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_cbdfdfd65c134d65a9b56e174d745157 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c95137bc2d64bb8945f2d3c8ae8471a = $(`<div id="html_7c95137bc2d64bb8945f2d3c8ae8471a" style="width: 100.0%; height: 100.0%;">KARAIKAL, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_cbdfdfd65c134d65a9b56e174d745157.setContent(html_7c95137bc2d64bb8945f2d3c8ae8471a);
+        
+
+        circle_marker_9f295ff551d4427d966ac88d1ece2881.bindPopup(popup_cbdfdfd65c134d65a9b56e174d745157)
+        ;
+
+        
+    
+    
+            var circle_marker_0d7597d23d8a414ebfac6454c9011c5f = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_8a537c618ecd484b858f98f5bf1de6e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1171b8dee5746a2849bda7fedafde37 = $(`<div id="html_e1171b8dee5746a2849bda7fedafde37" style="width: 100.0%; height: 100.0%;">VILLIANOOR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_8a537c618ecd484b858f98f5bf1de6e4.setContent(html_e1171b8dee5746a2849bda7fedafde37);
+        
+
+        circle_marker_0d7597d23d8a414ebfac6454c9011c5f.bindPopup(popup_8a537c618ecd484b858f98f5bf1de6e4)
+        ;
+
+        
+    
+    
+            var circle_marker_fe32ed402edf4b138ee4873f8616da7e = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_a4cec17825564033afaaeb6b6f2e0558 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5371b163c29941ec920e8075804e2a30 = $(`<div id="html_5371b163c29941ec920e8075804e2a30" style="width: 100.0%; height: 100.0%;">VILLIANUR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_a4cec17825564033afaaeb6b6f2e0558.setContent(html_5371b163c29941ec920e8075804e2a30);
+        
+
+        circle_marker_fe32ed402edf4b138ee4873f8616da7e.bindPopup(popup_a4cec17825564033afaaeb6b6f2e0558)
+        ;
+
+        
+    
+    
+            var circle_marker_b5ab89d024f24bfd828996522aa0cb5f = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_a541e58b472e4aa08cbe62d40fb81236 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bbcc0e33badc47fdb17860ab9d7576a2 = $(`<div id="html_bbcc0e33badc47fdb17860ab9d7576a2" style="width: 100.0%; height: 100.0%;">PONDICHERRY DISTILLERIES LTD., PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_a541e58b472e4aa08cbe62d40fb81236.setContent(html_bbcc0e33badc47fdb17860ab9d7576a2);
+        
+
+        circle_marker_b5ab89d024f24bfd828996522aa0cb5f.bindPopup(popup_a541e58b472e4aa08cbe62d40fb81236)
+        ;
+
+        
+    
+    
+            var circle_marker_ec88b74b355241feaf39bb9c6caa5a2e = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d5d43412853f4c0185bf4dd631228189 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef1d4a6ca013495aba78bd10d94a7496 = $(`<div id="html_ef1d4a6ca013495aba78bd10d94a7496" style="width: 100.0%; height: 100.0%;">VILLIANUR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_d5d43412853f4c0185bf4dd631228189.setContent(html_ef1d4a6ca013495aba78bd10d94a7496);
+        
+
+        circle_marker_ec88b74b355241feaf39bb9c6caa5a2e.bindPopup(popup_d5d43412853f4c0185bf4dd631228189)
+        ;
+
+        
+    
+    
+            var circle_marker_751d2a2e210a48fe9c866ef32afa9584 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_4ec551ee213e4812bbaff974904dd308 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2590a805d3694302b91f97bd38e63c9e = $(`<div id="html_2590a805d3694302b91f97bd38e63c9e" style="width: 100.0%; height: 100.0%;">SULTANPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_4ec551ee213e4812bbaff974904dd308.setContent(html_2590a805d3694302b91f97bd38e63c9e);
+        
+
+        circle_marker_751d2a2e210a48fe9c866ef32afa9584.bindPopup(popup_4ec551ee213e4812bbaff974904dd308)
+        ;
+
+        
+    
+    
+            var circle_marker_bcc96a142cdc4e8481937dd28b5dc97f = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_1caf5c92a2ab462896945bd4125ac52c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21bafa9c3c664437acffcfefa716e97a = $(`<div id="html_21bafa9c3c664437acffcfefa716e97a" style="width: 100.0%; height: 100.0%;">VILIANUR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_1caf5c92a2ab462896945bd4125ac52c.setContent(html_21bafa9c3c664437acffcfefa716e97a);
+        
+
+        circle_marker_bcc96a142cdc4e8481937dd28b5dc97f.bindPopup(popup_1caf5c92a2ab462896945bd4125ac52c)
+        ;
+
+        
+    
+    
+            var circle_marker_6b7384b30e1349b7ae086d809f9e6514 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_9f405452656044879aabb032ea2e3578 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23fedd67ba564b53b6bad54c70fa7c36 = $(`<div id="html_23fedd67ba564b53b6bad54c70fa7c36" style="width: 100.0%; height: 100.0%;">VILLIANUR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_9f405452656044879aabb032ea2e3578.setContent(html_23fedd67ba564b53b6bad54c70fa7c36);
+        
+
+        circle_marker_6b7384b30e1349b7ae086d809f9e6514.bindPopup(popup_9f405452656044879aabb032ea2e3578)
+        ;
+
+        
+    
+    
+            var circle_marker_bd52865406de4b728509a1a14e16576c = L.circleMarker(
+                [12.3081, 79.7056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_4e205ab910a1481f897006c4e6645ec7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3092e1eaa1ae410182dd147d2fde1738 = $(`<div id="html_3092e1eaa1ae410182dd147d2fde1738" style="width: 100.0%; height: 100.0%;">KATTERIKUPPAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_4e205ab910a1481f897006c4e6645ec7.setContent(html_3092e1eaa1ae410182dd147d2fde1738);
+        
+
+        circle_marker_bd52865406de4b728509a1a14e16576c.bindPopup(popup_4e205ab910a1481f897006c4e6645ec7)
+        ;
+
+        
+    
+    
+            var circle_marker_62be0baeebbd462db87bf3e32fb93d94 = L.circleMarker(
+                [11.9531, 79.6224],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_9dcfc4ed528140f8b68f8e8e4863b3ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d135764795341008ba34e3bad23359f = $(`<div id="html_9d135764795341008ba34e3bad23359f" style="width: 100.0%; height: 100.0%;">THIRUBUVANAI  INDUSTRIAL ESTATE, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_9dcfc4ed528140f8b68f8e8e4863b3ea.setContent(html_9d135764795341008ba34e3bad23359f);
+        
+
+        circle_marker_62be0baeebbd462db87bf3e32fb93d94.bindPopup(popup_9dcfc4ed528140f8b68f8e8e4863b3ea)
+        ;
+
+        
+    
+    
+            var circle_marker_0b9ac3142e1a4a918fecf7f29e0aaec0 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_a12dc748a20e4da59ca4a7265647a5c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be5d40101bb546e08466e361790416f4 = $(`<div id="html_be5d40101bb546e08466e361790416f4" style="width: 100.0%; height: 100.0%;">POORANANKUPPAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_a12dc748a20e4da59ca4a7265647a5c3.setContent(html_be5d40101bb546e08466e361790416f4);
+        
+
+        circle_marker_0b9ac3142e1a4a918fecf7f29e0aaec0.bindPopup(popup_a12dc748a20e4da59ca4a7265647a5c3)
+        ;
+
+        
+    
+    
+            var circle_marker_5c67a40669214b0dafbe59fe17869997 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_093728c6860d4efcbfadf4d406805589 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ee9dd10d6e54d7dafef60bd36d5b04e = $(`<div id="html_8ee9dd10d6e54d7dafef60bd36d5b04e" style="width: 100.0%; height: 100.0%;">THAVALAKUPPAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_093728c6860d4efcbfadf4d406805589.setContent(html_8ee9dd10d6e54d7dafef60bd36d5b04e);
+        
+
+        circle_marker_5c67a40669214b0dafbe59fe17869997.bindPopup(popup_093728c6860d4efcbfadf4d406805589)
+        ;
+
+        
+    
+    
+            var circle_marker_269667c07e664451b81390984a4b8502 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_1184dd1df52149e3b7fa5261ba8ea504 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c222cf433738401fa03c6a4076fa31a4 = $(`<div id="html_c222cf433738401fa03c6a4076fa31a4" style="width: 100.0%; height: 100.0%;">TAVALAKUPPAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_1184dd1df52149e3b7fa5261ba8ea504.setContent(html_c222cf433738401fa03c6a4076fa31a4);
+        
+
+        circle_marker_269667c07e664451b81390984a4b8502.bindPopup(popup_1184dd1df52149e3b7fa5261ba8ea504)
+        ;
+
+        
+    
+    
+            var circle_marker_68fc030347a04d10ad5525e3cfda9987 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_4311906e1aa74579a7c77bd131dfd70a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9500da6ed52464483d57a10a2515391 = $(`<div id="html_e9500da6ed52464483d57a10a2515391" style="width: 100.0%; height: 100.0%;">THAVALAKUPPAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_4311906e1aa74579a7c77bd131dfd70a.setContent(html_e9500da6ed52464483d57a10a2515391);
+        
+
+        circle_marker_68fc030347a04d10ad5525e3cfda9987.bindPopup(popup_4311906e1aa74579a7c77bd131dfd70a)
+        ;
+
+        
+    
+    
+            var circle_marker_99010485ca8443a5a6b145d8c35a0c87 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_aa199d90fe80485a88424a207c7744b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_171545ee3f1f47678f943c37abed8723 = $(`<div id="html_171545ee3f1f47678f943c37abed8723" style="width: 100.0%; height: 100.0%;">KARIAMANICKAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_aa199d90fe80485a88424a207c7744b8.setContent(html_171545ee3f1f47678f943c37abed8723);
+        
+
+        circle_marker_99010485ca8443a5a6b145d8c35a0c87.bindPopup(popup_aa199d90fe80485a88424a207c7744b8)
+        ;
+
+        
+    
+    
+            var circle_marker_326a627720194bba976e2b905dd48046 = L.circleMarker(
+                [10.9167, 79.8167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_cda9aeef4e43412caec4ede13dcfadf9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8a40cecc0b84e4f87e4e7bd7646248e = $(`<div id="html_e8a40cecc0b84e4f87e4e7bd7646248e" style="width: 100.0%; height: 100.0%;">VARICHIKUDI, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_cda9aeef4e43412caec4ede13dcfadf9.setContent(html_e8a40cecc0b84e4f87e4e7bd7646248e);
+        
+
+        circle_marker_326a627720194bba976e2b905dd48046.bindPopup(popup_cda9aeef4e43412caec4ede13dcfadf9)
+        ;
+
+        
+    
+    
+            var circle_marker_fe333c0adb624c55b92679873305867e = L.circleMarker(
+                [11.725, 79.4833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_9e0ed9dc8dd24fa3a52ffa18824c0bfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ed3181dd22d430d88545203fcc9c8a9 = $(`<div id="html_5ed3181dd22d430d88545203fcc9c8a9" style="width: 100.0%; height: 100.0%;">SELIAMEDU, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_9e0ed9dc8dd24fa3a52ffa18824c0bfa.setContent(html_5ed3181dd22d430d88545203fcc9c8a9);
+        
+
+        circle_marker_fe333c0adb624c55b92679873305867e.bindPopup(popup_9e0ed9dc8dd24fa3a52ffa18824c0bfa)
+        ;
+
+        
+    
+    
+            var circle_marker_fa6e70ec8e4a4116b7871f0f75931802 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_4dc8770e68914cdb94e09d7b53cc4570 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c8d5e3dca714fb089b50bdc301395c0 = $(`<div id="html_2c8d5e3dca714fb089b50bdc301395c0" style="width: 100.0%; height: 100.0%;">KARAYAMPUTHUR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_4dc8770e68914cdb94e09d7b53cc4570.setContent(html_2c8d5e3dca714fb089b50bdc301395c0);
+        
+
+        circle_marker_fa6e70ec8e4a4116b7871f0f75931802.bindPopup(popup_4dc8770e68914cdb94e09d7b53cc4570)
+        ;
+
+        
+    
+    
+            var circle_marker_f6e27a44eb274871b19c62e48b5a5f5c = L.circleMarker(
+                [11.725, 79.4833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_65c3e4e9d6164c2797c1e2315582206c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f606dee3f8594abb9ac487e618e8b9bc = $(`<div id="html_f606dee3f8594abb9ac487e618e8b9bc" style="width: 100.0%; height: 100.0%;">KIRUMAMPAKKAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_65c3e4e9d6164c2797c1e2315582206c.setContent(html_f606dee3f8594abb9ac487e618e8b9bc);
+        
+
+        circle_marker_f6e27a44eb274871b19c62e48b5a5f5c.bindPopup(popup_65c3e4e9d6164c2797c1e2315582206c)
+        ;
+
+        
+    
+    
+            var circle_marker_f188840ec3aa425ca7685920b29d6d59 = L.circleMarker(
+                [10.9434, 79.7558],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_8af57b566bc9400f8cb3b7f595f8f38c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02f736ecc4d54aa79de1282e7eea06a2 = $(`<div id="html_02f736ecc4d54aa79de1282e7eea06a2" style="width: 100.0%; height: 100.0%;">NERAVY, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_8af57b566bc9400f8cb3b7f595f8f38c.setContent(html_02f736ecc4d54aa79de1282e7eea06a2);
+        
+
+        circle_marker_f188840ec3aa425ca7685920b29d6d59.bindPopup(popup_8af57b566bc9400f8cb3b7f595f8f38c)
+        ;
+
+        
+    
+    
+            var circle_marker_cc8e551a9c374888897ef1c73124f380 = L.circleMarker(
+                [10.9167, 79.8167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_28a40e8307154aceb3a1e628f67d8289 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_082def1f45d74952a0c373929389e48a = $(`<div id="html_082def1f45d74952a0c373929389e48a" style="width: 100.0%; height: 100.0%;">AMBAGARATHUR, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_28a40e8307154aceb3a1e628f67d8289.setContent(html_082def1f45d74952a0c373929389e48a);
+        
+
+        circle_marker_cc8e551a9c374888897ef1c73124f380.bindPopup(popup_28a40e8307154aceb3a1e628f67d8289)
+        ;
+
+        
+    
+    
+            var circle_marker_41ef9dc199a641a685281f07ae3144f0 = L.circleMarker(
+                [10.9167, 79.8167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_82597ff76f4e4b7f9f940a6e6f74ad87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25c322c355274c37bc8fe887b82dafec = $(`<div id="html_25c322c355274c37bc8fe887b82dafec" style="width: 100.0%; height: 100.0%;">THIRUMALRAYANPATNAM, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_82597ff76f4e4b7f9f940a6e6f74ad87.setContent(html_25c322c355274c37bc8fe887b82dafec);
+        
+
+        circle_marker_41ef9dc199a641a685281f07ae3144f0.bindPopup(popup_82597ff76f4e4b7f9f940a6e6f74ad87)
+        ;
+
+        
+    
+    
+            var circle_marker_ccc6815eee034edf8b3d82d07818dd62 = L.circleMarker(
+                [10.9167, 79.8167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_8536dba8a30f4cedb7665ad2966853fc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5a9584deac87427c9e7f79e071960c6e = $(`<div id="html_5a9584deac87427c9e7f79e071960c6e" style="width: 100.0%; height: 100.0%;">KARAIKAL PORT, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_8536dba8a30f4cedb7665ad2966853fc.setContent(html_5a9584deac87427c9e7f79e071960c6e);
+        
+
+        circle_marker_ccc6815eee034edf8b3d82d07818dd62.bindPopup(popup_8536dba8a30f4cedb7665ad2966853fc)
+        ;
+
+        
+    
+    
+            var circle_marker_82996280e5a84a89a356b13ac634e4dd = L.circleMarker(
+                [11.9162, 79.6853],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_e71fc1e2b75441018310d2fc2640ba31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_141211faa46d4f8eae1dd6ef86142cb6 = $(`<div id="html_141211faa46d4f8eae1dd6ef86142cb6" style="width: 100.0%; height: 100.0%;">ARIYOOR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_e71fc1e2b75441018310d2fc2640ba31.setContent(html_141211faa46d4f8eae1dd6ef86142cb6);
+        
+
+        circle_marker_82996280e5a84a89a356b13ac634e4dd.bindPopup(popup_e71fc1e2b75441018310d2fc2640ba31)
+        ;
+
+        
+    
+    
+            var circle_marker_db2fde2a599e406d994639f31f47af2a = L.circleMarker(
+                [10.9709, 79.7717],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_fbc52b338f83480c8301fd0c9a21a0ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4b6d15e1e85463db154602e0224e861 = $(`<div id="html_d4b6d15e1e85463db154602e0224e861" style="width: 100.0%; height: 100.0%;">NEDUNGADU, KARAIKAL, PUDUCHERRY</div>`)[0];
+            popup_fbc52b338f83480c8301fd0c9a21a0ba.setContent(html_d4b6d15e1e85463db154602e0224e861);
+        
+
+        circle_marker_db2fde2a599e406d994639f31f47af2a.bindPopup(popup_fbc52b338f83480c8301fd0c9a21a0ba)
+        ;
+
+        
+    
+    
+            var circle_marker_452e4338404f4ac099df3c6248560dc2 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_15c251b31ac842bbaabb5362fd8d91d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_39d724c5ce5446c8a9785008da2c6370 = $(`<div id="html_39d724c5ce5446c8a9785008da2c6370" style="width: 100.0%; height: 100.0%;">PERIA KALAPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_15c251b31ac842bbaabb5362fd8d91d5.setContent(html_39d724c5ce5446c8a9785008da2c6370);
+        
+
+        circle_marker_452e4338404f4ac099df3c6248560dc2.bindPopup(popup_15c251b31ac842bbaabb5362fd8d91d5)
+        ;
+
+        
+    
+    
+            var circle_marker_f61ff3a9abf84982a1aec61e2c2e8391 = L.circleMarker(
+                [11.725, 79.4833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_ce8d883965164e08a9f07d326f636ade = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d9efeaa6002419eb40279199e578e32 = $(`<div id="html_8d9efeaa6002419eb40279199e578e32" style="width: 100.0%; height: 100.0%;">BAHOUR, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_ce8d883965164e08a9f07d326f636ade.setContent(html_8d9efeaa6002419eb40279199e578e32);
+        
+
+        circle_marker_f61ff3a9abf84982a1aec61e2c2e8391.bindPopup(popup_ce8d883965164e08a9f07d326f636ade)
+        ;
+
+        
+    
+    
+            var circle_marker_9f8a516381744ffe9c16dbf56498ad1f = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_7f840c6114104a2089b54b702dc038f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f84193f13454536b4b20374464994bb = $(`<div id="html_3f84193f13454536b4b20374464994bb" style="width: 100.0%; height: 100.0%;">NETTAPAKKAM, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_7f840c6114104a2089b54b702dc038f9.setContent(html_3f84193f13454536b4b20374464994bb);
+        
+
+        circle_marker_9f8a516381744ffe9c16dbf56498ad1f.bindPopup(popup_7f840c6114104a2089b54b702dc038f9)
+        ;
+
+        
+    
+    
+            var circle_marker_49b41127b7914905bf03456cc8721628 = L.circleMarker(
+                [11.8703, 79.5829],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_624cb239ce504568839c552eddc93423 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db5053dd244043c9a7ac8a3949a87c53 = $(`<div id="html_db5053dd244043c9a7ac8a3949a87c53" style="width: 100.0%; height: 100.0%;">MADUKKARAI, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_624cb239ce504568839c552eddc93423.setContent(html_db5053dd244043c9a7ac8a3949a87c53);
+        
+
+        circle_marker_49b41127b7914905bf03456cc8721628.bindPopup(popup_624cb239ce504568839c552eddc93423)
+        ;
+
+        
+    
+    
+            var circle_marker_847f93e622ed47eb8198d830219d2c76 = L.circleMarker(
+                [11.9531, 79.6224],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_d4ebc667f2744b84bea109e8826e3e85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_acc13e7a54f0470abfca69aeac242ada = $(`<div id="html_acc13e7a54f0470abfca69aeac242ada" style="width: 100.0%; height: 100.0%;">MADAGADIPET, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_d4ebc667f2744b84bea109e8826e3e85.setContent(html_acc13e7a54f0470abfca69aeac242ada);
+        
+
+        circle_marker_847f93e622ed47eb8198d830219d2c76.bindPopup(popup_d4ebc667f2744b84bea109e8826e3e85)
+        ;
+
+        
+    
+    
+            var circle_marker_85b99169b36f4edca6ce2759d5d94288 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_eac1c898440445f69e8d84287825e0e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b21c63fd2ece42adb2a165043598bc31 = $(`<div id="html_b21c63fd2ece42adb2a165043598bc31" style="width: 100.0%; height: 100.0%;">PUDUCHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_eac1c898440445f69e8d84287825e0e3.setContent(html_b21c63fd2ece42adb2a165043598bc31);
+        
+
+        circle_marker_85b99169b36f4edca6ce2759d5d94288.bindPopup(popup_eac1c898440445f69e8d84287825e0e3)
+        ;
+
+        
+    
+    
+            var circle_marker_f0354a13afbd46b8a107d221e7d72fb7 = L.circleMarker(
+                [12.5205, 79.8348],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1376f2d3e9954589b772a97b20cb8c42);
+        
+    
+        var popup_95cf081f42ba4f11b7a13a1dc801aeb5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c343dd4887bb49298a1379a35bc966c3 = $(`<div id="html_c343dd4887bb49298a1379a35bc966c3" style="width: 100.0%; height: 100.0%;">PUDUCHERRY, PUDUCHERRY, PUDUCHERRY</div>`)[0];
+            popup_95cf081f42ba4f11b7a13a1dc801aeb5.setContent(html_c343dd4887bb49298a1379a35bc966c3);
+        
+
+        circle_marker_f0354a13afbd46b8a107d221e7d72fb7.bindPopup(popup_95cf081f42ba4f11b7a13a1dc801aeb5)
+        ;
+
+        
+    
+</script>

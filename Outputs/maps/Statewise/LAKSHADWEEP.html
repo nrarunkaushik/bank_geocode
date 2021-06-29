@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d2012a8a68c74ad388a7538489cbd4a2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d2012a8a68c74ad388a7538489cbd4a2" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAKSHADWEEP Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(18)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>LAKSHADWEEP(19)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_d2012a8a68c74ad388a7538489cbd4a2 = L.map(
+                "map_d2012a8a68c74ad388a7538489cbd4a2",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1dd34063b309490db70cfb2883e08681 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+            map_d2012a8a68c74ad388a7538489cbd4a2.fitBounds(
+                [[8.2892876, 72.31907672454545], [10.94865445, 76.3]],
+                {}
+            );
+        
+    
+            var circle_marker_e9c2f5318228421ca78bb2aac02eb0a5 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_e774c087e613458290b559b77320faf2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cc18db9cf1914abea3ebd17b835720a7 = $(`<div id="html_cc18db9cf1914abea3ebd17b835720a7" style="width: 100.0%; height: 100.0%;">KILTAN, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_e774c087e613458290b559b77320faf2.setContent(html_cc18db9cf1914abea3ebd17b835720a7);
+        
+
+        circle_marker_e9c2f5318228421ca78bb2aac02eb0a5.bindPopup(popup_e774c087e613458290b559b77320faf2)
+        ;
+
+        
+    
+    
+            var circle_marker_439a2a835fa541f08fe22143260c6b13 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_83835a859947461eb10ff82e377aa9cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e313713d8a664a188241b66305f17e5a = $(`<div id="html_e313713d8a664a188241b66305f17e5a" style="width: 100.0%; height: 100.0%;">KILTAN CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_83835a859947461eb10ff82e377aa9cc.setContent(html_e313713d8a664a188241b66305f17e5a);
+        
+
+        circle_marker_439a2a835fa541f08fe22143260c6b13.bindPopup(popup_83835a859947461eb10ff82e377aa9cc)
+        ;
+
+        
+    
+    
+            var circle_marker_b2a12de63a7d40d2ba8ba7a72662d70c = L.circleMarker(
+                [9.1858, 73.3524],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_fc4befb30aca4239b7c5389420bbecd1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e19b3f3a68ca483b9e055e62009af34f = $(`<div id="html_e19b3f3a68ca483b9e055e62009af34f" style="width: 100.0%; height: 100.0%;">ANDROTT, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_fc4befb30aca4239b7c5389420bbecd1.setContent(html_e19b3f3a68ca483b9e055e62009af34f);
+        
+
+        circle_marker_b2a12de63a7d40d2ba8ba7a72662d70c.bindPopup(popup_fc4befb30aca4239b7c5389420bbecd1)
+        ;
+
+        
+    
+    
+            var circle_marker_319ba4863ff8410f935dc5da93c13341 = L.circleMarker(
+                [9.1858, 73.3524],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_b7343948b127499e81ca2f38fc591612 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4545c985cd2240bd8b01201ae39185fc = $(`<div id="html_4545c985cd2240bd8b01201ae39185fc" style="width: 100.0%; height: 100.0%;">ANDROTH CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_b7343948b127499e81ca2f38fc591612.setContent(html_4545c985cd2240bd8b01201ae39185fc);
+        
+
+        circle_marker_319ba4863ff8410f935dc5da93c13341.bindPopup(popup_b7343948b127499e81ca2f38fc591612)
+        ;
+
+        
+    
+    
+            var circle_marker_8a291a9d25f449f689dd6c77f937f9b7 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_a9dc68e6c8224e0194143338edbd9846 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0133417bdd64df4b749592ae42162cc = $(`<div id="html_b0133417bdd64df4b749592ae42162cc" style="width: 100.0%; height: 100.0%;">KAVARATTI, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_a9dc68e6c8224e0194143338edbd9846.setContent(html_b0133417bdd64df4b749592ae42162cc);
+        
+
+        circle_marker_8a291a9d25f449f689dd6c77f937f9b7.bindPopup(popup_a9dc68e6c8224e0194143338edbd9846)
+        ;
+
+        
+    
+    
+            var circle_marker_daac1657fe6e4e599c00980261a27365 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_12b913e56d424a4393a1da79c0e32e5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1386ac31517c4f18add988a8d0520df5 = $(`<div id="html_1386ac31517c4f18add988a8d0520df5" style="width: 100.0%; height: 100.0%;">SPECIALISED SME BRANCH, KAVARATTI, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_12b913e56d424a4393a1da79c0e32e5b.setContent(html_1386ac31517c4f18add988a8d0520df5);
+        
+
+        circle_marker_daac1657fe6e4e599c00980261a27365.bindPopup(popup_12b913e56d424a4393a1da79c0e32e5b)
+        ;
+
+        
+    
+    
+            var circle_marker_62b69f30e0ce43feba43891cd7651808 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_e0aba8b4a10c4aeeb5aca75942a2a70c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d6b6f7b73df45a4b2e7ce800bb5da6b = $(`<div id="html_7d6b6f7b73df45a4b2e7ce800bb5da6b" style="width: 100.0%; height: 100.0%;">KAVARATTI CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_e0aba8b4a10c4aeeb5aca75942a2a70c.setContent(html_7d6b6f7b73df45a4b2e7ce800bb5da6b);
+        
+
+        circle_marker_62b69f30e0ce43feba43891cd7651808.bindPopup(popup_e0aba8b4a10c4aeeb5aca75942a2a70c)
+        ;
+
+        
+    
+    
+            var circle_marker_3e9eca8497794c7db56885cad54c1bea = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_2744ce7cab814e3fa1b28665bb4aef42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b8c5d44e9e544dbbd1b8f733c394fcb = $(`<div id="html_7b8c5d44e9e544dbbd1b8f733c394fcb" style="width: 100.0%; height: 100.0%;">AMENI, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_2744ce7cab814e3fa1b28665bb4aef42.setContent(html_7b8c5d44e9e544dbbd1b8f733c394fcb);
+        
+
+        circle_marker_3e9eca8497794c7db56885cad54c1bea.bindPopup(popup_2744ce7cab814e3fa1b28665bb4aef42)
+        ;
+
+        
+    
+    
+            var circle_marker_6783c2ed85714e17bb79f738c0013fd8 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_15945a5893834389b2fc488881cda02b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eda0993a6bdf478d82251cd20259e685 = $(`<div id="html_eda0993a6bdf478d82251cd20259e685" style="width: 100.0%; height: 100.0%;">AMENI CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_15945a5893834389b2fc488881cda02b.setContent(html_eda0993a6bdf478d82251cd20259e685);
+        
+
+        circle_marker_6783c2ed85714e17bb79f738c0013fd8.bindPopup(popup_15945a5893834389b2fc488881cda02b)
+        ;
+
+        
+    
+    
+            var circle_marker_fb2cd1a1390249cdb8d1cbae2689ed5a = L.circleMarker(
+                [9.1858, 73.3524],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_a7322864912346e4bab5705c2db4f3cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a260d980d3ef43989340d7ceaf284414 = $(`<div id="html_a260d980d3ef43989340d7ceaf284414" style="width: 100.0%; height: 100.0%;">CHETLAT ISLAND, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_a7322864912346e4bab5705c2db4f3cb.setContent(html_a260d980d3ef43989340d7ceaf284414);
+        
+
+        circle_marker_fb2cd1a1390249cdb8d1cbae2689ed5a.bindPopup(popup_a7322864912346e4bab5705c2db4f3cb)
+        ;
+
+        
+    
+    
+            var circle_marker_623f2595440a403fa64ae83ce7d8cb36 = L.circleMarker(
+                [9.1858, 73.3524],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_77a6e1e9d9834a9eb6e97c686ce533be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb4a835a544f4fdd9fd2e3e19eb20c66 = $(`<div id="html_cb4a835a544f4fdd9fd2e3e19eb20c66" style="width: 100.0%; height: 100.0%;">CHETLAT CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_77a6e1e9d9834a9eb6e97c686ce533be.setContent(html_cb4a835a544f4fdd9fd2e3e19eb20c66);
+        
+
+        circle_marker_623f2595440a403fa64ae83ce7d8cb36.bindPopup(popup_77a6e1e9d9834a9eb6e97c686ce533be)
+        ;
+
+        
+    
+    
+            var circle_marker_88c145807f024f1ca44e456e6c632361 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_e511446c2cb94074bae988d6d93a86a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_28b3ab3223484d528905090125003f28 = $(`<div id="html_28b3ab3223484d528905090125003f28" style="width: 100.0%; height: 100.0%;">KALPENI, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_e511446c2cb94074bae988d6d93a86a5.setContent(html_28b3ab3223484d528905090125003f28);
+        
+
+        circle_marker_88c145807f024f1ca44e456e6c632361.bindPopup(popup_e511446c2cb94074bae988d6d93a86a5)
+        ;
+
+        
+    
+    
+            var circle_marker_2e6b250f02cb4e118dbf02553ca9b5c3 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_f8ebc9a37eee4681975e2ecb3aff3386 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e60a055af07c4c57920d97591b181402 = $(`<div id="html_e60a055af07c4c57920d97591b181402" style="width: 100.0%; height: 100.0%;">KALPENI CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_f8ebc9a37eee4681975e2ecb3aff3386.setContent(html_e60a055af07c4c57920d97591b181402);
+        
+
+        circle_marker_2e6b250f02cb4e118dbf02553ca9b5c3.bindPopup(popup_f8ebc9a37eee4681975e2ecb3aff3386)
+        ;
+
+        
+    
+    
+            var circle_marker_7cdc4fd90d904fa1891c36d23286421d = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_17a20f555e7043838884d75183e273d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b15f1d7933df4a81bb533c66f625be0e = $(`<div id="html_b15f1d7933df4a81bb533c66f625be0e" style="width: 100.0%; height: 100.0%;">MINICOY CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_17a20f555e7043838884d75183e273d7.setContent(html_b15f1d7933df4a81bb533c66f625be0e);
+        
+
+        circle_marker_7cdc4fd90d904fa1891c36d23286421d.bindPopup(popup_17a20f555e7043838884d75183e273d7)
+        ;
+
+        
+    
+    
+            var circle_marker_2b17e58329b14150ba5c037d55acffed = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_8cd8f522908e4685ad5e01f778c36b64 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af0d4d3303a041f89f421b8fc91a08e2 = $(`<div id="html_af0d4d3303a041f89f421b8fc91a08e2" style="width: 100.0%; height: 100.0%;">KADMAT, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_8cd8f522908e4685ad5e01f778c36b64.setContent(html_af0d4d3303a041f89f421b8fc91a08e2);
+        
+
+        circle_marker_2b17e58329b14150ba5c037d55acffed.bindPopup(popup_8cd8f522908e4685ad5e01f778c36b64)
+        ;
+
+        
+    
+    
+            var circle_marker_3b0bb34cbeb84d9592167a0866b8c40e = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_386474d8b1f14601abf36cc9e466bddd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a240311bafc4e55a0341d68183be33b = $(`<div id="html_7a240311bafc4e55a0341d68183be33b" style="width: 100.0%; height: 100.0%;">KADAMATH CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_386474d8b1f14601abf36cc9e466bddd.setContent(html_7a240311bafc4e55a0341d68183be33b);
+        
+
+        circle_marker_3b0bb34cbeb84d9592167a0866b8c40e.bindPopup(popup_386474d8b1f14601abf36cc9e466bddd)
+        ;
+
+        
+    
+    
+            var circle_marker_169d45610cff4df0a44e22edaf0cb6c3 = L.circleMarker(
+                [10.0333, 76.3],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_f320a55952cf41a8b12d86fb91e5eb9a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7eee64520e22482fa9ada1554593db13 = $(`<div id="html_7eee64520e22482fa9ada1554593db13" style="width: 100.0%; height: 100.0%;">AGATHY CURRENCY CHEST, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_f320a55952cf41a8b12d86fb91e5eb9a.setContent(html_7eee64520e22482fa9ada1554593db13);
+        
+
+        circle_marker_169d45610cff4df0a44e22edaf0cb6c3.bindPopup(popup_f320a55952cf41a8b12d86fb91e5eb9a)
+        ;
+
+        
+    
+    
+            var circle_marker_a55a174882dd4817b5f5cb980c0e8dfe = L.circleMarker(
+                [8.2892876, 73.0618573],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_e6ef07af80ac4990832190f8b899bbb3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7005c94d71c49febd9d88b8338f89dd = $(`<div id="html_d7005c94d71c49febd9d88b8338f89dd" style="width: 100.0%; height: 100.0%;">MINICOY, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_e6ef07af80ac4990832190f8b899bbb3.setContent(html_d7005c94d71c49febd9d88b8338f89dd);
+        
+
+        circle_marker_a55a174882dd4817b5f5cb980c0e8dfe.bindPopup(popup_e6ef07af80ac4990832190f8b899bbb3)
+        ;
+
+        
+    
+    
+            var circle_marker_287c27906d884d249c1da080172f3304 = L.circleMarker(
+                [10.94865445, 72.31907672454545],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_d2012a8a68c74ad388a7538489cbd4a2);
+        
+    
+        var popup_fdecc7ad406443d19e533cf7bb9a25e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34d4f278616a4ec2b0ac37a6178f95bc = $(`<div id="html_34d4f278616a4ec2b0ac37a6178f95bc" style="width: 100.0%; height: 100.0%;">AGATHY, LAKSHADWEEP, LAKSHADWEEP</div>`)[0];
+            popup_fdecc7ad406443d19e533cf7bb9a25e8.setContent(html_34d4f278616a4ec2b0ac37a6178f95bc);
+        
+
+        circle_marker_287c27906d884d249c1da080172f3304.bindPopup(popup_fdecc7ad406443d19e533cf7bb9a25e8)
+        ;
+
+        
+    
+</script>
