@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1ae14217db5445608b54e19d7852f853 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1ae14217db5445608b54e19d7852f853" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LADAKH Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:red;opacity:0.7;'></span>JAMMU & KASHMIR BANK LTD(36)</li><li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(6)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(1)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>LADAKH(44)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_1ae14217db5445608b54e19d7852f853 = L.map(
+                "map_1ae14217db5445608b54e19d7852f853",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6a87e454e00f49c7ab533b6649bccb8b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+            map_1ae14217db5445608b54e19d7852f853.fitBounds(
+                [[33.1333, 75.5667], [34.5667, 78.3574]],
+                {}
+            );
+        
+    
+            var circle_marker_267930b5d4f9447cb15ad0a5ed94f83e = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_21681b2bfa194429a72c3af2fc8b5d6c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cff9e31bce84435196e1dc06abd432af = $(`<div id="html_cff9e31bce84435196e1dc06abd432af" style="width: 100.0%; height: 100.0%;">LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_21681b2bfa194429a72c3af2fc8b5d6c.setContent(html_cff9e31bce84435196e1dc06abd432af);
+        
+
+        circle_marker_267930b5d4f9447cb15ad0a5ed94f83e.bindPopup(popup_21681b2bfa194429a72c3af2fc8b5d6c)
+        ;
+
+        
+    
+    
+            var circle_marker_010d2adddc6c400aa7cbbbc7efa87a5e = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_dea9321039cb4a8e81e0aac421b2ba79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_026931d422f24d5c8f53c00960ee59d8 = $(`<div id="html_026931d422f24d5c8f53c00960ee59d8" style="width: 100.0%; height: 100.0%;">LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_dea9321039cb4a8e81e0aac421b2ba79.setContent(html_026931d422f24d5c8f53c00960ee59d8);
+        
+
+        circle_marker_010d2adddc6c400aa7cbbbc7efa87a5e.bindPopup(popup_dea9321039cb4a8e81e0aac421b2ba79)
+        ;
+
+        
+    
+    
+            var circle_marker_a3819176cb9147358e2c3526ac0d4c5d = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_ec7032c3bde2443f90febb2b73822382 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b33df7271b1849729c775e9c8b0b781d = $(`<div id="html_b33df7271b1849729c775e9c8b0b781d" style="width: 100.0%; height: 100.0%;">LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_ec7032c3bde2443f90febb2b73822382.setContent(html_b33df7271b1849729c775e9c8b0b781d);
+        
+
+        circle_marker_a3819176cb9147358e2c3526ac0d4c5d.bindPopup(popup_ec7032c3bde2443f90febb2b73822382)
+        ;
+
+        
+    
+    
+            var circle_marker_e01e6e853e774ed9947a48f210491ba1 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_598254812cbf4e1387cef3874aeb5fc9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f5ed5bd9bf54a10a2b01518af145c78 = $(`<div id="html_1f5ed5bd9bf54a10a2b01518af145c78" style="width: 100.0%; height: 100.0%;">SKALZANGLING, LEH LADAKH, LADAKH</div>`)[0];
+            popup_598254812cbf4e1387cef3874aeb5fc9.setContent(html_1f5ed5bd9bf54a10a2b01518af145c78);
+        
+
+        circle_marker_e01e6e853e774ed9947a48f210491ba1.bindPopup(popup_598254812cbf4e1387cef3874aeb5fc9)
+        ;
+
+        
+    
+    
+            var circle_marker_653c3d98e8724bd5b4582084101b58dd = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_dfec06cad4ab4d55884bf75f01061287 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_338ab00967304cda9393de6d77c150f5 = $(`<div id="html_338ab00967304cda9393de6d77c150f5" style="width: 100.0%; height: 100.0%;">LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_dfec06cad4ab4d55884bf75f01061287.setContent(html_338ab00967304cda9393de6d77c150f5);
+        
+
+        circle_marker_653c3d98e8724bd5b4582084101b58dd.bindPopup(popup_dfec06cad4ab4d55884bf75f01061287)
+        ;
+
+        
+    
+    
+            var circle_marker_629bfef0e7b644dc9d42ddeed2309072 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_4f770160a9284674ba179782415994bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8de374cbdb254d52aa07a78242c44ee5 = $(`<div id="html_8de374cbdb254d52aa07a78242c44ee5" style="width: 100.0%; height: 100.0%;">CUSTOMER ACQUISITION CENTRE,LEH LADAKH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_4f770160a9284674ba179782415994bc.setContent(html_8de374cbdb254d52aa07a78242c44ee5);
+        
+
+        circle_marker_629bfef0e7b644dc9d42ddeed2309072.bindPopup(popup_4f770160a9284674ba179782415994bc)
+        ;
+
+        
+    
+    
+            var circle_marker_ddb50fd7f5354fc1b871decc921de48c = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_5d2e77502ce244858e3340c05fd74332 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_993874f089194baf936accc02f250233 = $(`<div id="html_993874f089194baf936accc02f250233" style="width: 100.0%; height: 100.0%;">CHOGLAMSAR, LEH LADAKH, LADAKH</div>`)[0];
+            popup_5d2e77502ce244858e3340c05fd74332.setContent(html_993874f089194baf936accc02f250233);
+        
+
+        circle_marker_ddb50fd7f5354fc1b871decc921de48c.bindPopup(popup_5d2e77502ce244858e3340c05fd74332)
+        ;
+
+        
+    
+    
+            var circle_marker_b25d3c188636417980abd21f324c035c = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_4a1275b783cc455881161d37bff376ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f03af2147362432387711451bb152387 = $(`<div id="html_f03af2147362432387711451bb152387" style="width: 100.0%; height: 100.0%;">KARGIL, KARGIL, LADAKH</div>`)[0];
+            popup_4a1275b783cc455881161d37bff376ba.setContent(html_f03af2147362432387711451bb152387);
+        
+
+        circle_marker_b25d3c188636417980abd21f324c035c.bindPopup(popup_4a1275b783cc455881161d37bff376ba)
+        ;
+
+        
+    
+    
+            var circle_marker_38e311805c794a768a77df20e9d68a71 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_6df5457db4774f0b8ff38cd293ed3476 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b345ec6c5a6545b49d33ce05f6fb8744 = $(`<div id="html_b345ec6c5a6545b49d33ce05f6fb8744" style="width: 100.0%; height: 100.0%;">DURBAK, LEH LADAKH, LADAKH</div>`)[0];
+            popup_6df5457db4774f0b8ff38cd293ed3476.setContent(html_b345ec6c5a6545b49d33ce05f6fb8744);
+        
+
+        circle_marker_38e311805c794a768a77df20e9d68a71.bindPopup(popup_6df5457db4774f0b8ff38cd293ed3476)
+        ;
+
+        
+    
+    
+            var circle_marker_8c621c2fa1a943999ef6e4eb3a71fea3 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_1b9f6a6b673c4513a531f307e0c1378e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7eb33dec7e494c598b95d8c9326e7558 = $(`<div id="html_7eb33dec7e494c598b95d8c9326e7558" style="width: 100.0%; height: 100.0%;">SAMOOR, LEH LADAKH, LADAKH</div>`)[0];
+            popup_1b9f6a6b673c4513a531f307e0c1378e.setContent(html_7eb33dec7e494c598b95d8c9326e7558);
+        
+
+        circle_marker_8c621c2fa1a943999ef6e4eb3a71fea3.bindPopup(popup_1b9f6a6b673c4513a531f307e0c1378e)
+        ;
+
+        
+    
+    
+            var circle_marker_5e2fa2ce01e2491ea69b7123546da6a5 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_02e0143822054d02b11345a280b720b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f989b2be87244d6a966753a4fe5420b = $(`<div id="html_5f989b2be87244d6a966753a4fe5420b" style="width: 100.0%; height: 100.0%;">DRASS TREASURY BRANCH, KARGIL, LADAKH</div>`)[0];
+            popup_02e0143822054d02b11345a280b720b3.setContent(html_5f989b2be87244d6a966753a4fe5420b);
+        
+
+        circle_marker_5e2fa2ce01e2491ea69b7123546da6a5.bindPopup(popup_02e0143822054d02b11345a280b720b3)
+        ;
+
+        
+    
+    
+            var circle_marker_63432d179abb4eb286415612cb6f57bd = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_4bb5668dbd6d4ab59a94cf112c25f7a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b67537f0ae544f959c324e0fea174966 = $(`<div id="html_b67537f0ae544f959c324e0fea174966" style="width: 100.0%; height: 100.0%;">MULBEK KARGIL, KARGIL, LADAKH</div>`)[0];
+            popup_4bb5668dbd6d4ab59a94cf112c25f7a2.setContent(html_b67537f0ae544f959c324e0fea174966);
+        
+
+        circle_marker_63432d179abb4eb286415612cb6f57bd.bindPopup(popup_4bb5668dbd6d4ab59a94cf112c25f7a2)
+        ;
+
+        
+    
+    
+            var circle_marker_7b243e1edb9b47d7a4949272d41b9254 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_ae56cb4ea17b410b9dff342f4b0d275a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4ce15618ff24e70852912364a2e7edc = $(`<div id="html_c4ce15618ff24e70852912364a2e7edc" style="width: 100.0%; height: 100.0%;">KHALTSI-LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_ae56cb4ea17b410b9dff342f4b0d275a.setContent(html_c4ce15618ff24e70852912364a2e7edc);
+        
+
+        circle_marker_7b243e1edb9b47d7a4949272d41b9254.bindPopup(popup_ae56cb4ea17b410b9dff342f4b0d275a)
+        ;
+
+        
+    
+    
+            var circle_marker_826975c3a62c472e8c8303754a77a86f = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_3134b3a3bba241019303ec160dbe05d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad97cbb962594c5ebcb8c8efe51a7380 = $(`<div id="html_ad97cbb962594c5ebcb8c8efe51a7380" style="width: 100.0%; height: 100.0%;">LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_3134b3a3bba241019303ec160dbe05d7.setContent(html_ad97cbb962594c5ebcb8c8efe51a7380);
+        
+
+        circle_marker_826975c3a62c472e8c8303754a77a86f.bindPopup(popup_3134b3a3bba241019303ec160dbe05d7)
+        ;
+
+        
+    
+    
+            var circle_marker_a6df238bbb58400a8517c821e4e8f487 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_652987e23270441895869d2134a39220 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f64b9b7586af4ad69040ab66e5babe61 = $(`<div id="html_f64b9b7586af4ad69040ab66e5babe61" style="width: 100.0%; height: 100.0%;">SKALZANGLING,LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_652987e23270441895869d2134a39220.setContent(html_f64b9b7586af4ad69040ab66e5babe61);
+        
+
+        circle_marker_a6df238bbb58400a8517c821e4e8f487.bindPopup(popup_652987e23270441895869d2134a39220)
+        ;
+
+        
+    
+    
+            var circle_marker_7c330476b35b4cb699c55213768c5d84 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_800c6dc06f154d0b8907c07d05ad635e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d5d0ef5c8404e3583101c790697a533 = $(`<div id="html_7d5d0ef5c8404e3583101c790697a533" style="width: 100.0%; height: 100.0%;">KAROO, LEH LADAKH, LADAKH</div>`)[0];
+            popup_800c6dc06f154d0b8907c07d05ad635e.setContent(html_7d5d0ef5c8404e3583101c790697a533);
+        
+
+        circle_marker_7c330476b35b4cb699c55213768c5d84.bindPopup(popup_800c6dc06f154d0b8907c07d05ad635e)
+        ;
+
+        
+    
+    
+            var circle_marker_b0687f1e8a594bf3a829deb0b987e593 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_71091f4f8de742f1b96a812e2c3e4f29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0ecf95524a0413c8a02a5cdc0a44e8c = $(`<div id="html_f0ecf95524a0413c8a02a5cdc0a44e8c" style="width: 100.0%; height: 100.0%;">SNM HOSPITAL LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_71091f4f8de742f1b96a812e2c3e4f29.setContent(html_f0ecf95524a0413c8a02a5cdc0a44e8c);
+        
+
+        circle_marker_b0687f1e8a594bf3a829deb0b987e593.bindPopup(popup_71091f4f8de742f1b96a812e2c3e4f29)
+        ;
+
+        
+    
+    
+            var circle_marker_66426c1925594edfb438e8105eb5a785 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_af029ed1475e41199b8ee9c44a6aed27 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba42c0cf3ad3429796dfee7cbf905963 = $(`<div id="html_ba42c0cf3ad3429796dfee7cbf905963" style="width: 100.0%; height: 100.0%;">Moti Market Leh, LEH LADAKH, LADAKH</div>`)[0];
+            popup_af029ed1475e41199b8ee9c44a6aed27.setContent(html_ba42c0cf3ad3429796dfee7cbf905963);
+        
+
+        circle_marker_66426c1925594edfb438e8105eb5a785.bindPopup(popup_af029ed1475e41199b8ee9c44a6aed27)
+        ;
+
+        
+    
+    
+            var circle_marker_6814d0bc4492495dbefcffb0158f9088 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_2f687447e8584937931331fb1c181fbe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fc175eba4c14f188052a1468ab3c8d2 = $(`<div id="html_8fc175eba4c14f188052a1468ab3c8d2" style="width: 100.0%; height: 100.0%;">ZONAL OFFICE LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_2f687447e8584937931331fb1c181fbe.setContent(html_8fc175eba4c14f188052a1468ab3c8d2);
+        
+
+        circle_marker_6814d0bc4492495dbefcffb0158f9088.bindPopup(popup_2f687447e8584937931331fb1c181fbe)
+        ;
+
+        
+    
+    
+            var circle_marker_8337c23e45644e3b878810712c75af8c = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_93611ccebaca4e2eb9346a637af085bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c0ef0a2e167426ba8994f8dd61ff939 = $(`<div id="html_5c0ef0a2e167426ba8994f8dd61ff939" style="width: 100.0%; height: 100.0%;">BOGDANG, LEH LADAKH, LADAKH</div>`)[0];
+            popup_93611ccebaca4e2eb9346a637af085bc.setContent(html_5c0ef0a2e167426ba8994f8dd61ff939);
+        
+
+        circle_marker_8337c23e45644e3b878810712c75af8c.bindPopup(popup_93611ccebaca4e2eb9346a637af085bc)
+        ;
+
+        
+    
+    
+            var circle_marker_dadd4af7702e49fe9f9b508e683e9331 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_c9796778a99e4889bb8b9f7bc15e6175 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f512052c80f4f4d9b18285a2ea3e70a = $(`<div id="html_0f512052c80f4f4d9b18285a2ea3e70a" style="width: 100.0%; height: 100.0%;">DISKIT-NOBRA, LEH LADAKH, LADAKH</div>`)[0];
+            popup_c9796778a99e4889bb8b9f7bc15e6175.setContent(html_0f512052c80f4f4d9b18285a2ea3e70a);
+        
+
+        circle_marker_dadd4af7702e49fe9f9b508e683e9331.bindPopup(popup_c9796778a99e4889bb8b9f7bc15e6175)
+        ;
+
+        
+    
+    
+            var circle_marker_ecf327b2a10a48288e043e1bab5bbacb = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_faa0d789315d487da6564237a596a322 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_328b75e689464827a78b499df02ca4a1 = $(`<div id="html_328b75e689464827a78b499df02ca4a1" style="width: 100.0%; height: 100.0%;">Panamik, LEH LADAKH, LADAKH</div>`)[0];
+            popup_faa0d789315d487da6564237a596a322.setContent(html_328b75e689464827a78b499df02ca4a1);
+        
+
+        circle_marker_ecf327b2a10a48288e043e1bab5bbacb.bindPopup(popup_faa0d789315d487da6564237a596a322)
+        ;
+
+        
+    
+    
+            var circle_marker_f9d9222f0bb14f04b96538dcecca1c08 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_0ec2d7c2ed584be79ef47de9cbaaca56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f7b6077da1846f89188fe6ccf401d2d = $(`<div id="html_0f7b6077da1846f89188fe6ccf401d2d" style="width: 100.0%; height: 100.0%;">ZAMPA, CHUGLAMSAR, LEH LADAKH, LADAKH</div>`)[0];
+            popup_0ec2d7c2ed584be79ef47de9cbaaca56.setContent(html_0f7b6077da1846f89188fe6ccf401d2d);
+        
+
+        circle_marker_f9d9222f0bb14f04b96538dcecca1c08.bindPopup(popup_0ec2d7c2ed584be79ef47de9cbaaca56)
+        ;
+
+        
+    
+    
+            var circle_marker_51597cf552a947acb705d3e2a2703e9d = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_92c501a6f6b143ec8b8012b1eaa7138b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_03058b3d95644ba9b0f7cbc4f2f49604 = $(`<div id="html_03058b3d95644ba9b0f7cbc4f2f49604" style="width: 100.0%; height: 100.0%;">PADAM ZANASKAR TREASURY BRANCH, KARGIL, LADAKH</div>`)[0];
+            popup_92c501a6f6b143ec8b8012b1eaa7138b.setContent(html_03058b3d95644ba9b0f7cbc4f2f49604);
+        
+
+        circle_marker_51597cf552a947acb705d3e2a2703e9d.bindPopup(popup_92c501a6f6b143ec8b8012b1eaa7138b)
+        ;
+
+        
+    
+    
+            var circle_marker_9e47f233573f44abb7a7b0d57f91be48 = L.circleMarker(
+                [33.3605, 78.3574],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_acbd920f5527423387255ebd26787523 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_488095302d004ec18bb21b61ad39fe30 = $(`<div id="html_488095302d004ec18bb21b61ad39fe30" style="width: 100.0%; height: 100.0%;">NYOMA TREASURY, LEH LADAKH, LADAKH</div>`)[0];
+            popup_acbd920f5527423387255ebd26787523.setContent(html_488095302d004ec18bb21b61ad39fe30);
+        
+
+        circle_marker_9e47f233573f44abb7a7b0d57f91be48.bindPopup(popup_acbd920f5527423387255ebd26787523)
+        ;
+
+        
+    
+    
+            var circle_marker_bca5de83d4fe4323924cc94138a54438 = L.circleMarker(
+                [33.1333, 75.5667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_4a6dee02c0be4f96a9de85e7e0ba5438 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b8fea60efaaf48fe8c56f567a3390136 = $(`<div id="html_b8fea60efaaf48fe8c56f567a3390136" style="width: 100.0%; height: 100.0%;">SKUR BUCHAN, LEH LADAKH, LADAKH</div>`)[0];
+            popup_4a6dee02c0be4f96a9de85e7e0ba5438.setContent(html_b8fea60efaaf48fe8c56f567a3390136);
+        
+
+        circle_marker_bca5de83d4fe4323924cc94138a54438.bindPopup(popup_4a6dee02c0be4f96a9de85e7e0ba5438)
+        ;
+
+        
+    
+    
+            var circle_marker_391c52c47b804afea4cc5253295c7eba = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_f7657407429d491e8748dfb546b00fb2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34cddba104094df1aae7171db36cc0e1 = $(`<div id="html_34cddba104094df1aae7171db36cc0e1" style="width: 100.0%; height: 100.0%;">Puskyum, KARGIL, LADAKH</div>`)[0];
+            popup_f7657407429d491e8748dfb546b00fb2.setContent(html_34cddba104094df1aae7171db36cc0e1);
+        
+
+        circle_marker_391c52c47b804afea4cc5253295c7eba.bindPopup(popup_f7657407429d491e8748dfb546b00fb2)
+        ;
+
+        
+    
+    
+            var circle_marker_dcdf1bcd252c42ec8025a54de8c60cdc = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_f827456a0dec43ff89317d915131245d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1d6d8cc82344dcb9c50cd1c5a4724fc = $(`<div id="html_a1d6d8cc82344dcb9c50cd1c5a4724fc" style="width: 100.0%; height: 100.0%;">TURTUK, LEH LADAKH, LADAKH</div>`)[0];
+            popup_f827456a0dec43ff89317d915131245d.setContent(html_a1d6d8cc82344dcb9c50cd1c5a4724fc);
+        
+
+        circle_marker_dcdf1bcd252c42ec8025a54de8c60cdc.bindPopup(popup_f827456a0dec43ff89317d915131245d)
+        ;
+
+        
+    
+    
+            var circle_marker_7e054c7a0c274986bb32d3cca3f75231 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_41e06d485d494d918d42c166d0cd791c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b18b1a7a56c40e6bd0f348a808f5116 = $(`<div id="html_5b18b1a7a56c40e6bd0f348a808f5116" style="width: 100.0%; height: 100.0%;">UPSHI, LEH LADAKH, LADAKH</div>`)[0];
+            popup_41e06d485d494d918d42c166d0cd791c.setContent(html_5b18b1a7a56c40e6bd0f348a808f5116);
+        
+
+        circle_marker_7e054c7a0c274986bb32d3cca3f75231.bindPopup(popup_41e06d485d494d918d42c166d0cd791c)
+        ;
+
+        
+    
+    
+            var circle_marker_1406572b3ccd41c797a29e3129b2aeee = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_4f15ecb7867d4d5f9c75ca90a43827e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_41285882d6e44b4f8671ddfa552cf6a1 = $(`<div id="html_41285882d6e44b4f8671ddfa552cf6a1" style="width: 100.0%; height: 100.0%;">SHEY, LEH LADAKH, LADAKH</div>`)[0];
+            popup_4f15ecb7867d4d5f9c75ca90a43827e2.setContent(html_41285882d6e44b4f8671ddfa552cf6a1);
+        
+
+        circle_marker_1406572b3ccd41c797a29e3129b2aeee.bindPopup(popup_4f15ecb7867d4d5f9c75ca90a43827e2)
+        ;
+
+        
+    
+    
+            var circle_marker_ac4f9cd945a848ada9d8e27ed89c7654 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_cd832f9c640749eb956abb6940ef7826 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49c34843390a4d3f854c3860befff491 = $(`<div id="html_49c34843390a4d3f854c3860befff491" style="width: 100.0%; height: 100.0%;">AKCHAMAL, KARGIL, LADAKH</div>`)[0];
+            popup_cd832f9c640749eb956abb6940ef7826.setContent(html_49c34843390a4d3f854c3860befff491);
+        
+
+        circle_marker_ac4f9cd945a848ada9d8e27ed89c7654.bindPopup(popup_cd832f9c640749eb956abb6940ef7826)
+        ;
+
+        
+    
+    
+            var circle_marker_0983cd6cc4f744e9aae563a91d12802a = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_7af531be1e3641d797c8e6ea3e4ad526 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cee68dcf04654990be9c9c2ab7c93431 = $(`<div id="html_cee68dcf04654990be9c9c2ab7c93431" style="width: 100.0%; height: 100.0%;">TRESPONE, KARGIL, LADAKH</div>`)[0];
+            popup_7af531be1e3641d797c8e6ea3e4ad526.setContent(html_cee68dcf04654990be9c9c2ab7c93431);
+        
+
+        circle_marker_0983cd6cc4f744e9aae563a91d12802a.bindPopup(popup_7af531be1e3641d797c8e6ea3e4ad526)
+        ;
+
+        
+    
+    
+            var circle_marker_07a85640e0fe44858ae35f780e3db073 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_c8b7e34041e946b48dda4dba9ded323f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6dc70968f69447a085c7bd945ea1bfab = $(`<div id="html_6dc70968f69447a085c7bd945ea1bfab" style="width: 100.0%; height: 100.0%;">CHIKTAN,  KARGIL, KARGIL, LADAKH</div>`)[0];
+            popup_c8b7e34041e946b48dda4dba9ded323f.setContent(html_6dc70968f69447a085c7bd945ea1bfab);
+        
+
+        circle_marker_07a85640e0fe44858ae35f780e3db073.bindPopup(popup_c8b7e34041e946b48dda4dba9ded323f)
+        ;
+
+        
+    
+    
+            var circle_marker_08a76c17f572426f8de3db67023215dd = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_01be0b6e9cb140abb9df10bc3dfbd440 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97356d2b51c64298b83045679b62d526 = $(`<div id="html_97356d2b51c64298b83045679b62d526" style="width: 100.0%; height: 100.0%;">Sanjak, Kargil, KARGIL, LADAKH</div>`)[0];
+            popup_01be0b6e9cb140abb9df10bc3dfbd440.setContent(html_97356d2b51c64298b83045679b62d526);
+        
+
+        circle_marker_08a76c17f572426f8de3db67023215dd.bindPopup(popup_01be0b6e9cb140abb9df10bc3dfbd440)
+        ;
+
+        
+    
+    
+            var circle_marker_d292fccd8a5f46cdb34e9833859efe6b = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_3182d220899943a387bdb89718bdcfa0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68c58225d2ab43fca019b7ad48875963 = $(`<div id="html_68c58225d2ab43fca019b7ad48875963" style="width: 100.0%; height: 100.0%;">T P BAROO, KARGIL, LADAKH</div>`)[0];
+            popup_3182d220899943a387bdb89718bdcfa0.setContent(html_68c58225d2ab43fca019b7ad48875963);
+        
+
+        circle_marker_d292fccd8a5f46cdb34e9833859efe6b.bindPopup(popup_3182d220899943a387bdb89718bdcfa0)
+        ;
+
+        
+    
+    
+            var circle_marker_42276216306d4d14aa322b1acb7baf79 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_95740671457a49e788505984a657f535 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f33526d6b23487ab0163e5641ed6044 = $(`<div id="html_2f33526d6b23487ab0163e5641ed6044" style="width: 100.0%; height: 100.0%;">KARGIL MAIN, KARGIL, LADAKH</div>`)[0];
+            popup_95740671457a49e788505984a657f535.setContent(html_2f33526d6b23487ab0163e5641ed6044);
+        
+
+        circle_marker_42276216306d4d14aa322b1acb7baf79.bindPopup(popup_95740671457a49e788505984a657f535)
+        ;
+
+        
+    
+    
+            var circle_marker_2e8815f8f5564b24b15f7acd23941758 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_4b615e2cedbc4dd49208c98386890b4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2bccdaf63d5a4497815fe83945132475 = $(`<div id="html_2bccdaf63d5a4497815fe83945132475" style="width: 100.0%; height: 100.0%;">SANKOO TREASURY, KARGIL, LADAKH</div>`)[0];
+            popup_4b615e2cedbc4dd49208c98386890b4d.setContent(html_2bccdaf63d5a4497815fe83945132475);
+        
+
+        circle_marker_2e8815f8f5564b24b15f7acd23941758.bindPopup(popup_4b615e2cedbc4dd49208c98386890b4d)
+        ;
+
+        
+    
+    
+            var circle_marker_d7057e5f2292468db0b07b0c0d07c0c9 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_8ce2f35d047a4f268a913e9ea9b3fbe1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f7ffbe3a0af4086bde98c1c01667854 = $(`<div id="html_6f7ffbe3a0af4086bde98c1c01667854" style="width: 100.0%; height: 100.0%;">LAL CHOWK KARGIL, KARGIL, LADAKH</div>`)[0];
+            popup_8ce2f35d047a4f268a913e9ea9b3fbe1.setContent(html_6f7ffbe3a0af4086bde98c1c01667854);
+        
+
+        circle_marker_d7057e5f2292468db0b07b0c0d07c0c9.bindPopup(popup_8ce2f35d047a4f268a913e9ea9b3fbe1)
+        ;
+
+        
+    
+    
+            var circle_marker_2f973a0d8b5f489bafb778c1d3f8e7c3 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_97c5c615d8b747c0b0f1d8caab03d22c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e3922c9a6e140a38852bf59816fd738 = $(`<div id="html_5e3922c9a6e140a38852bf59816fd738" style="width: 100.0%; height: 100.0%;">BATALIK, KARGIL, LADAKH</div>`)[0];
+            popup_97c5c615d8b747c0b0f1d8caab03d22c.setContent(html_5e3922c9a6e140a38852bf59816fd738);
+        
+
+        circle_marker_2f973a0d8b5f489bafb778c1d3f8e7c3.bindPopup(popup_97c5c615d8b747c0b0f1d8caab03d22c)
+        ;
+
+        
+    
+    
+            var circle_marker_49488eca3ef1435aa6212cfce398c55a = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_f6fab9428bff471985d1bbb7aa1514d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50fb7a1362554d11a89c117ef27d99f0 = $(`<div id="html_50fb7a1362554d11a89c117ef27d99f0" style="width: 100.0%; height: 100.0%;">THIKSEY, LEH LADAKH, LADAKH</div>`)[0];
+            popup_f6fab9428bff471985d1bbb7aa1514d3.setContent(html_50fb7a1362554d11a89c117ef27d99f0);
+        
+
+        circle_marker_49488eca3ef1435aa6212cfce398c55a.bindPopup(popup_f6fab9428bff471985d1bbb7aa1514d3)
+        ;
+
+        
+    
+    
+            var circle_marker_382ec36789994aaa95c89bb5f7f4d0d4 = L.circleMarker(
+                [34.5667, 76.1],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_0e5ddf8c51a9462bb39b6ec667bdc116 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6632271bcb60487789aafa4729fd9d46 = $(`<div id="html_6632271bcb60487789aafa4729fd9d46" style="width: 100.0%; height: 100.0%;">TEMISGAM, LEH LADAKH, LADAKH</div>`)[0];
+            popup_0e5ddf8c51a9462bb39b6ec667bdc116.setContent(html_6632271bcb60487789aafa4729fd9d46);
+        
+
+        circle_marker_382ec36789994aaa95c89bb5f7f4d0d4.bindPopup(popup_0e5ddf8c51a9462bb39b6ec667bdc116)
+        ;
+
+        
+    
+    
+            var circle_marker_9d68960c94e34da1a2b126ac96009d84 = L.circleMarker(
+                [34.1642029, 77.5848133],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_a5036cc8ca0341119ebe5145a69140b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75572a12434d42a7a84ffd856577db04 = $(`<div id="html_75572a12434d42a7a84ffd856577db04" style="width: 100.0%; height: 100.0%;">KAIREY LEH, LEH LADAKH, LADAKH</div>`)[0];
+            popup_a5036cc8ca0341119ebe5145a69140b8.setContent(html_75572a12434d42a7a84ffd856577db04);
+        
+
+        circle_marker_9d68960c94e34da1a2b126ac96009d84.bindPopup(popup_a5036cc8ca0341119ebe5145a69140b8)
+        ;
+
+        
+    
+    
+            var circle_marker_c1bb825f953c46e59cb3b7ef919694bd = L.circleMarker(
+                [34.4941159, 76.1158286],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_1ee7e1ecb7e44621bc3963eb878f960a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b0332297b084390863279ef1cee6739 = $(`<div id="html_3b0332297b084390863279ef1cee6739" style="width: 100.0%; height: 100.0%;">TSURU, KARGIL, LADAKH</div>`)[0];
+            popup_1ee7e1ecb7e44621bc3963eb878f960a.setContent(html_3b0332297b084390863279ef1cee6739);
+        
+
+        circle_marker_c1bb825f953c46e59cb3b7ef919694bd.bindPopup(popup_1ee7e1ecb7e44621bc3963eb878f960a)
+        ;
+
+        
+    
+    
+            var circle_marker_a517fa3afa244a85a9adbb92dcf170fc = L.circleMarker(
+                [34.1653913, 77.467491993407],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_1ae14217db5445608b54e19d7852f853);
+        
+    
+        var popup_7d825b46f0aa4ad9b1ab0eefaad6c2ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee14b5edd2ea4e4a9f55a356e6d14046 = $(`<div id="html_ee14b5edd2ea4e4a9f55a356e6d14046" style="width: 100.0%; height: 100.0%;">NIMMOO, LEH LADAKH, LADAKH</div>`)[0];
+            popup_7d825b46f0aa4ad9b1ab0eefaad6c2ea.setContent(html_ee14b5edd2ea4e4a9f55a356e6d14046);
+        
+
+        circle_marker_a517fa3afa244a85a9adbb92dcf170fc.bindPopup(popup_7d825b46f0aa4ad9b1ab0eefaad6c2ea)
+        ;
+
+        
+    
+</script>

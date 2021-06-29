@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_58de2cd890df4701a2495f2726f54850 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_58de2cd890df4701a2495f2726f54850" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAGALAND Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(12)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(7)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(7)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(6)</li><li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(5)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(4)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(2)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(2)</li><li><span style='background:turquoise;opacity:0.7;'></span>PUNJAB AND SIND BANK(2)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(2)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>NAGALAND(50)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_58de2cd890df4701a2495f2726f54850 = L.map(
+                "map_58de2cd890df4701a2495f2726f54850",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_422686923ea3474291a49a67dc2247fd = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+            map_58de2cd890df4701a2495f2726f54850.fitBounds(
+                [[25.662, 93.9], [26.3748, 94.8333]],
+                {}
+            );
+        
+    
+            var circle_marker_aafc5bdb89ca48a3bdf9679b896daf48 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_5cc84f34361241b587e1fe2450647059 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca80d76563154aeaa7f40491d445c421 = $(`<div id="html_ca80d76563154aeaa7f40491d445c421" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_5cc84f34361241b587e1fe2450647059.setContent(html_ca80d76563154aeaa7f40491d445c421);
+        
+
+        circle_marker_aafc5bdb89ca48a3bdf9679b896daf48.bindPopup(popup_5cc84f34361241b587e1fe2450647059)
+        ;
+
+        
+    
+    
+            var circle_marker_b9ced1e896934a54ac2f7d8bf8903b0d = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_b9ecb87eb1a14c929b98ec48f7cdc015 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c9c79c8195b4fc7877ff1a2514dc79f = $(`<div id="html_8c9c79c8195b4fc7877ff1a2514dc79f" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_b9ecb87eb1a14c929b98ec48f7cdc015.setContent(html_8c9c79c8195b4fc7877ff1a2514dc79f);
+        
+
+        circle_marker_b9ced1e896934a54ac2f7d8bf8903b0d.bindPopup(popup_b9ecb87eb1a14c929b98ec48f7cdc015)
+        ;
+
+        
+    
+    
+            var circle_marker_913cd3efbad14b32b4602377fb0a8562 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_35aaaac6dbd14fcb9102b8eb39351c1e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9055bdf0df8c48b8a6de4b88005288d3 = $(`<div id="html_9055bdf0df8c48b8a6de4b88005288d3" style="width: 100.0%; height: 100.0%;">Dimapur Bazaar, DIMAPUR, NAGALAND</div>`)[0];
+            popup_35aaaac6dbd14fcb9102b8eb39351c1e.setContent(html_9055bdf0df8c48b8a6de4b88005288d3);
+        
+
+        circle_marker_913cd3efbad14b32b4602377fb0a8562.bindPopup(popup_35aaaac6dbd14fcb9102b8eb39351c1e)
+        ;
+
+        
+    
+    
+            var circle_marker_98874a57a94845899507f617211fe086 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_02efb50b805c47cc8b53f45731216ccf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_512bdd398a4c4feb982c97f131468801 = $(`<div id="html_512bdd398a4c4feb982c97f131468801" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_02efb50b805c47cc8b53f45731216ccf.setContent(html_512bdd398a4c4feb982c97f131468801);
+        
+
+        circle_marker_98874a57a94845899507f617211fe086.bindPopup(popup_02efb50b805c47cc8b53f45731216ccf)
+        ;
+
+        
+    
+    
+            var circle_marker_4cb9e88eabf643199a739643e05eb985 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_7de4690efb4d48f8a8340aac1f11beca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd4eb0b8437b482a802269d840d4184d = $(`<div id="html_cd4eb0b8437b482a802269d840d4184d" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_7de4690efb4d48f8a8340aac1f11beca.setContent(html_cd4eb0b8437b482a802269d840d4184d);
+        
+
+        circle_marker_4cb9e88eabf643199a739643e05eb985.bindPopup(popup_7de4690efb4d48f8a8340aac1f11beca)
+        ;
+
+        
+    
+    
+            var circle_marker_b36af3c083fc441b99d1b1bfc7e0d11e = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_3135db26a47441f8b2b50e855ebd682c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7e2e50d8ef66432fbb096afaeb604e3b = $(`<div id="html_7e2e50d8ef66432fbb096afaeb604e3b" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_3135db26a47441f8b2b50e855ebd682c.setContent(html_7e2e50d8ef66432fbb096afaeb604e3b);
+        
+
+        circle_marker_b36af3c083fc441b99d1b1bfc7e0d11e.bindPopup(popup_3135db26a47441f8b2b50e855ebd682c)
+        ;
+
+        
+    
+    
+            var circle_marker_9321f6519969456ea3e1b146d0f9323f = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_087930a948a949268efbeeb58fad52e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5b638931dd4459c8b642958156e8d45 = $(`<div id="html_a5b638931dd4459c8b642958156e8d45" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_087930a948a949268efbeeb58fad52e7.setContent(html_a5b638931dd4459c8b642958156e8d45);
+        
+
+        circle_marker_9321f6519969456ea3e1b146d0f9323f.bindPopup(popup_087930a948a949268efbeeb58fad52e7)
+        ;
+
+        
+    
+    
+            var circle_marker_fbc3ac3e2c5b438bbc285afd23fc1967 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_fa0f2958416643a58dac956449372cb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d53afb0e66674749a7443c38b6b1a44e = $(`<div id="html_d53afb0e66674749a7443c38b6b1a44e" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_fa0f2958416643a58dac956449372cb8.setContent(html_d53afb0e66674749a7443c38b6b1a44e);
+        
+
+        circle_marker_fbc3ac3e2c5b438bbc285afd23fc1967.bindPopup(popup_fa0f2958416643a58dac956449372cb8)
+        ;
+
+        
+    
+    
+            var circle_marker_91713561df854338b5a20d4528cf969f = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_191596e4d94d42a2ba9935ec6f206843 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01f9b60144c8464b91c36484f7f44270 = $(`<div id="html_01f9b60144c8464b91c36484f7f44270" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_191596e4d94d42a2ba9935ec6f206843.setContent(html_01f9b60144c8464b91c36484f7f44270);
+        
+
+        circle_marker_91713561df854338b5a20d4528cf969f.bindPopup(popup_191596e4d94d42a2ba9935ec6f206843)
+        ;
+
+        
+    
+    
+            var circle_marker_a6d8bca45c2447fd8ec7c9c48f63cc21 = L.circleMarker(
+                [25.9288, 94.3486],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_9de99a4c4a064998bdb3abb68f0f6fea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b00efdacd9341e48457725807d41351 = $(`<div id="html_2b00efdacd9341e48457725807d41351" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_9de99a4c4a064998bdb3abb68f0f6fea.setContent(html_2b00efdacd9341e48457725807d41351);
+        
+
+        circle_marker_a6d8bca45c2447fd8ec7c9c48f63cc21.bindPopup(popup_9de99a4c4a064998bdb3abb68f0f6fea)
+        ;
+
+        
+    
+    
+            var circle_marker_a14edef409c14d5ebfc2fca8c4d98441 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_c8fa4a7232304152a76a8641078e6e46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4df9cf085131483984e7c95028dc7588 = $(`<div id="html_4df9cf085131483984e7c95028dc7588" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_c8fa4a7232304152a76a8641078e6e46.setContent(html_4df9cf085131483984e7c95028dc7588);
+        
+
+        circle_marker_a14edef409c14d5ebfc2fca8c4d98441.bindPopup(popup_c8fa4a7232304152a76a8641078e6e46)
+        ;
+
+        
+    
+    
+            var circle_marker_cbb3edc01d4c47e8a82e2f72bef7900b = L.circleMarker(
+                [25.9288, 94.3486],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_7b4172f23ba041578ba7eaff979b2d58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3956baf04094478ca4a50afde4a7c553 = $(`<div id="html_3956baf04094478ca4a50afde4a7c553" style="width: 100.0%; height: 100.0%;">PURANA BAZAR-DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_7b4172f23ba041578ba7eaff979b2d58.setContent(html_3956baf04094478ca4a50afde4a7c553);
+        
+
+        circle_marker_cbb3edc01d4c47e8a82e2f72bef7900b.bindPopup(popup_7b4172f23ba041578ba7eaff979b2d58)
+        ;
+
+        
+    
+    
+            var circle_marker_0e604f045a6b48a99a81698e8814704d = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_f620b504b3e24e298881c3842f708599 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4497dae0a52f44a2b3a438e4d7e410a2 = $(`<div id="html_4497dae0a52f44a2b3a438e4d7e410a2" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_f620b504b3e24e298881c3842f708599.setContent(html_4497dae0a52f44a2b3a438e4d7e410a2);
+        
+
+        circle_marker_0e604f045a6b48a99a81698e8814704d.bindPopup(popup_f620b504b3e24e298881c3842f708599)
+        ;
+
+        
+    
+    
+            var circle_marker_bf480099af9943a982eda4942bbd2a6e = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_dfdaa7d58b6a40eea243a72355028b1b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_381d3287fbbd4ef6816a1b3d8ffc0e32 = $(`<div id="html_381d3287fbbd4ef6816a1b3d8ffc0e32" style="width: 100.0%; height: 100.0%;">DIMAPUR KOHIMA ROAD, DIMAPUR, NAGALAND</div>`)[0];
+            popup_dfdaa7d58b6a40eea243a72355028b1b.setContent(html_381d3287fbbd4ef6816a1b3d8ffc0e32);
+        
+
+        circle_marker_bf480099af9943a982eda4942bbd2a6e.bindPopup(popup_dfdaa7d58b6a40eea243a72355028b1b)
+        ;
+
+        
+    
+    
+            var circle_marker_a838552642ad456199868a34a85dfc1f = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_78aaf1b3e1a24e81bdba2005c0e28e6b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_820b7ba567394024b2acbd9c2de1e52b = $(`<div id="html_820b7ba567394024b2acbd9c2de1e52b" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_78aaf1b3e1a24e81bdba2005c0e28e6b.setContent(html_820b7ba567394024b2acbd9c2de1e52b);
+        
+
+        circle_marker_a838552642ad456199868a34a85dfc1f.bindPopup(popup_78aaf1b3e1a24e81bdba2005c0e28e6b)
+        ;
+
+        
+    
+    
+            var circle_marker_b2566d24014b46fbb0e510db26d5c3d2 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_6feb9ae18bc447a1aa7db6c976c3e6d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e2323804968243d3a087f44c8cde60fc = $(`<div id="html_e2323804968243d3a087f44c8cde60fc" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_6feb9ae18bc447a1aa7db6c976c3e6d9.setContent(html_e2323804968243d3a087f44c8cde60fc);
+        
+
+        circle_marker_b2566d24014b46fbb0e510db26d5c3d2.bindPopup(popup_6feb9ae18bc447a1aa7db6c976c3e6d9)
+        ;
+
+        
+    
+    
+            var circle_marker_1c7511beb31c49a5903a103c4fcbd36c = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_1870c0df7d274c639643dc1ce90aa986 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a92941c0b5f43b7baa2940ec9535d00 = $(`<div id="html_3a92941c0b5f43b7baa2940ec9535d00" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_1870c0df7d274c639643dc1ce90aa986.setContent(html_3a92941c0b5f43b7baa2940ec9535d00);
+        
+
+        circle_marker_1c7511beb31c49a5903a103c4fcbd36c.bindPopup(popup_1870c0df7d274c639643dc1ce90aa986)
+        ;
+
+        
+    
+    
+            var circle_marker_817a0374c1654bd99fcfb39e89a756e2 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_04e8147661eb4b47993c937f45abffdc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_beb2e137649b44bea4afa61dd9084665 = $(`<div id="html_beb2e137649b44bea4afa61dd9084665" style="width: 100.0%; height: 100.0%;">WOKHA, WOKHA, NAGALAND</div>`)[0];
+            popup_04e8147661eb4b47993c937f45abffdc.setContent(html_beb2e137649b44bea4afa61dd9084665);
+        
+
+        circle_marker_817a0374c1654bd99fcfb39e89a756e2.bindPopup(popup_04e8147661eb4b47993c937f45abffdc)
+        ;
+
+        
+    
+    
+            var circle_marker_fa229fa034a84b8ea715946b48516f09 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_941c60bab94a499b8f49806d4358bccc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b49eef73728425d91284d5635def271 = $(`<div id="html_3b49eef73728425d91284d5635def271" style="width: 100.0%; height: 100.0%;">WOKHA, WOKHA, NAGALAND</div>`)[0];
+            popup_941c60bab94a499b8f49806d4358bccc.setContent(html_3b49eef73728425d91284d5635def271);
+        
+
+        circle_marker_fa229fa034a84b8ea715946b48516f09.bindPopup(popup_941c60bab94a499b8f49806d4358bccc)
+        ;
+
+        
+    
+    
+            var circle_marker_c9d043d31743441092d39d6b098c2de2 = L.circleMarker(
+                [26.3583, 94.8083],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_e2fb0b3fc862421897cc4693d5bc8270 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49338a7338e14bcfb1d47dbc828da172 = $(`<div id="html_49338a7338e14bcfb1d47dbc828da172" style="width: 100.0%; height: 100.0%;">NAGINIMORA, MON, NAGALAND</div>`)[0];
+            popup_e2fb0b3fc862421897cc4693d5bc8270.setContent(html_49338a7338e14bcfb1d47dbc828da172);
+        
+
+        circle_marker_c9d043d31743441092d39d6b098c2de2.bindPopup(popup_e2fb0b3fc862421897cc4693d5bc8270)
+        ;
+
+        
+    
+    
+            var circle_marker_c77302dfec554e3fba851d7d9c0f0c2b = L.circleMarker(
+                [25.9333, 94.2333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_687d50dad0524accab159f33857ab721 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1afe7929ea2a4573847a977660437472 = $(`<div id="html_1afe7929ea2a4573847a977660437472" style="width: 100.0%; height: 100.0%;">TSEMINYU NEW TOWN, KOHIMA, NAGALAND</div>`)[0];
+            popup_687d50dad0524accab159f33857ab721.setContent(html_1afe7929ea2a4573847a977660437472);
+        
+
+        circle_marker_c77302dfec554e3fba851d7d9c0f0c2b.bindPopup(popup_687d50dad0524accab159f33857ab721)
+        ;
+
+        
+    
+    
+            var circle_marker_76622a0467e741dd9051886ee69bb659 = L.circleMarker(
+                [25.9667, 94.5167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_fdd67d56c4824bc58b6a7c007a098cd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b40c743e0a34c1f98a86b35c589da73 = $(`<div id="html_0b40c743e0a34c1f98a86b35c589da73" style="width: 100.0%; height: 100.0%;">ZUNHEBOTO, ZUNHEBOTO, NAGALAND</div>`)[0];
+            popup_fdd67d56c4824bc58b6a7c007a098cd8.setContent(html_0b40c743e0a34c1f98a86b35c589da73);
+        
+
+        circle_marker_76622a0467e741dd9051886ee69bb659.bindPopup(popup_fdd67d56c4824bc58b6a7c007a098cd8)
+        ;
+
+        
+    
+    
+            var circle_marker_0fc917b5fe3d42db82233120f7eaf09d = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_b664c07632bf4015b13bb4395500bfdd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cfa7f48c791c4b47a9e6ca6e98b10eaf = $(`<div id="html_cfa7f48c791c4b47a9e6ca6e98b10eaf" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_b664c07632bf4015b13bb4395500bfdd.setContent(html_cfa7f48c791c4b47a9e6ca6e98b10eaf);
+        
+
+        circle_marker_0fc917b5fe3d42db82233120f7eaf09d.bindPopup(popup_b664c07632bf4015b13bb4395500bfdd)
+        ;
+
+        
+    
+    
+            var circle_marker_12c57c6ae2c649e29a5d49cffd19c144 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_bc7ab53cfb344c18978972da80c294c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b65b0896ebc04efd831cd1298c86152b = $(`<div id="html_b65b0896ebc04efd831cd1298c86152b" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_bc7ab53cfb344c18978972da80c294c7.setContent(html_b65b0896ebc04efd831cd1298c86152b);
+        
+
+        circle_marker_12c57c6ae2c649e29a5d49cffd19c144.bindPopup(popup_bc7ab53cfb344c18978972da80c294c7)
+        ;
+
+        
+    
+    
+            var circle_marker_ec85b257e467486aae5b10a155f40e7e = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_fd69910c58a1496da704bc0447f6ec21 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3da6d5dec91e446096901bbb528e6e6b = $(`<div id="html_3da6d5dec91e446096901bbb528e6e6b" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_fd69910c58a1496da704bc0447f6ec21.setContent(html_3da6d5dec91e446096901bbb528e6e6b);
+        
+
+        circle_marker_ec85b257e467486aae5b10a155f40e7e.bindPopup(popup_fd69910c58a1496da704bc0447f6ec21)
+        ;
+
+        
+    
+    
+            var circle_marker_cf984fb771174378bc29e48891436e09 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_b3b6dcb4a98c4a19b21b3c481a99eeca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a5bea17d3274e11965eb7bd384d0e8d = $(`<div id="html_4a5bea17d3274e11965eb7bd384d0e8d" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_b3b6dcb4a98c4a19b21b3c481a99eeca.setContent(html_4a5bea17d3274e11965eb7bd384d0e8d);
+        
+
+        circle_marker_cf984fb771174378bc29e48891436e09.bindPopup(popup_b3b6dcb4a98c4a19b21b3c481a99eeca)
+        ;
+
+        
+    
+    
+            var circle_marker_cbf68381762d4161a18167cbe6f00940 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_85f84b1e77b04f5a83b57cc1cdc6ece0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76ad1e40399c40a8931fddec43cbd6eb = $(`<div id="html_76ad1e40399c40a8931fddec43cbd6eb" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_85f84b1e77b04f5a83b57cc1cdc6ece0.setContent(html_76ad1e40399c40a8931fddec43cbd6eb);
+        
+
+        circle_marker_cbf68381762d4161a18167cbe6f00940.bindPopup(popup_85f84b1e77b04f5a83b57cc1cdc6ece0)
+        ;
+
+        
+    
+    
+            var circle_marker_e497e1d815374d33a994803501a8c4cb = L.circleMarker(
+                [25.662, 94.1084],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_8b117599f72843f49740ee9c7cb8d9a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9fbeb71ea20d4b4e9b086891aaee73bc = $(`<div id="html_9fbeb71ea20d4b4e9b086891aaee73bc" style="width: 100.0%; height: 100.0%;">KOHIMA SECRETARIAT ROAD, KOHIMA, NAGALAND</div>`)[0];
+            popup_8b117599f72843f49740ee9c7cb8d9a9.setContent(html_9fbeb71ea20d4b4e9b086891aaee73bc);
+        
+
+        circle_marker_e497e1d815374d33a994803501a8c4cb.bindPopup(popup_8b117599f72843f49740ee9c7cb8d9a9)
+        ;
+
+        
+    
+    
+            var circle_marker_25c89cbe066f420aa6063ab292018243 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_6ca3cf8a6550450d9c7f805a777b233d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44e40b3fa0c34e1198a5b8d9c14f5218 = $(`<div id="html_44e40b3fa0c34e1198a5b8d9c14f5218" style="width: 100.0%; height: 100.0%;">KOHIMA-MAIN ROAD, KOHIMA, NAGALAND</div>`)[0];
+            popup_6ca3cf8a6550450d9c7f805a777b233d.setContent(html_44e40b3fa0c34e1198a5b8d9c14f5218);
+        
+
+        circle_marker_25c89cbe066f420aa6063ab292018243.bindPopup(popup_6ca3cf8a6550450d9c7f805a777b233d)
+        ;
+
+        
+    
+    
+            var circle_marker_fe83c0ef67934361b1b4153f467fb284 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_1ad9032dd68d4a099e820737e080c645 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c374839e8e574cffac90d6486788b420 = $(`<div id="html_c374839e8e574cffac90d6486788b420" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_1ad9032dd68d4a099e820737e080c645.setContent(html_c374839e8e574cffac90d6486788b420);
+        
+
+        circle_marker_fe83c0ef67934361b1b4153f467fb284.bindPopup(popup_1ad9032dd68d4a099e820737e080c645)
+        ;
+
+        
+    
+    
+            var circle_marker_93cea8a726f7435a98b6392b37d2dd12 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_ba91456f9e714fd1ad8e92911973d5bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4c5da86f8dfa4efca79a95b3ee7f38c2 = $(`<div id="html_4c5da86f8dfa4efca79a95b3ee7f38c2" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_ba91456f9e714fd1ad8e92911973d5bb.setContent(html_4c5da86f8dfa4efca79a95b3ee7f38c2);
+        
+
+        circle_marker_93cea8a726f7435a98b6392b37d2dd12.bindPopup(popup_ba91456f9e714fd1ad8e92911973d5bb)
+        ;
+
+        
+    
+    
+            var circle_marker_ccf1a801260f47a594d1b074026defa7 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_6de42f991b7c471aaeacfa97bf88e4a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_127fcb6823e842d080472b9ac4fbd466 = $(`<div id="html_127fcb6823e842d080472b9ac4fbd466" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_6de42f991b7c471aaeacfa97bf88e4a4.setContent(html_127fcb6823e842d080472b9ac4fbd466);
+        
+
+        circle_marker_ccf1a801260f47a594d1b074026defa7.bindPopup(popup_6de42f991b7c471aaeacfa97bf88e4a4)
+        ;
+
+        
+    
+    
+            var circle_marker_6625fabcc35747abbbf301c4b7f0bd50 = L.circleMarker(
+                [26.3333, 94.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_9cd05218340140f599490382a28c8067 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e34bd7e0a2784c6dba511affb836b549 = $(`<div id="html_e34bd7e0a2784c6dba511affb836b549" style="width: 100.0%; height: 100.0%;">UNGMA, MOKOKCHUNG, NAGALAND</div>`)[0];
+            popup_9cd05218340140f599490382a28c8067.setContent(html_e34bd7e0a2784c6dba511affb836b549);
+        
+
+        circle_marker_6625fabcc35747abbbf301c4b7f0bd50.bindPopup(popup_9cd05218340140f599490382a28c8067)
+        ;
+
+        
+    
+    
+            var circle_marker_1b7cb6e3b4f2412fbc962947e35861bf = L.circleMarker(
+                [26.3333, 94.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_975e2e94196b48c8872f969d19c2f8f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4e56764df224e0e805c76a306ada04d = $(`<div id="html_c4e56764df224e0e805c76a306ada04d" style="width: 100.0%; height: 100.0%;">MOKOKCHUNG, MOKOKCHUNG, NAGALAND</div>`)[0];
+            popup_975e2e94196b48c8872f969d19c2f8f3.setContent(html_c4e56764df224e0e805c76a306ada04d);
+        
+
+        circle_marker_1b7cb6e3b4f2412fbc962947e35861bf.bindPopup(popup_975e2e94196b48c8872f969d19c2f8f3)
+        ;
+
+        
+    
+    
+            var circle_marker_ea04036b314a4f7687e40a150d7e54ea = L.circleMarker(
+                [26.3333, 94.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_a6f4ee9eb0a149f994409f46d542985e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e19068acffa544e7a8576aee944b5303 = $(`<div id="html_e19068acffa544e7a8576aee944b5303" style="width: 100.0%; height: 100.0%;">MOKOKCHUNG, MOKOKCHUNG, NAGALAND</div>`)[0];
+            popup_a6f4ee9eb0a149f994409f46d542985e.setContent(html_e19068acffa544e7a8576aee944b5303);
+        
+
+        circle_marker_ea04036b314a4f7687e40a150d7e54ea.bindPopup(popup_a6f4ee9eb0a149f994409f46d542985e)
+        ;
+
+        
+    
+    
+            var circle_marker_d0dcfcf9e05e4d939380491674a145df = L.circleMarker(
+                [26.3333, 94.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_602f93b20b0847d59544cdee331efb19 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bccc76cb539943b1818a9068ae3b08ba = $(`<div id="html_bccc76cb539943b1818a9068ae3b08ba" style="width: 100.0%; height: 100.0%;">MOKOKCHUNG, MOKOKCHUNG, NAGALAND</div>`)[0];
+            popup_602f93b20b0847d59544cdee331efb19.setContent(html_bccc76cb539943b1818a9068ae3b08ba);
+        
+
+        circle_marker_d0dcfcf9e05e4d939380491674a145df.bindPopup(popup_602f93b20b0847d59544cdee331efb19)
+        ;
+
+        
+    
+    
+            var circle_marker_188792fd06a744b1bb6535177d0be01d = L.circleMarker(
+                [26.3333, 94.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_432e1ce3ad534f70bfa6a5a0788e5496 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3df18374c73b4836bfda12f1985bcb65 = $(`<div id="html_3df18374c73b4836bfda12f1985bcb65" style="width: 100.0%; height: 100.0%;">MOKOKCHUNG, MOKOKCHUNG, NAGALAND</div>`)[0];
+            popup_432e1ce3ad534f70bfa6a5a0788e5496.setContent(html_3df18374c73b4836bfda12f1985bcb65);
+        
+
+        circle_marker_188792fd06a744b1bb6535177d0be01d.bindPopup(popup_432e1ce3ad534f70bfa6a5a0788e5496)
+        ;
+
+        
+    
+    
+            var circle_marker_92493dd183904682b461863cd91ae597 = L.circleMarker(
+                [26.2833, 94.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_74ed6a4173e246c4bf281626adc916c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_117e646635c048cda8bcde306b7dc2d5 = $(`<div id="html_117e646635c048cda8bcde306b7dc2d5" style="width: 100.0%; height: 100.0%;">CHANGTONGYA, MOKOKCHUNG, NAGALAND</div>`)[0];
+            popup_74ed6a4173e246c4bf281626adc916c4.setContent(html_117e646635c048cda8bcde306b7dc2d5);
+        
+
+        circle_marker_92493dd183904682b461863cd91ae597.bindPopup(popup_74ed6a4173e246c4bf281626adc916c4)
+        ;
+
+        
+    
+    
+            var circle_marker_ad0695b882dd4b59a43f63d01ff7cbce = L.circleMarker(
+                [25.7778, 94.1778],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_9667a6af4a0547d89f7ac5a697d97c28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd80dc8d18004c7295606fcd16b79286 = $(`<div id="html_cd80dc8d18004c7295606fcd16b79286" style="width: 100.0%; height: 100.0%;">CHUMUKEDIMA, DIMAPUR, NAGALAND</div>`)[0];
+            popup_9667a6af4a0547d89f7ac5a697d97c28.setContent(html_cd80dc8d18004c7295606fcd16b79286);
+        
+
+        circle_marker_ad0695b882dd4b59a43f63d01ff7cbce.bindPopup(popup_9667a6af4a0547d89f7ac5a697d97c28)
+        ;
+
+        
+    
+    
+            var circle_marker_d0c80cba89034656b051e00e18383eb8 = L.circleMarker(
+                [25.7778, 94.1778],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_7c2446e08fa64cc3a40e725b5a1ba23e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fc509009332445ba47db4579ab93ed5 = $(`<div id="html_6fc509009332445ba47db4579ab93ed5" style="width: 100.0%; height: 100.0%;">CHUMUKEDIMA, DIMAPUR, NAGALAND</div>`)[0];
+            popup_7c2446e08fa64cc3a40e725b5a1ba23e.setContent(html_6fc509009332445ba47db4579ab93ed5);
+        
+
+        circle_marker_d0c80cba89034656b051e00e18383eb8.bindPopup(popup_7c2446e08fa64cc3a40e725b5a1ba23e)
+        ;
+
+        
+    
+    
+            var circle_marker_95acd1c45fea44d18ce06b326b929fa2 = L.circleMarker(
+                [26.3748, 94.6222],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_de43387710ef453ab1b43cfe1ce0bdd6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e5d9f911cad49f6a83f995c683d90ae = $(`<div id="html_0e5d9f911cad49f6a83f995c683d90ae" style="width: 100.0%; height: 100.0%;">TIZIT, MON, NAGALAND</div>`)[0];
+            popup_de43387710ef453ab1b43cfe1ce0bdd6.setContent(html_0e5d9f911cad49f6a83f995c683d90ae);
+        
+
+        circle_marker_95acd1c45fea44d18ce06b326b929fa2.bindPopup(popup_de43387710ef453ab1b43cfe1ce0bdd6)
+        ;
+
+        
+    
+    
+            var circle_marker_1cf8fa662b1746f3bbd33570e9b50b53 = L.circleMarker(
+                [26.3333, 94.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_828f063fc0414a25835663479a6b36f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ec6c6eae9de49b094d4e28706f153b3 = $(`<div id="html_6ec6c6eae9de49b094d4e28706f153b3" style="width: 100.0%; height: 100.0%;">CHANGKI, MOKOKCHUNG, NAGALAND</div>`)[0];
+            popup_828f063fc0414a25835663479a6b36f0.setContent(html_6ec6c6eae9de49b094d4e28706f153b3);
+        
+
+        circle_marker_1cf8fa662b1746f3bbd33570e9b50b53.bindPopup(popup_828f063fc0414a25835663479a6b36f0)
+        ;
+
+        
+    
+    
+            var circle_marker_2c76fb9839514551bc1d33707b52dddb = L.circleMarker(
+                [26.2833, 94.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_ac98a1395f5744078ebb843add7aad51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e66c436d9efa413cb2f4b8f888a4ce02 = $(`<div id="html_e66c436d9efa413cb2f4b8f888a4ce02" style="width: 100.0%; height: 100.0%;">KUBOLONG, MOKOKCHUNG, NAGALAND</div>`)[0];
+            popup_ac98a1395f5744078ebb843add7aad51.setContent(html_e66c436d9efa413cb2f4b8f888a4ce02);
+        
+
+        circle_marker_2c76fb9839514551bc1d33707b52dddb.bindPopup(popup_ac98a1395f5744078ebb843add7aad51)
+        ;
+
+        
+    
+    
+            var circle_marker_c106dcb724ef44e4b39f3a2382cecd3a = L.circleMarker(
+                [25.7667, 93.9],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_320d8027d265436c947682960113d7f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5c278878361483b84fe38d323ffb4f1 = $(`<div id="html_c5c278878361483b84fe38d323ffb4f1" style="width: 100.0%; height: 100.0%;">MEDZIPHEMA, DIMAPUR, NAGALAND</div>`)[0];
+            popup_320d8027d265436c947682960113d7f5.setContent(html_c5c278878361483b84fe38d323ffb4f1);
+        
+
+        circle_marker_c106dcb724ef44e4b39f3a2382cecd3a.bindPopup(popup_320d8027d265436c947682960113d7f5)
+        ;
+
+        
+    
+    
+            var circle_marker_13ce4ad9ede84430b0ed71fb13aa6908 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_e4c42be712d34ceba8441ab069347116 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_86be0afdf5104a50a46d79f981cb7ac9 = $(`<div id="html_86be0afdf5104a50a46d79f981cb7ac9" style="width: 100.0%; height: 100.0%;">HIGH SCHOOL JUNCTION, KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_e4c42be712d34ceba8441ab069347116.setContent(html_86be0afdf5104a50a46d79f981cb7ac9);
+        
+
+        circle_marker_13ce4ad9ede84430b0ed71fb13aa6908.bindPopup(popup_e4c42be712d34ceba8441ab069347116)
+        ;
+
+        
+    
+    
+            var circle_marker_91143f1b4567420f81c39dbf947d88ca = L.circleMarker(
+                [25.9288, 94.3486],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_e8c2b15468c345d0bbbe2916128b9757 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b57c3693b4c43fbb001a143d78805ab = $(`<div id="html_8b57c3693b4c43fbb001a143d78805ab" style="width: 100.0%; height: 100.0%;">DIPHUPAR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_e8c2b15468c345d0bbbe2916128b9757.setContent(html_8b57c3693b4c43fbb001a143d78805ab);
+        
+
+        circle_marker_91143f1b4567420f81c39dbf947d88ca.bindPopup(popup_e8c2b15468c345d0bbbe2916128b9757)
+        ;
+
+        
+    
+    
+            var circle_marker_af082fc69d584d55b0b05ab1c09eec33 = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_851b5bbe82c14137bdf92fedcd4cc3b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_820b81a29bab4693ac7397dde05f7879 = $(`<div id="html_820b81a29bab4693ac7397dde05f7879" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_851b5bbe82c14137bdf92fedcd4cc3b6.setContent(html_820b81a29bab4693ac7397dde05f7879);
+        
+
+        circle_marker_af082fc69d584d55b0b05ab1c09eec33.bindPopup(popup_851b5bbe82c14137bdf92fedcd4cc3b6)
+        ;
+
+        
+    
+    
+            var circle_marker_38bd49e2c95d4a0db18a652ed736076b = L.circleMarker(
+                [26.1, 94.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_a4dd0c8680624121b46612d1fd64dc62 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f86704bea01f4c45a3f3325468b3a11f = $(`<div id="html_f86704bea01f4c45a3f3325468b3a11f" style="width: 100.0%; height: 100.0%;">DIMAPUR, DIMAPUR, NAGALAND</div>`)[0];
+            popup_a4dd0c8680624121b46612d1fd64dc62.setContent(html_f86704bea01f4c45a3f3325468b3a11f);
+        
+
+        circle_marker_38bd49e2c95d4a0db18a652ed736076b.bindPopup(popup_a4dd0c8680624121b46612d1fd64dc62)
+        ;
+
+        
+    
+    
+            var circle_marker_007d966589ac427da9d19e1bda9e9dbb = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_d1b705c8e7334d2ea0adf3b365d8116c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0afe5316f0584233a33630b4629ace2b = $(`<div id="html_0afe5316f0584233a33630b4629ace2b" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_d1b705c8e7334d2ea0adf3b365d8116c.setContent(html_0afe5316f0584233a33630b4629ace2b);
+        
+
+        circle_marker_007d966589ac427da9d19e1bda9e9dbb.bindPopup(popup_d1b705c8e7334d2ea0adf3b365d8116c)
+        ;
+
+        
+    
+    
+            var circle_marker_bc5a11636a45435e94c656ba8bce2582 = L.circleMarker(
+                [25.8583, 94.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_58de2cd890df4701a2495f2726f54850);
+        
+    
+        var popup_58a22728fbcd482caa0b12a6ce35261f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dff6622cffbf47ae8e32e8fa981cc5dd = $(`<div id="html_dff6622cffbf47ae8e32e8fa981cc5dd" style="width: 100.0%; height: 100.0%;">KOHIMA, KOHIMA, NAGALAND</div>`)[0];
+            popup_58a22728fbcd482caa0b12a6ce35261f.setContent(html_dff6622cffbf47ae8e32e8fa981cc5dd);
+        
+
+        circle_marker_bc5a11636a45435e94c656ba8bce2582.bindPopup(popup_58a22728fbcd482caa0b12a6ce35261f)
+        ;
+
+        
+    
+</script>

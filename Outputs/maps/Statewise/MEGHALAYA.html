@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dbe7334381544ca3a9d0b6a50fadd582 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_dbe7334381544ca3a9d0b6a50fadd582" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MEGHALAYA Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(29)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(15)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(9)</li><li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(8)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(8)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(8)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(5)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(4)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(3)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(1)</li><li><span style='background:turquoise;opacity:0.7;'></span>PUNJAB AND SIND BANK(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>MEGHALAYA(91)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_dbe7334381544ca3a9d0b6a50fadd582 = L.map(
+                "map_dbe7334381544ca3a9d0b6a50fadd582",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4d454b3b4fe24ddaa21b52fa6219353a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+            map_dbe7334381544ca3a9d0b6a50fadd582.fitBounds(
+                [[25.3, 90.3667], [27.9167, 96.1667]],
+                {}
+            );
+        
+    
+            var circle_marker_0aebc00bfc744467ab5d1d7de3ed16b2 = L.circleMarker(
+                [25.9, 91.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_63cb98016307439bb5480f8dc58ead77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78d9dd560fa3457a95ddf3c69bfecc02 = $(`<div id="html_78d9dd560fa3457a95ddf3c69bfecc02" style="width: 100.0%; height: 100.0%;">NONGPOH, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_63cb98016307439bb5480f8dc58ead77.setContent(html_78d9dd560fa3457a95ddf3c69bfecc02);
+        
+
+        circle_marker_0aebc00bfc744467ab5d1d7de3ed16b2.bindPopup(popup_63cb98016307439bb5480f8dc58ead77)
+        ;
+
+        
+    
+    
+            var circle_marker_46d32ccbc83b4d4bb9a1b5619009e130 = L.circleMarker(
+                [25.9, 91.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_893a7d5dd8c442f4afe26db58c52fe2a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b8ddc048f2f4c93827faceb0a35e7e0 = $(`<div id="html_3b8ddc048f2f4c93827faceb0a35e7e0" style="width: 100.0%; height: 100.0%;">NONGPOH, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_893a7d5dd8c442f4afe26db58c52fe2a.setContent(html_3b8ddc048f2f4c93827faceb0a35e7e0);
+        
+
+        circle_marker_46d32ccbc83b4d4bb9a1b5619009e130.bindPopup(popup_893a7d5dd8c442f4afe26db58c52fe2a)
+        ;
+
+        
+    
+    
+            var circle_marker_6713ec2e043f4a64b191bfe3f584c138 = L.circleMarker(
+                [25.9, 91.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_57802164a10647a994b7c1ea99447894 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a00c2939653f4cf6acccf417ce179c7c = $(`<div id="html_a00c2939653f4cf6acccf417ce179c7c" style="width: 100.0%; height: 100.0%;">NONGPOH, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_57802164a10647a994b7c1ea99447894.setContent(html_a00c2939653f4cf6acccf417ce179c7c);
+        
+
+        circle_marker_6713ec2e043f4a64b191bfe3f584c138.bindPopup(popup_57802164a10647a994b7c1ea99447894)
+        ;
+
+        
+    
+    
+            var circle_marker_87263c5982df438192b872c53c1aaa27 = L.circleMarker(
+                [25.9, 91.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_70a9ff97411a4910b8e90cb3219e4b6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_535e0f89f09a4fda921a5e4e92b55d0b = $(`<div id="html_535e0f89f09a4fda921a5e4e92b55d0b" style="width: 100.0%; height: 100.0%;">NONGPOH, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_70a9ff97411a4910b8e90cb3219e4b6e.setContent(html_535e0f89f09a4fda921a5e4e92b55d0b);
+        
+
+        circle_marker_87263c5982df438192b872c53c1aaa27.bindPopup(popup_70a9ff97411a4910b8e90cb3219e4b6e)
+        ;
+
+        
+    
+    
+            var circle_marker_9a14491af1f74242864b52a960037b18 = L.circleMarker(
+                [25.9, 91.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_5841944b5f014b42a5178f97c8a522f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49280bcbf3c049c4af9c4ec8059f495d = $(`<div id="html_49280bcbf3c049c4af9c4ec8059f495d" style="width: 100.0%; height: 100.0%;">NANGPOH, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_5841944b5f014b42a5178f97c8a522f6.setContent(html_49280bcbf3c049c4af9c4ec8059f495d);
+        
+
+        circle_marker_9a14491af1f74242864b52a960037b18.bindPopup(popup_5841944b5f014b42a5178f97c8a522f6)
+        ;
+
+        
+    
+    
+            var circle_marker_4bfad8307c2c418c89a08b58827530ce = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_2a840033bb9943e4a3135fa03890d77d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1c2f9d04eec47a584eadb56df1893b6 = $(`<div id="html_a1c2f9d04eec47a584eadb56df1893b6" style="width: 100.0%; height: 100.0%;">SHILLONG - MESEB, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_2a840033bb9943e4a3135fa03890d77d.setContent(html_a1c2f9d04eec47a584eadb56df1893b6);
+        
+
+        circle_marker_4bfad8307c2c418c89a08b58827530ce.bindPopup(popup_2a840033bb9943e4a3135fa03890d77d)
+        ;
+
+        
+    
+    
+            var circle_marker_25ec5668f46642f190cb91c4ffdfb7ec = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_5a6cba23bc034536a8404d2627f63748 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b7c7c70072ff4c90952675e02780a3f4 = $(`<div id="html_b7c7c70072ff4c90952675e02780a3f4" style="width: 100.0%; height: 100.0%;">ST.ANTHONY COLLEGE, SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_5a6cba23bc034536a8404d2627f63748.setContent(html_b7c7c70072ff4c90952675e02780a3f4);
+        
+
+        circle_marker_25ec5668f46642f190cb91c4ffdfb7ec.bindPopup(popup_5a6cba23bc034536a8404d2627f63748)
+        ;
+
+        
+    
+    
+            var circle_marker_6a017a9b058145da94540ddb15b6e383 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_29f013c949fc4b7e9c570b59044023ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_972c94d9c9634ff9aecba92f41c880a8 = $(`<div id="html_972c94d9c9634ff9aecba92f41c880a8" style="width: 100.0%; height: 100.0%;">SHILLONG LADY KEANS GIRLS COLLEGE, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_29f013c949fc4b7e9c570b59044023ff.setContent(html_972c94d9c9634ff9aecba92f41c880a8);
+        
+
+        circle_marker_6a017a9b058145da94540ddb15b6e383.bindPopup(popup_29f013c949fc4b7e9c570b59044023ff)
+        ;
+
+        
+    
+    
+            var circle_marker_6931916a0da24f5db75194b940db0c7d = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_592f0541d7044b8a9e2ea262f2c17462 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_284cdc5e3dba4bcea93a51580d2732d9 = $(`<div id="html_284cdc5e3dba4bcea93a51580d2732d9" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_592f0541d7044b8a9e2ea262f2c17462.setContent(html_284cdc5e3dba4bcea93a51580d2732d9);
+        
+
+        circle_marker_6931916a0da24f5db75194b940db0c7d.bindPopup(popup_592f0541d7044b8a9e2ea262f2c17462)
+        ;
+
+        
+    
+    
+            var circle_marker_713d24dec71a497eb26dde9866043508 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_391d5143bee84fb3a31fa3d1d60c0c4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f53d9c3659d64cb6985e679d0bf6216a = $(`<div id="html_f53d9c3659d64cb6985e679d0bf6216a" style="width: 100.0%; height: 100.0%;">SHILLONG-POLICE BAZAR, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_391d5143bee84fb3a31fa3d1d60c0c4d.setContent(html_f53d9c3659d64cb6985e679d0bf6216a);
+        
+
+        circle_marker_713d24dec71a497eb26dde9866043508.bindPopup(popup_391d5143bee84fb3a31fa3d1d60c0c4d)
+        ;
+
+        
+    
+    
+            var circle_marker_671afb5c93d643048f69042e5d2b125a = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_4ec633ec5c25420ebe647df17e4094db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9fa0737807c4fe192beabbb695df386 = $(`<div id="html_e9fa0737807c4fe192beabbb695df386" style="width: 100.0%; height: 100.0%;">UPPER SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_4ec633ec5c25420ebe647df17e4094db.setContent(html_e9fa0737807c4fe192beabbb695df386);
+        
+
+        circle_marker_671afb5c93d643048f69042e5d2b125a.bindPopup(popup_4ec633ec5c25420ebe647df17e4094db)
+        ;
+
+        
+    
+    
+            var circle_marker_9420443740cb4016a8fd210708dff26b = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_b138ddd6b9884883904b3eadcdb1d041 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c581e4162d74414cac9018e00a53ecab = $(`<div id="html_c581e4162d74414cac9018e00a53ecab" style="width: 100.0%; height: 100.0%;">MOTINAGAR, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_b138ddd6b9884883904b3eadcdb1d041.setContent(html_c581e4162d74414cac9018e00a53ecab);
+        
+
+        circle_marker_9420443740cb4016a8fd210708dff26b.bindPopup(popup_b138ddd6b9884883904b3eadcdb1d041)
+        ;
+
+        
+    
+    
+            var circle_marker_d6fc32b56bc44a33bd2753d81e2c3a27 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_16d8c74e411f4f25b07b658169ca4f08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a63c0daeec8a4059b532e02c4930cea4 = $(`<div id="html_a63c0daeec8a4059b532e02c4930cea4" style="width: 100.0%; height: 100.0%;">SHILLONG-G.S.ROAD, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_16d8c74e411f4f25b07b658169ca4f08.setContent(html_a63c0daeec8a4059b532e02c4930cea4);
+        
+
+        circle_marker_d6fc32b56bc44a33bd2753d81e2c3a27.bindPopup(popup_16d8c74e411f4f25b07b658169ca4f08)
+        ;
+
+        
+    
+    
+            var circle_marker_57aa90f65f294467b50bfdfbd55f33c9 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_d040aea68a88479bbc64947543c3319f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d5ae685a47b425eb62ec8ac50658fe1 = $(`<div id="html_3d5ae685a47b425eb62ec8ac50658fe1" style="width: 100.0%; height: 100.0%;">LAITUMKHRAH, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_d040aea68a88479bbc64947543c3319f.setContent(html_3d5ae685a47b425eb62ec8ac50658fe1);
+        
+
+        circle_marker_57aa90f65f294467b50bfdfbd55f33c9.bindPopup(popup_d040aea68a88479bbc64947543c3319f)
+        ;
+
+        
+    
+    
+            var circle_marker_dabccf09767f481a84964bb2d3ceb744 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_d43ebfa66ffd4725b62016d959918a4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a644a74392b84fb681b72f4bbcd6c581 = $(`<div id="html_a644a74392b84fb681b72f4bbcd6c581" style="width: 100.0%; height: 100.0%;">SHILLONG GARIKHANA, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_d43ebfa66ffd4725b62016d959918a4f.setContent(html_a644a74392b84fb681b72f4bbcd6c581);
+        
+
+        circle_marker_dabccf09767f481a84964bb2d3ceb744.bindPopup(popup_d43ebfa66ffd4725b62016d959918a4f)
+        ;
+
+        
+    
+    
+            var circle_marker_bd5f8b0f32884076b502bb0e401a93d5 = L.circleMarker(
+                [27.9167, 96.1667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_6c449e53167747f090798ecc5a9757f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1db4ffba84e949afa828377193f973e1 = $(`<div id="html_1db4ffba84e949afa828377193f973e1" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_6c449e53167747f090798ecc5a9757f8.setContent(html_1db4ffba84e949afa828377193f973e1);
+        
+
+        circle_marker_bd5f8b0f32884076b502bb0e401a93d5.bindPopup(popup_6c449e53167747f090798ecc5a9757f8)
+        ;
+
+        
+    
+    
+            var circle_marker_d10a8fcb6a574ca5832fbb211efbd21e = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_e8a4443b552445258e2fd74a285e03df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0417bb6996a4b17808557f4f5097fe8 = $(`<div id="html_d0417bb6996a4b17808557f4f5097fe8" style="width: 100.0%; height: 100.0%;">SHILLONG-BARA BAZAR ROAD, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_e8a4443b552445258e2fd74a285e03df.setContent(html_d0417bb6996a4b17808557f4f5097fe8);
+        
+
+        circle_marker_d10a8fcb6a574ca5832fbb211efbd21e.bindPopup(popup_e8a4443b552445258e2fd74a285e03df)
+        ;
+
+        
+    
+    
+            var circle_marker_a952cf97f0e24daf811a4a0d515fb350 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_5400813b77cb49cabdbf84be780e2d9d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa3444b69eb14492ac0babc3d92c348e = $(`<div id="html_aa3444b69eb14492ac0babc3d92c348e" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_5400813b77cb49cabdbf84be780e2d9d.setContent(html_aa3444b69eb14492ac0babc3d92c348e);
+        
+
+        circle_marker_a952cf97f0e24daf811a4a0d515fb350.bindPopup(popup_5400813b77cb49cabdbf84be780e2d9d)
+        ;
+
+        
+    
+    
+            var circle_marker_e5a76ddfad274117822b58b86e788d6e = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_7a995e0d9bb5437588779be18cfaa11d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89a3009acfb64020aaca0431448ec557 = $(`<div id="html_89a3009acfb64020aaca0431448ec557" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_7a995e0d9bb5437588779be18cfaa11d.setContent(html_89a3009acfb64020aaca0431448ec557);
+        
+
+        circle_marker_e5a76ddfad274117822b58b86e788d6e.bindPopup(popup_7a995e0d9bb5437588779be18cfaa11d)
+        ;
+
+        
+    
+    
+            var circle_marker_c9564d303a944d8ea4f438e374fd84a3 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_eb79a33b90a149f7aa3bec717819f526 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07e79c329ceb42969953a2202bd7b144 = $(`<div id="html_07e79c329ceb42969953a2202bd7b144" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_eb79a33b90a149f7aa3bec717819f526.setContent(html_07e79c329ceb42969953a2202bd7b144);
+        
+
+        circle_marker_c9564d303a944d8ea4f438e374fd84a3.bindPopup(popup_eb79a33b90a149f7aa3bec717819f526)
+        ;
+
+        
+    
+    
+            var circle_marker_2613188d639e427481dced8e2233df81 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_ca8664d41ccf4a54a8671be99bfe1993 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8841635c8dd4adfa8eba13c582567e7 = $(`<div id="html_e8841635c8dd4adfa8eba13c582567e7" style="width: 100.0%; height: 100.0%;">UMLYNGKA, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_ca8664d41ccf4a54a8671be99bfe1993.setContent(html_e8841635c8dd4adfa8eba13c582567e7);
+        
+
+        circle_marker_2613188d639e427481dced8e2233df81.bindPopup(popup_ca8664d41ccf4a54a8671be99bfe1993)
+        ;
+
+        
+    
+    
+            var circle_marker_9c29645808394f3e9ee1655a9e6d9a04 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_e8eddcde3b65430c92d53009cf8acb19 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df553874bdc74e689615b3f32a5dbad7 = $(`<div id="html_df553874bdc74e689615b3f32a5dbad7" style="width: 100.0%; height: 100.0%;">SHILLONG-G.S.ROAD, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_e8eddcde3b65430c92d53009cf8acb19.setContent(html_df553874bdc74e689615b3f32a5dbad7);
+        
+
+        circle_marker_9c29645808394f3e9ee1655a9e6d9a04.bindPopup(popup_e8eddcde3b65430c92d53009cf8acb19)
+        ;
+
+        
+    
+    
+            var circle_marker_db405669943045fa831a81dc6bf32d70 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_2bb9fb415d264068b98421c45c9fe1c9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6d02e373d034cd5a8fcb5694e411b59 = $(`<div id="html_d6d02e373d034cd5a8fcb5694e411b59" style="width: 100.0%; height: 100.0%;">LAITUMKHRAH  BRANCH, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_2bb9fb415d264068b98421c45c9fe1c9.setContent(html_d6d02e373d034cd5a8fcb5694e411b59);
+        
+
+        circle_marker_db405669943045fa831a81dc6bf32d70.bindPopup(popup_2bb9fb415d264068b98421c45c9fe1c9)
+        ;
+
+        
+    
+    
+            var circle_marker_fcae872ebda848b0b9ef693adf8b07eb = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_83e1ca989b934d639a507218ee4cb617 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a705cf3d499344039ea0ce064910828e = $(`<div id="html_a705cf3d499344039ea0ce064910828e" style="width: 100.0%; height: 100.0%;">LAITUMKHRAH, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_83e1ca989b934d639a507218ee4cb617.setContent(html_a705cf3d499344039ea0ce064910828e);
+        
+
+        circle_marker_fcae872ebda848b0b9ef693adf8b07eb.bindPopup(popup_83e1ca989b934d639a507218ee4cb617)
+        ;
+
+        
+    
+    
+            var circle_marker_07638e59573d40218d37fbaf9f8384a4 = L.circleMarker(
+                [25.5378, 91.8754],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_be71a656535f49e78d11f9e6f5c9bef7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_41a701484b9d455bbbf4134edc18e4cd = $(`<div id="html_41a701484b9d455bbbf4134edc18e4cd" style="width: 100.0%; height: 100.0%;">MAWLAI, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_be71a656535f49e78d11f9e6f5c9bef7.setContent(html_41a701484b9d455bbbf4134edc18e4cd);
+        
+
+        circle_marker_07638e59573d40218d37fbaf9f8384a4.bindPopup(popup_be71a656535f49e78d11f9e6f5c9bef7)
+        ;
+
+        
+    
+    
+            var circle_marker_d3df3037607f4027a8cafe87d24e22b7 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_4970dc4f183041f3a99a2bf7b13a62e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58cc635953614fa09e7c8e0b8114873d = $(`<div id="html_58cc635953614fa09e7c8e0b8114873d" style="width: 100.0%; height: 100.0%;">LAITUMKHRAH, SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_4970dc4f183041f3a99a2bf7b13a62e6.setContent(html_58cc635953614fa09e7c8e0b8114873d);
+        
+
+        circle_marker_d3df3037607f4027a8cafe87d24e22b7.bindPopup(popup_4970dc4f183041f3a99a2bf7b13a62e6)
+        ;
+
+        
+    
+    
+            var circle_marker_eab42d1835e74b10a05650b1c177c790 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_529140701c9844dc81a0daa1d628a230 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b9f0609467e43a38d1d934f3052d73b = $(`<div id="html_2b9f0609467e43a38d1d934f3052d73b" style="width: 100.0%; height: 100.0%;">SHILLONG NEEPCO LTD, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_529140701c9844dc81a0daa1d628a230.setContent(html_2b9f0609467e43a38d1d934f3052d73b);
+        
+
+        circle_marker_eab42d1835e74b10a05650b1c177c790.bindPopup(popup_529140701c9844dc81a0daa1d628a230)
+        ;
+
+        
+    
+    
+            var circle_marker_db40d46973254dd283e619815984b14e = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_ad386ff077494438a1165b61d5e9dc57 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7d1a01b58934d51b9e49ed0464a4f59 = $(`<div id="html_a7d1a01b58934d51b9e49ed0464a4f59" style="width: 100.0%; height: 100.0%;">LAITUMKHRAH, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_ad386ff077494438a1165b61d5e9dc57.setContent(html_a7d1a01b58934d51b9e49ed0464a4f59);
+        
+
+        circle_marker_db40d46973254dd283e619815984b14e.bindPopup(popup_ad386ff077494438a1165b61d5e9dc57)
+        ;
+
+        
+    
+    
+            var circle_marker_ee920d98c91941b987fd232228ae35d3 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_ac4dd5b0f21840ceb2124ade1271fffc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2e1721afc4440adbf74d39d96e0749c = $(`<div id="html_c2e1721afc4440adbf74d39d96e0749c" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_ac4dd5b0f21840ceb2124ade1271fffc.setContent(html_c2e1721afc4440adbf74d39d96e0749c);
+        
+
+        circle_marker_ee920d98c91941b987fd232228ae35d3.bindPopup(popup_ac4dd5b0f21840ceb2124ade1271fffc)
+        ;
+
+        
+    
+    
+            var circle_marker_fb03347280de4e3d98cb9b4e6d8ef596 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_cf6bd8ead9a245c184bfb7f3209f5a7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90e0b4a6410d4a87accb75ce961ddc7a = $(`<div id="html_90e0b4a6410d4a87accb75ce961ddc7a" style="width: 100.0%; height: 100.0%;">LAMA VILLA, SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_cf6bd8ead9a245c184bfb7f3209f5a7f.setContent(html_90e0b4a6410d4a87accb75ce961ddc7a);
+        
+
+        circle_marker_fb03347280de4e3d98cb9b4e6d8ef596.bindPopup(popup_cf6bd8ead9a245c184bfb7f3209f5a7f)
+        ;
+
+        
+    
+    
+            var circle_marker_6b090971212c44f198240b960586c305 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_74a9889794e7492d9fa0dec973654de8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f70caa0b4e6e46198541809d2bd11450 = $(`<div id="html_f70caa0b4e6e46198541809d2bd11450" style="width: 100.0%; height: 100.0%;">SHILLONG - LAITUMKHRAH, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_74a9889794e7492d9fa0dec973654de8.setContent(html_f70caa0b4e6e46198541809d2bd11450);
+        
+
+        circle_marker_6b090971212c44f198240b960586c305.bindPopup(popup_74a9889794e7492d9fa0dec973654de8)
+        ;
+
+        
+    
+    
+            var circle_marker_bb4ec90281fe4c3a9b7333c76a0980d3 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_707a0d68bfaf40dca61e554a49e058b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aae653e50a524b8aa54bea539050ce0a = $(`<div id="html_aae653e50a524b8aa54bea539050ce0a" style="width: 100.0%; height: 100.0%;">JAIL ROAD, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_707a0d68bfaf40dca61e554a49e058b3.setContent(html_aae653e50a524b8aa54bea539050ce0a);
+        
+
+        circle_marker_bb4ec90281fe4c3a9b7333c76a0980d3.bindPopup(popup_707a0d68bfaf40dca61e554a49e058b3)
+        ;
+
+        
+    
+    
+            var circle_marker_97eda736ecb54fdcbc3a7e29e1b07764 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_7a3227f37d6c4bb4a5b7ba22fd8cc930 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57a6c2c66dc74144a847d4eb8c0250ea = $(`<div id="html_57a6c2c66dc74144a847d4eb8c0250ea" style="width: 100.0%; height: 100.0%;">SHILLONG-LABAN, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_7a3227f37d6c4bb4a5b7ba22fd8cc930.setContent(html_57a6c2c66dc74144a847d4eb8c0250ea);
+        
+
+        circle_marker_97eda736ecb54fdcbc3a7e29e1b07764.bindPopup(popup_7a3227f37d6c4bb4a5b7ba22fd8cc930)
+        ;
+
+        
+    
+    
+            var circle_marker_568b5f20e3834d258863115d04b13c77 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_93995b2e846f45abb35c9e45bb8873e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9c59bf3280c4e9a8ed183793a3b731c = $(`<div id="html_e9c59bf3280c4e9a8ed183793a3b731c" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_93995b2e846f45abb35c9e45bb8873e7.setContent(html_e9c59bf3280c4e9a8ed183793a3b731c);
+        
+
+        circle_marker_568b5f20e3834d258863115d04b13c77.bindPopup(popup_93995b2e846f45abb35c9e45bb8873e7)
+        ;
+
+        
+    
+    
+            var circle_marker_d50deccef94b4283b29526752bfbe562 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_687a13f9f48646b5a7759ddf7f1becfb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c937d15f261450b9ff2abd3c093eb37 = $(`<div id="html_1c937d15f261450b9ff2abd3c093eb37" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_687a13f9f48646b5a7759ddf7f1becfb.setContent(html_1c937d15f261450b9ff2abd3c093eb37);
+        
+
+        circle_marker_d50deccef94b4283b29526752bfbe562.bindPopup(popup_687a13f9f48646b5a7759ddf7f1becfb)
+        ;
+
+        
+    
+    
+            var circle_marker_239873eeeac94b21a52fc78d57e5ebe7 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_f12330675a1c46458d4c0e01f1e42551 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_822b1d95f5a049bcb8a25cde2a443c75 = $(`<div id="html_822b1d95f5a049bcb8a25cde2a443c75" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_f12330675a1c46458d4c0e01f1e42551.setContent(html_822b1d95f5a049bcb8a25cde2a443c75);
+        
+
+        circle_marker_239873eeeac94b21a52fc78d57e5ebe7.bindPopup(popup_f12330675a1c46458d4c0e01f1e42551)
+        ;
+
+        
+    
+    
+            var circle_marker_2e3c628b990a483999af6c7fccc00b84 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_90dc9dcdc94b4ec388d7b0ff66278719 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a13ab4d9a9043598ddceddd46cca201 = $(`<div id="html_0a13ab4d9a9043598ddceddd46cca201" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_90dc9dcdc94b4ec388d7b0ff66278719.setContent(html_0a13ab4d9a9043598ddceddd46cca201);
+        
+
+        circle_marker_2e3c628b990a483999af6c7fccc00b84.bindPopup(popup_90dc9dcdc94b4ec388d7b0ff66278719)
+        ;
+
+        
+    
+    
+            var circle_marker_ff22f07623014f59b8997697a2e6cedb = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_726272abfb024d4bb600d5e48da5474c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa05d1e999bc4d91b626b8777e71c02e = $(`<div id="html_fa05d1e999bc4d91b626b8777e71c02e" style="width: 100.0%; height: 100.0%;">JAIL ROAD (SHILLONG), EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_726272abfb024d4bb600d5e48da5474c.setContent(html_fa05d1e999bc4d91b626b8777e71c02e);
+        
+
+        circle_marker_ff22f07623014f59b8997697a2e6cedb.bindPopup(popup_726272abfb024d4bb600d5e48da5474c)
+        ;
+
+        
+    
+    
+            var circle_marker_ff9e100422b14e6ab2b8b702c6720a28 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_9a3c71be76a1460e898c9a8b77ae8853 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_504048b842234654848bbcbfb2882201 = $(`<div id="html_504048b842234654848bbcbfb2882201" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_9a3c71be76a1460e898c9a8b77ae8853.setContent(html_504048b842234654848bbcbfb2882201);
+        
+
+        circle_marker_ff9e100422b14e6ab2b8b702c6720a28.bindPopup(popup_9a3c71be76a1460e898c9a8b77ae8853)
+        ;
+
+        
+    
+    
+            var circle_marker_eeadf10932ca412d92d0a5445aefd590 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_e7b06bf4add043d9b3c35683a6402760 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_79e172f422504fda8245a366648ad890 = $(`<div id="html_79e172f422504fda8245a366648ad890" style="width: 100.0%; height: 100.0%;">SHILLONG-POLICE BAZAR, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_e7b06bf4add043d9b3c35683a6402760.setContent(html_79e172f422504fda8245a366648ad890);
+        
+
+        circle_marker_eeadf10932ca412d92d0a5445aefd590.bindPopup(popup_e7b06bf4add043d9b3c35683a6402760)
+        ;
+
+        
+    
+    
+            var circle_marker_9fc4f5cc0ed94cafb14544b8ca798bc0 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_dced4fba3f6446449d5a72cf074f9f47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1ed6f8a1b4647ebbb81d0da5f05c4be = $(`<div id="html_a1ed6f8a1b4647ebbb81d0da5f05c4be" style="width: 100.0%; height: 100.0%;">LAITUMKHRAH, SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_dced4fba3f6446449d5a72cf074f9f47.setContent(html_a1ed6f8a1b4647ebbb81d0da5f05c4be);
+        
+
+        circle_marker_9fc4f5cc0ed94cafb14544b8ca798bc0.bindPopup(popup_dced4fba3f6446449d5a72cf074f9f47)
+        ;
+
+        
+    
+    
+            var circle_marker_40d1c320754440188667d9b5fafe6ad4 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_9878c303f87249bfb4896953e407a1ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_429847766fd94429ba2ef78721e05ca5 = $(`<div id="html_429847766fd94429ba2ef78721e05ca5" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_9878c303f87249bfb4896953e407a1ab.setContent(html_429847766fd94429ba2ef78721e05ca5);
+        
+
+        circle_marker_40d1c320754440188667d9b5fafe6ad4.bindPopup(popup_9878c303f87249bfb4896953e407a1ab)
+        ;
+
+        
+    
+    
+            var circle_marker_7df325e3ba1c490a9d84c0d0242c23ee = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_067258d62deb4c8bbe6429d3a3173a5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46325ea869964a7c8a575c48e74e790e = $(`<div id="html_46325ea869964a7c8a575c48e74e790e" style="width: 100.0%; height: 100.0%;">MAWDIANGDIANG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_067258d62deb4c8bbe6429d3a3173a5f.setContent(html_46325ea869964a7c8a575c48e74e790e);
+        
+
+        circle_marker_7df325e3ba1c490a9d84c0d0242c23ee.bindPopup(popup_067258d62deb4c8bbe6429d3a3173a5f)
+        ;
+
+        
+    
+    
+            var circle_marker_487805f77fae4563a6f1e71030d15da4 = L.circleMarker(
+                [25.45, 90.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_232bd8116421421aaaa4ab5801281559 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbdb47908fe24999aa66218e1aee6e7e = $(`<div id="html_dbdb47908fe24999aa66218e1aee6e7e" style="width: 100.0%; height: 100.0%;">TURA, WEST GARO HILLS, MEGHALAYA</div>`)[0];
+            popup_232bd8116421421aaaa4ab5801281559.setContent(html_dbdb47908fe24999aa66218e1aee6e7e);
+        
+
+        circle_marker_487805f77fae4563a6f1e71030d15da4.bindPopup(popup_232bd8116421421aaaa4ab5801281559)
+        ;
+
+        
+    
+    
+            var circle_marker_b14427f3e8c14b77b15d552290e42d43 = L.circleMarker(
+                [25.45, 90.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_96e3f7bc577f4e2cada6c065ef28d2e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d48bc6c88f5248b7910b74abf2dadd27 = $(`<div id="html_d48bc6c88f5248b7910b74abf2dadd27" style="width: 100.0%; height: 100.0%;">TURA, WEST GARO HILLS, MEGHALAYA</div>`)[0];
+            popup_96e3f7bc577f4e2cada6c065ef28d2e8.setContent(html_d48bc6c88f5248b7910b74abf2dadd27);
+        
+
+        circle_marker_b14427f3e8c14b77b15d552290e42d43.bindPopup(popup_96e3f7bc577f4e2cada6c065ef28d2e8)
+        ;
+
+        
+    
+    
+            var circle_marker_4d22637b332e4a7a9f15231d6b8f9f87 = L.circleMarker(
+                [25.45, 90.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_400a0545107c45a5b6eab7d12f46caed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a067d2c09c9422eb8b4bf0c085f3465 = $(`<div id="html_0a067d2c09c9422eb8b4bf0c085f3465" style="width: 100.0%; height: 100.0%;">TURA, WEST GARO HILLS, MEGHALAYA</div>`)[0];
+            popup_400a0545107c45a5b6eab7d12f46caed.setContent(html_0a067d2c09c9422eb8b4bf0c085f3465);
+        
+
+        circle_marker_4d22637b332e4a7a9f15231d6b8f9f87.bindPopup(popup_400a0545107c45a5b6eab7d12f46caed)
+        ;
+
+        
+    
+    
+            var circle_marker_6abfbe3fa7a54a8b9adc1037ce234fc9 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_526d176753b64889b25bdd46f4686020 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa4ede752d1d48c2954932b32e3c6370 = $(`<div id="html_fa4ede752d1d48c2954932b32e3c6370" style="width: 100.0%; height: 100.0%;">ARASU SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_526d176753b64889b25bdd46f4686020.setContent(html_fa4ede752d1d48c2954932b32e3c6370);
+        
+
+        circle_marker_6abfbe3fa7a54a8b9adc1037ce234fc9.bindPopup(popup_526d176753b64889b25bdd46f4686020)
+        ;
+
+        
+    
+    
+            var circle_marker_127d2ce0d86047a19a07615458de782b = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_2dd218e4cd9d491883cd2a1ad86910f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55a60fe7137f49cbb77123a5544968c1 = $(`<div id="html_55a60fe7137f49cbb77123a5544968c1" style="width: 100.0%; height: 100.0%;">MAWLAI, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_2dd218e4cd9d491883cd2a1ad86910f8.setContent(html_55a60fe7137f49cbb77123a5544968c1);
+        
+
+        circle_marker_127d2ce0d86047a19a07615458de782b.bindPopup(popup_2dd218e4cd9d491883cd2a1ad86910f8)
+        ;
+
+        
+    
+    
+            var circle_marker_bbd1315005614b04b9cf4a92c02db5d9 = L.circleMarker(
+                [25.3704, 92.4375],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_6f3ea3bc7aa443febe57a671a33d76fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52c5574e62e3484eb2e95288eb3378f6 = $(`<div id="html_52c5574e62e3484eb2e95288eb3378f6" style="width: 100.0%; height: 100.0%;">KHLIEHRIAT EAST, EAST JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_6f3ea3bc7aa443febe57a671a33d76fa.setContent(html_52c5574e62e3484eb2e95288eb3378f6);
+        
+
+        circle_marker_bbd1315005614b04b9cf4a92c02db5d9.bindPopup(popup_6f3ea3bc7aa443febe57a671a33d76fa)
+        ;
+
+        
+    
+    
+            var circle_marker_e87ac852810440c3b6a31d630795d7d7 = L.circleMarker(
+                [25.6, 90.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_18e5960055944b41925447b7bd9de582 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a97e9315d37f4b2bb879ccf4c6873ed1 = $(`<div id="html_a97e9315d37f4b2bb879ccf4c6873ed1" style="width: 100.0%; height: 100.0%;">WILLIAM NAGAR, EAST GARO HILLS, MEGHALAYA</div>`)[0];
+            popup_18e5960055944b41925447b7bd9de582.setContent(html_a97e9315d37f4b2bb879ccf4c6873ed1);
+        
+
+        circle_marker_e87ac852810440c3b6a31d630795d7d7.bindPopup(popup_18e5960055944b41925447b7bd9de582)
+        ;
+
+        
+    
+    
+            var circle_marker_a8ab2ba197374622bdd93cd74f3abc2f = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_a2be39aeca3945cc81477a42ba19d32b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5983f6b3984b43c6970d88e4a57b272d = $(`<div id="html_5983f6b3984b43c6970d88e4a57b272d" style="width: 100.0%; height: 100.0%;">KYNTON, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_a2be39aeca3945cc81477a42ba19d32b.setContent(html_5983f6b3984b43c6970d88e4a57b272d);
+        
+
+        circle_marker_a8ab2ba197374622bdd93cd74f3abc2f.bindPopup(popup_a2be39aeca3945cc81477a42ba19d32b)
+        ;
+
+        
+    
+    
+            var circle_marker_03fe07c765de45fa98da358765b6231c = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_942e29f342fd4ee4a47557288f10590b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8d24e1fd67d45279b230a69bfb95c20 = $(`<div id="html_e8d24e1fd67d45279b230a69bfb95c20" style="width: 100.0%; height: 100.0%;">POHKSEH, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_942e29f342fd4ee4a47557288f10590b.setContent(html_e8d24e1fd67d45279b230a69bfb95c20);
+        
+
+        circle_marker_03fe07c765de45fa98da358765b6231c.bindPopup(popup_942e29f342fd4ee4a47557288f10590b)
+        ;
+
+        
+    
+    
+            var circle_marker_188740c8533346e6850c6056321ad773 = L.circleMarker(
+                [25.6, 90.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_eb0b66430b3647fe9c2a78a492129ea1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20bbef2345bf41d2810c9d5d9b3f673e = $(`<div id="html_20bbef2345bf41d2810c9d5d9b3f673e" style="width: 100.0%; height: 100.0%;">MENDIPATHAR, NORTH GARO HILLS, MEGHALAYA</div>`)[0];
+            popup_eb0b66430b3647fe9c2a78a492129ea1.setContent(html_20bbef2345bf41d2810c9d5d9b3f673e);
+        
+
+        circle_marker_188740c8533346e6850c6056321ad773.bindPopup(popup_eb0b66430b3647fe9c2a78a492129ea1)
+        ;
+
+        
+    
+    
+            var circle_marker_46b7b25dec594c9f9791bc314a36b9f2 = L.circleMarker(
+                [25.45, 90.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_949824e110094a6a9ee793668b6b8778 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6053b673a7f045d28669b4de2fd5f999 = $(`<div id="html_6053b673a7f045d28669b4de2fd5f999" style="width: 100.0%; height: 100.0%;">ANOGIRI, WEST GARO HILLS, MEGHALAYA</div>`)[0];
+            popup_949824e110094a6a9ee793668b6b8778.setContent(html_6053b673a7f045d28669b4de2fd5f999);
+        
+
+        circle_marker_46b7b25dec594c9f9791bc314a36b9f2.bindPopup(popup_949824e110094a6a9ee793668b6b8778)
+        ;
+
+        
+    
+    
+            var circle_marker_149df7aab3a347d7a80eeb9a0afe9a85 = L.circleMarker(
+                [25.9, 91.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_20220507a18e40c59a060b4f3006c502 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_327dcf2fbb8747d7bccc69e8b2715976 = $(`<div id="html_327dcf2fbb8747d7bccc69e8b2715976" style="width: 100.0%; height: 100.0%;">UMDEN, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_20220507a18e40c59a060b4f3006c502.setContent(html_327dcf2fbb8747d7bccc69e8b2715976);
+        
+
+        circle_marker_149df7aab3a347d7a80eeb9a0afe9a85.bindPopup(popup_20220507a18e40c59a060b4f3006c502)
+        ;
+
+        
+    
+    
+            var circle_marker_5e52642fe6044fb38f040d18486c2d16 = L.circleMarker(
+                [25.4667, 91.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_1ae82261b3d94a798bbef3cc4e69eb71 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23dcede05a4a49cf9469a6ad964bbe26 = $(`<div id="html_23dcede05a4a49cf9469a6ad964bbe26" style="width: 100.0%; height: 100.0%;">SUROKSPARSOHIONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_1ae82261b3d94a798bbef3cc4e69eb71.setContent(html_23dcede05a4a49cf9469a6ad964bbe26);
+        
+
+        circle_marker_5e52642fe6044fb38f040d18486c2d16.bindPopup(popup_1ae82261b3d94a798bbef3cc4e69eb71)
+        ;
+
+        
+    
+    
+            var circle_marker_2659275bc42d4b1da08c9a9b91931c5c = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_4ebc97724e7544b9a969f410c0d1b270 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1795ceb6f0b0424a91f498da05c2a9a4 = $(`<div id="html_1795ceb6f0b0424a91f498da05c2a9a4" style="width: 100.0%; height: 100.0%;">NONGMYNSONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_4ebc97724e7544b9a969f410c0d1b270.setContent(html_1795ceb6f0b0424a91f498da05c2a9a4);
+        
+
+        circle_marker_2659275bc42d4b1da08c9a9b91931c5c.bindPopup(popup_4ebc97724e7544b9a969f410c0d1b270)
+        ;
+
+        
+    
+    
+            var circle_marker_e3b9d4951f2647d49345a24b6b6f840b = L.circleMarker(
+                [25.6, 91.7917],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_a8adaccc05f345039ecd732083c48da0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ba37ff4db714276ac90fd97cdbbcdf6 = $(`<div id="html_1ba37ff4db714276ac90fd97cdbbcdf6" style="width: 100.0%; height: 100.0%;">BYRNIHAT, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_a8adaccc05f345039ecd732083c48da0.setContent(html_1ba37ff4db714276ac90fd97cdbbcdf6);
+        
+
+        circle_marker_e3b9d4951f2647d49345a24b6b6f840b.bindPopup(popup_a8adaccc05f345039ecd732083c48da0)
+        ;
+
+        
+    
+    
+            var circle_marker_7716b583616a441bb39906bd50583598 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_71d5b0a4a3dd4b1ab80f6feccdc41c0a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00e4f9622753401b9da0c335a50c8c3b = $(`<div id="html_00e4f9622753401b9da0c335a50c8c3b" style="width: 100.0%; height: 100.0%;">MAWIONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_71d5b0a4a3dd4b1ab80f6feccdc41c0a.setContent(html_00e4f9622753401b9da0c335a50c8c3b);
+        
+
+        circle_marker_7716b583616a441bb39906bd50583598.bindPopup(popup_71d5b0a4a3dd4b1ab80f6feccdc41c0a)
+        ;
+
+        
+    
+    
+            var circle_marker_e3f034539d1844d694e8cf8bcbe0cba2 = L.circleMarker(
+                [25.6, 91.7917],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_87ba1c44277a4074ad5dc361e8cf7970 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1cea73044cb4198bc0aa66a7ed25f05 = $(`<div id="html_d1cea73044cb4198bc0aa66a7ed25f05" style="width: 100.0%; height: 100.0%;">BALAT, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_87ba1c44277a4074ad5dc361e8cf7970.setContent(html_d1cea73044cb4198bc0aa66a7ed25f05);
+        
+
+        circle_marker_e3f034539d1844d694e8cf8bcbe0cba2.bindPopup(popup_87ba1c44277a4074ad5dc361e8cf7970)
+        ;
+
+        
+    
+    
+            var circle_marker_0fe51100b5f84bc7b67a43ed39bdbb77 = L.circleMarker(
+                [25.3778, 91.5833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_5a161bfaa2d740a38a3459309d69123d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f94e45064b694f63925641a45cd90179 = $(`<div id="html_f94e45064b694f63925641a45cd90179" style="width: 100.0%; height: 100.0%;">SHELLAPUNJI, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_5a161bfaa2d740a38a3459309d69123d.setContent(html_f94e45064b694f63925641a45cd90179);
+        
+
+        circle_marker_0fe51100b5f84bc7b67a43ed39bdbb77.bindPopup(popup_5a161bfaa2d740a38a3459309d69123d)
+        ;
+
+        
+    
+    
+            var circle_marker_09fc5b360b7b48a8bc27d78bc81afaa7 = L.circleMarker(
+                [25.4667, 91.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_f7fd3fe2ab1f488cadaf1412b72744b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76bbdf2c2eb6489bb0dd1f07b8bd895c = $(`<div id="html_76bbdf2c2eb6489bb0dd1f07b8bd895c" style="width: 100.0%; height: 100.0%;">MAIRANG, WEST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_f7fd3fe2ab1f488cadaf1412b72744b4.setContent(html_76bbdf2c2eb6489bb0dd1f07b8bd895c);
+        
+
+        circle_marker_09fc5b360b7b48a8bc27d78bc81afaa7.bindPopup(popup_f7fd3fe2ab1f488cadaf1412b72744b4)
+        ;
+
+        
+    
+    
+            var circle_marker_e481454f40664cf2b409d12f796a6b26 = L.circleMarker(
+                [25.5167, 91.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_935c267201e846aca15d45370d1b3758 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd6e7182c4cb4c9cb09463426d6a7882 = $(`<div id="html_bd6e7182c4cb4c9cb09463426d6a7882" style="width: 100.0%; height: 100.0%;">SHALLANG, WEST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_935c267201e846aca15d45370d1b3758.setContent(html_bd6e7182c4cb4c9cb09463426d6a7882);
+        
+
+        circle_marker_e481454f40664cf2b409d12f796a6b26.bindPopup(popup_935c267201e846aca15d45370d1b3758)
+        ;
+
+        
+    
+    
+            var circle_marker_5c14dc9de1c34477b4b8f017d5ce9cee = L.circleMarker(
+                [25.6, 91.7917],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_056904b159e94c7586286a71b2e20ded = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4d44dd361e848f197dffb60ef74da74 = $(`<div id="html_d4d44dd361e848f197dffb60ef74da74" style="width: 100.0%; height: 100.0%;">LAD-SOHBAR, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_056904b159e94c7586286a71b2e20ded.setContent(html_d4d44dd361e848f197dffb60ef74da74);
+        
+
+        circle_marker_5c14dc9de1c34477b4b8f017d5ce9cee.bindPopup(popup_056904b159e94c7586286a71b2e20ded)
+        ;
+
+        
+    
+    
+            var circle_marker_f7ae8f43aaba417ab5c42113d362f8b4 = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_33721e21adff46b5846b503faa4ddc96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba244e1cae564b9cba3906a92c1d3a4d = $(`<div id="html_ba244e1cae564b9cba3906a92c1d3a4d" style="width: 100.0%; height: 100.0%;">UMMULONG, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_33721e21adff46b5846b503faa4ddc96.setContent(html_ba244e1cae564b9cba3906a92c1d3a4d);
+        
+
+        circle_marker_f7ae8f43aaba417ab5c42113d362f8b4.bindPopup(popup_33721e21adff46b5846b503faa4ddc96)
+        ;
+
+        
+    
+    
+            var circle_marker_306320c44bd54c02b65fc5ca618f6880 = L.circleMarker(
+                [25.6, 91.7917],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_3b3735092161418bbfbe9a3e37940033 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a1faf6b623642b98f78749d151999d9 = $(`<div id="html_8a1faf6b623642b98f78749d151999d9" style="width: 100.0%; height: 100.0%;">MAWHATI, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_3b3735092161418bbfbe9a3e37940033.setContent(html_8a1faf6b623642b98f78749d151999d9);
+        
+
+        circle_marker_306320c44bd54c02b65fc5ca618f6880.bindPopup(popup_3b3735092161418bbfbe9a3e37940033)
+        ;
+
+        
+    
+    
+            var circle_marker_d61f3c2087234330981c301417b54af4 = L.circleMarker(
+                [25.3, 91.7],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_4237cda036d84cb19e0398682642279c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49f11138401f47ed83995640fa087514 = $(`<div id="html_49f11138401f47ed83995640fa087514" style="width: 100.0%; height: 100.0%;">CHERAPUNJI, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_4237cda036d84cb19e0398682642279c.setContent(html_49f11138401f47ed83995640fa087514);
+        
+
+        circle_marker_d61f3c2087234330981c301417b54af4.bindPopup(popup_4237cda036d84cb19e0398682642279c)
+        ;
+
+        
+    
+    
+            var circle_marker_b9faa47853854042b7461a47390be1fd = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_c57360e2a9c6460e9c39fd39d01cdfd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dfb684b4c8934a52b2e5caed0c2a41b6 = $(`<div id="html_dfb684b4c8934a52b2e5caed0c2a41b6" style="width: 100.0%; height: 100.0%;">MAWRYNGKNENG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_c57360e2a9c6460e9c39fd39d01cdfd4.setContent(html_dfb684b4c8934a52b2e5caed0c2a41b6);
+        
+
+        circle_marker_b9faa47853854042b7461a47390be1fd.bindPopup(popup_c57360e2a9c6460e9c39fd39d01cdfd4)
+        ;
+
+        
+    
+    
+            var circle_marker_a02caeec81d242f8abf6b597c84d76a7 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_b82be23ef9a34bcd983767ec89aa6949 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4af8237305f9407e94d762c4a3b88c15 = $(`<div id="html_4af8237305f9407e94d762c4a3b88c15" style="width: 100.0%; height: 100.0%;">NONGTHYMMAI, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_b82be23ef9a34bcd983767ec89aa6949.setContent(html_4af8237305f9407e94d762c4a3b88c15);
+        
+
+        circle_marker_a02caeec81d242f8abf6b597c84d76a7.bindPopup(popup_b82be23ef9a34bcd983767ec89aa6949)
+        ;
+
+        
+    
+    
+            var circle_marker_d4992e36c73c426999b3338731b773ae = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_bb5ac78517ed46fcb1a305391a9ec56c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e85aa514ee24b2a9d6385fbe2a9bc60 = $(`<div id="html_8e85aa514ee24b2a9d6385fbe2a9bc60" style="width: 100.0%; height: 100.0%;">IIM, SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_bb5ac78517ed46fcb1a305391a9ec56c.setContent(html_8e85aa514ee24b2a9d6385fbe2a9bc60);
+        
+
+        circle_marker_d4992e36c73c426999b3338731b773ae.bindPopup(popup_bb5ac78517ed46fcb1a305391a9ec56c)
+        ;
+
+        
+    
+    
+            var circle_marker_da7870230e1a4015a0dadda7392c6cd5 = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_0657c02ee4c84ba8beb14f1104ebb8fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb82f4fa01d04878a5a7f77ada514b7e = $(`<div id="html_eb82f4fa01d04878a5a7f77ada514b7e" style="width: 100.0%; height: 100.0%;">NONGTHYMMAI, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_0657c02ee4c84ba8beb14f1104ebb8fb.setContent(html_eb82f4fa01d04878a5a7f77ada514b7e);
+        
+
+        circle_marker_da7870230e1a4015a0dadda7392c6cd5.bindPopup(popup_0657c02ee4c84ba8beb14f1104ebb8fb)
+        ;
+
+        
+    
+    
+            var circle_marker_ab0a7e0dae3c4002a2c7469d4d6ab65a = L.circleMarker(
+                [25.5167, 91.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_28c3a545f38a409dbd40ef54f42782c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_524df28a02854d6c9c78b4d33ff2c7dd = $(`<div id="html_524df28a02854d6c9c78b4d33ff2c7dd" style="width: 100.0%; height: 100.0%;">NONGSTOIN, WEST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_28c3a545f38a409dbd40ef54f42782c2.setContent(html_524df28a02854d6c9c78b4d33ff2c7dd);
+        
+
+        circle_marker_ab0a7e0dae3c4002a2c7469d4d6ab65a.bindPopup(popup_28c3a545f38a409dbd40ef54f42782c2)
+        ;
+
+        
+    
+    
+            var circle_marker_acf4974e69ab4795a747543b6bfc8cd7 = L.circleMarker(
+                [25.5167, 91.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_f4e4f61d01694c37af291a4414345e2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0d8fe71f27b4e7d985f62ea74596bce = $(`<div id="html_a0d8fe71f27b4e7d985f62ea74596bce" style="width: 100.0%; height: 100.0%;">NONGSTOIN, WEST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_f4e4f61d01694c37af291a4414345e2d.setContent(html_a0d8fe71f27b4e7d985f62ea74596bce);
+        
+
+        circle_marker_acf4974e69ab4795a747543b6bfc8cd7.bindPopup(popup_f4e4f61d01694c37af291a4414345e2d)
+        ;
+
+        
+    
+    
+            var circle_marker_4632378c08d048fdb25ddd5ebc7a96c2 = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_5d49c04e4225410ab082c233e41351e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4eb8f857653f4b25832c7f74b6928c68 = $(`<div id="html_4eb8f857653f4b25832c7f74b6928c68" style="width: 100.0%; height: 100.0%;">JOWAI, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_5d49c04e4225410ab082c233e41351e4.setContent(html_4eb8f857653f4b25832c7f74b6928c68);
+        
+
+        circle_marker_4632378c08d048fdb25ddd5ebc7a96c2.bindPopup(popup_5d49c04e4225410ab082c233e41351e4)
+        ;
+
+        
+    
+    
+            var circle_marker_a80deab0217542239b1e1db87edd8627 = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_34526804616640e98f7860903f2df0f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ee8eae7691e4a47a6614beb5397cb9a = $(`<div id="html_1ee8eae7691e4a47a6614beb5397cb9a" style="width: 100.0%; height: 100.0%;">JOWAI, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_34526804616640e98f7860903f2df0f6.setContent(html_1ee8eae7691e4a47a6614beb5397cb9a);
+        
+
+        circle_marker_a80deab0217542239b1e1db87edd8627.bindPopup(popup_34526804616640e98f7860903f2df0f6)
+        ;
+
+        
+    
+    
+            var circle_marker_6f91d89fb4444267bc6a0ab63a96799b = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_0a64e30f7f564fcd999229801ab7c436 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bed4e8ac20a748eea6ea8afa0e663c38 = $(`<div id="html_bed4e8ac20a748eea6ea8afa0e663c38" style="width: 100.0%; height: 100.0%;">JOWAI, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_0a64e30f7f564fcd999229801ab7c436.setContent(html_bed4e8ac20a748eea6ea8afa0e663c38);
+        
+
+        circle_marker_6f91d89fb4444267bc6a0ab63a96799b.bindPopup(popup_0a64e30f7f564fcd999229801ab7c436)
+        ;
+
+        
+    
+    
+            var circle_marker_26ded3dd4e874ffaa6fb8a9440954ff0 = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_2552c9460a4447459bdefa7821036f21 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b81c0856d514029a9bda5408f2c4be1 = $(`<div id="html_5b81c0856d514029a9bda5408f2c4be1" style="width: 100.0%; height: 100.0%;">JOWAI, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_2552c9460a4447459bdefa7821036f21.setContent(html_5b81c0856d514029a9bda5408f2c4be1);
+        
+
+        circle_marker_26ded3dd4e874ffaa6fb8a9440954ff0.bindPopup(popup_2552c9460a4447459bdefa7821036f21)
+        ;
+
+        
+    
+    
+            var circle_marker_5031726176214fe3b34f35a0e63354a8 = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_c6a6e78e43464db0a5b94d1af68039a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e045c4e991344d2acd9f84c0b1cfcb2 = $(`<div id="html_1e045c4e991344d2acd9f84c0b1cfcb2" style="width: 100.0%; height: 100.0%;">JOWAI, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_c6a6e78e43464db0a5b94d1af68039a3.setContent(html_1e045c4e991344d2acd9f84c0b1cfcb2);
+        
+
+        circle_marker_5031726176214fe3b34f35a0e63354a8.bindPopup(popup_c6a6e78e43464db0a5b94d1af68039a3)
+        ;
+
+        
+    
+    
+            var circle_marker_9b403cdf15934fe2ba31a80510a5835c = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_371813abc2c04f7ab1695d5f33fd28fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6300d14c5da84230b6bc0e88d11e7734 = $(`<div id="html_6300d14c5da84230b6bc0e88d11e7734" style="width: 100.0%; height: 100.0%;">JOWAI, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_371813abc2c04f7ab1695d5f33fd28fe.setContent(html_6300d14c5da84230b6bc0e88d11e7734);
+        
+
+        circle_marker_9b403cdf15934fe2ba31a80510a5835c.bindPopup(popup_371813abc2c04f7ab1695d5f33fd28fe)
+        ;
+
+        
+    
+    
+            var circle_marker_7666de921e924381a4aca3ea3aa1ce83 = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_34a369ef6db847888b3e396f708b1d0d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8799b09b10b45dc8c85715244fc7135 = $(`<div id="html_d8799b09b10b45dc8c85715244fc7135" style="width: 100.0%; height: 100.0%;">JOWAI, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_34a369ef6db847888b3e396f708b1d0d.setContent(html_d8799b09b10b45dc8c85715244fc7135);
+        
+
+        circle_marker_7666de921e924381a4aca3ea3aa1ce83.bindPopup(popup_34a369ef6db847888b3e396f708b1d0d)
+        ;
+
+        
+    
+    
+            var circle_marker_1e54f175733240de96b188f32b2335d9 = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_3aba1345aa7c431890fa410df46657c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d167b4002344060b0d03b07619da885 = $(`<div id="html_8d167b4002344060b0d03b07619da885" style="width: 100.0%; height: 100.0%;">JOWAI, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_3aba1345aa7c431890fa410df46657c1.setContent(html_8d167b4002344060b0d03b07619da885);
+        
+
+        circle_marker_1e54f175733240de96b188f32b2335d9.bindPopup(popup_3aba1345aa7c431890fa410df46657c1)
+        ;
+
+        
+    
+    
+            var circle_marker_c5c4d38da8674c7ea79710dc1d62b68d = L.circleMarker(
+                [25.3704, 92.4375],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_cba55b1ca0d3456c8f65a96c4c7db279 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0e7e86402da41c789d195562a0c8239 = $(`<div id="html_c0e7e86402da41c789d195562a0c8239" style="width: 100.0%; height: 100.0%;">SAIPHUNG, EAST JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_cba55b1ca0d3456c8f65a96c4c7db279.setContent(html_c0e7e86402da41c789d195562a0c8239);
+        
+
+        circle_marker_c5c4d38da8674c7ea79710dc1d62b68d.bindPopup(popup_cba55b1ca0d3456c8f65a96c4c7db279)
+        ;
+
+        
+    
+    
+            var circle_marker_f3eb0520570040f1999277b6151684e3 = L.circleMarker(
+                [25.6, 91.7917],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_bfbb1eb32358482791e8394821a9fb51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_067e76b6366c4eb2b17364e40bb542e8 = $(`<div id="html_067e76b6366c4eb2b17364e40bb542e8" style="width: 100.0%; height: 100.0%;">BYRNIHAT, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_bfbb1eb32358482791e8394821a9fb51.setContent(html_067e76b6366c4eb2b17364e40bb542e8);
+        
+
+        circle_marker_f3eb0520570040f1999277b6151684e3.bindPopup(popup_bfbb1eb32358482791e8394821a9fb51)
+        ;
+
+        
+    
+    
+            var circle_marker_6c259e6f6f1147bf879458d50b421120 = L.circleMarker(
+                [25.6, 91.7917],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_edc5b0b96d7a4c58a4874451b7489626 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61fd7fcc206f425f8fe32049e8c01620 = $(`<div id="html_61fd7fcc206f425f8fe32049e8c01620" style="width: 100.0%; height: 100.0%;">BURNIHAT, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_edc5b0b96d7a4c58a4874451b7489626.setContent(html_61fd7fcc206f425f8fe32049e8c01620);
+        
+
+        circle_marker_6c259e6f6f1147bf879458d50b421120.bindPopup(popup_edc5b0b96d7a4c58a4874451b7489626)
+        ;
+
+        
+    
+    
+            var circle_marker_c737e80df7d44503a3c9283ac4603138 = L.circleMarker(
+                [25.6, 91.7917],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_44c9c69c556b4e8bbcceb8502f12e8cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9adf9c4622e44062a6c9bf00763a98f3 = $(`<div id="html_9adf9c4622e44062a6c9bf00763a98f3" style="width: 100.0%; height: 100.0%;">BYRNIHAT, RI BHOI, MEGHALAYA</div>`)[0];
+            popup_44c9c69c556b4e8bbcceb8502f12e8cd.setContent(html_9adf9c4622e44062a6c9bf00763a98f3);
+        
+
+        circle_marker_c737e80df7d44503a3c9283ac4603138.bindPopup(popup_44c9c69c556b4e8bbcceb8502f12e8cd)
+        ;
+
+        
+    
+    
+            var circle_marker_57a3a0b1561349dc92b76c9fc3a4a3c4 = L.circleMarker(
+                [25.5167, 91.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_032e749c03424693adc89f94a78f679e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b27ae4b8d3949cd95ac99824ae14d3f = $(`<div id="html_2b27ae4b8d3949cd95ac99824ae14d3f" style="width: 100.0%; height: 100.0%;">NONGSHILLONG, SOUTH WEST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_032e749c03424693adc89f94a78f679e.setContent(html_2b27ae4b8d3949cd95ac99824ae14d3f);
+        
+
+        circle_marker_57a3a0b1561349dc92b76c9fc3a4a3c4.bindPopup(popup_032e749c03424693adc89f94a78f679e)
+        ;
+
+        
+    
+    
+            var circle_marker_5ee5aad745e8440eaf39c48b6852bd44 = L.circleMarker(
+                [25.3704, 92.4375],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_8fa3fa6d34db4e41be44de26f45f706c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5b9357457714fd89e02f6f27cf77e81 = $(`<div id="html_d5b9357457714fd89e02f6f27cf77e81" style="width: 100.0%; height: 100.0%;">LUMSHNONG, EAST JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_8fa3fa6d34db4e41be44de26f45f706c.setContent(html_d5b9357457714fd89e02f6f27cf77e81);
+        
+
+        circle_marker_5ee5aad745e8440eaf39c48b6852bd44.bindPopup(popup_8fa3fa6d34db4e41be44de26f45f706c)
+        ;
+
+        
+    
+    
+            var circle_marker_fe3019ef8b7e48759b9d7bd47829088c = L.circleMarker(
+                [25.45, 92.2],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_220ec9b4c19f48ff9c5edff90ff1ea88 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c228054b68394533906c6209da26a2bc = $(`<div id="html_c228054b68394533906c6209da26a2bc" style="width: 100.0%; height: 100.0%;">NONGBAH, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_220ec9b4c19f48ff9c5edff90ff1ea88.setContent(html_c228054b68394533906c6209da26a2bc);
+        
+
+        circle_marker_fe3019ef8b7e48759b9d7bd47829088c.bindPopup(popup_220ec9b4c19f48ff9c5edff90ff1ea88)
+        ;
+
+        
+    
+    
+            var circle_marker_809991ceab4b4c3fa84bf64a410140ae = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_4fb1cb16e93845e9a5081661941453d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3423e8a772414f22a826bbe83b0df1b2 = $(`<div id="html_3423e8a772414f22a826bbe83b0df1b2" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_4fb1cb16e93845e9a5081661941453d5.setContent(html_3423e8a772414f22a826bbe83b0df1b2);
+        
+
+        circle_marker_809991ceab4b4c3fa84bf64a410140ae.bindPopup(popup_4fb1cb16e93845e9a5081661941453d5)
+        ;
+
+        
+    
+    
+            var circle_marker_91c290aa959d4616ba7a5ea5c6f7c79b = L.circleMarker(
+                [25.4643, 91.7571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_a0ff48045494426ea4ab0bf3d3eaa20c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_758f81acd8bc4b519d6e22b16a82c003 = $(`<div id="html_758f81acd8bc4b519d6e22b16a82c003" style="width: 100.0%; height: 100.0%;">SHILLONG, EAST KHASI HILLS, MEGHALAYA</div>`)[0];
+            popup_a0ff48045494426ea4ab0bf3d3eaa20c.setContent(html_758f81acd8bc4b519d6e22b16a82c003);
+        
+
+        circle_marker_91c290aa959d4616ba7a5ea5c6f7c79b.bindPopup(popup_a0ff48045494426ea4ab0bf3d3eaa20c)
+        ;
+
+        
+    
+    
+            var circle_marker_cc119100c82b443b9a64c0cc01b76a41 = L.circleMarker(
+                [25.5, 92.25],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_dbe7334381544ca3a9d0b6a50fadd582);
+        
+    
+        var popup_f047ca3532874fe78edc63c28da48460 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eae889947e91411384230138c38aa24b = $(`<div id="html_eae889947e91411384230138c38aa24b" style="width: 100.0%; height: 100.0%;">KHELERIHAT, JAINTIA HILLS, MEGHALAYA</div>`)[0];
+            popup_f047ca3532874fe78edc63c28da48460.setContent(html_eae889947e91411384230138c38aa24b);
+        
+
+        circle_marker_cc119100c82b443b9a64c0cc01b76a41.bindPopup(popup_f047ca3532874fe78edc63c28da48460)
+        ;
+
+        
+    
+</script>

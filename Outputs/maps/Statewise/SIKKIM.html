@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e4a8d57098be4571bf579259c20e98ff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e4a8d57098be4571bf579259c20e98ff" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIKKIM Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(16)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(11)</li><li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(10)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(10)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(6)</li><li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(5)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(3)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(3)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(2)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(1)</li><li><span style='background:turquoise;opacity:0.7;'></span>PUNJAB AND SIND BANK(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>SIKKIM(68)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_e4a8d57098be4571bf579259c20e98ff = L.map(
+                "map_e4a8d57098be4571bf579259c20e98ff",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3da157169db642f487c9ae3fa5cd3a17 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+            map_e4a8d57098be4571bf579259c20e98ff.fitBounds(
+                [[26.425, 88.15], [27.329046, 88.75]],
+                {}
+            );
+        
+    
+            var circle_marker_a8caa02119f54bf0a36aed36e5e801f6 = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_a4137025f407406bbdd51bd9dbbe1cea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e7c1af863fe43b9bf936bb790d66bcd = $(`<div id="html_8e7c1af863fe43b9bf936bb790d66bcd" style="width: 100.0%; height: 100.0%;">JORETHANG, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_a4137025f407406bbdd51bd9dbbe1cea.setContent(html_8e7c1af863fe43b9bf936bb790d66bcd);
+        
+
+        circle_marker_a8caa02119f54bf0a36aed36e5e801f6.bindPopup(popup_a4137025f407406bbdd51bd9dbbe1cea)
+        ;
+
+        
+    
+    
+            var circle_marker_d98952344efb4a4f9fb367dc7dc3a29c = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_b5d1c3175a5949cf90a7810fb35ef595 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5be6603277b94ab6bd1ddf52f9a7fb40 = $(`<div id="html_5be6603277b94ab6bd1ddf52f9a7fb40" style="width: 100.0%; height: 100.0%;">JORETHANG, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_b5d1c3175a5949cf90a7810fb35ef595.setContent(html_5be6603277b94ab6bd1ddf52f9a7fb40);
+        
+
+        circle_marker_d98952344efb4a4f9fb367dc7dc3a29c.bindPopup(popup_b5d1c3175a5949cf90a7810fb35ef595)
+        ;
+
+        
+    
+    
+            var circle_marker_c5071245f3a244da85008724efc05d12 = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_f294108f7a4e43b6ac98199c7c6202cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff9c338c87d44fb48f8482511bbdbd81 = $(`<div id="html_ff9c338c87d44fb48f8482511bbdbd81" style="width: 100.0%; height: 100.0%;">JORETHANG, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_f294108f7a4e43b6ac98199c7c6202cf.setContent(html_ff9c338c87d44fb48f8482511bbdbd81);
+        
+
+        circle_marker_c5071245f3a244da85008724efc05d12.bindPopup(popup_f294108f7a4e43b6ac98199c7c6202cf)
+        ;
+
+        
+    
+    
+            var circle_marker_98b15f42d1bf4c499b56a65baf0cc86c = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_770e4b5bf8744d228e7bfc82184218ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ace59a417a2d4a0b9d504ec2c550462b = $(`<div id="html_ace59a417a2d4a0b9d504ec2c550462b" style="width: 100.0%; height: 100.0%;">JORETHANG, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_770e4b5bf8744d228e7bfc82184218ac.setContent(html_ace59a417a2d4a0b9d504ec2c550462b);
+        
+
+        circle_marker_98b15f42d1bf4c499b56a65baf0cc86c.bindPopup(popup_770e4b5bf8744d228e7bfc82184218ac)
+        ;
+
+        
+    
+    
+            var circle_marker_9ba63159a8ed4b15a37830762460f2b0 = L.circleMarker(
+                [27.1833, 88.65],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_e3000476b12e465fbff6e656606ef8b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a71eb3067b324053a134ba256548bef0 = $(`<div id="html_a71eb3067b324053a134ba256548bef0" style="width: 100.0%; height: 100.0%;">RHENOCK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_e3000476b12e465fbff6e656606ef8b6.setContent(html_a71eb3067b324053a134ba256548bef0);
+        
+
+        circle_marker_9ba63159a8ed4b15a37830762460f2b0.bindPopup(popup_e3000476b12e465fbff6e656606ef8b6)
+        ;
+
+        
+    
+    
+            var circle_marker_8600bd92a035467da5df0b52037ebde1 = L.circleMarker(
+                [27.2333, 88.5],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_43b5545535af4525a4dfbc02c9f5bd37 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_615c73511f4449caa8d6ebd34784e57a = $(`<div id="html_615c73511f4449caa8d6ebd34784e57a" style="width: 100.0%; height: 100.0%;">SINGTAM, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_43b5545535af4525a4dfbc02c9f5bd37.setContent(html_615c73511f4449caa8d6ebd34784e57a);
+        
+
+        circle_marker_8600bd92a035467da5df0b52037ebde1.bindPopup(popup_43b5545535af4525a4dfbc02c9f5bd37)
+        ;
+
+        
+    
+    
+            var circle_marker_83e79244798c4fcba21bf2773eb97968 = L.circleMarker(
+                [27.2333, 88.5],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_87847001fef44b069ebd5a3b86b48101 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e43b45f3509042b290238dcf4e9f63f0 = $(`<div id="html_e43b45f3509042b290238dcf4e9f63f0" style="width: 100.0%; height: 100.0%;">SINGTAM, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_87847001fef44b069ebd5a3b86b48101.setContent(html_e43b45f3509042b290238dcf4e9f63f0);
+        
+
+        circle_marker_83e79244798c4fcba21bf2773eb97968.bindPopup(popup_87847001fef44b069ebd5a3b86b48101)
+        ;
+
+        
+    
+    
+            var circle_marker_e790462cda9348c286bcabf46c4822bb = L.circleMarker(
+                [27.2333, 88.5],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_291bc3e3c4e443c1947485fe91dad122 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43d0860822464a2291553061384071da = $(`<div id="html_43d0860822464a2291553061384071da" style="width: 100.0%; height: 100.0%;">SINGTAM BRANCH, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_291bc3e3c4e443c1947485fe91dad122.setContent(html_43d0860822464a2291553061384071da);
+        
+
+        circle_marker_e790462cda9348c286bcabf46c4822bb.bindPopup(popup_291bc3e3c4e443c1947485fe91dad122)
+        ;
+
+        
+    
+    
+            var circle_marker_c18a5f27c2d64d84a7d555d71ce23529 = L.circleMarker(
+                [27.2333, 88.5],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_88daeed1a21e4fbd84bee4b6bf01e7d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7cb2c54dc268415abb0af2d7703236c6 = $(`<div id="html_7cb2c54dc268415abb0af2d7703236c6" style="width: 100.0%; height: 100.0%;">SINGTAM, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_88daeed1a21e4fbd84bee4b6bf01e7d9.setContent(html_7cb2c54dc268415abb0af2d7703236c6);
+        
+
+        circle_marker_c18a5f27c2d64d84a7d555d71ce23529.bindPopup(popup_88daeed1a21e4fbd84bee4b6bf01e7d9)
+        ;
+
+        
+    
+    
+            var circle_marker_d948f99104114e7f9edfeb3c3dc0d77c = L.circleMarker(
+                [27.2, 88.5611],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_ff21ff8a8f3645d8a39fda67a58ffd43 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06db19f288f044bb9b48d49a6ae2e765 = $(`<div id="html_06db19f288f044bb9b48d49a6ae2e765" style="width: 100.0%; height: 100.0%;">SIKKIM MANIPAL INSTITUTE OF TECHNOLOGY, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_ff21ff8a8f3645d8a39fda67a58ffd43.setContent(html_06db19f288f044bb9b48d49a6ae2e765);
+        
+
+        circle_marker_d948f99104114e7f9edfeb3c3dc0d77c.bindPopup(popup_ff21ff8a8f3645d8a39fda67a58ffd43)
+        ;
+
+        
+    
+    
+            var circle_marker_d2bfdd2d9b144df588ed5ea61f9cec8d = L.circleMarker(
+                [27.2333, 88.5],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_37a51561631b44f3b04ee7574dcfe8c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_748b4bff3e4b4cb6875c1a18c9f8c1d4 = $(`<div id="html_748b4bff3e4b4cb6875c1a18c9f8c1d4" style="width: 100.0%; height: 100.0%;">SINGTAM, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_37a51561631b44f3b04ee7574dcfe8c7.setContent(html_748b4bff3e4b4cb6875c1a18c9f8c1d4);
+        
+
+        circle_marker_d2bfdd2d9b144df588ed5ea61f9cec8d.bindPopup(popup_37a51561631b44f3b04ee7574dcfe8c7)
+        ;
+
+        
+    
+    
+            var circle_marker_7586d04d2f674a9c99bf1fd93a569f85 = L.circleMarker(
+                [27.2333, 88.5],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_220d9c97cdf641d9a7f8ced8144fc809 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_013e12227fec414886e9b2d384273bd2 = $(`<div id="html_013e12227fec414886e9b2d384273bd2" style="width: 100.0%; height: 100.0%;">SINGTAM TOWN, E.SIKKIM,, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_220d9c97cdf641d9a7f8ced8144fc809.setContent(html_013e12227fec414886e9b2d384273bd2);
+        
+
+        circle_marker_7586d04d2f674a9c99bf1fd93a569f85.bindPopup(popup_220d9c97cdf641d9a7f8ced8144fc809)
+        ;
+
+        
+    
+    
+            var circle_marker_0bf8688202294e9290ed56c29419e030 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_ca0303be99514c329ad9327f2915f449 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_245cb97ff2e94bdeb32e136ce98d84ac = $(`<div id="html_245cb97ff2e94bdeb32e136ce98d84ac" style="width: 100.0%; height: 100.0%;">PENLONG, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_ca0303be99514c329ad9327f2915f449.setContent(html_245cb97ff2e94bdeb32e136ce98d84ac);
+        
+
+        circle_marker_0bf8688202294e9290ed56c29419e030.bindPopup(popup_ca0303be99514c329ad9327f2915f449)
+        ;
+
+        
+    
+    
+            var circle_marker_af127b9eead4492b8b7078178312f3c1 = L.circleMarker(
+                [27.2, 88.5611],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_7fe812b277f84b178a7e5dc881e3c1e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1108377378154c219ba55f059833f557 = $(`<div id="html_1108377378154c219ba55f059833f557" style="width: 100.0%; height: 100.0%;">RONGLI, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_7fe812b277f84b178a7e5dc881e3c1e5.setContent(html_1108377378154c219ba55f059833f557);
+        
+
+        circle_marker_af127b9eead4492b8b7078178312f3c1.bindPopup(popup_7fe812b277f84b178a7e5dc881e3c1e5)
+        ;
+
+        
+    
+    
+            var circle_marker_34f92b0f51c445d7ac4812c7ef378c24 = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_bceaf4c668864d48896487f04ce970ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_217b8d7b999344ea93c626a21ee0a4f0 = $(`<div id="html_217b8d7b999344ea93c626a21ee0a4f0" style="width: 100.0%; height: 100.0%;">SORENG, WEST SIKKIM, SIKKIM</div>`)[0];
+            popup_bceaf4c668864d48896487f04ce970ce.setContent(html_217b8d7b999344ea93c626a21ee0a4f0);
+        
+
+        circle_marker_34f92b0f51c445d7ac4812c7ef378c24.bindPopup(popup_bceaf4c668864d48896487f04ce970ce)
+        ;
+
+        
+    
+    
+            var circle_marker_ea0b747d53ed438798148a54080c9a83 = L.circleMarker(
+                [26.425, 88.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_171a00b3e76d48dfafa534847ce19b0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf307383709a4cfe907ff29f5568d91c = $(`<div id="html_bf307383709a4cfe907ff29f5568d91c" style="width: 100.0%; height: 100.0%;">RANIPOOL, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_171a00b3e76d48dfafa534847ce19b0b.setContent(html_bf307383709a4cfe907ff29f5568d91c);
+        
+
+        circle_marker_ea0b747d53ed438798148a54080c9a83.bindPopup(popup_171a00b3e76d48dfafa534847ce19b0b)
+        ;
+
+        
+    
+    
+            var circle_marker_aa0247ff42614fde9d47dc165cd19fec = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_6adc646de32340e7bb22e21d1c5457fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_175b4d91fdd54a1b927de4a47fb1b8db = $(`<div id="html_175b4d91fdd54a1b927de4a47fb1b8db" style="width: 100.0%; height: 100.0%;">GYALSHING (GEYZING), WEST SIKKIM, SIKKIM</div>`)[0];
+            popup_6adc646de32340e7bb22e21d1c5457fb.setContent(html_175b4d91fdd54a1b927de4a47fb1b8db);
+        
+
+        circle_marker_aa0247ff42614fde9d47dc165cd19fec.bindPopup(popup_6adc646de32340e7bb22e21d1c5457fb)
+        ;
+
+        
+    
+    
+            var circle_marker_adf286ad10ef46459698b65ed4f7a486 = L.circleMarker(
+                [27.1833, 88.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_0eaf95d822fa409fab07e7c0e38d2751 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7f877da6efa4d90a925dce47d4c2393 = $(`<div id="html_e7f877da6efa4d90a925dce47d4c2393" style="width: 100.0%; height: 100.0%;">CENTRAL PENDAM, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_0eaf95d822fa409fab07e7c0e38d2751.setContent(html_e7f877da6efa4d90a925dce47d4c2393);
+        
+
+        circle_marker_adf286ad10ef46459698b65ed4f7a486.bindPopup(popup_0eaf95d822fa409fab07e7c0e38d2751)
+        ;
+
+        
+    
+    
+            var circle_marker_d54b5b9c7eea45b6b8cb7aab06a1d30e = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_5384d6b512674dcd9262d94a0bc48e9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60e8c2de6e9846b99559f7b73b59ee3e = $(`<div id="html_60e8c2de6e9846b99559f7b73b59ee3e" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_5384d6b512674dcd9262d94a0bc48e9f.setContent(html_60e8c2de6e9846b99559f7b73b59ee3e);
+        
+
+        circle_marker_d54b5b9c7eea45b6b8cb7aab06a1d30e.bindPopup(popup_5384d6b512674dcd9262d94a0bc48e9f)
+        ;
+
+        
+    
+    
+            var circle_marker_6c6d3e47952948fe95e49e8e05b5256a = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_824c6c41105a4014969ae117e874759e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36a6f7e2fc434e848ab7b9f5565fe2fa = $(`<div id="html_36a6f7e2fc434e848ab7b9f5565fe2fa" style="width: 100.0%; height: 100.0%;">TADONG, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_824c6c41105a4014969ae117e874759e.setContent(html_36a6f7e2fc434e848ab7b9f5565fe2fa);
+        
+
+        circle_marker_6c6d3e47952948fe95e49e8e05b5256a.bindPopup(popup_824c6c41105a4014969ae117e874759e)
+        ;
+
+        
+    
+    
+            var circle_marker_bc70dcbdbc5a4c7daf63ca5988c5f1d0 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_4405eef6ee0a42fbb0afc4eda808cb09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a8ebbec58ac487e842f74208ed74e18 = $(`<div id="html_3a8ebbec58ac487e842f74208ed74e18" style="width: 100.0%; height: 100.0%;">TADONG, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_4405eef6ee0a42fbb0afc4eda808cb09.setContent(html_3a8ebbec58ac487e842f74208ed74e18);
+        
+
+        circle_marker_bc70dcbdbc5a4c7daf63ca5988c5f1d0.bindPopup(popup_4405eef6ee0a42fbb0afc4eda808cb09)
+        ;
+
+        
+    
+    
+            var circle_marker_2ab29740b2574f759e61f72296e1e9ec = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_500ee0220a3246ccbb805e708574d3c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61f4b7bf81c24f69ad46483c600162b4 = $(`<div id="html_61f4b7bf81c24f69ad46483c600162b4" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_500ee0220a3246ccbb805e708574d3c5.setContent(html_61f4b7bf81c24f69ad46483c600162b4);
+        
+
+        circle_marker_2ab29740b2574f759e61f72296e1e9ec.bindPopup(popup_500ee0220a3246ccbb805e708574d3c5)
+        ;
+
+        
+    
+    
+            var circle_marker_0da2ac8abe7b413980bd309e52b5e558 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_30fbf52827304168b02fc856e9af343e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8f4d6824ac74c6e9898b014b50b18f0 = $(`<div id="html_a8f4d6824ac74c6e9898b014b50b18f0" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_30fbf52827304168b02fc856e9af343e.setContent(html_a8f4d6824ac74c6e9898b014b50b18f0);
+        
+
+        circle_marker_0da2ac8abe7b413980bd309e52b5e558.bindPopup(popup_30fbf52827304168b02fc856e9af343e)
+        ;
+
+        
+    
+    
+            var circle_marker_1961efaebd254a81a7f7a41653ab1a91 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_c667c8acaa574e9e9f144ff0afedf0bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f89d43ddbbe44512ba00a356734a4274 = $(`<div id="html_f89d43ddbbe44512ba00a356734a4274" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_c667c8acaa574e9e9f144ff0afedf0bf.setContent(html_f89d43ddbbe44512ba00a356734a4274);
+        
+
+        circle_marker_1961efaebd254a81a7f7a41653ab1a91.bindPopup(popup_c667c8acaa574e9e9f144ff0afedf0bf)
+        ;
+
+        
+    
+    
+            var circle_marker_1fa991c972bc421c89470a6749fc2e91 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_0353daf3d32540c091592e83263375f4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24063cb57fab43c8931861b8c6d2ef3b = $(`<div id="html_24063cb57fab43c8931861b8c6d2ef3b" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_0353daf3d32540c091592e83263375f4.setContent(html_24063cb57fab43c8931861b8c6d2ef3b);
+        
+
+        circle_marker_1fa991c972bc421c89470a6749fc2e91.bindPopup(popup_0353daf3d32540c091592e83263375f4)
+        ;
+
+        
+    
+    
+            var circle_marker_36e1c2c6dfe140a190a1910641f90f0c = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_4fc42b6577174da89f8e6878af4be3b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20288b6a885f4a3c9a873ff7ff059378 = $(`<div id="html_20288b6a885f4a3c9a873ff7ff059378" style="width: 100.0%; height: 100.0%;">GANGTOK BRANCH, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_4fc42b6577174da89f8e6878af4be3b7.setContent(html_20288b6a885f4a3c9a873ff7ff059378);
+        
+
+        circle_marker_36e1c2c6dfe140a190a1910641f90f0c.bindPopup(popup_4fc42b6577174da89f8e6878af4be3b7)
+        ;
+
+        
+    
+    
+            var circle_marker_a3bade6cbc654446884e7463a37a5700 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_f49b799990b84b4c9ffbbdd9cb7c77b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90b9ba1004914822a9cdc2108abb06c5 = $(`<div id="html_90b9ba1004914822a9cdc2108abb06c5" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_f49b799990b84b4c9ffbbdd9cb7c77b6.setContent(html_90b9ba1004914822a9cdc2108abb06c5);
+        
+
+        circle_marker_a3bade6cbc654446884e7463a37a5700.bindPopup(popup_f49b799990b84b4c9ffbbdd9cb7c77b6)
+        ;
+
+        
+    
+    
+            var circle_marker_bbe8b76e1ed14e86b2baf70138b94fc2 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_d9781ffcfab943fea6a8d23a7fddc0e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a9a0e1bc5694665ab35bafd70c9a60a = $(`<div id="html_8a9a0e1bc5694665ab35bafd70c9a60a" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_d9781ffcfab943fea6a8d23a7fddc0e5.setContent(html_8a9a0e1bc5694665ab35bafd70c9a60a);
+        
+
+        circle_marker_bbe8b76e1ed14e86b2baf70138b94fc2.bindPopup(popup_d9781ffcfab943fea6a8d23a7fddc0e5)
+        ;
+
+        
+    
+    
+            var circle_marker_d66d927805614a2f84144cdd6c9baa81 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_23bb309a742e4c978fddda245babfb6c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6da5ce430d204573a95af54d2df9a5fd = $(`<div id="html_6da5ce430d204573a95af54d2df9a5fd" style="width: 100.0%; height: 100.0%;">ARITHANG, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_23bb309a742e4c978fddda245babfb6c.setContent(html_6da5ce430d204573a95af54d2df9a5fd);
+        
+
+        circle_marker_d66d927805614a2f84144cdd6c9baa81.bindPopup(popup_23bb309a742e4c978fddda245babfb6c)
+        ;
+
+        
+    
+    
+            var circle_marker_a0ca7041af7544748bf20b4fe32069ca = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_94c1bcca07e84661b57d35da683d940f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_daa11efe2d7d4df9a1ba613ade2aaecc = $(`<div id="html_daa11efe2d7d4df9a1ba613ade2aaecc" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_94c1bcca07e84661b57d35da683d940f.setContent(html_daa11efe2d7d4df9a1ba613ade2aaecc);
+        
+
+        circle_marker_a0ca7041af7544748bf20b4fe32069ca.bindPopup(popup_94c1bcca07e84661b57d35da683d940f)
+        ;
+
+        
+    
+    
+            var circle_marker_0c76bad79b8a428686e0a3f8dd95da03 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_b2e71469ae9e4497954f172e70575937 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c216bb708c64337a77255ae53ceee21 = $(`<div id="html_5c216bb708c64337a77255ae53ceee21" style="width: 100.0%; height: 100.0%;">TADONG, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_b2e71469ae9e4497954f172e70575937.setContent(html_5c216bb708c64337a77255ae53ceee21);
+        
+
+        circle_marker_0c76bad79b8a428686e0a3f8dd95da03.bindPopup(popup_b2e71469ae9e4497954f172e70575937)
+        ;
+
+        
+    
+    
+            var circle_marker_53ace5ac600f4f798132b1def13fb85a = L.circleMarker(
+                [27.2, 88.5611],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_4e210698fc8f4ef8a742955f3c5718c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e79867986490468a93be6b85165498c4 = $(`<div id="html_e79867986490468a93be6b85165498c4" style="width: 100.0%; height: 100.0%;">RANIPOOL, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_4e210698fc8f4ef8a742955f3c5718c4.setContent(html_e79867986490468a93be6b85165498c4);
+        
+
+        circle_marker_53ace5ac600f4f798132b1def13fb85a.bindPopup(popup_4e210698fc8f4ef8a742955f3c5718c4)
+        ;
+
+        
+    
+    
+            var circle_marker_c159213265cc41728242ec3e6840e7ca = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_18677135eeb4468a8cb8d6424668c753 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a790e8f2effe41099e4a8d613314eef4 = $(`<div id="html_a790e8f2effe41099e4a8d613314eef4" style="width: 100.0%; height: 100.0%;">UPPER TADONG, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_18677135eeb4468a8cb8d6424668c753.setContent(html_a790e8f2effe41099e4a8d613314eef4);
+        
+
+        circle_marker_c159213265cc41728242ec3e6840e7ca.bindPopup(popup_18677135eeb4468a8cb8d6424668c753)
+        ;
+
+        
+    
+    
+            var circle_marker_2940c7732de2431aa5fa6e7808d86b57 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_127e8f89b5d448658fa3a3dfbdf8d0f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8cc70fa1f7794741965871f057d3a74a = $(`<div id="html_8cc70fa1f7794741965871f057d3a74a" style="width: 100.0%; height: 100.0%;">METRO POINT, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_127e8f89b5d448658fa3a3dfbdf8d0f0.setContent(html_8cc70fa1f7794741965871f057d3a74a);
+        
+
+        circle_marker_2940c7732de2431aa5fa6e7808d86b57.bindPopup(popup_127e8f89b5d448658fa3a3dfbdf8d0f0)
+        ;
+
+        
+    
+    
+            var circle_marker_874f3b8f4e9042cfa476177fe7231496 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_74c08d29636c457eb7e10203b868d1e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1837e453247b4d428f03163967272492 = $(`<div id="html_1837e453247b4d428f03163967272492" style="width: 100.0%; height: 100.0%;">BHOJOGHARI, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_74c08d29636c457eb7e10203b868d1e4.setContent(html_1837e453247b4d428f03163967272492);
+        
+
+        circle_marker_874f3b8f4e9042cfa476177fe7231496.bindPopup(popup_74c08d29636c457eb7e10203b868d1e4)
+        ;
+
+        
+    
+    
+            var circle_marker_92d9be0799874a3c91b5d133caa434f4 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_aa909cbda8f44541a324fc879136ef64 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df23a74032d741088f12d7a79e9a6c01 = $(`<div id="html_df23a74032d741088f12d7a79e9a6c01" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_aa909cbda8f44541a324fc879136ef64.setContent(html_df23a74032d741088f12d7a79e9a6c01);
+        
+
+        circle_marker_92d9be0799874a3c91b5d133caa434f4.bindPopup(popup_aa909cbda8f44541a324fc879136ef64)
+        ;
+
+        
+    
+    
+            var circle_marker_41ab40f81e83414eb971d23a3f25a6a9 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_c18be4b5c7ed4bd39bec047d04c575dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_80af0bf6a8a34b5d89b6e06f981b0f06 = $(`<div id="html_80af0bf6a8a34b5d89b6e06f981b0f06" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_c18be4b5c7ed4bd39bec047d04c575dd.setContent(html_80af0bf6a8a34b5d89b6e06f981b0f06);
+        
+
+        circle_marker_41ab40f81e83414eb971d23a3f25a6a9.bindPopup(popup_c18be4b5c7ed4bd39bec047d04c575dd)
+        ;
+
+        
+    
+    
+            var circle_marker_236381be9ce9404989bd16b9340ded1b = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_1f08d1ba9df44f618911efa2b5794f3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e18055a4fc28461cb684593ebd914122 = $(`<div id="html_e18055a4fc28461cb684593ebd914122" style="width: 100.0%; height: 100.0%;">GANGTOK BRANCH, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_1f08d1ba9df44f618911efa2b5794f3a.setContent(html_e18055a4fc28461cb684593ebd914122);
+        
+
+        circle_marker_236381be9ce9404989bd16b9340ded1b.bindPopup(popup_1f08d1ba9df44f618911efa2b5794f3a)
+        ;
+
+        
+    
+    
+            var circle_marker_941dfbcbe726429da2774c71896b6560 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_e0bd83719edc47ef946366a916c83a02 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1947f5487720452388c5fb7f1a412ccc = $(`<div id="html_1947f5487720452388c5fb7f1a412ccc" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_e0bd83719edc47ef946366a916c83a02.setContent(html_1947f5487720452388c5fb7f1a412ccc);
+        
+
+        circle_marker_941dfbcbe726429da2774c71896b6560.bindPopup(popup_e0bd83719edc47ef946366a916c83a02)
+        ;
+
+        
+    
+    
+            var circle_marker_181fef1d7b6e4b578611a70b0c52bb22 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_9a7f37b50f1f488d9059ad5b3f187f91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7e11da43e704af5901bd6474a302d5e = $(`<div id="html_e7e11da43e704af5901bd6474a302d5e" style="width: 100.0%; height: 100.0%;">UPPER BURTUK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_9a7f37b50f1f488d9059ad5b3f187f91.setContent(html_e7e11da43e704af5901bd6474a302d5e);
+        
+
+        circle_marker_181fef1d7b6e4b578611a70b0c52bb22.bindPopup(popup_9a7f37b50f1f488d9059ad5b3f187f91)
+        ;
+
+        
+    
+    
+            var circle_marker_dde788ca513f4c91b590fe319ae60e11 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_6f4713fd03854e498106cc681c53a93e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77a88c7f4f1f413883ac471bd7172b01 = $(`<div id="html_77a88c7f4f1f413883ac471bd7172b01" style="width: 100.0%; height: 100.0%;">GANGTOK SIKKIM, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_6f4713fd03854e498106cc681c53a93e.setContent(html_77a88c7f4f1f413883ac471bd7172b01);
+        
+
+        circle_marker_dde788ca513f4c91b590fe319ae60e11.bindPopup(popup_6f4713fd03854e498106cc681c53a93e)
+        ;
+
+        
+    
+    
+            var circle_marker_ae8a98e4e00a4274bb220304458a5bf5 = L.circleMarker(
+                [27.2333, 88.6],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_b5d0ab5ad1da4ee090dec5d0fbeb7b3f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48eeed6071b7405283d31067f55355f2 = $(`<div id="html_48eeed6071b7405283d31067f55355f2" style="width: 100.0%; height: 100.0%;">PAKYONG, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_b5d0ab5ad1da4ee090dec5d0fbeb7b3f.setContent(html_48eeed6071b7405283d31067f55355f2);
+        
+
+        circle_marker_ae8a98e4e00a4274bb220304458a5bf5.bindPopup(popup_b5d0ab5ad1da4ee090dec5d0fbeb7b3f)
+        ;
+
+        
+    
+    
+            var circle_marker_e47b2554dd0d4c099d69caea881e2aeb = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_a5eeb27be0104848a1f18c730ae47e0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67ef0ba05e2743d296806b8c2ec43fd5 = $(`<div id="html_67ef0ba05e2743d296806b8c2ec43fd5" style="width: 100.0%; height: 100.0%;">GEYZING, WEST SIKKIM, SIKKIM</div>`)[0];
+            popup_a5eeb27be0104848a1f18c730ae47e0b.setContent(html_67ef0ba05e2743d296806b8c2ec43fd5);
+        
+
+        circle_marker_e47b2554dd0d4c099d69caea881e2aeb.bindPopup(popup_a5eeb27be0104848a1f18c730ae47e0b)
+        ;
+
+        
+    
+    
+            var circle_marker_9ba9f347c3fe450da42afc80d6078938 = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_6cb5a8ee982c4acba1c5c4b327badf4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21ab81120a4846139169b6790c79579a = $(`<div id="html_21ab81120a4846139169b6790c79579a" style="width: 100.0%; height: 100.0%;">LOGSHIP, WEST SIKKIM, SIKKIM</div>`)[0];
+            popup_6cb5a8ee982c4acba1c5c4b327badf4d.setContent(html_21ab81120a4846139169b6790c79579a);
+        
+
+        circle_marker_9ba9f347c3fe450da42afc80d6078938.bindPopup(popup_6cb5a8ee982c4acba1c5c4b327badf4d)
+        ;
+
+        
+    
+    
+            var circle_marker_a99967b932d8417facd123fc49d51123 = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_6ae35f99453445babcfc6bb2b6abe031 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d3d3650dfd44642af047895a9cb697d = $(`<div id="html_3d3d3650dfd44642af047895a9cb697d" style="width: 100.0%; height: 100.0%;">GEYZING, WEST SIKKIM, SIKKIM</div>`)[0];
+            popup_6ae35f99453445babcfc6bb2b6abe031.setContent(html_3d3d3650dfd44642af047895a9cb697d);
+        
+
+        circle_marker_a99967b932d8417facd123fc49d51123.bindPopup(popup_6ae35f99453445babcfc6bb2b6abe031)
+        ;
+
+        
+    
+    
+            var circle_marker_9f6f26bb61c0488a8f42f27a8313f7ac = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_655eafedd5a3462c859a84de627b4840 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e0655c21e504087a43b22719d85dd2d = $(`<div id="html_5e0655c21e504087a43b22719d85dd2d" style="width: 100.0%; height: 100.0%;">NAMCHI, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_655eafedd5a3462c859a84de627b4840.setContent(html_5e0655c21e504087a43b22719d85dd2d);
+        
+
+        circle_marker_9f6f26bb61c0488a8f42f27a8313f7ac.bindPopup(popup_655eafedd5a3462c859a84de627b4840)
+        ;
+
+        
+    
+    
+            var circle_marker_05278399a9874d3f813581f4f1854b66 = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_7ccad436c55d4da29155d654af9bc889 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67e2fb2217f9410f9a49228c2405ec35 = $(`<div id="html_67e2fb2217f9410f9a49228c2405ec35" style="width: 100.0%; height: 100.0%;">NAMCHI, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_7ccad436c55d4da29155d654af9bc889.setContent(html_67e2fb2217f9410f9a49228c2405ec35);
+        
+
+        circle_marker_05278399a9874d3f813581f4f1854b66.bindPopup(popup_7ccad436c55d4da29155d654af9bc889)
+        ;
+
+        
+    
+    
+            var circle_marker_df05fef6260447ff9fa13fe8622ac032 = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_133816b255f14509905848e631ca9137 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_98b868aaab3c4519846b8d776bd54886 = $(`<div id="html_98b868aaab3c4519846b8d776bd54886" style="width: 100.0%; height: 100.0%;">NAMCHI, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_133816b255f14509905848e631ca9137.setContent(html_98b868aaab3c4519846b8d776bd54886);
+        
+
+        circle_marker_df05fef6260447ff9fa13fe8622ac032.bindPopup(popup_133816b255f14509905848e631ca9137)
+        ;
+
+        
+    
+    
+            var circle_marker_2dcd837d456b4bcfaadfcf7ab874b47b = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_d1cab2a304734d1393c59479be76e7ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77295edaee2e4a6fa168692d7a8253cf = $(`<div id="html_77295edaee2e4a6fa168692d7a8253cf" style="width: 100.0%; height: 100.0%;">NAMCHI, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_d1cab2a304734d1393c59479be76e7ec.setContent(html_77295edaee2e4a6fa168692d7a8253cf);
+        
+
+        circle_marker_2dcd837d456b4bcfaadfcf7ab874b47b.bindPopup(popup_d1cab2a304734d1393c59479be76e7ec)
+        ;
+
+        
+    
+    
+            var circle_marker_37c09c9084764e05a8eb5437e6767e05 = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_b7707f4557674261ad7628a5ec8d039d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5f2ee23cce249df9868bc92b22dafe0 = $(`<div id="html_c5f2ee23cce249df9868bc92b22dafe0" style="width: 100.0%; height: 100.0%;">NAMCHI, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_b7707f4557674261ad7628a5ec8d039d.setContent(html_c5f2ee23cce249df9868bc92b22dafe0);
+        
+
+        circle_marker_37c09c9084764e05a8eb5437e6767e05.bindPopup(popup_b7707f4557674261ad7628a5ec8d039d)
+        ;
+
+        
+    
+    
+            var circle_marker_86800f9a3c6847698b500660d81c641b = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_aead364946634822a98fd774054f4dd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1694f3b8c8540b8bea3a205523e7170 = $(`<div id="html_d1694f3b8c8540b8bea3a205523e7170" style="width: 100.0%; height: 100.0%;">NAMCHI, SOUTH SIKKIM, SIKKIM</div>`)[0];
+            popup_aead364946634822a98fd774054f4dd8.setContent(html_d1694f3b8c8540b8bea3a205523e7170);
+        
+
+        circle_marker_86800f9a3c6847698b500660d81c641b.bindPopup(popup_aead364946634822a98fd774054f4dd8)
+        ;
+
+        
+    
+    
+            var circle_marker_d2aaf37661a543138f9c417566568196 = L.circleMarker(
+                [27.2, 88.5611],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_0019008c7efb44ac93b64fe6fb18d7bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4beddedfe165469e8c564ee3e071a8e0 = $(`<div id="html_4beddedfe165469e8c564ee3e071a8e0" style="width: 100.0%; height: 100.0%;">RANIPOOL, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_0019008c7efb44ac93b64fe6fb18d7bf.setContent(html_4beddedfe165469e8c564ee3e071a8e0);
+        
+
+        circle_marker_d2aaf37661a543138f9c417566568196.bindPopup(popup_0019008c7efb44ac93b64fe6fb18d7bf)
+        ;
+
+        
+    
+    
+            var circle_marker_2261bd28a6a74d23bc1418cf7884c9f0 = L.circleMarker(
+                [27.2, 88.5611],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_7e3544d6a9d7479899333e4ffacd8d29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7848dc2bd9a04e47aab5cbaa42a22a21 = $(`<div id="html_7848dc2bd9a04e47aab5cbaa42a22a21" style="width: 100.0%; height: 100.0%;">RANIPOOL, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_7e3544d6a9d7479899333e4ffacd8d29.setContent(html_7848dc2bd9a04e47aab5cbaa42a22a21);
+        
+
+        circle_marker_2261bd28a6a74d23bc1418cf7884c9f0.bindPopup(popup_7e3544d6a9d7479899333e4ffacd8d29)
+        ;
+
+        
+    
+    
+            var circle_marker_65436a278984486e948f0c784a788d02 = L.circleMarker(
+                [27.2, 88.5611],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_526bd75d3a9c46c8a2f9fdd810244398 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0f88df9886841d0acd3c731e80797cb = $(`<div id="html_b0f88df9886841d0acd3c731e80797cb" style="width: 100.0%; height: 100.0%;">RANIPOOL, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_526bd75d3a9c46c8a2f9fdd810244398.setContent(html_b0f88df9886841d0acd3c731e80797cb);
+        
+
+        circle_marker_65436a278984486e948f0c784a788d02.bindPopup(popup_526bd75d3a9c46c8a2f9fdd810244398)
+        ;
+
+        
+    
+    
+            var circle_marker_6c9dc940109348b78408b3316ee84d5e = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_609ead0a961c4e28919438286fc05322 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57e49456f4b94b2f90d13ee7d2946563 = $(`<div id="html_57e49456f4b94b2f90d13ee7d2946563" style="width: 100.0%; height: 100.0%;">NAYABAZAR, WEST SIKKIM, SIKKIM</div>`)[0];
+            popup_609ead0a961c4e28919438286fc05322.setContent(html_57e49456f4b94b2f90d13ee7d2946563);
+        
+
+        circle_marker_6c9dc940109348b78408b3316ee84d5e.bindPopup(popup_609ead0a961c4e28919438286fc05322)
+        ;
+
+        
+    
+    
+            var circle_marker_3ad33acc72c045808304c00a02b95797 = L.circleMarker(
+                [27.1667, 88.35],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_d4a1d00adde943f78327b74f870b2940 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97d6300d482c4037a05960488efafc09 = $(`<div id="html_97d6300d482c4037a05960488efafc09" style="width: 100.0%; height: 100.0%;">MANGALBAREY, WEST SIKKIM, SIKKIM</div>`)[0];
+            popup_d4a1d00adde943f78327b74f870b2940.setContent(html_97d6300d482c4037a05960488efafc09);
+        
+
+        circle_marker_3ad33acc72c045808304c00a02b95797.bindPopup(popup_d4a1d00adde943f78327b74f870b2940)
+        ;
+
+        
+    
+    
+            var circle_marker_d0206a32adfc47d391f0f006ae878faa = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_2ccd63fcde0c4afba8c1558cc14afca5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_350f255ed226497fb6fd10349dbf985b = $(`<div id="html_350f255ed226497fb6fd10349dbf985b" style="width: 100.0%; height: 100.0%;">MANGAN, NORTH SIKKIM, SIKKIM</div>`)[0];
+            popup_2ccd63fcde0c4afba8c1558cc14afca5.setContent(html_350f255ed226497fb6fd10349dbf985b);
+        
+
+        circle_marker_d0206a32adfc47d391f0f006ae878faa.bindPopup(popup_2ccd63fcde0c4afba8c1558cc14afca5)
+        ;
+
+        
+    
+    
+            var circle_marker_0df9133580f142a6b47d5480ffafb764 = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_77666983dc4940fe9315ff27266c1bac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00c4cae2761544ab85562b48a80a32d2 = $(`<div id="html_00c4cae2761544ab85562b48a80a32d2" style="width: 100.0%; height: 100.0%;">MANGAN, NORTH SIKKIM, SIKKIM</div>`)[0];
+            popup_77666983dc4940fe9315ff27266c1bac.setContent(html_00c4cae2761544ab85562b48a80a32d2);
+        
+
+        circle_marker_0df9133580f142a6b47d5480ffafb764.bindPopup(popup_77666983dc4940fe9315ff27266c1bac)
+        ;
+
+        
+    
+    
+            var circle_marker_ebd03b76cd094750a2aac5d71b729a3f = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_983148f04c8044c1b2535211872a3e2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72532f3cd2554bf78bb5a6e843d56dae = $(`<div id="html_72532f3cd2554bf78bb5a6e843d56dae" style="width: 100.0%; height: 100.0%;">MANGAN, NORTH SIKKIM, SIKKIM</div>`)[0];
+            popup_983148f04c8044c1b2535211872a3e2b.setContent(html_72532f3cd2554bf78bb5a6e843d56dae);
+        
+
+        circle_marker_ebd03b76cd094750a2aac5d71b729a3f.bindPopup(popup_983148f04c8044c1b2535211872a3e2b)
+        ;
+
+        
+    
+    
+            var circle_marker_31bf702d9b5046f4ae161bec08ffac9a = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_d03dd5ec78dc42e19723e866bd92c44e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d17c5dee1c914f9491b6e3abb4b8c000 = $(`<div id="html_d17c5dee1c914f9491b6e3abb4b8c000" style="width: 100.0%; height: 100.0%;">MANGAN BRANCH, NORTH SIKKIM, SIKKIM</div>`)[0];
+            popup_d03dd5ec78dc42e19723e866bd92c44e.setContent(html_d17c5dee1c914f9491b6e3abb4b8c000);
+        
+
+        circle_marker_31bf702d9b5046f4ae161bec08ffac9a.bindPopup(popup_d03dd5ec78dc42e19723e866bd92c44e)
+        ;
+
+        
+    
+    
+            var circle_marker_7dc25a8a8e3c457a976e24070f19ba18 = L.circleMarker(
+                [27.1833, 88.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_ac9b219af5d1473aa3edffa95bf595ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5a0d920d1bdb4248bc98d31e23e97b93 = $(`<div id="html_5a0d920d1bdb4248bc98d31e23e97b93" style="width: 100.0%; height: 100.0%;">RUNGPO(E.SIKKIM), EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_ac9b219af5d1473aa3edffa95bf595ef.setContent(html_5a0d920d1bdb4248bc98d31e23e97b93);
+        
+
+        circle_marker_7dc25a8a8e3c457a976e24070f19ba18.bindPopup(popup_ac9b219af5d1473aa3edffa95bf595ef)
+        ;
+
+        
+    
+    
+            var circle_marker_aa6f71c1c25c4f5ab1a4dadee1f5a308 = L.circleMarker(
+                [27.1833, 88.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_d89aafa428de4eff80b87035e164fda8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05b72adc387d4ac8bc6b86083a310473 = $(`<div id="html_05b72adc387d4ac8bc6b86083a310473" style="width: 100.0%; height: 100.0%;">RANGPO, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_d89aafa428de4eff80b87035e164fda8.setContent(html_05b72adc387d4ac8bc6b86083a310473);
+        
+
+        circle_marker_aa6f71c1c25c4f5ab1a4dadee1f5a308.bindPopup(popup_d89aafa428de4eff80b87035e164fda8)
+        ;
+
+        
+    
+    
+            var circle_marker_adaa01e09d0e4a95ad13cf5b96f0ff7d = L.circleMarker(
+                [27.2, 88.5611],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_274a9f913bf4471d964f309cf30938ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5b6dcd209ba480489daac50f6409826 = $(`<div id="html_b5b6dcd209ba480489daac50f6409826" style="width: 100.0%; height: 100.0%;">RANGPO, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_274a9f913bf4471d964f309cf30938ce.setContent(html_b5b6dcd209ba480489daac50f6409826);
+        
+
+        circle_marker_adaa01e09d0e4a95ad13cf5b96f0ff7d.bindPopup(popup_274a9f913bf4471d964f309cf30938ce)
+        ;
+
+        
+    
+    
+            var circle_marker_5f7cd8e52d9b426195b9b333dc7082b3 = L.circleMarker(
+                [27.1833, 88.5333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_cdc1e35c5bde49d6b82d83d19aeffdc7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d28aa8204c2c4c0d884b07d0e24177b0 = $(`<div id="html_d28aa8204c2c4c0d884b07d0e24177b0" style="width: 100.0%; height: 100.0%;">RANGPO, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_cdc1e35c5bde49d6b82d83d19aeffdc7.setContent(html_d28aa8204c2c4c0d884b07d0e24177b0);
+        
+
+        circle_marker_5f7cd8e52d9b426195b9b333dc7082b3.bindPopup(popup_cdc1e35c5bde49d6b82d83d19aeffdc7)
+        ;
+
+        
+    
+    
+            var circle_marker_a95809a5d60545d3809caf160fa65b99 = L.circleMarker(
+                [27.25, 88.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_5a7f6e4dd8284ddba287f6e34a3e6dee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee76be192d0e48f98d50a4da8da18f08 = $(`<div id="html_ee76be192d0e48f98d50a4da8da18f08" style="width: 100.0%; height: 100.0%;">DENTAM, WEST SIKKIM, SIKKIM</div>`)[0];
+            popup_5a7f6e4dd8284ddba287f6e34a3e6dee.setContent(html_ee76be192d0e48f98d50a4da8da18f08);
+        
+
+        circle_marker_a95809a5d60545d3809caf160fa65b99.bindPopup(popup_5a7f6e4dd8284ddba287f6e34a3e6dee)
+        ;
+
+        
+    
+    
+            var circle_marker_012e48c3ee3a4abf952929428976e35d = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_006752e90e644ce2b6ee42fb2f0b4b5d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4ec147667094af581da6a1b93407cea = $(`<div id="html_c4ec147667094af581da6a1b93407cea" style="width: 100.0%; height: 100.0%;">Gangtok, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_006752e90e644ce2b6ee42fb2f0b4b5d.setContent(html_c4ec147667094af581da6a1b93407cea);
+        
+
+        circle_marker_012e48c3ee3a4abf952929428976e35d.bindPopup(popup_006752e90e644ce2b6ee42fb2f0b4b5d)
+        ;
+
+        
+    
+    
+            var circle_marker_92eb9158643f421f9b8fd61fbaa9b4d2 = L.circleMarker(
+                [27.3083, 88.5583],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_d5f7fc8ad6c74fc7ae83a5ba29f3245c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4af98e114b254eca98a0e046de923451 = $(`<div id="html_4af98e114b254eca98a0e046de923451" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_d5f7fc8ad6c74fc7ae83a5ba29f3245c.setContent(html_4af98e114b254eca98a0e046de923451);
+        
+
+        circle_marker_92eb9158643f421f9b8fd61fbaa9b4d2.bindPopup(popup_d5f7fc8ad6c74fc7ae83a5ba29f3245c)
+        ;
+
+        
+    
+    
+            var circle_marker_b81e6b1e75f84fae8007dbac5455b936 = L.circleMarker(
+                [27.329046, 88.6122673],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e4a8d57098be4571bf579259c20e98ff);
+        
+    
+        var popup_daab7e5be9344d0ea68611cbd9ecf004 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f302c59103144729a4bda0631000fb43 = $(`<div id="html_f302c59103144729a4bda0631000fb43" style="width: 100.0%; height: 100.0%;">GANGTOK, EAST SIKKIM, SIKKIM</div>`)[0];
+            popup_daab7e5be9344d0ea68611cbd9ecf004.setContent(html_f302c59103144729a4bda0631000fb43);
+        
+
+        circle_marker_b81e6b1e75f84fae8007dbac5455b936.bindPopup(popup_daab7e5be9344d0ea68611cbd9ecf004)
+        ;
+
+        
+    
+</script>

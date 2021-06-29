@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b9d80144eedb4e72809ee0850857c00f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_b9d80144eedb4e72809ee0850857c00f" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARUNACHAL PRADESH Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(10)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(8)</li><li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(8)</li><li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(6)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(5)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(3)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(2)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(1)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(1)</li><li><span style='background:turquoise;opacity:0.7;'></span>PUNJAB AND SIND BANK(1)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>ARUNACHAL PRADESH(46)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_b9d80144eedb4e72809ee0850857c00f = L.map(
+                "map_b9d80144eedb4e72809ee0850857c00f",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0ee13771342e4cd89103ce2fc405c4b6 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+            map_b9d80144eedb4e72809ee0850857c00f.fitBounds(
+                [[27.1467, 91.8667], [28.1667, 96.55]],
+                {}
+            );
+        
+    
+            var circle_marker_b8702593d5ab43368643a74c6ea077e0 = L.circleMarker(
+                [27.5833, 91.8667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_7c43a29a41d7408f86009a545486ace7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ecc3a22f48b142eba486de866f02aca2 = $(`<div id="html_ecc3a22f48b142eba486de866f02aca2" style="width: 100.0%; height: 100.0%;">TAWANG, TAWANG, ARUNACHAL PRADESH</div>`)[0];
+            popup_7c43a29a41d7408f86009a545486ace7.setContent(html_ecc3a22f48b142eba486de866f02aca2);
+        
+
+        circle_marker_b8702593d5ab43368643a74c6ea077e0.bindPopup(popup_7c43a29a41d7408f86009a545486ace7)
+        ;
+
+        
+    
+    
+            var circle_marker_27354762f1e946049eebef27b3835b3c = L.circleMarker(
+                [27.5833, 91.8667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_24879a79234f46988b58a40691d52cf9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7180dfec23e44818b52f4c43be531821 = $(`<div id="html_7180dfec23e44818b52f4c43be531821" style="width: 100.0%; height: 100.0%;">TAWANG, TAWANG, ARUNACHAL PRADESH</div>`)[0];
+            popup_24879a79234f46988b58a40691d52cf9.setContent(html_7180dfec23e44818b52f4c43be531821);
+        
+
+        circle_marker_27354762f1e946049eebef27b3835b3c.bindPopup(popup_24879a79234f46988b58a40691d52cf9)
+        ;
+
+        
+    
+    
+            var circle_marker_9cf73ffbef7e4647b477d09c087d4317 = L.circleMarker(
+                [28.1667, 94.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_6f7e7547e1cd4e2498072e6928c3577e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2b3e933346c4459ac7253c87011b66c = $(`<div id="html_f2b3e933346c4459ac7253c87011b66c" style="width: 100.0%; height: 100.0%;">ALONG, WEST SIANG, ARUNACHAL PRADESH</div>`)[0];
+            popup_6f7e7547e1cd4e2498072e6928c3577e.setContent(html_f2b3e933346c4459ac7253c87011b66c);
+        
+
+        circle_marker_9cf73ffbef7e4647b477d09c087d4317.bindPopup(popup_6f7e7547e1cd4e2498072e6928c3577e)
+        ;
+
+        
+    
+    
+            var circle_marker_cbec918aca6440109b6c58d74f369ccf = L.circleMarker(
+                [28.1667, 94.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_5f03a6c17e7a4ddc926cf83a437f3098 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b093ff5063047ab986f41cde8233417 = $(`<div id="html_8b093ff5063047ab986f41cde8233417" style="width: 100.0%; height: 100.0%;">ALONG, WEST SIANG, ARUNACHAL PRADESH</div>`)[0];
+            popup_5f03a6c17e7a4ddc926cf83a437f3098.setContent(html_8b093ff5063047ab986f41cde8233417);
+        
+
+        circle_marker_cbec918aca6440109b6c58d74f369ccf.bindPopup(popup_5f03a6c17e7a4ddc926cf83a437f3098)
+        ;
+
+        
+    
+    
+            var circle_marker_860cce6d3dca49529d02badfc599827e = L.circleMarker(
+                [28.0667, 95.3333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_4eda9d71f07e42a8ad20770b1d9d0ced = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ccd7f0155fde4a4eaeebd53087e28e9f = $(`<div id="html_ccd7f0155fde4a4eaeebd53087e28e9f" style="width: 100.0%; height: 100.0%;">PASIGHAT, EAST SIANG, ARUNACHAL PRADESH</div>`)[0];
+            popup_4eda9d71f07e42a8ad20770b1d9d0ced.setContent(html_ccd7f0155fde4a4eaeebd53087e28e9f);
+        
+
+        circle_marker_860cce6d3dca49529d02badfc599827e.bindPopup(popup_4eda9d71f07e42a8ad20770b1d9d0ced)
+        ;
+
+        
+    
+    
+            var circle_marker_95d5ad58b37a49ffa9432a044892029f = L.circleMarker(
+                [28.0667, 95.3333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_18d7872758db4dcaa421a00ea8bd577a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ca3333824f04fccae3b06a546cce959 = $(`<div id="html_6ca3333824f04fccae3b06a546cce959" style="width: 100.0%; height: 100.0%;">PASIGHAT, EAST SIANG, ARUNACHAL PRADESH</div>`)[0];
+            popup_18d7872758db4dcaa421a00ea8bd577a.setContent(html_6ca3333824f04fccae3b06a546cce959);
+        
+
+        circle_marker_95d5ad58b37a49ffa9432a044892029f.bindPopup(popup_18d7872758db4dcaa421a00ea8bd577a)
+        ;
+
+        
+    
+    
+            var circle_marker_dbe5fc721f3845e396881658af7eb81d = L.circleMarker(
+                [28.0667, 95.3333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_06c8218bed0d475b83dd3fda2e4613a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_39fd95032ef040a6a48b8ce8127c9207 = $(`<div id="html_39fd95032ef040a6a48b8ce8127c9207" style="width: 100.0%; height: 100.0%;">PASIGHAT, EAST SIANG, ARUNACHAL PRADESH</div>`)[0];
+            popup_06c8218bed0d475b83dd3fda2e4613a3.setContent(html_39fd95032ef040a6a48b8ce8127c9207);
+        
+
+        circle_marker_dbe5fc721f3845e396881658af7eb81d.bindPopup(popup_06c8218bed0d475b83dd3fda2e4613a3)
+        ;
+
+        
+    
+    
+            var circle_marker_ec368293df384cdabc18782fec450401 = L.circleMarker(
+                [28.0667, 95.3333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_0a0312bb3e364f2db6b0a177a5459694 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72982ed53e0c4488b1cb3d83aea83bb9 = $(`<div id="html_72982ed53e0c4488b1cb3d83aea83bb9" style="width: 100.0%; height: 100.0%;">PASIGHAT, EAST SIANG, ARUNACHAL PRADESH</div>`)[0];
+            popup_0a0312bb3e364f2db6b0a177a5459694.setContent(html_72982ed53e0c4488b1cb3d83aea83bb9);
+        
+
+        circle_marker_ec368293df384cdabc18782fec450401.bindPopup(popup_0a0312bb3e364f2db6b0a177a5459694)
+        ;
+
+        
+    
+    
+            var circle_marker_376aefa854584cfba7153fde8d816a48 = L.circleMarker(
+                [27.8333, 95.8667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_0e56661197f243f599c9dacc29e0256e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_702d26bb8c9e4cd7862f270d88c77359 = $(`<div id="html_702d26bb8c9e4cd7862f270d88c77359" style="width: 100.0%; height: 100.0%;">ROING, LOWER DIBANG VALLEY, ARUNACHAL PRADESH</div>`)[0];
+            popup_0e56661197f243f599c9dacc29e0256e.setContent(html_702d26bb8c9e4cd7862f270d88c77359);
+        
+
+        circle_marker_376aefa854584cfba7153fde8d816a48.bindPopup(popup_0e56661197f243f599c9dacc29e0256e)
+        ;
+
+        
+    
+    
+            var circle_marker_2a584c19d97843849dfae3b18f043047 = L.circleMarker(
+                [27.6333, 93.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_1d7fc2ddf60c4251b2c32e0731c868aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44110934986b42bbaee0bdec73117128 = $(`<div id="html_44110934986b42bbaee0bdec73117128" style="width: 100.0%; height: 100.0%;">ZIRO, LOWER SUBANSIRI, ARUNACHAL PRADESH</div>`)[0];
+            popup_1d7fc2ddf60c4251b2c32e0731c868aa.setContent(html_44110934986b42bbaee0bdec73117128);
+        
+
+        circle_marker_2a584c19d97843849dfae3b18f043047.bindPopup(popup_1d7fc2ddf60c4251b2c32e0731c868aa)
+        ;
+
+        
+    
+    
+            var circle_marker_980b660833404b469b202579dd641c17 = L.circleMarker(
+                [27.6333, 93.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_9a1e3d2e1c3a42d399f7102164b42e63 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21631a51cfa44556974024ed354f07b5 = $(`<div id="html_21631a51cfa44556974024ed354f07b5" style="width: 100.0%; height: 100.0%;">ZIRO, LOWER SUBANSIRI, ARUNACHAL PRADESH</div>`)[0];
+            popup_9a1e3d2e1c3a42d399f7102164b42e63.setContent(html_21631a51cfa44556974024ed354f07b5);
+        
+
+        circle_marker_980b660833404b469b202579dd641c17.bindPopup(popup_9a1e3d2e1c3a42d399f7102164b42e63)
+        ;
+
+        
+    
+    
+            var circle_marker_3ec90511d00f4eecb84348eb9c59f3b6 = L.circleMarker(
+                [28.0833, 96.55],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_b70971e26aab48e296e49fdc66e97a37 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd4d5fcb87dd4bdebc9eeeec5cae1a57 = $(`<div id="html_bd4d5fcb87dd4bdebc9eeeec5cae1a57" style="width: 100.0%; height: 100.0%;">GUNA NAGAR, NAMSAI, ARUNACHAL PRADESH</div>`)[0];
+            popup_b70971e26aab48e296e49fdc66e97a37.setContent(html_bd4d5fcb87dd4bdebc9eeeec5cae1a57);
+        
+
+        circle_marker_3ec90511d00f4eecb84348eb9c59f3b6.bindPopup(popup_b70971e26aab48e296e49fdc66e97a37)
+        ;
+
+        
+    
+    
+            var circle_marker_8c8cd2a7a03a481a9b16101f2968fa68 = L.circleMarker(
+                [27.4583, 92.0667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_17e92a5a25924693b35351f29e746c76 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e44f2c954ea49108411183cb82a47f4 = $(`<div id="html_6e44f2c954ea49108411183cb82a47f4" style="width: 100.0%; height: 100.0%;">SEPPA, EAST KAMENG, ARUNACHAL PRADESH</div>`)[0];
+            popup_17e92a5a25924693b35351f29e746c76.setContent(html_6e44f2c954ea49108411183cb82a47f4);
+        
+
+        circle_marker_8c8cd2a7a03a481a9b16101f2968fa68.bindPopup(popup_17e92a5a25924693b35351f29e746c76)
+        ;
+
+        
+    
+    
+            var circle_marker_ae1fd632e57241efab78cc58ebd3cf9e = L.circleMarker(
+                [28.0833, 96.55],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_d5ff620c28a946259722a005f5175e31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60da502e9247434e8ebb8fc8c9a11654 = $(`<div id="html_60da502e9247434e8ebb8fc8c9a11654" style="width: 100.0%; height: 100.0%;">MOHADEVPUR, NAMSAI, ARUNACHAL PRADESH</div>`)[0];
+            popup_d5ff620c28a946259722a005f5175e31.setContent(html_60da502e9247434e8ebb8fc8c9a11654);
+        
+
+        circle_marker_ae1fd632e57241efab78cc58ebd3cf9e.bindPopup(popup_d5ff620c28a946259722a005f5175e31)
+        ;
+
+        
+    
+    
+            var circle_marker_dbcbe9039b3f44fbbf210e42e4039a1f = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_13481d73e6f744b28842ecf35507cf52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aefd518073d54b2894fbf8189167f766 = $(`<div id="html_aefd518073d54b2894fbf8189167f766" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_13481d73e6f744b28842ecf35507cf52.setContent(html_aefd518073d54b2894fbf8189167f766);
+        
+
+        circle_marker_dbcbe9039b3f44fbbf210e42e4039a1f.bindPopup(popup_13481d73e6f744b28842ecf35507cf52)
+        ;
+
+        
+    
+    
+            var circle_marker_01037e33bdae4be4bb23a7113882d0ce = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_c47b1d82aa214c0281ec811b1a17400d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b62cf6b4d30c453b87fe70bd750bae7a = $(`<div id="html_b62cf6b4d30c453b87fe70bd750bae7a" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_c47b1d82aa214c0281ec811b1a17400d.setContent(html_b62cf6b4d30c453b87fe70bd750bae7a);
+        
+
+        circle_marker_01037e33bdae4be4bb23a7113882d0ce.bindPopup(popup_c47b1d82aa214c0281ec811b1a17400d)
+        ;
+
+        
+    
+    
+            var circle_marker_7def5eeab36a43ffb408706108846196 = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_e2c08d42704e455d90f42c6ec8638f23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c6c9363fa6bd442297ddb7712bce48cd = $(`<div id="html_c6c9363fa6bd442297ddb7712bce48cd" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_e2c08d42704e455d90f42c6ec8638f23.setContent(html_c6c9363fa6bd442297ddb7712bce48cd);
+        
+
+        circle_marker_7def5eeab36a43ffb408706108846196.bindPopup(popup_e2c08d42704e455d90f42c6ec8638f23)
+        ;
+
+        
+    
+    
+            var circle_marker_6f20d80dc8c04887afadf9432edc0dd5 = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_b961717c381345dfa65f127252badf87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7181b9ca9b7742f7b803af83f1cf3ef4 = $(`<div id="html_7181b9ca9b7742f7b803af83f1cf3ef4" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_b961717c381345dfa65f127252badf87.setContent(html_7181b9ca9b7742f7b803af83f1cf3ef4);
+        
+
+        circle_marker_6f20d80dc8c04887afadf9432edc0dd5.bindPopup(popup_b961717c381345dfa65f127252badf87)
+        ;
+
+        
+    
+    
+            var circle_marker_109f46835d514c34927c79c627a4fd4a = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_9657e305dc95443ebe0363547330551a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_70644e8beb2242ae9e16796f25295fbf = $(`<div id="html_70644e8beb2242ae9e16796f25295fbf" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_9657e305dc95443ebe0363547330551a.setContent(html_70644e8beb2242ae9e16796f25295fbf);
+        
+
+        circle_marker_109f46835d514c34927c79c627a4fd4a.bindPopup(popup_9657e305dc95443ebe0363547330551a)
+        ;
+
+        
+    
+    
+            var circle_marker_4b1610336ffa4fc88cab29ad3bd2a956 = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_3694840e6b704fdf81cf24729ca24fe3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_959546ff1eb74fb8bd71609bde814cdf = $(`<div id="html_959546ff1eb74fb8bd71609bde814cdf" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_3694840e6b704fdf81cf24729ca24fe3.setContent(html_959546ff1eb74fb8bd71609bde814cdf);
+        
+
+        circle_marker_4b1610336ffa4fc88cab29ad3bd2a956.bindPopup(popup_3694840e6b704fdf81cf24729ca24fe3)
+        ;
+
+        
+    
+    
+            var circle_marker_ab5c56dcc3074a8081636a9d5a43a3e2 = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_6af9575caa5c450990b5588f0b62346c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1bf126bc4b442a9b8bc75eb998cf9f6 = $(`<div id="html_a1bf126bc4b442a9b8bc75eb998cf9f6" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_6af9575caa5c450990b5588f0b62346c.setContent(html_a1bf126bc4b442a9b8bc75eb998cf9f6);
+        
+
+        circle_marker_ab5c56dcc3074a8081636a9d5a43a3e2.bindPopup(popup_6af9575caa5c450990b5588f0b62346c)
+        ;
+
+        
+    
+    
+            var circle_marker_54bd6e0887404291930d83ab17592189 = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_7b9b850ef2be4a86aa3f9544338ca7cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b03cf68a191414dab8d908875e6a44f = $(`<div id="html_8b03cf68a191414dab8d908875e6a44f" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_7b9b850ef2be4a86aa3f9544338ca7cf.setContent(html_8b03cf68a191414dab8d908875e6a44f);
+        
+
+        circle_marker_54bd6e0887404291930d83ab17592189.bindPopup(popup_7b9b850ef2be4a86aa3f9544338ca7cf)
+        ;
+
+        
+    
+    
+            var circle_marker_863f7b680aff4611b6c02c3a9ffdc15c = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_6f2e8c291a8e4438aba9f04daeddcbe7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5090ec5e793643608ce249fd788477cf = $(`<div id="html_5090ec5e793643608ce249fd788477cf" style="width: 100.0%; height: 100.0%;">ITANAGAR MAIN, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_6f2e8c291a8e4438aba9f04daeddcbe7.setContent(html_5090ec5e793643608ce249fd788477cf);
+        
+
+        circle_marker_863f7b680aff4611b6c02c3a9ffdc15c.bindPopup(popup_6f2e8c291a8e4438aba9f04daeddcbe7)
+        ;
+
+        
+    
+    
+            var circle_marker_5f02b58e6a91450aa115b92b73fc5b18 = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_078019626fec4240ba86927f06281e03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fbf67f4e3d24fef9e2ca12c88a9fcf8 = $(`<div id="html_4fbf67f4e3d24fef9e2ca12c88a9fcf8" style="width: 100.0%; height: 100.0%;">ITANAGAR (SECRETARIAT), PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_078019626fec4240ba86927f06281e03.setContent(html_4fbf67f4e3d24fef9e2ca12c88a9fcf8);
+        
+
+        circle_marker_5f02b58e6a91450aa115b92b73fc5b18.bindPopup(popup_078019626fec4240ba86927f06281e03)
+        ;
+
+        
+    
+    
+            var circle_marker_de5a4c706ba04270996a1ed5302106f2 = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_85931557e67d4bc7b547ddfb17c7a73b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_245e290b219c488890ecc4f35655608c = $(`<div id="html_245e290b219c488890ecc4f35655608c" style="width: 100.0%; height: 100.0%;">Itanagar Secretariat, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_85931557e67d4bc7b547ddfb17c7a73b.setContent(html_245e290b219c488890ecc4f35655608c);
+        
+
+        circle_marker_de5a4c706ba04270996a1ed5302106f2.bindPopup(popup_85931557e67d4bc7b547ddfb17c7a73b)
+        ;
+
+        
+    
+    
+            var circle_marker_8125d03b6c7c4f11bcf4b8e7f3f08ca0 = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_ddc695bde3904c10b5fb653b240b9a57 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe5e2020dd194aa8b3dcbb2fe0157d7b = $(`<div id="html_fe5e2020dd194aa8b3dcbb2fe0157d7b" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_ddc695bde3904c10b5fb653b240b9a57.setContent(html_fe5e2020dd194aa8b3dcbb2fe0157d7b);
+        
+
+        circle_marker_8125d03b6c7c4f11bcf4b8e7f3f08ca0.bindPopup(popup_ddc695bde3904c10b5fb653b240b9a57)
+        ;
+
+        
+    
+    
+            var circle_marker_0b6e0a0577ac47f9988d039ef89f18a1 = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_f9a1408b4a7f4b50abe19167c843f68b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9376dfbfd2b4933a5f16051f447a1ef = $(`<div id="html_f9376dfbfd2b4933a5f16051f447a1ef" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_f9a1408b4a7f4b50abe19167c843f68b.setContent(html_f9376dfbfd2b4933a5f16051f447a1ef);
+        
+
+        circle_marker_0b6e0a0577ac47f9988d039ef89f18a1.bindPopup(popup_f9a1408b4a7f4b50abe19167c843f68b)
+        ;
+
+        
+    
+    
+            var circle_marker_c4fa28ee76b944bf80d3987e6b237f4c = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_efd2a2f3a4044b37a69f2215281be7fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b024a12529f242d69f18261fe5ea27fc = $(`<div id="html_b024a12529f242d69f18261fe5ea27fc" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_efd2a2f3a4044b37a69f2215281be7fb.setContent(html_b024a12529f242d69f18261fe5ea27fc);
+        
+
+        circle_marker_c4fa28ee76b944bf80d3987e6b237f4c.bindPopup(popup_efd2a2f3a4044b37a69f2215281be7fb)
+        ;
+
+        
+    
+    
+            var circle_marker_d5f136c6b44344568e34c6a8ff501abe = L.circleMarker(
+                [28.0833, 96.55],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_432ff534d02d4e6894413210c1a42aee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf3b0c148d7e423db4547aa0cd3ffc89 = $(`<div id="html_bf3b0c148d7e423db4547aa0cd3ffc89" style="width: 100.0%; height: 100.0%;">NAMSAI, NAMSAI, ARUNACHAL PRADESH</div>`)[0];
+            popup_432ff534d02d4e6894413210c1a42aee.setContent(html_bf3b0c148d7e423db4547aa0cd3ffc89);
+        
+
+        circle_marker_d5f136c6b44344568e34c6a8ff501abe.bindPopup(popup_432ff534d02d4e6894413210c1a42aee)
+        ;
+
+        
+    
+    
+            var circle_marker_1bf042a255754abfa3750746c95d6fe5 = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_370ccff3e917416aa7d6db7edb803060 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99e95fd0a703460eb7a126f5b63a8d5b = $(`<div id="html_99e95fd0a703460eb7a126f5b63a8d5b" style="width: 100.0%; height: 100.0%;">ARUNACHAL UNIVERSITY, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_370ccff3e917416aa7d6db7edb803060.setContent(html_99e95fd0a703460eb7a126f5b63a8d5b);
+        
+
+        circle_marker_1bf042a255754abfa3750746c95d6fe5.bindPopup(popup_370ccff3e917416aa7d6db7edb803060)
+        ;
+
+        
+    
+    
+            var circle_marker_b8fee1e868514abdb59038b1a121e017 = L.circleMarker(
+                [27.3333, 92.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_ceb6ce0e92954b388afd2b68e7ec295f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a16f33245f747ff9e754ff7210e7041 = $(`<div id="html_9a16f33245f747ff9e754ff7210e7041" style="width: 100.0%; height: 100.0%;">DIRANG, WEST KAMENG, ARUNACHAL PRADESH</div>`)[0];
+            popup_ceb6ce0e92954b388afd2b68e7ec295f.setContent(html_9a16f33245f747ff9e754ff7210e7041);
+        
+
+        circle_marker_b8fee1e868514abdb59038b1a121e017.bindPopup(popup_ceb6ce0e92954b388afd2b68e7ec295f)
+        ;
+
+        
+    
+    
+            var circle_marker_82ec206671b84340ab677bcf0a21fa37 = L.circleMarker(
+                [27.9167, 96.1667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_049bfaf305144df59bf25b161bbd54f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10c32b730aff4f3fa7acb1f3a8765002 = $(`<div id="html_10c32b730aff4f3fa7acb1f3a8765002" style="width: 100.0%; height: 100.0%;">TEZU, LOHIT, ARUNACHAL PRADESH</div>`)[0];
+            popup_049bfaf305144df59bf25b161bbd54f3.setContent(html_10c32b730aff4f3fa7acb1f3a8765002);
+        
+
+        circle_marker_82ec206671b84340ab677bcf0a21fa37.bindPopup(popup_049bfaf305144df59bf25b161bbd54f3)
+        ;
+
+        
+    
+    
+            var circle_marker_175e1a2126c04b86b439932650a96337 = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_e3d64fe5bdfa45c6a82d64c56bb15a5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc7bc85938d74529804b13f2b79000ae = $(`<div id="html_dc7bc85938d74529804b13f2b79000ae" style="width: 100.0%; height: 100.0%;">NAHARLAGUN, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_e3d64fe5bdfa45c6a82d64c56bb15a5a.setContent(html_dc7bc85938d74529804b13f2b79000ae);
+        
+
+        circle_marker_175e1a2126c04b86b439932650a96337.bindPopup(popup_e3d64fe5bdfa45c6a82d64c56bb15a5a)
+        ;
+
+        
+    
+    
+            var circle_marker_4e18530eb6c546d78da9d1ab5ee2d924 = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_79910df406464200bfb35d68b3b73b84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1f4547325ea48b5be7456ab750c9c41 = $(`<div id="html_c1f4547325ea48b5be7456ab750c9c41" style="width: 100.0%; height: 100.0%;">NAHARLAGOON, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_79910df406464200bfb35d68b3b73b84.setContent(html_c1f4547325ea48b5be7456ab750c9c41);
+        
+
+        circle_marker_4e18530eb6c546d78da9d1ab5ee2d924.bindPopup(popup_79910df406464200bfb35d68b3b73b84)
+        ;
+
+        
+    
+    
+            var circle_marker_19aeaa7921e04fb1ae52554cd86e237e = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_3cd00863b7a947eb938c24d869c3e22a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba25d221c5a741e1b4b005dccb69dade = $(`<div id="html_ba25d221c5a741e1b4b005dccb69dade" style="width: 100.0%; height: 100.0%;">NAHARLAGUN, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_3cd00863b7a947eb938c24d869c3e22a.setContent(html_ba25d221c5a741e1b4b005dccb69dade);
+        
+
+        circle_marker_19aeaa7921e04fb1ae52554cd86e237e.bindPopup(popup_3cd00863b7a947eb938c24d869c3e22a)
+        ;
+
+        
+    
+    
+            var circle_marker_8193cf84d8344e3382a68a35dc21253d = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_546b35dc653d48d583e3e7bc289bf55e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16e9235c8db84e04a53613ba1b445bcb = $(`<div id="html_16e9235c8db84e04a53613ba1b445bcb" style="width: 100.0%; height: 100.0%;">NAHARLAGUN, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_546b35dc653d48d583e3e7bc289bf55e.setContent(html_16e9235c8db84e04a53613ba1b445bcb);
+        
+
+        circle_marker_8193cf84d8344e3382a68a35dc21253d.bindPopup(popup_546b35dc653d48d583e3e7bc289bf55e)
+        ;
+
+        
+    
+    
+            var circle_marker_b38c4adf93034ff299b38a1f86c49b03 = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_b5098d80aaf34684af41a7a027ac4095 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e3d817855c6431083bb7db4d2c1729a = $(`<div id="html_4e3d817855c6431083bb7db4d2c1729a" style="width: 100.0%; height: 100.0%;">NAHARLAGUN, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_b5098d80aaf34684af41a7a027ac4095.setContent(html_4e3d817855c6431083bb7db4d2c1729a);
+        
+
+        circle_marker_b38c4adf93034ff299b38a1f86c49b03.bindPopup(popup_b5098d80aaf34684af41a7a027ac4095)
+        ;
+
+        
+    
+    
+            var circle_marker_18c957007705439babed6ba3de01c190 = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_e301d36f8e0b43d7b80f8ea41407a23c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7352a0a95b674b2597059067ad837a29 = $(`<div id="html_7352a0a95b674b2597059067ad837a29" style="width: 100.0%; height: 100.0%;">NAHARLAGUN, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_e301d36f8e0b43d7b80f8ea41407a23c.setContent(html_7352a0a95b674b2597059067ad837a29);
+        
+
+        circle_marker_18c957007705439babed6ba3de01c190.bindPopup(popup_e301d36f8e0b43d7b80f8ea41407a23c)
+        ;
+
+        
+    
+    
+            var circle_marker_220b9f719ab343fdbc1efeb8ca5184e8 = L.circleMarker(
+                [27.1467, 93.7192],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_134538026a6543c2a3eacb20f7d73d85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f88b8b361244394863cda7b84c92297 = $(`<div id="html_3f88b8b361244394863cda7b84c92297" style="width: 100.0%; height: 100.0%;">NAHARLAGUN, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_134538026a6543c2a3eacb20f7d73d85.setContent(html_3f88b8b361244394863cda7b84c92297);
+        
+
+        circle_marker_220b9f719ab343fdbc1efeb8ca5184e8.bindPopup(popup_134538026a6543c2a3eacb20f7d73d85)
+        ;
+
+        
+    
+    
+            var circle_marker_e15f6f5a93c4482e8c9bc9608ed9220a = L.circleMarker(
+                [27.6333, 93.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_32df720dff164cdba9679ebf9cf98001 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2536207db7a544b18039fb6b6bd0f9ef = $(`<div id="html_2536207db7a544b18039fb6b6bd0f9ef" style="width: 100.0%; height: 100.0%;">DAPORIJO, UPPER SUBANSIRI, ARUNACHAL PRADESH</div>`)[0];
+            popup_32df720dff164cdba9679ebf9cf98001.setContent(html_2536207db7a544b18039fb6b6bd0f9ef);
+        
+
+        circle_marker_e15f6f5a93c4482e8c9bc9608ed9220a.bindPopup(popup_32df720dff164cdba9679ebf9cf98001)
+        ;
+
+        
+    
+    
+            var circle_marker_92f31cf748da4c9da7b63e4fedabe991 = L.circleMarker(
+                [27.5535, 93.7868],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_c8ee6e12c0f34c9b86aec6c2e1733b71 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3818e8bb9b6243d6bfcd454082bc0191 = $(`<div id="html_3818e8bb9b6243d6bfcd454082bc0191" style="width: 100.0%; height: 100.0%;">BANDARDEWA, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_c8ee6e12c0f34c9b86aec6c2e1733b71.setContent(html_3818e8bb9b6243d6bfcd454082bc0191);
+        
+
+        circle_marker_92f31cf748da4c9da7b63e4fedabe991.bindPopup(popup_c8ee6e12c0f34c9b86aec6c2e1733b71)
+        ;
+
+        
+    
+    
+            var circle_marker_6c4c6c5777d84db8b64a4112afdc70d4 = L.circleMarker(
+                [27.25, 92.4],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_eb91dd7020dd42cf8c1a4427c7db779e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_41f3dc6595ea471680bff10c7efe2d57 = $(`<div id="html_41f3dc6595ea471680bff10c7efe2d57" style="width: 100.0%; height: 100.0%;">BOMDILA, WEST KAMENG, ARUNACHAL PRADESH</div>`)[0];
+            popup_eb91dd7020dd42cf8c1a4427c7db779e.setContent(html_41f3dc6595ea471680bff10c7efe2d57);
+        
+
+        circle_marker_6c4c6c5777d84db8b64a4112afdc70d4.bindPopup(popup_eb91dd7020dd42cf8c1a4427c7db779e)
+        ;
+
+        
+    
+    
+            var circle_marker_17e324ccd189491ca572cbce12fd1c5b = L.circleMarker(
+                [27.25, 92.4],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_8dcc516a5d114d60970ca5482bef2ee2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5472b66c6ef648ef978875d28f56059d = $(`<div id="html_5472b66c6ef648ef978875d28f56059d" style="width: 100.0%; height: 100.0%;">BOMDILA, WEST KAMENG, ARUNACHAL PRADESH</div>`)[0];
+            popup_8dcc516a5d114d60970ca5482bef2ee2.setContent(html_5472b66c6ef648ef978875d28f56059d);
+        
+
+        circle_marker_17e324ccd189491ca572cbce12fd1c5b.bindPopup(popup_8dcc516a5d114d60970ca5482bef2ee2)
+        ;
+
+        
+    
+    
+            var circle_marker_57f0e50942034a7c8347aacc7cde7428 = L.circleMarker(
+                [27.25, 92.4],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_5c0f0394d9364f6a88de3723eae2320a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c9c61ee3ed14f07a369f744eb857fbf = $(`<div id="html_9c9c61ee3ed14f07a369f744eb857fbf" style="width: 100.0%; height: 100.0%;">BOMDILA, WEST KAMENG, ARUNACHAL PRADESH</div>`)[0];
+            popup_5c0f0394d9364f6a88de3723eae2320a.setContent(html_9c9c61ee3ed14f07a369f744eb857fbf);
+        
+
+        circle_marker_57f0e50942034a7c8347aacc7cde7428.bindPopup(popup_5c0f0394d9364f6a88de3723eae2320a)
+        ;
+
+        
+    
+    
+            var circle_marker_da856614d28a4eebab4761233f94ae4d = L.circleMarker(
+                [28.1667, 94.7667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_742021f345484d73bc7a9a7d3202dada = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7125a792bd89421ea386bf50de6c813f = $(`<div id="html_7125a792bd89421ea386bf50de6c813f" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_742021f345484d73bc7a9a7d3202dada.setContent(html_7125a792bd89421ea386bf50de6c813f);
+        
+
+        circle_marker_da856614d28a4eebab4761233f94ae4d.bindPopup(popup_742021f345484d73bc7a9a7d3202dada)
+        ;
+
+        
+    
+    
+            var circle_marker_96325a7689c64d86adf7d0f09c887aa6 = L.circleMarker(
+                [27.15, 93.75],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_b9d80144eedb4e72809ee0850857c00f);
+        
+    
+        var popup_c3a64ebd17454e0099e6a1f9460f0e37 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_744c7228832c4f57afb75bb91f992c9c = $(`<div id="html_744c7228832c4f57afb75bb91f992c9c" style="width: 100.0%; height: 100.0%;">ITANAGAR, PAPUMPARE, ARUNACHAL PRADESH</div>`)[0];
+            popup_c3a64ebd17454e0099e6a1f9460f0e37.setContent(html_744c7228832c4f57afb75bb91f992c9c);
+        
+
+        circle_marker_96325a7689c64d86adf7d0f09c887aa6.bindPopup(popup_c3a64ebd17454e0099e6a1f9460f0e37)
+        ;
+
+        
+    
+</script>

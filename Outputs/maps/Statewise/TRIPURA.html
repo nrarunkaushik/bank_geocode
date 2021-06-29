@@ -1,0 +1,3451 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e9a665221f8f4eac9563578f3d75e6f3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e9a665221f8f4eac9563578f3d75e6f3" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRIPURA Bank Branches</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (Bank)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:gold;opacity:0.7;'></span>PUNJAB NATIONAL BANK(75)</li><li><span style='background:black;opacity:0.7;'></span>UCO BANK(30)</li><li><span style='background:blue;opacity:0.7;'></span>CANARA BANK(18)</li><li><span style='background:lime;opacity:0.7;'></span>BANK OF INDIA(13)</li><li><span style='background:yellow;opacity:0.7;'></span>UNION BANK OF INDIA(10)</li><li><span style='background:grey;opacity:0.7;'></span>BANK OF BARODA(7)</li><li><span style='background:green;opacity:0.7;'></span>CENTRAL BANK OF INDIA(6)</li><li><span style='background:purple;opacity:0.7;'></span>INDIAN BANK(6)</li><li><span style='background:orange;opacity:0.7;'></span>INDIAN OVERSEAS BANK(5)</li><li><span style='background:turquoise;opacity:0.7;'></span>PUNJAB AND SIND BANK(2)</li><li><span style='background:maroon;opacity:0.7;'></span>BANK OF MAHARASHTRA(1)</li>
+
+  </ul>
+</div>
+
+<br> </br>
+<div class='legend-title'>Legend (State)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:linen;opacity:0.7;'></span>TRIPURA(173)</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_e9a665221f8f4eac9563578f3d75e6f3 = L.map(
+                "map_e9a665221f8f4eac9563578f3d75e6f3",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0472264e0ada4950a47fd3bf7d483ff8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+            map_e9a665221f8f4eac9563578f3d75e6f3.fitBounds(
+                [[23.0, 73.6862571], [24.578721, 92.0167]],
+                {}
+            );
+        
+    
+            var circle_marker_5f5c87710a2c4479964bf0b3d00cbcfd = L.circleMarker(
+                [23.9225, 91.6031],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_09139d9f231d463a936968df8d9ae930 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_373672f4bc4647a3b52dd820d2f4bd80 = $(`<div id="html_373672f4bc4647a3b52dd820d2f4bd80" style="width: 100.0%; height: 100.0%;">KALYANPUR, KHOWAI, TRIPURA</div>`)[0];
+            popup_09139d9f231d463a936968df8d9ae930.setContent(html_373672f4bc4647a3b52dd820d2f4bd80);
+        
+
+        circle_marker_5f5c87710a2c4479964bf0b3d00cbcfd.bindPopup(popup_09139d9f231d463a936968df8d9ae930)
+        ;
+
+        
+    
+    
+            var circle_marker_31597eab961c4b059a0abc6d8d68a78f = L.circleMarker(
+                [23.2528, 91.4514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_65c60cf5c8aa4f4e8cd400b8ebf62a96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c559db9fc3d4e14826093c1691e2daf = $(`<div id="html_2c559db9fc3d4e14826093c1691e2daf" style="width: 100.0%; height: 100.0%;">BARPATHARI, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_65c60cf5c8aa4f4e8cd400b8ebf62a96.setContent(html_2c559db9fc3d4e14826093c1691e2daf);
+        
+
+        circle_marker_31597eab961c4b059a0abc6d8d68a78f.bindPopup(popup_65c60cf5c8aa4f4e8cd400b8ebf62a96)
+        ;
+
+        
+    
+    
+            var circle_marker_3a0dacfefc774886b92627dc52cd07ce = L.circleMarker(
+                [23.2528, 91.4514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_01889a4d8e434dbfb8f6e125e5e65e0c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a9034974101473dab3c19b4edfd430b = $(`<div id="html_6a9034974101473dab3c19b4edfd430b" style="width: 100.0%; height: 100.0%;">HRISHYAMUKH, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_01889a4d8e434dbfb8f6e125e5e65e0c.setContent(html_6a9034974101473dab3c19b4edfd430b);
+        
+
+        circle_marker_3a0dacfefc774886b92627dc52cd07ce.bindPopup(popup_01889a4d8e434dbfb8f6e125e5e65e0c)
+        ;
+
+        
+    
+    
+            var circle_marker_6579e1f3a72b477494e00a2195e3e11f = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_93885845d31f4356a3e4b1d74a232626 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a17ad17f961c462c9ebcfd8a4d4cf83d = $(`<div id="html_a17ad17f961c462c9ebcfd8a4d4cf83d" style="width: 100.0%; height: 100.0%;">UDAYPUR TOWN, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_93885845d31f4356a3e4b1d74a232626.setContent(html_a17ad17f961c462c9ebcfd8a4d4cf83d);
+        
+
+        circle_marker_6579e1f3a72b477494e00a2195e3e11f.bindPopup(popup_93885845d31f4356a3e4b1d74a232626)
+        ;
+
+        
+    
+    
+            var circle_marker_5de11a4f72d941c59bdf1d3c75d0f86e = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_895af5b77df84ae5b09ed9c554a75166 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_70c633b8b6f74bfe9fc6e344f74f7e84 = $(`<div id="html_70c633b8b6f74bfe9fc6e344f74f7e84" style="width: 100.0%; height: 100.0%;">UDAIPUR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_895af5b77df84ae5b09ed9c554a75166.setContent(html_70c633b8b6f74bfe9fc6e344f74f7e84);
+        
+
+        circle_marker_5de11a4f72d941c59bdf1d3c75d0f86e.bindPopup(popup_895af5b77df84ae5b09ed9c554a75166)
+        ;
+
+        
+    
+    
+            var circle_marker_e30d52abcb734486852adcb992bf4e97 = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_b1698ba4146149219bb8c321552513a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85cfd98e5de2479e88700076b1d5c67e = $(`<div id="html_85cfd98e5de2479e88700076b1d5c67e" style="width: 100.0%; height: 100.0%;">UDAYPUR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_b1698ba4146149219bb8c321552513a7.setContent(html_85cfd98e5de2479e88700076b1d5c67e);
+        
+
+        circle_marker_e30d52abcb734486852adcb992bf4e97.bindPopup(popup_b1698ba4146149219bb8c321552513a7)
+        ;
+
+        
+    
+    
+            var circle_marker_ff83aabcebc84578a125cb036efbb8d7 = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_1c5563a3848449e086876a3a157144c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_79003b81286b4e3ba64a4fbb8cbf921c = $(`<div id="html_79003b81286b4e3ba64a4fbb8cbf921c" style="width: 100.0%; height: 100.0%;">UDAIPUR TOWN, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_1c5563a3848449e086876a3a157144c1.setContent(html_79003b81286b4e3ba64a4fbb8cbf921c);
+        
+
+        circle_marker_ff83aabcebc84578a125cb036efbb8d7.bindPopup(popup_1c5563a3848449e086876a3a157144c1)
+        ;
+
+        
+    
+    
+            var circle_marker_bff4c96408a149a4823ddf26bd9e8a4a = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_cb53387f2c2d4dc7940dca04c4cf387f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73070c1fb73a4ef28abdde3e0b78fc4a = $(`<div id="html_73070c1fb73a4ef28abdde3e0b78fc4a" style="width: 100.0%; height: 100.0%;">UDAIPUR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_cb53387f2c2d4dc7940dca04c4cf387f.setContent(html_73070c1fb73a4ef28abdde3e0b78fc4a);
+        
+
+        circle_marker_bff4c96408a149a4823ddf26bd9e8a4a.bindPopup(popup_cb53387f2c2d4dc7940dca04c4cf387f)
+        ;
+
+        
+    
+    
+            var circle_marker_83ed0eade90f41268dc5500f8eecb19a = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_cddd36e022fb45a091e355a06de81f9b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e63ab4319e324e0f9ffe98b9374230a6 = $(`<div id="html_e63ab4319e324e0f9ffe98b9374230a6" style="width: 100.0%; height: 100.0%;">UDAIPUR (TRIPURA), SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_cddd36e022fb45a091e355a06de81f9b.setContent(html_e63ab4319e324e0f9ffe98b9374230a6);
+        
+
+        circle_marker_83ed0eade90f41268dc5500f8eecb19a.bindPopup(popup_cddd36e022fb45a091e355a06de81f9b)
+        ;
+
+        
+    
+    
+            var circle_marker_e0e3bfe76fdc4610ab288bddc6efd2eb = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_0321ec02d738449ab7fe797118ee8ac9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3471eabd7a54feaae54840355f7da11 = $(`<div id="html_e3471eabd7a54feaae54840355f7da11" style="width: 100.0%; height: 100.0%;">UDAIPUR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_0321ec02d738449ab7fe797118ee8ac9.setContent(html_e3471eabd7a54feaae54840355f7da11);
+        
+
+        circle_marker_e0e3bfe76fdc4610ab288bddc6efd2eb.bindPopup(popup_0321ec02d738449ab7fe797118ee8ac9)
+        ;
+
+        
+    
+    
+            var circle_marker_38c2cdf2b0564671acf0be4a26ab22cb = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_322684cd5f5a43c69836102b422a83d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5aaf992465224747b3862a6681b78717 = $(`<div id="html_5aaf992465224747b3862a6681b78717" style="width: 100.0%; height: 100.0%;">EAST PRATAPGARH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_322684cd5f5a43c69836102b422a83d0.setContent(html_5aaf992465224747b3862a6681b78717);
+        
+
+        circle_marker_38c2cdf2b0564671acf0be4a26ab22cb.bindPopup(popup_322684cd5f5a43c69836102b422a83d0)
+        ;
+
+        
+    
+    
+            var circle_marker_326ca4aa8cae4baeb349a214eca62c8d = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_9646345be6a947158458db6582c190df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df63f1eba3b34e28a08b76e3ed727b79 = $(`<div id="html_df63f1eba3b34e28a08b76e3ed727b79" style="width: 100.0%; height: 100.0%;">CHAILENGTA, DHALAI, TRIPURA</div>`)[0];
+            popup_9646345be6a947158458db6582c190df.setContent(html_df63f1eba3b34e28a08b76e3ed727b79);
+        
+
+        circle_marker_326ca4aa8cae4baeb349a214eca62c8d.bindPopup(popup_9646345be6a947158458db6582c190df)
+        ;
+
+        
+    
+    
+            var circle_marker_aac127cf71f945e0a46ef9720d924c31 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_84761c2d9aad49e9b11223f7362d806f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_04bbf91fdf1d44e48d135427c7d31dc2 = $(`<div id="html_04bbf91fdf1d44e48d135427c7d31dc2" style="width: 100.0%; height: 100.0%;">RAISHYABARI, DHALAI, TRIPURA</div>`)[0];
+            popup_84761c2d9aad49e9b11223f7362d806f.setContent(html_04bbf91fdf1d44e48d135427c7d31dc2);
+        
+
+        circle_marker_aac127cf71f945e0a46ef9720d924c31.bindPopup(popup_84761c2d9aad49e9b11223f7362d806f)
+        ;
+
+        
+    
+    
+            var circle_marker_8452bd9c650f48fca8b2a5fc0746b735 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f280e581ede34c189fa4679b420317e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a474b973836d42a8bf30ac3a3c2243ed = $(`<div id="html_a474b973836d42a8bf30ac3a3c2243ed" style="width: 100.0%; height: 100.0%;">JIRANIA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_f280e581ede34c189fa4679b420317e6.setContent(html_a474b973836d42a8bf30ac3a3c2243ed);
+        
+
+        circle_marker_8452bd9c650f48fca8b2a5fc0746b735.bindPopup(popup_f280e581ede34c189fa4679b420317e6)
+        ;
+
+        
+    
+    
+            var circle_marker_2541f774b975409ab5e40a8981af8844 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d23b9c18dc884ed58b5593251c172621 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c524f03e5a304b1f8c2e9becdc724fd3 = $(`<div id="html_c524f03e5a304b1f8c2e9becdc724fd3" style="width: 100.0%; height: 100.0%;">JIRANIA (NIT AGARTALA), WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_d23b9c18dc884ed58b5593251c172621.setContent(html_c524f03e5a304b1f8c2e9becdc724fd3);
+        
+
+        circle_marker_2541f774b975409ab5e40a8981af8844.bindPopup(popup_d23b9c18dc884ed58b5593251c172621)
+        ;
+
+        
+    
+    
+            var circle_marker_5d85b712c83f4af691471d833e646749 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_ad7eed09838541f189151e8be98cebfb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee410fbc5f404eca9af0ffd3a42967b0 = $(`<div id="html_ee410fbc5f404eca9af0ffd3a42967b0" style="width: 100.0%; height: 100.0%;">JIRANIA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_ad7eed09838541f189151e8be98cebfb.setContent(html_ee410fbc5f404eca9af0ffd3a42967b0);
+        
+
+        circle_marker_5d85b712c83f4af691471d833e646749.bindPopup(popup_ad7eed09838541f189151e8be98cebfb)
+        ;
+
+        
+    
+    
+            var circle_marker_44aee27747bc4ea5a7d503305c9d884f = L.circleMarker(
+                [24.0112, 91.6182],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2742078cf1624a4b93ba2e20676b99e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_467e02f9f81744f084be883a87248f2e = $(`<div id="html_467e02f9f81744f084be883a87248f2e" style="width: 100.0%; height: 100.0%;">TELIAMURA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_2742078cf1624a4b93ba2e20676b99e5.setContent(html_467e02f9f81744f084be883a87248f2e);
+        
+
+        circle_marker_44aee27747bc4ea5a7d503305c9d884f.bindPopup(popup_2742078cf1624a4b93ba2e20676b99e5)
+        ;
+
+        
+    
+    
+            var circle_marker_64aa23deddbf4699b655ee974674a235 = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_399b3041fb3b45888f46f0e18f505beb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d270bbf4f0124294b850299c10056d62 = $(`<div id="html_d270bbf4f0124294b850299c10056d62" style="width: 100.0%; height: 100.0%;">KANCHANPUR, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_399b3041fb3b45888f46f0e18f505beb.setContent(html_d270bbf4f0124294b850299c10056d62);
+        
+
+        circle_marker_64aa23deddbf4699b655ee974674a235.bindPopup(popup_399b3041fb3b45888f46f0e18f505beb)
+        ;
+
+        
+    
+    
+            var circle_marker_14ecffca68754e9eb967106e987219b8 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_5df1f8f59029414f84810638be6082dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3501c2b0c7114c498a35b934cca289ca = $(`<div id="html_3501c2b0c7114c498a35b934cca289ca" style="width: 100.0%; height: 100.0%;">BISHALGARH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_5df1f8f59029414f84810638be6082dd.setContent(html_3501c2b0c7114c498a35b934cca289ca);
+        
+
+        circle_marker_14ecffca68754e9eb967106e987219b8.bindPopup(popup_5df1f8f59029414f84810638be6082dd)
+        ;
+
+        
+    
+    
+            var circle_marker_4ada721e531844ee97198feb4eb8170b = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_385587f5aecf40889bc1bfbf95d37749 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c12b1e2991b49529523621225591975 = $(`<div id="html_2c12b1e2991b49529523621225591975" style="width: 100.0%; height: 100.0%;">BISHALGARH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_385587f5aecf40889bc1bfbf95d37749.setContent(html_2c12b1e2991b49529523621225591975);
+        
+
+        circle_marker_4ada721e531844ee97198feb4eb8170b.bindPopup(popup_385587f5aecf40889bc1bfbf95d37749)
+        ;
+
+        
+    
+    
+            var circle_marker_ddc496e7a2754b2c8e0a03e08f6d37c0 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_c052e76d74484f03a6a84d2d7a36132e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b95c6b4d5284d75af560b1289071548 = $(`<div id="html_5b95c6b4d5284d75af560b1289071548" style="width: 100.0%; height: 100.0%;">BISHALGARH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_c052e76d74484f03a6a84d2d7a36132e.setContent(html_5b95c6b4d5284d75af560b1289071548);
+        
+
+        circle_marker_ddc496e7a2754b2c8e0a03e08f6d37c0.bindPopup(popup_c052e76d74484f03a6a84d2d7a36132e)
+        ;
+
+        
+    
+    
+            var circle_marker_d285439294da42b784a8fb53e63dafdf = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_1eb109d22c32456789aef5b89d5c9371 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89b33b291af7406cbbe52bdf602c3372 = $(`<div id="html_89b33b291af7406cbbe52bdf602c3372" style="width: 100.0%; height: 100.0%;">BISHALGARH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_1eb109d22c32456789aef5b89d5c9371.setContent(html_89b33b291af7406cbbe52bdf602c3372);
+        
+
+        circle_marker_d285439294da42b784a8fb53e63dafdf.bindPopup(popup_1eb109d22c32456789aef5b89d5c9371)
+        ;
+
+        
+    
+    
+            var circle_marker_a1e1b8682517470eb6a578651aeaee17 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_9f32dce8fcc147aeac5896a9fbda9042 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e75e5c95cd542769b667b640b3d9548 = $(`<div id="html_9e75e5c95cd542769b667b640b3d9548" style="width: 100.0%; height: 100.0%;">CHAKMAGHAT, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_9f32dce8fcc147aeac5896a9fbda9042.setContent(html_9e75e5c95cd542769b667b640b3d9548);
+        
+
+        circle_marker_a1e1b8682517470eb6a578651aeaee17.bindPopup(popup_9f32dce8fcc147aeac5896a9fbda9042)
+        ;
+
+        
+    
+    
+            var circle_marker_90e895ceab634419be0430e93ade624f = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_166c591535834c8f968667bbd1d1625d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e2cd94fd25834425b2516a908b2f529d = $(`<div id="html_e2cd94fd25834425b2516a908b2f529d" style="width: 100.0%; height: 100.0%;">BISHRAMGANJ, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_166c591535834c8f968667bbd1d1625d.setContent(html_e2cd94fd25834425b2516a908b2f529d);
+        
+
+        circle_marker_90e895ceab634419be0430e93ade624f.bindPopup(popup_166c591535834c8f968667bbd1d1625d)
+        ;
+
+        
+    
+    
+            var circle_marker_4aae04ea8d1a4b5cb0fa881b67f2691d = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_703f187f5dfa4ae2b9a95cb95d1025a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4b69772b04a04dacb4df424cf4a12675 = $(`<div id="html_4b69772b04a04dacb4df424cf4a12675" style="width: 100.0%; height: 100.0%;">ANANDA NAGAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_703f187f5dfa4ae2b9a95cb95d1025a1.setContent(html_4b69772b04a04dacb4df424cf4a12675);
+        
+
+        circle_marker_4aae04ea8d1a4b5cb0fa881b67f2691d.bindPopup(popup_703f187f5dfa4ae2b9a95cb95d1025a1)
+        ;
+
+        
+    
+    
+            var circle_marker_329be65392c64658a4d9739036155e70 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_99038b55b73c4bed861cd6ec087b796a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5eb094945384ff5bfd8e343f1051e7b = $(`<div id="html_b5eb094945384ff5bfd8e343f1051e7b" style="width: 100.0%; height: 100.0%;">ANANDANAGR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_99038b55b73c4bed861cd6ec087b796a.setContent(html_b5eb094945384ff5bfd8e343f1051e7b);
+        
+
+        circle_marker_329be65392c64658a4d9739036155e70.bindPopup(popup_99038b55b73c4bed861cd6ec087b796a)
+        ;
+
+        
+    
+    
+            var circle_marker_ebe6fefb8d0a4bd8826d979583f044ce = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_e1ee3d443878497880ed21dd434eaec4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fbb565b9aae414c851b85da60f54133 = $(`<div id="html_6fbb565b9aae414c851b85da60f54133" style="width: 100.0%; height: 100.0%;">KADAMTALA, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_e1ee3d443878497880ed21dd434eaec4.setContent(html_6fbb565b9aae414c851b85da60f54133);
+        
+
+        circle_marker_ebe6fefb8d0a4bd8826d979583f044ce.bindPopup(popup_e1ee3d443878497880ed21dd434eaec4)
+        ;
+
+        
+    
+    
+            var circle_marker_b7f6feb375994640b98beedb8f3c8ff4 = L.circleMarker(
+                [23.0, 91.7319],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_669e99ece7364f83aab402d53081f5c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_09a0e1fa18e744a6a54f76d877dde623 = $(`<div id="html_09a0e1fa18e744a6a54f76d877dde623" style="width: 100.0%; height: 100.0%;">MANU BAZAR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_669e99ece7364f83aab402d53081f5c3.setContent(html_09a0e1fa18e744a6a54f76d877dde623);
+        
+
+        circle_marker_b7f6feb375994640b98beedb8f3c8ff4.bindPopup(popup_669e99ece7364f83aab402d53081f5c3)
+        ;
+
+        
+    
+    
+            var circle_marker_1f05cac7f27d4b25aeb6b9bf14837185 = L.circleMarker(
+                [24.0112, 91.6182],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_eb3c24f655e14ce59d6ddc37ec213f0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b307da8a9abb471aa377cb396d6f6ca6 = $(`<div id="html_b307da8a9abb471aa377cb396d6f6ca6" style="width: 100.0%; height: 100.0%;">TELIAMURA, KHOWAI, TRIPURA</div>`)[0];
+            popup_eb3c24f655e14ce59d6ddc37ec213f0e.setContent(html_b307da8a9abb471aa377cb396d6f6ca6);
+        
+
+        circle_marker_1f05cac7f27d4b25aeb6b9bf14837185.bindPopup(popup_eb3c24f655e14ce59d6ddc37ec213f0e)
+        ;
+
+        
+    
+    
+            var circle_marker_7eff9a4e02394bb3912e17a678c1244a = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_3a6e964d97584501b8fde3f602221036 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5ae0a9fe2e1459ea4de9e85ff64b426 = $(`<div id="html_e5ae0a9fe2e1459ea4de9e85ff64b426" style="width: 100.0%; height: 100.0%;">KUMARGHAT, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_3a6e964d97584501b8fde3f602221036.setContent(html_e5ae0a9fe2e1459ea4de9e85ff64b426);
+        
+
+        circle_marker_7eff9a4e02394bb3912e17a678c1244a.bindPopup(popup_3a6e964d97584501b8fde3f602221036)
+        ;
+
+        
+    
+    
+            var circle_marker_8fc1bd2102024e9fb12f05e6cc12647b = L.circleMarker(
+                [24.019, 91.625],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_599712c5ec34433dbbaa8b88927b18bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8fa1dec8df84de4a897108c550d0c01 = $(`<div id="html_a8fa1dec8df84de4a897108c550d0c01" style="width: 100.0%; height: 100.0%;">CHEBRI, KHOWAI, TRIPURA</div>`)[0];
+            popup_599712c5ec34433dbbaa8b88927b18bb.setContent(html_a8fa1dec8df84de4a897108c550d0c01);
+        
+
+        circle_marker_8fc1bd2102024e9fb12f05e6cc12647b.bindPopup(popup_599712c5ec34433dbbaa8b88927b18bb)
+        ;
+
+        
+    
+    
+            var circle_marker_d158cfa3866b4b7e80f160b0493c8485 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_569244f346d5413f8b445d6d736e4101 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94f2253e8d1a4de49d78f8c55a7d3fa4 = $(`<div id="html_94f2253e8d1a4de49d78f8c55a7d3fa4" style="width: 100.0%; height: 100.0%;">RANIRBAZAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_569244f346d5413f8b445d6d736e4101.setContent(html_94f2253e8d1a4de49d78f8c55a7d3fa4);
+        
+
+        circle_marker_d158cfa3866b4b7e80f160b0493c8485.bindPopup(popup_569244f346d5413f8b445d6d736e4101)
+        ;
+
+        
+    
+    
+            var circle_marker_4a8d7475097a44bdb7cdac439fbdf10a = L.circleMarker(
+                [24.0112, 91.6182],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_43d3c53b0a0a4077a846bfacdbcd7fc8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_954958922e7842a9be00ab98057225e2 = $(`<div id="html_954958922e7842a9be00ab98057225e2" style="width: 100.0%; height: 100.0%;">CHAKMAGHAT SDM OFFICE, KHOWAI, TRIPURA</div>`)[0];
+            popup_43d3c53b0a0a4077a846bfacdbcd7fc8.setContent(html_954958922e7842a9be00ab98057225e2);
+        
+
+        circle_marker_4a8d7475097a44bdb7cdac439fbdf10a.bindPopup(popup_43d3c53b0a0a4077a846bfacdbcd7fc8)
+        ;
+
+        
+    
+    
+            var circle_marker_885f6119779449439a00f6fd72130755 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2dc1b88d2fe7413d8411782256bd4c57 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_493b0ad372114553907ef990f80891f3 = $(`<div id="html_493b0ad372114553907ef990f80891f3" style="width: 100.0%; height: 100.0%;">USHAMARKET, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_2dc1b88d2fe7413d8411782256bd4c57.setContent(html_493b0ad372114553907ef990f80891f3);
+        
+
+        circle_marker_885f6119779449439a00f6fd72130755.bindPopup(popup_2dc1b88d2fe7413d8411782256bd4c57)
+        ;
+
+        
+    
+    
+            var circle_marker_5969a2f9118a4ac79f4ca4f8b569aca6 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_580b1a3726f54ce79b225ca4f175a086 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_26298a820d3e4f1c9f6e3b62ad8bd78f = $(`<div id="html_26298a820d3e4f1c9f6e3b62ad8bd78f" style="width: 100.0%; height: 100.0%;">MOHANPUR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_580b1a3726f54ce79b225ca4f175a086.setContent(html_26298a820d3e4f1c9f6e3b62ad8bd78f);
+        
+
+        circle_marker_5969a2f9118a4ac79f4ca4f8b569aca6.bindPopup(popup_580b1a3726f54ce79b225ca4f175a086)
+        ;
+
+        
+    
+    
+            var circle_marker_214fc0c7c0234b529d1adaaa013098b5 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_4a1673d4956345d8a07be54e64327f28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5af27de70ace4580aaddc53267a09e16 = $(`<div id="html_5af27de70ace4580aaddc53267a09e16" style="width: 100.0%; height: 100.0%;">MACHMARA, UNAKOTI, TRIPURA</div>`)[0];
+            popup_4a1673d4956345d8a07be54e64327f28.setContent(html_5af27de70ace4580aaddc53267a09e16);
+        
+
+        circle_marker_214fc0c7c0234b529d1adaaa013098b5.bindPopup(popup_4a1673d4956345d8a07be54e64327f28)
+        ;
+
+        
+    
+    
+            var circle_marker_342245aeafbd4a78b7a33887890720d0 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_ef3e6af23684467ea6902797d35d0b51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d14db67e6c8e49a7ac917ccae2166b37 = $(`<div id="html_d14db67e6c8e49a7ac917ccae2166b37" style="width: 100.0%; height: 100.0%;">MOHANPUR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_ef3e6af23684467ea6902797d35d0b51.setContent(html_d14db67e6c8e49a7ac917ccae2166b37);
+        
+
+        circle_marker_342245aeafbd4a78b7a33887890720d0.bindPopup(popup_ef3e6af23684467ea6902797d35d0b51)
+        ;
+
+        
+    
+    
+            var circle_marker_12a18c1907814e43a890c1555d79bdc3 = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_3892b49e674f41c9a9831a7ce8512f4b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64d8aedc4a8f42a4a05aa6856b165cef = $(`<div id="html_64d8aedc4a8f42a4a05aa6856b165cef" style="width: 100.0%; height: 100.0%;">BIRCHANDRA NAGAR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_3892b49e674f41c9a9831a7ce8512f4b.setContent(html_64d8aedc4a8f42a4a05aa6856b165cef);
+        
+
+        circle_marker_12a18c1907814e43a890c1555d79bdc3.bindPopup(popup_3892b49e674f41c9a9831a7ce8512f4b)
+        ;
+
+        
+    
+    
+            var circle_marker_a347e6f5f4c4423689e42b998bf89f84 = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2a33a45d2f05419391ade7c949efa8f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8718d4a8b91e4b4893b8b5e0cc9c2af6 = $(`<div id="html_8718d4a8b91e4b4893b8b5e0cc9c2af6" style="width: 100.0%; height: 100.0%;">MAHARANIPUR, KHOWAI, TRIPURA</div>`)[0];
+            popup_2a33a45d2f05419391ade7c949efa8f9.setContent(html_8718d4a8b91e4b4893b8b5e0cc9c2af6);
+        
+
+        circle_marker_a347e6f5f4c4423689e42b998bf89f84.bindPopup(popup_2a33a45d2f05419391ade7c949efa8f9)
+        ;
+
+        
+    
+    
+            var circle_marker_974dc81536d74a44b9a071fb8caebbdc = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_b0cd8a415e564267a999a97d0a913376 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d078210a53f14f02b63c7657caca1f8b = $(`<div id="html_d078210a53f14f02b63c7657caca1f8b" style="width: 100.0%; height: 100.0%;">GOKUL NAGAR, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_b0cd8a415e564267a999a97d0a913376.setContent(html_d078210a53f14f02b63c7657caca1f8b);
+        
+
+        circle_marker_974dc81536d74a44b9a071fb8caebbdc.bindPopup(popup_b0cd8a415e564267a999a97d0a913376)
+        ;
+
+        
+    
+    
+            var circle_marker_7ce558a5189944bea6c77d0826d13764 = L.circleMarker(
+                [23.2528, 91.4514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_bfb290013c244a878f8c448a63c7f57b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f80cc1d9416242d68cd38126a6ea2340 = $(`<div id="html_f80cc1d9416242d68cd38126a6ea2340" style="width: 100.0%; height: 100.0%;">RADHANAGAR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_bfb290013c244a878f8c448a63c7f57b.setContent(html_f80cc1d9416242d68cd38126a6ea2340);
+        
+
+        circle_marker_7ce558a5189944bea6c77d0826d13764.bindPopup(popup_bfb290013c244a878f8c448a63c7f57b)
+        ;
+
+        
+    
+    
+            var circle_marker_9b751d9858ae4ae7999f679c4b964498 = L.circleMarker(
+                [23.0, 91.7319],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d11b968b143240f6ab930fb0df35277d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_490ce3ba779a48be907cbb6833fba0da = $(`<div id="html_490ce3ba779a48be907cbb6833fba0da" style="width: 100.0%; height: 100.0%;">BAIKHORA, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_d11b968b143240f6ab930fb0df35277d.setContent(html_490ce3ba779a48be907cbb6833fba0da);
+        
+
+        circle_marker_9b751d9858ae4ae7999f679c4b964498.bindPopup(popup_d11b968b143240f6ab930fb0df35277d)
+        ;
+
+        
+    
+    
+            var circle_marker_432e80901316475281a3e09e73f3be56 = L.circleMarker(
+                [23.0, 91.7319],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_bcec1136eaf5458ab8e98c44087eec29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_464fb8cee3b34c2385fd27a062753757 = $(`<div id="html_464fb8cee3b34c2385fd27a062753757" style="width: 100.0%; height: 100.0%;">SANTIR BAZAR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_bcec1136eaf5458ab8e98c44087eec29.setContent(html_464fb8cee3b34c2385fd27a062753757);
+        
+
+        circle_marker_432e80901316475281a3e09e73f3be56.bindPopup(popup_bcec1136eaf5458ab8e98c44087eec29)
+        ;
+
+        
+    
+    
+            var circle_marker_699396583e864c829e2595a202c3952a = L.circleMarker(
+                [23.53, 91.6447],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_5c9e90c608ee42879be6119a791259ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b60d154841554a0bb0529736aa02900c = $(`<div id="html_b60d154841554a0bb0529736aa02900c" style="width: 100.0%; height: 100.0%;">DALAK, GOMATI, TRIPURA</div>`)[0];
+            popup_5c9e90c608ee42879be6119a791259ba.setContent(html_b60d154841554a0bb0529736aa02900c);
+        
+
+        circle_marker_699396583e864c829e2595a202c3952a.bindPopup(popup_5c9e90c608ee42879be6119a791259ba)
+        ;
+
+        
+    
+    
+            var circle_marker_82e27a905d02478bb3d0c3a7c3afc803 = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_521621ee649b46a3a22fbfe35941e890 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6265a3ff2454c2cb59b505ec0304b90 = $(`<div id="html_f6265a3ff2454c2cb59b505ec0304b90" style="width: 100.0%; height: 100.0%;">KAILASAHAR, UNAKOTI, TRIPURA</div>`)[0];
+            popup_521621ee649b46a3a22fbfe35941e890.setContent(html_f6265a3ff2454c2cb59b505ec0304b90);
+        
+
+        circle_marker_82e27a905d02478bb3d0c3a7c3afc803.bindPopup(popup_521621ee649b46a3a22fbfe35941e890)
+        ;
+
+        
+    
+    
+            var circle_marker_d1354e6222554e02a6a0eb60fda46bc3 = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_51bcc03809f24f8ba074690ca6064fa5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c9ba0360edda41ed80eaa10ac23b39bf = $(`<div id="html_c9ba0360edda41ed80eaa10ac23b39bf" style="width: 100.0%; height: 100.0%;">KAILASAHAR, UNAKOTI, TRIPURA</div>`)[0];
+            popup_51bcc03809f24f8ba074690ca6064fa5.setContent(html_c9ba0360edda41ed80eaa10ac23b39bf);
+        
+
+        circle_marker_d1354e6222554e02a6a0eb60fda46bc3.bindPopup(popup_51bcc03809f24f8ba074690ca6064fa5)
+        ;
+
+        
+    
+    
+            var circle_marker_deb273cc66a0423e813207f556bf516e = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_e6abf12695244756b4e6c8afe21568d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b42df99f73db4f25942d72a0cdbfad65 = $(`<div id="html_b42df99f73db4f25942d72a0cdbfad65" style="width: 100.0%; height: 100.0%;">KAILASAHAR, UNAKOTI, TRIPURA</div>`)[0];
+            popup_e6abf12695244756b4e6c8afe21568d3.setContent(html_b42df99f73db4f25942d72a0cdbfad65);
+        
+
+        circle_marker_deb273cc66a0423e813207f556bf516e.bindPopup(popup_e6abf12695244756b4e6c8afe21568d3)
+        ;
+
+        
+    
+    
+            var circle_marker_8abe072d594e4781ab3b9ed56b313df3 = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_545ad397f52342b1b55423354187d856 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60b0bf95524645ea8e3089c4548f36c8 = $(`<div id="html_60b0bf95524645ea8e3089c4548f36c8" style="width: 100.0%; height: 100.0%;">KAILASHAHAR, UNAKOTI, TRIPURA</div>`)[0];
+            popup_545ad397f52342b1b55423354187d856.setContent(html_60b0bf95524645ea8e3089c4548f36c8);
+        
+
+        circle_marker_8abe072d594e4781ab3b9ed56b313df3.bindPopup(popup_545ad397f52342b1b55423354187d856)
+        ;
+
+        
+    
+    
+            var circle_marker_a07a6e534beb4d578a21785575bb419e = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a56207d55e974df08d0004caa764c076 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e4f534aa22a74ef0a6c90c8c506edb5f = $(`<div id="html_e4f534aa22a74ef0a6c90c8c506edb5f" style="width: 100.0%; height: 100.0%;">LDM Kailashar(N Trpura), UNAKOTI, TRIPURA</div>`)[0];
+            popup_a56207d55e974df08d0004caa764c076.setContent(html_e4f534aa22a74ef0a6c90c8c506edb5f);
+        
+
+        circle_marker_a07a6e534beb4d578a21785575bb419e.bindPopup(popup_a56207d55e974df08d0004caa764c076)
+        ;
+
+        
+    
+    
+            var circle_marker_34851b4f153d49d8bdf6737f82dfd33a = L.circleMarker(
+                [24.0789, 91.8987],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_47f5f47a3698409b8767e5c3a98cacda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14eb55a12c874f0b9175d5e359259e33 = $(`<div id="html_14eb55a12c874f0b9175d5e359259e33" style="width: 100.0%; height: 100.0%;">GANDACHERRA, DHALAI, TRIPURA</div>`)[0];
+            popup_47f5f47a3698409b8767e5c3a98cacda.setContent(html_14eb55a12c874f0b9175d5e359259e33);
+        
+
+        circle_marker_34851b4f153d49d8bdf6737f82dfd33a.bindPopup(popup_47f5f47a3698409b8767e5c3a98cacda)
+        ;
+
+        
+    
+    
+            var circle_marker_ab2f982589c940c38bb31a468259a892 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a7a668954747431f914348cf48a06973 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_09b472e04be1488f8a81185207459294 = $(`<div id="html_09b472e04be1488f8a81185207459294" style="width: 100.0%; height: 100.0%;">NARSINGARH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_a7a668954747431f914348cf48a06973.setContent(html_09b472e04be1488f8a81185207459294);
+        
+
+        circle_marker_ab2f982589c940c38bb31a468259a892.bindPopup(popup_a7a668954747431f914348cf48a06973)
+        ;
+
+        
+    
+    
+            var circle_marker_ff6e19d252b442a59d2d2c7d118bbc6c = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2433cb42b60d48f2b89ba768c326c375 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52e70b6f4c1e4c0da7efcb6f7cea289e = $(`<div id="html_52e70b6f4c1e4c0da7efcb6f7cea289e" style="width: 100.0%; height: 100.0%;">KILLA, GOMATI, TRIPURA</div>`)[0];
+            popup_2433cb42b60d48f2b89ba768c326c375.setContent(html_52e70b6f4c1e4c0da7efcb6f7cea289e);
+        
+
+        circle_marker_ff6e19d252b442a59d2d2c7d118bbc6c.bindPopup(popup_2433cb42b60d48f2b89ba768c326c375)
+        ;
+
+        
+    
+    
+            var circle_marker_39b224aa9f6546c08a7b7ce5bcebb5f8 = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d9d2172bd3824f0286344e22a3de7ae5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b88364d247fb46a89c6ad6281c7af66b = $(`<div id="html_b88364d247fb46a89c6ad6281c7af66b" style="width: 100.0%; height: 100.0%;">JUMERDHEPA, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_d9d2172bd3824f0286344e22a3de7ae5.setContent(html_b88364d247fb46a89c6ad6281c7af66b);
+        
+
+        circle_marker_39b224aa9f6546c08a7b7ce5bcebb5f8.bindPopup(popup_d9d2172bd3824f0286344e22a3de7ae5)
+        ;
+
+        
+    
+    
+            var circle_marker_2512bbc82c9b4877a18690f35656c898 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_cd5c0dad6d9f4891a1685c910cf2134e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cfbb7707eaf24ee68045bf5e62890de6 = $(`<div id="html_cfbb7707eaf24ee68045bf5e62890de6" style="width: 100.0%; height: 100.0%;">VANMUN, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_cd5c0dad6d9f4891a1685c910cf2134e.setContent(html_cfbb7707eaf24ee68045bf5e62890de6);
+        
+
+        circle_marker_2512bbc82c9b4877a18690f35656c898.bindPopup(popup_cd5c0dad6d9f4891a1685c910cf2134e)
+        ;
+
+        
+    
+    
+            var circle_marker_ea76659e561741a0ae661ab8531aa03e = L.circleMarker(
+                [24.0789, 91.8987],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_b892cc707e9445ff9a980638bb553e20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_734c134bed424080862d48ce69297228 = $(`<div id="html_734c134bed424080862d48ce69297228" style="width: 100.0%; height: 100.0%;">JAGABANDHUPARA, DHALAI, TRIPURA</div>`)[0];
+            popup_b892cc707e9445ff9a980638bb553e20.setContent(html_734c134bed424080862d48ce69297228);
+        
+
+        circle_marker_ea76659e561741a0ae661ab8531aa03e.bindPopup(popup_b892cc707e9445ff9a980638bb553e20)
+        ;
+
+        
+    
+    
+            var circle_marker_89e3e7644a634619ac52dbbb62c94a1d = L.circleMarker(
+                [23.53, 91.6447],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_fa3fa9c81cc2488b9f92736cf3e4a18c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1fd67c64d9b0459ebd549a737e876278 = $(`<div id="html_1fd67c64d9b0459ebd549a737e876278" style="width: 100.0%; height: 100.0%;">AMARPUR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_fa3fa9c81cc2488b9f92736cf3e4a18c.setContent(html_1fd67c64d9b0459ebd549a737e876278);
+        
+
+        circle_marker_89e3e7644a634619ac52dbbb62c94a1d.bindPopup(popup_fa3fa9c81cc2488b9f92736cf3e4a18c)
+        ;
+
+        
+    
+    
+            var circle_marker_9968a4cce23c42adb846afa9b85c1ab8 = L.circleMarker(
+                [23.53, 91.6447],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_36bc894a63fb4b10b45903598e3519ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e27e8af81350428fbc7fcd99fb9208ac = $(`<div id="html_e27e8af81350428fbc7fcd99fb9208ac" style="width: 100.0%; height: 100.0%;">AMARPUR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_36bc894a63fb4b10b45903598e3519ce.setContent(html_e27e8af81350428fbc7fcd99fb9208ac);
+        
+
+        circle_marker_9968a4cce23c42adb846afa9b85c1ab8.bindPopup(popup_36bc894a63fb4b10b45903598e3519ce)
+        ;
+
+        
+    
+    
+            var circle_marker_712a23f41ae34160bda4cd161a5aaca3 = L.circleMarker(
+                [24.1, 91.6333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_3ec0545fee354b4e9d0776db34b4cc98 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db795e156a3642c1acc204fc92be13ab = $(`<div id="html_db795e156a3642c1acc204fc92be13ab" style="width: 100.0%; height: 100.0%;">KHOWAI, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_3ec0545fee354b4e9d0776db34b4cc98.setContent(html_db795e156a3642c1acc204fc92be13ab);
+        
+
+        circle_marker_712a23f41ae34160bda4cd161a5aaca3.bindPopup(popup_3ec0545fee354b4e9d0776db34b4cc98)
+        ;
+
+        
+    
+    
+            var circle_marker_7e6c0715116c4d659f378228a55957e3 = L.circleMarker(
+                [24.1, 91.6333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_4e32e36d63a44004bccedc94952b2da1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c9b6cbb1adb2466b88eaa364280218b5 = $(`<div id="html_c9b6cbb1adb2466b88eaa364280218b5" style="width: 100.0%; height: 100.0%;">KHOWAI, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_4e32e36d63a44004bccedc94952b2da1.setContent(html_c9b6cbb1adb2466b88eaa364280218b5);
+        
+
+        circle_marker_7e6c0715116c4d659f378228a55957e3.bindPopup(popup_4e32e36d63a44004bccedc94952b2da1)
+        ;
+
+        
+    
+    
+            var circle_marker_5eed7f0b439544ddb90e74868b900b53 = L.circleMarker(
+                [24.1, 91.6333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_781353c3cdae41e49ae72a828f206785 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ee77f7a316c44f1a72ea84ef6f5ab3e = $(`<div id="html_3ee77f7a316c44f1a72ea84ef6f5ab3e" style="width: 100.0%; height: 100.0%;">BACHAIBARI, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_781353c3cdae41e49ae72a828f206785.setContent(html_3ee77f7a316c44f1a72ea84ef6f5ab3e);
+        
+
+        circle_marker_5eed7f0b439544ddb90e74868b900b53.bindPopup(popup_781353c3cdae41e49ae72a828f206785)
+        ;
+
+        
+    
+    
+            var circle_marker_561dfa6f3c5e4be98227acca6964474e = L.circleMarker(
+                [24.1, 91.6333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7dd9e10051f74266a41dbd98c2b923d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61459221f378478eba74c5c946449963 = $(`<div id="html_61459221f378478eba74c5c946449963" style="width: 100.0%; height: 100.0%;">KHOWAI, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_7dd9e10051f74266a41dbd98c2b923d4.setContent(html_61459221f378478eba74c5c946449963);
+        
+
+        circle_marker_561dfa6f3c5e4be98227acca6964474e.bindPopup(popup_7dd9e10051f74266a41dbd98c2b923d4)
+        ;
+
+        
+    
+    
+            var circle_marker_fc212d9788b248dc90c737e9f311980e = L.circleMarker(
+                [24.0112, 91.6182],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7b23308dea1240e29eea231feb2e585f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89edb00ef3ef4533a2023a48bcff8f63 = $(`<div id="html_89edb00ef3ef4533a2023a48bcff8f63" style="width: 100.0%; height: 100.0%;">KHOWAI, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_7b23308dea1240e29eea231feb2e585f.setContent(html_89edb00ef3ef4533a2023a48bcff8f63);
+        
+
+        circle_marker_fc212d9788b248dc90c737e9f311980e.bindPopup(popup_7b23308dea1240e29eea231feb2e585f)
+        ;
+
+        
+    
+    
+            var circle_marker_97e1598d8be8405d91068ecc31146087 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_4fca9f52208449f09b5bdf7c1e422af0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_180de9439c254430b5297e64f397532d = $(`<div id="html_180de9439c254430b5297e64f397532d" style="width: 100.0%; height: 100.0%;">CHANDRAPUR, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_4fca9f52208449f09b5bdf7c1e422af0.setContent(html_180de9439c254430b5297e64f397532d);
+        
+
+        circle_marker_97e1598d8be8405d91068ecc31146087.bindPopup(popup_4fca9f52208449f09b5bdf7c1e422af0)
+        ;
+
+        
+    
+    
+            var circle_marker_5de8c4e4b96c4f7aba04055777e982e3 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7cd4aedd74f145d597d3721be3adbd21 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_781e171fdfb943c3bfb0b3c4ec49322f = $(`<div id="html_781e171fdfb943c3bfb0b3c4ec49322f" style="width: 100.0%; height: 100.0%;">MANDWI, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_7cd4aedd74f145d597d3721be3adbd21.setContent(html_781e171fdfb943c3bfb0b3c4ec49322f);
+        
+
+        circle_marker_5de8c4e4b96c4f7aba04055777e982e3.bindPopup(popup_7cd4aedd74f145d597d3721be3adbd21)
+        ;
+
+        
+    
+    
+            var circle_marker_90f89b43fd36470abbe68ad825dca15c = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_e4cb211f7b92476190a62b3161654161 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90a488bf96fe437481786552efaad805 = $(`<div id="html_90a488bf96fe437481786552efaad805" style="width: 100.0%; height: 100.0%;">HALHALI, DHALAI, TRIPURA</div>`)[0];
+            popup_e4cb211f7b92476190a62b3161654161.setContent(html_90a488bf96fe437481786552efaad805);
+        
+
+        circle_marker_90f89b43fd36470abbe68ad825dca15c.bindPopup(popup_e4cb211f7b92476190a62b3161654161)
+        ;
+
+        
+    
+    
+            var circle_marker_b239753539ac4621b9800565458261d9 = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7fcd49b3aab6495983f8d23baea27468 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f3deabc38ae42ad827073108051349e = $(`<div id="html_4f3deabc38ae42ad827073108051349e" style="width: 100.0%; height: 100.0%;">SIKARIBARI, DHALAI, TRIPURA</div>`)[0];
+            popup_7fcd49b3aab6495983f8d23baea27468.setContent(html_4f3deabc38ae42ad827073108051349e);
+        
+
+        circle_marker_b239753539ac4621b9800565458261d9.bindPopup(popup_7fcd49b3aab6495983f8d23baea27468)
+        ;
+
+        
+    
+    
+            var circle_marker_3d77429191b14b8197fbd3331f92f6c6 = L.circleMarker(
+                [23.2528, 91.4514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_71f91bc123cd401d8973bf894c2a71dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4da963764d714bbab7e90191ef4d3ac7 = $(`<div id="html_4da963764d714bbab7e90191ef4d3ac7" style="width: 100.0%; height: 100.0%;">SIDDINAGAR, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_71f91bc123cd401d8973bf894c2a71dc.setContent(html_4da963764d714bbab7e90191ef4d3ac7);
+        
+
+        circle_marker_3d77429191b14b8197fbd3331f92f6c6.bindPopup(popup_71f91bc123cd401d8973bf894c2a71dc)
+        ;
+
+        
+    
+    
+            var circle_marker_1d3e19337b84465eb51ae8a06dfd5949 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_e7f34f4f1d654f7b9c22540c5226e25d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb5be846d3644d539805cb22f2794c3d = $(`<div id="html_fb5be846d3644d539805cb22f2794c3d" style="width: 100.0%; height: 100.0%;">LICHUBAGAN-KUNJAVAN BRANCH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_e7f34f4f1d654f7b9c22540c5226e25d.setContent(html_fb5be846d3644d539805cb22f2794c3d);
+        
+
+        circle_marker_1d3e19337b84465eb51ae8a06dfd5949.bindPopup(popup_e7f34f4f1d654f7b9c22540c5226e25d)
+        ;
+
+        
+    
+    
+            var circle_marker_29fbc531f09e4c2fa01e8a4939d25d95 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_777b75ae052e40a1a1c7e017e72838bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad31064774384006a934340891e13ad9 = $(`<div id="html_ad31064774384006a934340891e13ad9" style="width: 100.0%; height: 100.0%;">G.B. HOSPITAL, AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_777b75ae052e40a1a1c7e017e72838bb.setContent(html_ad31064774384006a934340891e13ad9);
+        
+
+        circle_marker_29fbc531f09e4c2fa01e8a4939d25d95.bindPopup(popup_777b75ae052e40a1a1c7e017e72838bb)
+        ;
+
+        
+    
+    
+            var circle_marker_bf387ca7447f4c679c8c30a392f1b85e = L.circleMarker(
+                [23.4833, 91.3833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7f19fa55fc224d4fbbddb6bf761258af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10920eb3f16149cb89427077046a8a53 = $(`<div id="html_10920eb3f16149cb89427077046a8a53" style="width: 100.0%; height: 100.0%;">MOHANBHOG, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_7f19fa55fc224d4fbbddb6bf761258af.setContent(html_10920eb3f16149cb89427077046a8a53);
+        
+
+        circle_marker_bf387ca7447f4c679c8c30a392f1b85e.bindPopup(popup_7f19fa55fc224d4fbbddb6bf761258af)
+        ;
+
+        
+    
+    
+            var circle_marker_5fec1c9a68e54fa0ba647a28b63354f0 = L.circleMarker(
+                [23.3167, 91.3167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_6ad3d6b24add4ae08eed1453da5816c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_896b9e0c53a24e0cad43e6369551b496 = $(`<div id="html_896b9e0c53a24e0cad43e6369551b496" style="width: 100.0%; height: 100.0%;">SONAMURA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_6ad3d6b24add4ae08eed1453da5816c3.setContent(html_896b9e0c53a24e0cad43e6369551b496);
+        
+
+        circle_marker_5fec1c9a68e54fa0ba647a28b63354f0.bindPopup(popup_6ad3d6b24add4ae08eed1453da5816c3)
+        ;
+
+        
+    
+    
+            var circle_marker_e2bb3c5f8ca347cea87b38b29fe102f1 = L.circleMarker(
+                [23.3167, 91.3167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_3c13f251cb2047b9b51592d2fcaa46dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8241b72735a64da3a512d710688a6965 = $(`<div id="html_8241b72735a64da3a512d710688a6965" style="width: 100.0%; height: 100.0%;">SONAMURA, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_3c13f251cb2047b9b51592d2fcaa46dd.setContent(html_8241b72735a64da3a512d710688a6965);
+        
+
+        circle_marker_e2bb3c5f8ca347cea87b38b29fe102f1.bindPopup(popup_3c13f251cb2047b9b51592d2fcaa46dd)
+        ;
+
+        
+    
+    
+            var circle_marker_a3474bf574ec45e0ab095157c0972c5c = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_9f79b06b276941e5a5f4189766184b91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0312ba7b90e8484993fb1942a8d9ded5 = $(`<div id="html_0312ba7b90e8484993fb1942a8d9ded5" style="width: 100.0%; height: 100.0%;">MANU, DHALAI, TRIPURA</div>`)[0];
+            popup_9f79b06b276941e5a5f4189766184b91.setContent(html_0312ba7b90e8484993fb1942a8d9ded5);
+        
+
+        circle_marker_a3474bf574ec45e0ab095157c0972c5c.bindPopup(popup_9f79b06b276941e5a5f4189766184b91)
+        ;
+
+        
+    
+    
+            var circle_marker_6fbd08a5bef64e34a150b27b2a41ab55 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_38bced53c96e40318b3ea48cd527a98b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3a9028639124681b788d4baaa3873de = $(`<div id="html_f3a9028639124681b788d4baaa3873de" style="width: 100.0%; height: 100.0%;">BOXANAGAR BRANCH, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_38bced53c96e40318b3ea48cd527a98b.setContent(html_f3a9028639124681b788d4baaa3873de);
+        
+
+        circle_marker_6fbd08a5bef64e34a150b27b2a41ab55.bindPopup(popup_38bced53c96e40318b3ea48cd527a98b)
+        ;
+
+        
+    
+    
+            var circle_marker_f7444dd7243d4a3c9f10b4b922735cdb = L.circleMarker(
+                [23.4833, 91.3833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_e8071aafcd75458e8d70ce4a88e96f9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5eddb3c82647457e9125703fc69c2097 = $(`<div id="html_5eddb3c82647457e9125703fc69c2097" style="width: 100.0%; height: 100.0%;">KARBOK, GOMATI, TRIPURA</div>`)[0];
+            popup_e8071aafcd75458e8d70ce4a88e96f9c.setContent(html_5eddb3c82647457e9125703fc69c2097);
+        
+
+        circle_marker_f7444dd7243d4a3c9f10b4b922735cdb.bindPopup(popup_e8071aafcd75458e8d70ce4a88e96f9c)
+        ;
+
+        
+    
+    
+            var circle_marker_f632ab8d49544c51b04246e4865022bf = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_dda60ad5c2a749efa17ee9c867f20d8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd9d76d8ac0c4c548edba1dd1dcceb57 = $(`<div id="html_fd9d76d8ac0c4c548edba1dd1dcceb57" style="width: 100.0%; height: 100.0%;">KHUMULWNG, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_dda60ad5c2a749efa17ee9c867f20d8e.setContent(html_fd9d76d8ac0c4c548edba1dd1dcceb57);
+        
+
+        circle_marker_f632ab8d49544c51b04246e4865022bf.bindPopup(popup_dda60ad5c2a749efa17ee9c867f20d8e)
+        ;
+
+        
+    
+    
+            var circle_marker_76e05724a6c24839b3bcfdfb083d194a = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2a43fd8ef71a441ea3664a9493710ff0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0af4e1c6b7624331a2a92979061b7761 = $(`<div id="html_0af4e1c6b7624331a2a92979061b7761" style="width: 100.0%; height: 100.0%;">BARKATHAL, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_2a43fd8ef71a441ea3664a9493710ff0.setContent(html_0af4e1c6b7624331a2a92979061b7761);
+        
+
+        circle_marker_76e05724a6c24839b3bcfdfb083d194a.bindPopup(popup_2a43fd8ef71a441ea3664a9493710ff0)
+        ;
+
+        
+    
+    
+            var circle_marker_4f523815854446b2917d1eae708215a4 = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a6f7420ab4044af1bd69c8e6581c891a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85a8b66a857746438ffde2c379d1959d = $(`<div id="html_85a8b66a857746438ffde2c379d1959d" style="width: 100.0%; height: 100.0%;">DURGACHOWMUHANI, DHALAI, TRIPURA</div>`)[0];
+            popup_a6f7420ab4044af1bd69c8e6581c891a.setContent(html_85a8b66a857746438ffde2c379d1959d);
+        
+
+        circle_marker_4f523815854446b2917d1eae708215a4.bindPopup(popup_a6f7420ab4044af1bd69c8e6581c891a)
+        ;
+
+        
+    
+    
+            var circle_marker_33496929ca8140c19169f594ed8a9830 = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_ae9fc8cd36724f459369bf58cc60695d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78ef41e32cf84916aa099d109d0c02a3 = $(`<div id="html_78ef41e32cf84916aa099d109d0c02a3" style="width: 100.0%; height: 100.0%;">DHUMMACHERRA, DHALAI, TRIPURA</div>`)[0];
+            popup_ae9fc8cd36724f459369bf58cc60695d.setContent(html_78ef41e32cf84916aa099d109d0c02a3);
+        
+
+        circle_marker_33496929ca8140c19169f594ed8a9830.bindPopup(popup_ae9fc8cd36724f459369bf58cc60695d)
+        ;
+
+        
+    
+    
+            var circle_marker_295689d96cca4640a15847934b075d1f = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_ac7056e74e2b401e96220735b206bf28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b29a93eff40a44699ef4b92d1b51d549 = $(`<div id="html_b29a93eff40a44699ef4b92d1b51d549" style="width: 100.0%; height: 100.0%;">AMBASA, DHALAI, TRIPURA</div>`)[0];
+            popup_ac7056e74e2b401e96220735b206bf28.setContent(html_b29a93eff40a44699ef4b92d1b51d549);
+        
+
+        circle_marker_295689d96cca4640a15847934b075d1f.bindPopup(popup_ac7056e74e2b401e96220735b206bf28)
+        ;
+
+        
+    
+    
+            var circle_marker_03e84324b9be4d7b8fd0bcd28fe44da1 = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d1a95d7ba6a04f3dbb338f455e570a69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88a758e87734428a8da135d37d1c8526 = $(`<div id="html_88a758e87734428a8da135d37d1c8526" style="width: 100.0%; height: 100.0%;">AMBASA, DHALAI, TRIPURA</div>`)[0];
+            popup_d1a95d7ba6a04f3dbb338f455e570a69.setContent(html_88a758e87734428a8da135d37d1c8526);
+        
+
+        circle_marker_03e84324b9be4d7b8fd0bcd28fe44da1.bindPopup(popup_d1a95d7ba6a04f3dbb338f455e570a69)
+        ;
+
+        
+    
+    
+            var circle_marker_3a73188acacf4f95bf46d56455077ad0 = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_6185b447717249b283137d38ca08d62d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68fe3d6958914eb8a40e6d18f8c31523 = $(`<div id="html_68fe3d6958914eb8a40e6d18f8c31523" style="width: 100.0%; height: 100.0%;">AMBASSA, DHALAI, TRIPURA</div>`)[0];
+            popup_6185b447717249b283137d38ca08d62d.setContent(html_68fe3d6958914eb8a40e6d18f8c31523);
+        
+
+        circle_marker_3a73188acacf4f95bf46d56455077ad0.bindPopup(popup_6185b447717249b283137d38ca08d62d)
+        ;
+
+        
+    
+    
+            var circle_marker_3024d0cb1e05460084fe7b2867b17545 = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_6985ab58d7f6474384f74637275f3e47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1479cabdc91d4323a34963d75813a134 = $(`<div id="html_1479cabdc91d4323a34963d75813a134" style="width: 100.0%; height: 100.0%;">AMBASSA, DHALAI, TRIPURA</div>`)[0];
+            popup_6985ab58d7f6474384f74637275f3e47.setContent(html_1479cabdc91d4323a34963d75813a134);
+        
+
+        circle_marker_3024d0cb1e05460084fe7b2867b17545.bindPopup(popup_6985ab58d7f6474384f74637275f3e47)
+        ;
+
+        
+    
+    
+            var circle_marker_26572f3307944c5c864cde3bd9e03058 = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_8d89b2ddb2b7418396685aee3015fd09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_80304595166a435d9ca4c3a9c044eb95 = $(`<div id="html_80304595166a435d9ca4c3a9c044eb95" style="width: 100.0%; height: 100.0%;">KAMALPUR, DHALAI, TRIPURA</div>`)[0];
+            popup_8d89b2ddb2b7418396685aee3015fd09.setContent(html_80304595166a435d9ca4c3a9c044eb95);
+        
+
+        circle_marker_26572f3307944c5c864cde3bd9e03058.bindPopup(popup_8d89b2ddb2b7418396685aee3015fd09)
+        ;
+
+        
+    
+    
+            var circle_marker_6d619e4062f340fcb3a3c23cfd43aa04 = L.circleMarker(
+                [24.2, 91.8333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_199dff9962f04c5abffcfe8675892b45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a6e88eb15364d58bca2e717b47fbe32 = $(`<div id="html_0a6e88eb15364d58bca2e717b47fbe32" style="width: 100.0%; height: 100.0%;">KAMALPUR, DHALAI, TRIPURA</div>`)[0];
+            popup_199dff9962f04c5abffcfe8675892b45.setContent(html_0a6e88eb15364d58bca2e717b47fbe32);
+        
+
+        circle_marker_6d619e4062f340fcb3a3c23cfd43aa04.bindPopup(popup_199dff9962f04c5abffcfe8675892b45)
+        ;
+
+        
+    
+    
+            var circle_marker_df3b2ed8e87b43cd9b9048b279ce922b = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_1b23b0d8305a43a8b03d3cb6fd1ce174 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18e2d152d989483da8ac7f4f756436e1 = $(`<div id="html_18e2d152d989483da8ac7f4f756436e1" style="width: 100.0%; height: 100.0%;">LALJURI, UNAKOTI, TRIPURA</div>`)[0];
+            popup_1b23b0d8305a43a8b03d3cb6fd1ce174.setContent(html_18e2d152d989483da8ac7f4f756436e1);
+        
+
+        circle_marker_df3b2ed8e87b43cd9b9048b279ce922b.bindPopup(popup_1b23b0d8305a43a8b03d3cb6fd1ce174)
+        ;
+
+        
+    
+    
+            var circle_marker_f979952e770a437a8236f3ee52271dec = L.circleMarker(
+                [24.0112, 91.6182],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_1c831d05517748a98306567cb545b019 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9cc658e80b8f4bed898342a72e8f77ac = $(`<div id="html_9cc658e80b8f4bed898342a72e8f77ac" style="width: 100.0%; height: 100.0%;">BAGAN BAZAR, KHOWAI, TRIPURA</div>`)[0];
+            popup_1c831d05517748a98306567cb545b019.setContent(html_9cc658e80b8f4bed898342a72e8f77ac);
+        
+
+        circle_marker_f979952e770a437a8236f3ee52271dec.bindPopup(popup_1c831d05517748a98306567cb545b019)
+        ;
+
+        
+    
+    
+            var circle_marker_a926bbe706c94a52a7ba68100da35008 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2ecc050d5f7f4bf6897d65d2fb13df60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ca4e77797fa4d9a961b384a4fd2607b = $(`<div id="html_7ca4e77797fa4d9a961b384a4fd2607b" style="width: 100.0%; height: 100.0%;">NUTANBAZAR, GOMATI, TRIPURA</div>`)[0];
+            popup_2ecc050d5f7f4bf6897d65d2fb13df60.setContent(html_7ca4e77797fa4d9a961b384a4fd2607b);
+        
+
+        circle_marker_a926bbe706c94a52a7ba68100da35008.bindPopup(popup_2ecc050d5f7f4bf6897d65d2fb13df60)
+        ;
+
+        
+    
+    
+            var circle_marker_4cde935b279541b685b1c5f22e255863 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_8c501c91288d4d4a966d5de5158fe9bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_272f7db79ff64d0a8b4d1f8144f7aca2 = $(`<div id="html_272f7db79ff64d0a8b4d1f8144f7aca2" style="width: 100.0%; height: 100.0%;">PECHARTHAL, UNAKOTI, TRIPURA</div>`)[0];
+            popup_8c501c91288d4d4a966d5de5158fe9bf.setContent(html_272f7db79ff64d0a8b4d1f8144f7aca2);
+        
+
+        circle_marker_4cde935b279541b685b1c5f22e255863.bindPopup(popup_8c501c91288d4d4a966d5de5158fe9bf)
+        ;
+
+        
+    
+    
+            var circle_marker_d1499623504340578043b426b5ae70c3 = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_de136cc3e03b421996644f272ed55c4e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a58748962fd4e70b5d0d4772285a538 = $(`<div id="html_3a58748962fd4e70b5d0d4772285a538" style="width: 100.0%; height: 100.0%;">CHAUMANU, DHALAI, TRIPURA</div>`)[0];
+            popup_de136cc3e03b421996644f272ed55c4e.setContent(html_3a58748962fd4e70b5d0d4772285a538);
+        
+
+        circle_marker_d1499623504340578043b426b5ae70c3.bindPopup(popup_de136cc3e03b421996644f272ed55c4e)
+        ;
+
+        
+    
+    
+            var circle_marker_aeb08f44030640e191366370cb815df8 = L.circleMarker(
+                [23.7062, 91.4203],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_3464008b89bf4cab8169a7a525c7dc23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0dd5217aab9477aa5f9968a8415793b = $(`<div id="html_d0dd5217aab9477aa5f9968a8415793b" style="width: 100.0%; height: 100.0%;">JAMJURI, GOMATI, TRIPURA</div>`)[0];
+            popup_3464008b89bf4cab8169a7a525c7dc23.setContent(html_d0dd5217aab9477aa5f9968a8415793b);
+        
+
+        circle_marker_aeb08f44030640e191366370cb815df8.bindPopup(popup_3464008b89bf4cab8169a7a525c7dc23)
+        ;
+
+        
+    
+    
+            var circle_marker_28c9def73bd446db9a16d59a6fa33cb4 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_02bd68f13a1b4a34b2452f45a6ce83cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ed92eafe6764aec92a489bf572e7be7 = $(`<div id="html_3ed92eafe6764aec92a489bf572e7be7" style="width: 100.0%; height: 100.0%;">JATANBARI, GOMATI, TRIPURA</div>`)[0];
+            popup_02bd68f13a1b4a34b2452f45a6ce83cc.setContent(html_3ed92eafe6764aec92a489bf572e7be7);
+        
+
+        circle_marker_28c9def73bd446db9a16d59a6fa33cb4.bindPopup(popup_02bd68f13a1b4a34b2452f45a6ce83cc)
+        ;
+
+        
+    
+    
+            var circle_marker_f02d25c7c9d54d4cbb3f2312b580c93a = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_9a05cd8cc61e4996bb064ea4df916e23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_455326e650c84eec9f4591e3164a160f = $(`<div id="html_455326e650c84eec9f4591e3164a160f" style="width: 100.0%; height: 100.0%;">MACHLI, DHALAI, TRIPURA</div>`)[0];
+            popup_9a05cd8cc61e4996bb064ea4df916e23.setContent(html_455326e650c84eec9f4591e3164a160f);
+        
+
+        circle_marker_f02d25c7c9d54d4cbb3f2312b580c93a.bindPopup(popup_9a05cd8cc61e4996bb064ea4df916e23)
+        ;
+
+        
+    
+    
+            var circle_marker_7d5f1d55e74f40748dc3ba97db1b283e = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_dc790ed43d8c4029af54b2a6be84f80a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18926c412d734c478aa54c3fd660d966 = $(`<div id="html_18926c412d734c478aa54c3fd660d966" style="width: 100.0%; height: 100.0%;">GANDHIGRAM, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_dc790ed43d8c4029af54b2a6be84f80a.setContent(html_18926c412d734c478aa54c3fd660d966);
+        
+
+        circle_marker_7d5f1d55e74f40748dc3ba97db1b283e.bindPopup(popup_dc790ed43d8c4029af54b2a6be84f80a)
+        ;
+
+        
+    
+    
+            var circle_marker_221309f7e3854bd89468848f15e8588b = L.circleMarker(
+                [23.0, 91.7319],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_16d9a9fa1fb344a6b7d4b50d932ebd46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60542bd164b546f9a04ba44f204c0550 = $(`<div id="html_60542bd164b546f9a04ba44f204c0550" style="width: 100.0%; height: 100.0%;">SABROOM, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_16d9a9fa1fb344a6b7d4b50d932ebd46.setContent(html_60542bd164b546f9a04ba44f204c0550);
+        
+
+        circle_marker_221309f7e3854bd89468848f15e8588b.bindPopup(popup_16d9a9fa1fb344a6b7d4b50d932ebd46)
+        ;
+
+        
+    
+    
+            var circle_marker_841c27e321a94dc18197b27385de8f6d = L.circleMarker(
+                [23.0, 91.7319],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_8c270dcf0bcd44d2be3bc06f05217c08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_072091f256f54ed49643a5b35496eb46 = $(`<div id="html_072091f256f54ed49643a5b35496eb46" style="width: 100.0%; height: 100.0%;">SABROOM, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_8c270dcf0bcd44d2be3bc06f05217c08.setContent(html_072091f256f54ed49643a5b35496eb46);
+        
+
+        circle_marker_841c27e321a94dc18197b27385de8f6d.bindPopup(popup_8c270dcf0bcd44d2be3bc06f05217c08)
+        ;
+
+        
+    
+    
+            var circle_marker_63d38d98f6094e9ebb16d5d8cd0bcde6 = L.circleMarker(
+                [23.2528, 91.4514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7c7bb10df9fd4a0695e5295aade8fd66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7c754cbd6f24052be45914f227c3750 = $(`<div id="html_e7c754cbd6f24052be45914f227c3750" style="width: 100.0%; height: 100.0%;">BILONIA BRANCH, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_7c7bb10df9fd4a0695e5295aade8fd66.setContent(html_e7c754cbd6f24052be45914f227c3750);
+        
+
+        circle_marker_63d38d98f6094e9ebb16d5d8cd0bcde6.bindPopup(popup_7c7bb10df9fd4a0695e5295aade8fd66)
+        ;
+
+        
+    
+    
+            var circle_marker_65abb1c267494f4bbd7729db097df16e = L.circleMarker(
+                [23.2528, 91.4514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_100bbcfbb7ba4606974a0d77111fe5e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e37f56690d9b4769bb756144d1973f65 = $(`<div id="html_e37f56690d9b4769bb756144d1973f65" style="width: 100.0%; height: 100.0%;">BELONIA, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_100bbcfbb7ba4606974a0d77111fe5e3.setContent(html_e37f56690d9b4769bb756144d1973f65);
+        
+
+        circle_marker_65abb1c267494f4bbd7729db097df16e.bindPopup(popup_100bbcfbb7ba4606974a0d77111fe5e3)
+        ;
+
+        
+    
+    
+            var circle_marker_4beb729fa41c4d0eb404739a109618db = L.circleMarker(
+                [23.2528, 91.4514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f3f57eaf140d44739f9910dd660d9baf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23cc670f34a545f4912fac6e696907ff = $(`<div id="html_23cc670f34a545f4912fac6e696907ff" style="width: 100.0%; height: 100.0%;">BELONIA COLLEGE SQUARE, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_f3f57eaf140d44739f9910dd660d9baf.setContent(html_23cc670f34a545f4912fac6e696907ff);
+        
+
+        circle_marker_4beb729fa41c4d0eb404739a109618db.bindPopup(popup_f3f57eaf140d44739f9910dd660d9baf)
+        ;
+
+        
+    
+    
+            var circle_marker_713274438d374e0ea5075b3cad27ac52 = L.circleMarker(
+                [23.2528, 91.4514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f63d537c114041f08784c426d8a2a0fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_069990870ba44f1988a1634b64ad49e2 = $(`<div id="html_069990870ba44f1988a1634b64ad49e2" style="width: 100.0%; height: 100.0%;">BELONIA, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_f63d537c114041f08784c426d8a2a0fa.setContent(html_069990870ba44f1988a1634b64ad49e2);
+        
+
+        circle_marker_713274438d374e0ea5075b3cad27ac52.bindPopup(popup_f63d537c114041f08784c426d8a2a0fa)
+        ;
+
+        
+    
+    
+            var circle_marker_7971535021604e47b0a75f684240f05b = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d8cc34dc08084b9898e80df9b91b6797 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_646218e3e2c741cd859525cf1ca87eaf = $(`<div id="html_646218e3e2c741cd859525cf1ca87eaf" style="width: 100.0%; height: 100.0%;">DHARMANAGAR, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_d8cc34dc08084b9898e80df9b91b6797.setContent(html_646218e3e2c741cd859525cf1ca87eaf);
+        
+
+        circle_marker_7971535021604e47b0a75f684240f05b.bindPopup(popup_d8cc34dc08084b9898e80df9b91b6797)
+        ;
+
+        
+    
+    
+            var circle_marker_4713a6a7696b4dd6ba7665d4952d383b = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_83a3e2a3bb334e9eb94c9a3728cc15e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a63966a42af41c2a7652766cd8ccbeb = $(`<div id="html_8a63966a42af41c2a7652766cd8ccbeb" style="width: 100.0%; height: 100.0%;">DHARMANAGAR, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_83a3e2a3bb334e9eb94c9a3728cc15e2.setContent(html_8a63966a42af41c2a7652766cd8ccbeb);
+        
+
+        circle_marker_4713a6a7696b4dd6ba7665d4952d383b.bindPopup(popup_83a3e2a3bb334e9eb94c9a3728cc15e2)
+        ;
+
+        
+    
+    
+            var circle_marker_2f0fbdd7ac5b4f63ba6426c3ac0c2c65 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a382a4a1a24a444788c10ee29fe40e44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14127c0c1e8d4174bd10b47a94d65137 = $(`<div id="html_14127c0c1e8d4174bd10b47a94d65137" style="width: 100.0%; height: 100.0%;">DHARMANAGAR, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_a382a4a1a24a444788c10ee29fe40e44.setContent(html_14127c0c1e8d4174bd10b47a94d65137);
+        
+
+        circle_marker_2f0fbdd7ac5b4f63ba6426c3ac0c2c65.bindPopup(popup_a382a4a1a24a444788c10ee29fe40e44)
+        ;
+
+        
+    
+    
+            var circle_marker_c3efe36cfe3047999834ee38a022f363 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_795128821eb644549900c04e55f54406 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3d9196971db4fe8b8fa10ef17782739 = $(`<div id="html_d3d9196971db4fe8b8fa10ef17782739" style="width: 100.0%; height: 100.0%;">DHARMANAGAR, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_795128821eb644549900c04e55f54406.setContent(html_d3d9196971db4fe8b8fa10ef17782739);
+        
+
+        circle_marker_c3efe36cfe3047999834ee38a022f363.bindPopup(popup_795128821eb644549900c04e55f54406)
+        ;
+
+        
+    
+    
+            var circle_marker_23bc51c539b74f5bb083c3263a13b574 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a48cafdae6e14b10bedab3b213456d26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe83003af440466e83bacaaea29f7872 = $(`<div id="html_fe83003af440466e83bacaaea29f7872" style="width: 100.0%; height: 100.0%;">DHARMANAGAR, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_a48cafdae6e14b10bedab3b213456d26.setContent(html_fe83003af440466e83bacaaea29f7872);
+        
+
+        circle_marker_23bc51c539b74f5bb083c3263a13b574.bindPopup(popup_a48cafdae6e14b10bedab3b213456d26)
+        ;
+
+        
+    
+    
+            var circle_marker_3ed80ca0045e430986437c61d5cd3dd2 = L.circleMarker(
+                [24.3333, 92.0167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2f325249e2f74cae92c5c78dc43830cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da39c168822645f495a403ba52bb3732 = $(`<div id="html_da39c168822645f495a403ba52bb3732" style="width: 100.0%; height: 100.0%;">GOURNAGAR, UNAKOTI, TRIPURA</div>`)[0];
+            popup_2f325249e2f74cae92c5c78dc43830cc.setContent(html_da39c168822645f495a403ba52bb3732);
+        
+
+        circle_marker_3ed80ca0045e430986437c61d5cd3dd2.bindPopup(popup_2f325249e2f74cae92c5c78dc43830cc)
+        ;
+
+        
+    
+    
+            var circle_marker_4550d1136de24c9bb0ca1fbba462b1cc = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_0ba72b5029e049909bf551e56a0a60aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c18c074c1bc2457ca195af324f919ff4 = $(`<div id="html_c18c074c1bc2457ca195af324f919ff4" style="width: 100.0%; height: 100.0%;">PANISAGAR, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_0ba72b5029e049909bf551e56a0a60aa.setContent(html_c18c074c1bc2457ca195af324f919ff4);
+        
+
+        circle_marker_4550d1136de24c9bb0ca1fbba462b1cc.bindPopup(popup_0ba72b5029e049909bf551e56a0a60aa)
+        ;
+
+        
+    
+    
+            var circle_marker_7bb781de14ca48e68709bca46ad743ce = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_50a074207ed34f94b1ae7bf65ef689ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51f87f61e60c4dc9977255d84a8190d7 = $(`<div id="html_51f87f61e60c4dc9977255d84a8190d7" style="width: 100.0%; height: 100.0%;">RAMNAGAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_50a074207ed34f94b1ae7bf65ef689ec.setContent(html_51f87f61e60c4dc9977255d84a8190d7);
+        
+
+        circle_marker_7bb781de14ca48e68709bca46ad743ce.bindPopup(popup_50a074207ed34f94b1ae7bf65ef689ec)
+        ;
+
+        
+    
+    
+            var circle_marker_1080f23f42654a49b99ee033b0a74cb4 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7cad3d20ec9d4208b4b053f210ca6e40 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bfc83a6c24844f1daec93d4c2adb8112 = $(`<div id="html_bfc83a6c24844f1daec93d4c2adb8112" style="width: 100.0%; height: 100.0%;">RAMCHANDRA NAGAR, AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_7cad3d20ec9d4208b4b053f210ca6e40.setContent(html_bfc83a6c24844f1daec93d4c2adb8112);
+        
+
+        circle_marker_1080f23f42654a49b99ee033b0a74cb4.bindPopup(popup_7cad3d20ec9d4208b4b053f210ca6e40)
+        ;
+
+        
+    
+    
+            var circle_marker_5b76eea3241c4dfa87856dc9d4b5c748 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_8657000b63d74fdea371d6628bb67709 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d638b12355f42afa734fdb0c80f90cd = $(`<div id="html_3d638b12355f42afa734fdb0c80f90cd" style="width: 100.0%; height: 100.0%;">GORKHABASTI, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_8657000b63d74fdea371d6628bb67709.setContent(html_3d638b12355f42afa734fdb0c80f90cd);
+        
+
+        circle_marker_5b76eea3241c4dfa87856dc9d4b5c748.bindPopup(popup_8657000b63d74fdea371d6628bb67709)
+        ;
+
+        
+    
+    
+            var circle_marker_e6c1c67dfe644d7bb772edf7cd46ab20 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f428762c544e4ec090aa409866ba30d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_545a5c9916234836981b414f2abed3b7 = $(`<div id="html_545a5c9916234836981b414f2abed3b7" style="width: 100.0%; height: 100.0%;">G.B.BAZAR - AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_f428762c544e4ec090aa409866ba30d2.setContent(html_545a5c9916234836981b414f2abed3b7);
+        
+
+        circle_marker_e6c1c67dfe644d7bb772edf7cd46ab20.bindPopup(popup_f428762c544e4ec090aa409866ba30d2)
+        ;
+
+        
+    
+    
+            var circle_marker_828c12f482f54798a951a98f23360aee = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2ef6af368e534853bac6c9ec81403bf5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66c6255b52ea4d36b3396a896bcb4222 = $(`<div id="html_66c6255b52ea4d36b3396a896bcb4222" style="width: 100.0%; height: 100.0%;">AGARTALA JAIL ASHRAM ROAD, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_2ef6af368e534853bac6c9ec81403bf5.setContent(html_66c6255b52ea4d36b3396a896bcb4222);
+        
+
+        circle_marker_828c12f482f54798a951a98f23360aee.bindPopup(popup_2ef6af368e534853bac6c9ec81403bf5)
+        ;
+
+        
+    
+    
+            var circle_marker_120c47cb73c746b6850c1dd0e25ade92 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_6f5b70cd70844a1d91526069d9763d9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0faa294c29164716aa3b44db8c50c808 = $(`<div id="html_0faa294c29164716aa3b44db8c50c808" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_6f5b70cd70844a1d91526069d9763d9c.setContent(html_0faa294c29164716aa3b44db8c50c808);
+        
+
+        circle_marker_120c47cb73c746b6850c1dd0e25ade92.bindPopup(popup_6f5b70cd70844a1d91526069d9763d9c)
+        ;
+
+        
+    
+    
+            var circle_marker_a545bc43eea64a06a2cd31ea19444aa1 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_5cdee0745ccb4cd99ca1da378a45b222 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1411a1f6b9954424807dce19a8deebb4 = $(`<div id="html_1411a1f6b9954424807dce19a8deebb4" style="width: 100.0%; height: 100.0%;">INDIAN BANK AGARTALA SAKUNTALA ROAD, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_5cdee0745ccb4cd99ca1da378a45b222.setContent(html_1411a1f6b9954424807dce19a8deebb4);
+        
+
+        circle_marker_a545bc43eea64a06a2cd31ea19444aa1.bindPopup(popup_5cdee0745ccb4cd99ca1da378a45b222)
+        ;
+
+        
+    
+    
+            var circle_marker_5f6c0cbab82142369079c7f8233be8b3 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a550269455ec448482a60c3c525c9b01 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67d6b20117ea48978cda5e1db2c0d3ad = $(`<div id="html_67d6b20117ea48978cda5e1db2c0d3ad" style="width: 100.0%; height: 100.0%;">AGARTALA,BANAMALIPUR NORTH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_a550269455ec448482a60c3c525c9b01.setContent(html_67d6b20117ea48978cda5e1db2c0d3ad);
+        
+
+        circle_marker_5f6c0cbab82142369079c7f8233be8b3.bindPopup(popup_a550269455ec448482a60c3c525c9b01)
+        ;
+
+        
+    
+    
+            var circle_marker_7b432103df024dcd97ef72fb4e80fb0c = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_1df713f61e9c4fe9a6676d935bc451c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5324fd3f5ffd48639ccbfbb02b49548c = $(`<div id="html_5324fd3f5ffd48639ccbfbb02b49548c" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_1df713f61e9c4fe9a6676d935bc451c4.setContent(html_5324fd3f5ffd48639ccbfbb02b49548c);
+        
+
+        circle_marker_7b432103df024dcd97ef72fb4e80fb0c.bindPopup(popup_1df713f61e9c4fe9a6676d935bc451c4)
+        ;
+
+        
+    
+    
+            var circle_marker_4f3558780d4542379797b265c52ce9ab = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_469e0ab4f01146c182cf02fddcc110c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e2e36509c9d44609513e62d8c35d78d = $(`<div id="html_1e2e36509c9d44609513e62d8c35d78d" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_469e0ab4f01146c182cf02fddcc110c2.setContent(html_1e2e36509c9d44609513e62d8c35d78d);
+        
+
+        circle_marker_4f3558780d4542379797b265c52ce9ab.bindPopup(popup_469e0ab4f01146c182cf02fddcc110c2)
+        ;
+
+        
+    
+    
+            var circle_marker_209ff23f04f649d0b790a3b6d38963e2 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_e7ef90a91db248a39b14b189ce5fce22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba903d54a86547d2b689ba02d9d06201 = $(`<div id="html_ba903d54a86547d2b689ba02d9d06201" style="width: 100.0%; height: 100.0%;">AGARTALA-MASJID ROAD, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_e7ef90a91db248a39b14b189ce5fce22.setContent(html_ba903d54a86547d2b689ba02d9d06201);
+        
+
+        circle_marker_209ff23f04f649d0b790a3b6d38963e2.bindPopup(popup_e7ef90a91db248a39b14b189ce5fce22)
+        ;
+
+        
+    
+    
+            var circle_marker_7c3dfb3e707f488c8fb460ea71b60c62 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_c73954c0a8904a278dedb09414fcdf06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc64c9d3af6849a183b857721f4f3cb7 = $(`<div id="html_fc64c9d3af6849a183b857721f4f3cb7" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_c73954c0a8904a278dedb09414fcdf06.setContent(html_fc64c9d3af6849a183b857721f4f3cb7);
+        
+
+        circle_marker_7c3dfb3e707f488c8fb460ea71b60c62.bindPopup(popup_c73954c0a8904a278dedb09414fcdf06)
+        ;
+
+        
+    
+    
+            var circle_marker_b73ce03c5a1845d4accbf569bcd31b85 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_5f849069d0c74a2eaca846d0a2e788b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e562ce5416a041279c7b7473eb5d0601 = $(`<div id="html_e562ce5416a041279c7b7473eb5d0601" style="width: 100.0%; height: 100.0%;">TRTC AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_5f849069d0c74a2eaca846d0a2e788b2.setContent(html_e562ce5416a041279c7b7473eb5d0601);
+        
+
+        circle_marker_b73ce03c5a1845d4accbf569bcd31b85.bindPopup(popup_5f849069d0c74a2eaca846d0a2e788b2)
+        ;
+
+        
+    
+    
+            var circle_marker_8019443873854d048b6fe43354285d8d = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7b720623c47b428c89469f89482b61af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_151530c97540473d80961ed87d04f88d = $(`<div id="html_151530c97540473d80961ed87d04f88d" style="width: 100.0%; height: 100.0%;">DISTRICT COURT BRANCH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_7b720623c47b428c89469f89482b61af.setContent(html_151530c97540473d80961ed87d04f88d);
+        
+
+        circle_marker_8019443873854d048b6fe43354285d8d.bindPopup(popup_7b720623c47b428c89469f89482b61af)
+        ;
+
+        
+    
+    
+            var circle_marker_b8d065515b254fbab8fe587db94d00e9 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_cf7e2d87797c49809357500ef697b0dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0eb6992652bb4391ae5a2a008de2eb43 = $(`<div id="html_0eb6992652bb4391ae5a2a008de2eb43" style="width: 100.0%; height: 100.0%;">AGARTALA PURBASHA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_cf7e2d87797c49809357500ef697b0dc.setContent(html_0eb6992652bb4391ae5a2a008de2eb43);
+        
+
+        circle_marker_b8d065515b254fbab8fe587db94d00e9.bindPopup(popup_cf7e2d87797c49809357500ef697b0dc)
+        ;
+
+        
+    
+    
+            var circle_marker_98ba4fe9d412464085554784e92a6c1d = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_1caf89784a4449f4b99a3986b10677e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55a88856919f450bafd4d1eaafa2ad5b = $(`<div id="html_55a88856919f450bafd4d1eaafa2ad5b" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_1caf89784a4449f4b99a3986b10677e7.setContent(html_55a88856919f450bafd4d1eaafa2ad5b);
+        
+
+        circle_marker_98ba4fe9d412464085554784e92a6c1d.bindPopup(popup_1caf89784a4449f4b99a3986b10677e7)
+        ;
+
+        
+    
+    
+            var circle_marker_81dde86c39eb4eb68ee31d3aae1a9324 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_0e7e8fdb68bd4f5a9ad6fe7949336ae9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ddcacd21faa41c79d1c33bf0304cfc4 = $(`<div id="html_1ddcacd21faa41c79d1c33bf0304cfc4" style="width: 100.0%; height: 100.0%;">MELAR MATH, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_0e7e8fdb68bd4f5a9ad6fe7949336ae9.setContent(html_1ddcacd21faa41c79d1c33bf0304cfc4);
+        
+
+        circle_marker_81dde86c39eb4eb68ee31d3aae1a9324.bindPopup(popup_0e7e8fdb68bd4f5a9ad6fe7949336ae9)
+        ;
+
+        
+    
+    
+            var circle_marker_38e476c93d264736885028141e1b5d55 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a55b5a993b304f119f94af52a03a2ea6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_727fd81a61d249f889a1a9898eb788c2 = $(`<div id="html_727fd81a61d249f889a1a9898eb788c2" style="width: 100.0%; height: 100.0%;">L.N. BARI ROAD, AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_a55b5a993b304f119f94af52a03a2ea6.setContent(html_727fd81a61d249f889a1a9898eb788c2);
+        
+
+        circle_marker_38e476c93d264736885028141e1b5d55.bindPopup(popup_a55b5a993b304f119f94af52a03a2ea6)
+        ;
+
+        
+    
+    
+            var circle_marker_279c34472e814b769e63d85a671a135f = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_24fffde85acc46d688642b01304d153c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d28a8a5f35e144ddbdd5cf1d31bc6f11 = $(`<div id="html_d28a8a5f35e144ddbdd5cf1d31bc6f11" style="width: 100.0%; height: 100.0%;">GUWAHATI HIGH COURT, AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_24fffde85acc46d688642b01304d153c.setContent(html_d28a8a5f35e144ddbdd5cf1d31bc6f11);
+        
+
+        circle_marker_279c34472e814b769e63d85a671a135f.bindPopup(popup_24fffde85acc46d688642b01304d153c)
+        ;
+
+        
+    
+    
+            var circle_marker_a96698ea8354458aaa12d90dfaaaebb5 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d9393cdb7d6c4b2e9f2dc1ee74e3c6e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75bc803fd86648ddbc1a3bb69e56166b = $(`<div id="html_75bc803fd86648ddbc1a3bb69e56166b" style="width: 100.0%; height: 100.0%;">MAHARAJ GANJ BAZAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_d9393cdb7d6c4b2e9f2dc1ee74e3c6e5.setContent(html_75bc803fd86648ddbc1a3bb69e56166b);
+        
+
+        circle_marker_a96698ea8354458aaa12d90dfaaaebb5.bindPopup(popup_d9393cdb7d6c4b2e9f2dc1ee74e3c6e5)
+        ;
+
+        
+    
+    
+            var circle_marker_17e7fc712498407e949fd521baf4933d = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f0ca702ff5a0427daf54f84cb9df20e0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d95e8c8dcd3f4725810fa24d45132565 = $(`<div id="html_d95e8c8dcd3f4725810fa24d45132565" style="width: 100.0%; height: 100.0%;">KHAYERPUR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_f0ca702ff5a0427daf54f84cb9df20e0.setContent(html_d95e8c8dcd3f4725810fa24d45132565);
+        
+
+        circle_marker_17e7fc712498407e949fd521baf4933d.bindPopup(popup_f0ca702ff5a0427daf54f84cb9df20e0)
+        ;
+
+        
+    
+    
+            var circle_marker_365df805bcb44c9a842a403acb633337 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_80e1ffe26dba42af989a926a1457978e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e2cfd68ae8094b73b1974bd45c1342ce = $(`<div id="html_e2cfd68ae8094b73b1974bd45c1342ce" style="width: 100.0%; height: 100.0%;">AGARTALA BATTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_80e1ffe26dba42af989a926a1457978e.setContent(html_e2cfd68ae8094b73b1974bd45c1342ce);
+        
+
+        circle_marker_365df805bcb44c9a842a403acb633337.bindPopup(popup_80e1ffe26dba42af989a926a1457978e)
+        ;
+
+        
+    
+    
+            var circle_marker_63c6b0ed22784d05affe1911397e94d6 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_b5840fce2d29439db3d128c91d4a2cfe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_279f465ad93e40bd8cfea6efd9d6f05a = $(`<div id="html_279f465ad93e40bd8cfea6efd9d6f05a" style="width: 100.0%; height: 100.0%;">AGARTALA GOLBAZAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_b5840fce2d29439db3d128c91d4a2cfe.setContent(html_279f465ad93e40bd8cfea6efd9d6f05a);
+        
+
+        circle_marker_63c6b0ed22784d05affe1911397e94d6.bindPopup(popup_b5840fce2d29439db3d128c91d4a2cfe)
+        ;
+
+        
+    
+    
+            var circle_marker_05049307e6f54bfa9b406b1b181cf641 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f6da988e278b4d95a86eae7b0df471d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb72e8a729e44e6b9b5701a7152bdefe = $(`<div id="html_bb72e8a729e44e6b9b5701a7152bdefe" style="width: 100.0%; height: 100.0%;">KHAYERPUR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_f6da988e278b4d95a86eae7b0df471d4.setContent(html_bb72e8a729e44e6b9b5701a7152bdefe);
+        
+
+        circle_marker_05049307e6f54bfa9b406b1b181cf641.bindPopup(popup_f6da988e278b4d95a86eae7b0df471d4)
+        ;
+
+        
+    
+    
+            var circle_marker_befff6244e134bf6b71d6a409683d902 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f5a2d2940f7548a78a0ca80722b36bef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_afec618027c64eeba72dd4843b122299 = $(`<div id="html_afec618027c64eeba72dd4843b122299" style="width: 100.0%; height: 100.0%;">VIP ROAD, AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_f5a2d2940f7548a78a0ca80722b36bef.setContent(html_afec618027c64eeba72dd4843b122299);
+        
+
+        circle_marker_befff6244e134bf6b71d6a409683d902.bindPopup(popup_f5a2d2940f7548a78a0ca80722b36bef)
+        ;
+
+        
+    
+    
+            var circle_marker_5c61d6e1c6f34460bb3c0ed1737b4460 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_bf064e5d283e481eb048598205504dbb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1cfc4ff76b8e44ddb2f71464e571e396 = $(`<div id="html_1cfc4ff76b8e44ddb2f71464e571e396" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_bf064e5d283e481eb048598205504dbb.setContent(html_1cfc4ff76b8e44ddb2f71464e571e396);
+        
+
+        circle_marker_5c61d6e1c6f34460bb3c0ed1737b4460.bindPopup(popup_bf064e5d283e481eb048598205504dbb)
+        ;
+
+        
+    
+    
+            var circle_marker_b463056cf42541c988858e7bb7f00d14 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d69b9298f6c742f28d894c7e47f24a6c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22b6fb43311a467aa1e7045cd87ad835 = $(`<div id="html_22b6fb43311a467aa1e7045cd87ad835" style="width: 100.0%; height: 100.0%;">CAMPER BAZAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_d69b9298f6c742f28d894c7e47f24a6c.setContent(html_22b6fb43311a467aa1e7045cd87ad835);
+        
+
+        circle_marker_b463056cf42541c988858e7bb7f00d14.bindPopup(popup_d69b9298f6c742f28d894c7e47f24a6c)
+        ;
+
+        
+    
+    
+            var circle_marker_5c22511032e74959b2913064097b384b = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_4bc19782b9b942d58f288031f148efa1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7cbc66a08cc34a64be3320e042d2ba5e = $(`<div id="html_7cbc66a08cc34a64be3320e042d2ba5e" style="width: 100.0%; height: 100.0%;">AGARTHALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_4bc19782b9b942d58f288031f148efa1.setContent(html_7cbc66a08cc34a64be3320e042d2ba5e);
+        
+
+        circle_marker_5c22511032e74959b2913064097b384b.bindPopup(popup_4bc19782b9b942d58f288031f148efa1)
+        ;
+
+        
+    
+    
+            var circle_marker_54b54777b11f49f4aa51bed33883492e = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d4ee3b928acb4e9096d316984868382b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a16b8f8a1123442683675bf2bdf8c07b = $(`<div id="html_a16b8f8a1123442683675bf2bdf8c07b" style="width: 100.0%; height: 100.0%;">BADARGHAT, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_d4ee3b928acb4e9096d316984868382b.setContent(html_a16b8f8a1123442683675bf2bdf8c07b);
+        
+
+        circle_marker_54b54777b11f49f4aa51bed33883492e.bindPopup(popup_d4ee3b928acb4e9096d316984868382b)
+        ;
+
+        
+    
+    
+            var circle_marker_e69b295d331a4ba780ab1ad71c45a469 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_59f737dd49fd411fafbde8172b24a68c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e333bc9cc6ea42319b35834d7cfd2706 = $(`<div id="html_e333bc9cc6ea42319b35834d7cfd2706" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_59f737dd49fd411fafbde8172b24a68c.setContent(html_e333bc9cc6ea42319b35834d7cfd2706);
+        
+
+        circle_marker_e69b295d331a4ba780ab1ad71c45a469.bindPopup(popup_59f737dd49fd411fafbde8172b24a68c)
+        ;
+
+        
+    
+    
+            var circle_marker_9c3ac14be5ac4216ac37923c371a1cec = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_de19cbf89478402d965f1ffd93599a7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19dc85efff784d2badbd482ef5b1a8aa = $(`<div id="html_19dc85efff784d2badbd482ef5b1a8aa" style="width: 100.0%; height: 100.0%;">BATTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_de19cbf89478402d965f1ffd93599a7c.setContent(html_19dc85efff784d2badbd482ef5b1a8aa);
+        
+
+        circle_marker_9c3ac14be5ac4216ac37923c371a1cec.bindPopup(popup_de19cbf89478402d965f1ffd93599a7c)
+        ;
+
+        
+    
+    
+            var circle_marker_84d9a857b34b4eea809743c5717c69e8 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_96c1bdee7e574475aa716cc08e79e723 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da615cf3011d4d909e89561aa7483dc4 = $(`<div id="html_da615cf3011d4d909e89561aa7483dc4" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_96c1bdee7e574475aa716cc08e79e723.setContent(html_da615cf3011d4d909e89561aa7483dc4);
+        
+
+        circle_marker_84d9a857b34b4eea809743c5717c69e8.bindPopup(popup_96c1bdee7e574475aa716cc08e79e723)
+        ;
+
+        
+    
+    
+            var circle_marker_2cb430367b8e40fc8f0e4bdf896c265c = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_0900b3ca768c463fb924f7c0b2e8754b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3af20229630e4c9c96197b65d4b3ec7a = $(`<div id="html_3af20229630e4c9c96197b65d4b3ec7a" style="width: 100.0%; height: 100.0%;">KAMAN CHOUMOHANI, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_0900b3ca768c463fb924f7c0b2e8754b.setContent(html_3af20229630e4c9c96197b65d4b3ec7a);
+        
+
+        circle_marker_2cb430367b8e40fc8f0e4bdf896c265c.bindPopup(popup_0900b3ca768c463fb924f7c0b2e8754b)
+        ;
+
+        
+    
+    
+            var circle_marker_4f47e636cc1e439fad3ca310e33e12c2 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_31a0b0672bc5497aa116cae2d26a1a5c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5726fe709b1541cb8f99073885434c5c = $(`<div id="html_5726fe709b1541cb8f99073885434c5c" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_31a0b0672bc5497aa116cae2d26a1a5c.setContent(html_5726fe709b1541cb8f99073885434c5c);
+        
+
+        circle_marker_4f47e636cc1e439fad3ca310e33e12c2.bindPopup(popup_31a0b0672bc5497aa116cae2d26a1a5c)
+        ;
+
+        
+    
+    
+            var circle_marker_850ef7c6da9549c8a4f4f2f76787ff99 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2d42efa1a348488ba52b3765efe3f18c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_733c7e3e175a4b7094cd514064de4946 = $(`<div id="html_733c7e3e175a4b7094cd514064de4946" style="width: 100.0%; height: 100.0%;">RAMNAGAR-AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_2d42efa1a348488ba52b3765efe3f18c.setContent(html_733c7e3e175a4b7094cd514064de4946);
+        
+
+        circle_marker_850ef7c6da9549c8a4f4f2f76787ff99.bindPopup(popup_2d42efa1a348488ba52b3765efe3f18c)
+        ;
+
+        
+    
+    
+            var circle_marker_fb2e839458114c4da65157599d2483d9 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d86f5c83aa8243c3b1b40b3b2ee47fd9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ff17fd96da44057999ffd630d35adf7 = $(`<div id="html_4ff17fd96da44057999ffd630d35adf7" style="width: 100.0%; height: 100.0%;">BAROMURA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_d86f5c83aa8243c3b1b40b3b2ee47fd9.setContent(html_4ff17fd96da44057999ffd630d35adf7);
+        
+
+        circle_marker_fb2e839458114c4da65157599d2483d9.bindPopup(popup_d86f5c83aa8243c3b1b40b3b2ee47fd9)
+        ;
+
+        
+    
+    
+            var circle_marker_b58a5df0a11d408daa71698b668c3e07 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f4ebdb70dab349a7a9127ee3b665d475 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_280b03da384840a7841c13ca5dad840c = $(`<div id="html_280b03da384840a7841c13ca5dad840c" style="width: 100.0%; height: 100.0%;">BATTALA SUPER MARKET, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_f4ebdb70dab349a7a9127ee3b665d475.setContent(html_280b03da384840a7841c13ca5dad840c);
+        
+
+        circle_marker_b58a5df0a11d408daa71698b668c3e07.bindPopup(popup_f4ebdb70dab349a7a9127ee3b665d475)
+        ;
+
+        
+    
+    
+            var circle_marker_7db8f1ff4c6b49369c0c14d26dcb132b = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f4be6a02f94442978a2a4eafb2314b75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a2e2f2a110b4255b862bdbf1ec71822 = $(`<div id="html_7a2e2f2a110b4255b862bdbf1ec71822" style="width: 100.0%; height: 100.0%;">M.G.BAZAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_f4be6a02f94442978a2a4eafb2314b75.setContent(html_7a2e2f2a110b4255b862bdbf1ec71822);
+        
+
+        circle_marker_7db8f1ff4c6b49369c0c14d26dcb132b.bindPopup(popup_f4be6a02f94442978a2a4eafb2314b75)
+        ;
+
+        
+    
+    
+            var circle_marker_f4dee99253a341699ac008229ebc3537 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_b62e1b240c2d419b94f3964c9e60c3cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97743b5327744c3ead91538ac1dc5e04 = $(`<div id="html_97743b5327744c3ead91538ac1dc5e04" style="width: 100.0%; height: 100.0%;">AKHAURA ROAD, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_b62e1b240c2d419b94f3964c9e60c3cc.setContent(html_97743b5327744c3ead91538ac1dc5e04);
+        
+
+        circle_marker_f4dee99253a341699ac008229ebc3537.bindPopup(popup_b62e1b240c2d419b94f3964c9e60c3cc)
+        ;
+
+        
+    
+    
+            var circle_marker_9705815e5f1a4186a2967b4154b9c825 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_71dec219adc748ecad35ab609fc794d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5857b4f291b457ab10e280b3a75f4f0 = $(`<div id="html_e5857b4f291b457ab10e280b3a75f4f0" style="width: 100.0%; height: 100.0%;">CHANDRAPUR, AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_71dec219adc748ecad35ab609fc794d6.setContent(html_e5857b4f291b457ab10e280b3a75f4f0);
+        
+
+        circle_marker_9705815e5f1a4186a2967b4154b9c825.bindPopup(popup_71dec219adc748ecad35ab609fc794d6)
+        ;
+
+        
+    
+    
+            var circle_marker_f89c784ed5f840fe93bd18b0d3893ca2 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_dc0bc563b99d4572ae8b0e002da88cb6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ae20b827cfc4d09b8193f5e2634c607 = $(`<div id="html_6ae20b827cfc4d09b8193f5e2634c607" style="width: 100.0%; height: 100.0%;">DHALESWAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_dc0bc563b99d4572ae8b0e002da88cb6.setContent(html_6ae20b827cfc4d09b8193f5e2634c607);
+        
+
+        circle_marker_f89c784ed5f840fe93bd18b0d3893ca2.bindPopup(popup_dc0bc563b99d4572ae8b0e002da88cb6)
+        ;
+
+        
+    
+    
+            var circle_marker_9b66ac50e4b9473a8d5bd977a4c053e2 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a5ee674e70524b698a38ae45420c6e4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c94128dbdad9418a82ecd982e3e86d82 = $(`<div id="html_c94128dbdad9418a82ecd982e3e86d82" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_a5ee674e70524b698a38ae45420c6e4f.setContent(html_c94128dbdad9418a82ecd982e3e86d82);
+        
+
+        circle_marker_9b66ac50e4b9473a8d5bd977a4c053e2.bindPopup(popup_a5ee674e70524b698a38ae45420c6e4f)
+        ;
+
+        
+    
+    
+            var circle_marker_18d3c9ed779c404d8b4cbc88c97d4f8c = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_bcafa85ecd2f4731b1ef8dfed95ca038 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_992cc9b2c5a84a23b680369c2361bfe4 = $(`<div id="html_992cc9b2c5a84a23b680369c2361bfe4" style="width: 100.0%; height: 100.0%;">RETAIL ASSETS HUB AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_bcafa85ecd2f4731b1ef8dfed95ca038.setContent(html_992cc9b2c5a84a23b680369c2361bfe4);
+        
+
+        circle_marker_18d3c9ed779c404d8b4cbc88c97d4f8c.bindPopup(popup_bcafa85ecd2f4731b1ef8dfed95ca038)
+        ;
+
+        
+    
+    
+            var circle_marker_8e80193f37ec4c5aa79e2b0b1af50bde = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_285ca5b5b7ab463ea3f96272a9910cd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_162ed29734a2478e8b5d55b260aaa007 = $(`<div id="html_162ed29734a2478e8b5d55b260aaa007" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_285ca5b5b7ab463ea3f96272a9910cd4.setContent(html_162ed29734a2478e8b5d55b260aaa007);
+        
+
+        circle_marker_8e80193f37ec4c5aa79e2b0b1af50bde.bindPopup(popup_285ca5b5b7ab463ea3f96272a9910cd4)
+        ;
+
+        
+    
+    
+            var circle_marker_4bee902f261447ba90507b0e1698dfe3 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_7754ccd65143478090a8cd6e9066ae45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fe30da4cdba4955916db02222051d96 = $(`<div id="html_6fe30da4cdba4955916db02222051d96" style="width: 100.0%; height: 100.0%;">ZONAL OFFICE, AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_7754ccd65143478090a8cd6e9066ae45.setContent(html_6fe30da4cdba4955916db02222051d96);
+        
+
+        circle_marker_4bee902f261447ba90507b0e1698dfe3.bindPopup(popup_7754ccd65143478090a8cd6e9066ae45)
+        ;
+
+        
+    
+    
+            var circle_marker_d8e524c298b14b0c8fd1381cf1f24f22 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_2032ab28bddc444bad4641e7ec093f1a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cdff9dc92b9140a4b4afcc884d2fed7c = $(`<div id="html_cdff9dc92b9140a4b4afcc884d2fed7c" style="width: 100.0%; height: 100.0%;">CIRCLE SASTRA CENTRE AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_2032ab28bddc444bad4641e7ec093f1a.setContent(html_cdff9dc92b9140a4b4afcc884d2fed7c);
+        
+
+        circle_marker_d8e524c298b14b0c8fd1381cf1f24f22.bindPopup(popup_2032ab28bddc444bad4641e7ec093f1a)
+        ;
+
+        
+    
+    
+            var circle_marker_f0b6c40ea24f479e800b6679cced98d7 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a677d79fea9e439fb1df73838b5e6817 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c9adecee8064385af50268c4d6a91a2 = $(`<div id="html_3c9adecee8064385af50268c4d6a91a2" style="width: 100.0%; height: 100.0%;">GOVERNMENT BUSINESS VERTICAL,AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_a677d79fea9e439fb1df73838b5e6817.setContent(html_3c9adecee8064385af50268c4d6a91a2);
+        
+
+        circle_marker_f0b6c40ea24f479e800b6679cced98d7.bindPopup(popup_a677d79fea9e439fb1df73838b5e6817)
+        ;
+
+        
+    
+    
+            var circle_marker_5d6d16f269004ca3be06a6f3081bc45e = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_fe2983b3e6d34762ad536e77b717a7c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d3bff5ba7394b889c6c8dc35165a173 = $(`<div id="html_8d3bff5ba7394b889c6c8dc35165a173" style="width: 100.0%; height: 100.0%;">CUSTOMER ACQUISITION CENTER, AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_fe2983b3e6d34762ad536e77b717a7c6.setContent(html_8d3bff5ba7394b889c6c8dc35165a173);
+        
+
+        circle_marker_5d6d16f269004ca3be06a6f3081bc45e.bindPopup(popup_fe2983b3e6d34762ad536e77b717a7c6)
+        ;
+
+        
+    
+    
+            var circle_marker_1e9543f4bc574da19abcc6904f9395dc = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_3aea9e24113e4c66aa50656a907c4d27 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4b5af664a9b4f25a812b6ced19c3e1d = $(`<div id="html_c4b5af664a9b4f25a812b6ced19c3e1d" style="width: 100.0%; height: 100.0%;">PNB LOAN POINT RETAIL AGRI MSME,AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_3aea9e24113e4c66aa50656a907c4d27.setContent(html_c4b5af664a9b4f25a812b6ced19c3e1d);
+        
+
+        circle_marker_1e9543f4bc574da19abcc6904f9395dc.bindPopup(popup_3aea9e24113e4c66aa50656a907c4d27)
+        ;
+
+        
+    
+    
+            var circle_marker_b2c1a80f457b442ab4a7914bb5b366a2 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_96f46dcebd384b7eb5d600c606e17181 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57eb058734724ef998062abbe0445572 = $(`<div id="html_57eb058734724ef998062abbe0445572" style="width: 100.0%; height: 100.0%;">CIRCLE OFFICE AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_96f46dcebd384b7eb5d600c606e17181.setContent(html_57eb058734724ef998062abbe0445572);
+        
+
+        circle_marker_b2c1a80f457b442ab4a7914bb5b366a2.bindPopup(popup_96f46dcebd384b7eb5d600c606e17181)
+        ;
+
+        
+    
+    
+            var circle_marker_dacefb10b1d946048b24aa233e746141 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_aa06bbcd40d04f949adb116f8745ec59 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4571a4aec03c4a7e889c7cc598815f1b = $(`<div id="html_4571a4aec03c4a7e889c7cc598815f1b" style="width: 100.0%; height: 100.0%;">LDM Agartala(W Tripura), WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_aa06bbcd40d04f949adb116f8745ec59.setContent(html_4571a4aec03c4a7e889c7cc598815f1b);
+        
+
+        circle_marker_dacefb10b1d946048b24aa233e746141.bindPopup(popup_aa06bbcd40d04f949adb116f8745ec59)
+        ;
+
+        
+    
+    
+            var circle_marker_baebd3119165401583b75174ac64da53 = L.circleMarker(
+                [23.4833, 91.3833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "grey", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f34159113da343ffaff9f2227fa15b75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_070fcc67d99f40cda81379743a9683bb = $(`<div id="html_070fcc67d99f40cda81379743a9683bb" style="width: 100.0%; height: 100.0%;">MIRZA, KAKRABAN, GOMATI, TRIPURA</div>`)[0];
+            popup_f34159113da343ffaff9f2227fa15b75.setContent(html_070fcc67d99f40cda81379743a9683bb);
+        
+
+        circle_marker_baebd3119165401583b75174ac64da53.bindPopup(popup_f34159113da343ffaff9f2227fa15b75)
+        ;
+
+        
+    
+    
+            var circle_marker_ee935aca456e4f419fdf5e45ffe99fd3 = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_3cfa750e46c54a17a0302dd141ae4e94 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58d00c078d334f4390fab0a829ae2557 = $(`<div id="html_58d00c078d334f4390fab0a829ae2557" style="width: 100.0%; height: 100.0%;">MELAGHAR, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_3cfa750e46c54a17a0302dd141ae4e94.setContent(html_58d00c078d334f4390fab0a829ae2557);
+        
+
+        circle_marker_ee935aca456e4f419fdf5e45ffe99fd3.bindPopup(popup_3cfa750e46c54a17a0302dd141ae4e94)
+        ;
+
+        
+    
+    
+            var circle_marker_b79043e689354b8dbe24d8badb62c6f7 = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_f70a978bc89e490281a162f00c3a800e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61f229a70e3b4ea6a9e22f267fee685a = $(`<div id="html_61f229a70e3b4ea6a9e22f267fee685a" style="width: 100.0%; height: 100.0%;">MELAGHAR, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_f70a978bc89e490281a162f00c3a800e.setContent(html_61f229a70e3b4ea6a9e22f267fee685a);
+        
+
+        circle_marker_b79043e689354b8dbe24d8badb62c6f7.bindPopup(popup_f70a978bc89e490281a162f00c3a800e)
+        ;
+
+        
+    
+    
+            var circle_marker_5a9c1d8956ec46278faeb650741215d0 = L.circleMarker(
+                [23.3166, 91.5056],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_d11545f56079497eb0aa72378a4f3f16 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_216714fe97e147ebabd758d5bd8e079b = $(`<div id="html_216714fe97e147ebabd758d5bd8e079b" style="width: 100.0%; height: 100.0%;">MELAGHAR, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_d11545f56079497eb0aa72378a4f3f16.setContent(html_216714fe97e147ebabd758d5bd8e079b);
+        
+
+        circle_marker_5a9c1d8956ec46278faeb650741215d0.bindPopup(popup_d11545f56079497eb0aa72378a4f3f16)
+        ;
+
+        
+    
+    
+            var circle_marker_2e8fdad1965f41feb63eb41b414644eb = L.circleMarker(
+                [24.0447, 91.7553],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_4b1ff78cdb21423c8f06f12ae7d27bb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12329e31b24f440d8130497736a6eae8 = $(`<div id="html_12329e31b24f440d8130497736a6eae8" style="width: 100.0%; height: 100.0%;">DAMCHERRA, NORTH TRIPURA, TRIPURA</div>`)[0];
+            popup_4b1ff78cdb21423c8f06f12ae7d27bb1.setContent(html_12329e31b24f440d8130497736a6eae8);
+        
+
+        circle_marker_2e8fdad1965f41feb63eb41b414644eb.bindPopup(popup_4b1ff78cdb21423c8f06f12ae7d27bb1)
+        ;
+
+        
+    
+    
+            var circle_marker_fe48aa79d31c40fd8f13ba2368dcf3f0 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_ec1e679a1cce43f5a33cd7b960693672 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d3c48c7ab834b04bd24939632aef974 = $(`<div id="html_0d3c48c7ab834b04bd24939632aef974" style="width: 100.0%; height: 100.0%;">MADHUPUR, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_ec1e679a1cce43f5a33cd7b960693672.setContent(html_0d3c48c7ab834b04bd24939632aef974);
+        
+
+        circle_marker_fe48aa79d31c40fd8f13ba2368dcf3f0.bindPopup(popup_ec1e679a1cce43f5a33cd7b960693672)
+        ;
+
+        
+    
+    
+            var circle_marker_55fe2118762f431d9958df113cf09c37 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_bb772455b20e4285bf4278307bb01d68 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21a6d0bbcfc94a03a92a8e47768cb7fd = $(`<div id="html_21a6d0bbcfc94a03a92a8e47768cb7fd" style="width: 100.0%; height: 100.0%;">BARJALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_bb772455b20e4285bf4278307bb01d68.setContent(html_21a6d0bbcfc94a03a92a8e47768cb7fd);
+        
+
+        circle_marker_55fe2118762f431d9958df113cf09c37.bindPopup(popup_bb772455b20e4285bf4278307bb01d68)
+        ;
+
+        
+    
+    
+            var circle_marker_40f23d8591684a0cbd2d535b85306537 = L.circleMarker(
+                [24.139, 91.7716],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_ab959b5d9b4d4f3681bdf0e0a197d392 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_476f5847df0e44a5994327e6e6b81851 = $(`<div id="html_476f5847df0e44a5994327e6e6b81851" style="width: 100.0%; height: 100.0%;">LEMBUCHERRA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_ab959b5d9b4d4f3681bdf0e0a197d392.setContent(html_476f5847df0e44a5994327e6e6b81851);
+        
+
+        circle_marker_40f23d8591684a0cbd2d535b85306537.bindPopup(popup_ab959b5d9b4d4f3681bdf0e0a197d392)
+        ;
+
+        
+    
+    
+            var circle_marker_512a498dc24c4e798e3a8c7a03ca91b0 = L.circleMarker(
+                [23.5067, 91.514],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_eb573b51b6b444fea1ccc41bfb532cf1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a8eb4d9ac104059a4ce25abb234dca2 = $(`<div id="html_0a8eb4d9ac104059a4ce25abb234dca2" style="width: 100.0%; height: 100.0%;">BISHRAMGANJ, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_eb573b51b6b444fea1ccc41bfb532cf1.setContent(html_0a8eb4d9ac104059a4ce25abb234dca2);
+        
+
+        circle_marker_512a498dc24c4e798e3a8c7a03ca91b0.bindPopup(popup_eb573b51b6b444fea1ccc41bfb532cf1)
+        ;
+
+        
+    
+    
+            var circle_marker_7d60581f23c547c0ac74869eae5171d2 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_709e614aa8864372bf5c0e16ee79a8d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf509142036c4330a7bd85b5cbc6f09b = $(`<div id="html_cf509142036c4330a7bd85b5cbc6f09b" style="width: 100.0%; height: 100.0%;">GABORDI, SEPAHIJALA, TRIPURA</div>`)[0];
+            popup_709e614aa8864372bf5c0e16ee79a8d8.setContent(html_cf509142036c4330a7bd85b5cbc6f09b);
+        
+
+        circle_marker_7d60581f23c547c0ac74869eae5171d2.bindPopup(popup_709e614aa8864372bf5c0e16ee79a8d8)
+        ;
+
+        
+    
+    
+            var circle_marker_819f3933051043de807b5fbe50f87424 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "turquoise", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_b9fbf7317f5a460c84ed808506889123 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a648e39a10347a688875c12f6a57adc = $(`<div id="html_3a648e39a10347a688875c12f6a57adc" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_b9fbf7317f5a460c84ed808506889123.setContent(html_3a648e39a10347a688875c12f6a57adc);
+        
+
+        circle_marker_819f3933051043de807b5fbe50f87424.bindPopup(popup_b9fbf7317f5a460c84ed808506889123)
+        ;
+
+        
+    
+    
+            var circle_marker_310bf94bc2474ceeab28580dca2573c5 = L.circleMarker(
+                [23.6167, 91.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "maroon", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_a8f01433dffd4064aed7310c60476cbe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9bfee1ee71fe474688a82d16830c8c47 = $(`<div id="html_9bfee1ee71fe474688a82d16830c8c47" style="width: 100.0%; height: 100.0%;">AGARTALA, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_a8f01433dffd4064aed7310c60476cbe.setContent(html_9bfee1ee71fe474688a82d16830c8c47);
+        
+
+        circle_marker_310bf94bc2474ceeab28580dca2573c5.bindPopup(popup_a8f01433dffd4064aed7310c60476cbe)
+        ;
+
+        
+    
+    
+            var circle_marker_66b9d0a223ac46d3a1212047a209cc6f = L.circleMarker(
+                [24.578721, 73.6862571],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_9afd292990cb48dfb2cb6b4a835bb8df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7422034070543e8821578450109cf5d = $(`<div id="html_e7422034070543e8821578450109cf5d" style="width: 100.0%; height: 100.0%;">UDAIPUR-TRIPURA, SOUTH TRIPURA, TRIPURA</div>`)[0];
+            popup_9afd292990cb48dfb2cb6b4a835bb8df.setContent(html_e7422034070543e8821578450109cf5d);
+        
+
+        circle_marker_66b9d0a223ac46d3a1212047a209cc6f.bindPopup(popup_9afd292990cb48dfb2cb6b4a835bb8df)
+        ;
+
+        
+    
+    
+            var circle_marker_96b9ccecc391452b82f7ad6e3c0dbf65 = L.circleMarker(
+                [23.4613369, 91.60718003817723],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_09d7f76c22ff4324bb3141ade4bdc178 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee86ca007ef546888658e0a23ae7fdf4 = $(`<div id="html_ee86ca007ef546888658e0a23ae7fdf4" style="width: 100.0%; height: 100.0%;">SALGARAH, GOMATI, TRIPURA</div>`)[0];
+            popup_09d7f76c22ff4324bb3141ade4bdc178.setContent(html_ee86ca007ef546888658e0a23ae7fdf4);
+        
+
+        circle_marker_96b9ccecc391452b82f7ad6e3c0dbf65.bindPopup(popup_09d7f76c22ff4324bb3141ade4bdc178)
+        ;
+
+        
+    
+    
+            var circle_marker_041a1e674fed43dbb0fd9320f6615473 = L.circleMarker(
+                [23.8312377, 91.2823821],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_e9a665221f8f4eac9563578f3d75e6f3);
+        
+    
+        var popup_72777a20aca94b6cbed6b39c673f725c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3966195de94844bfaa1d31192c70c882 = $(`<div id="html_3966195de94844bfaa1d31192c70c882" style="width: 100.0%; height: 100.0%;">BATI ABHOYNAGAR, WEST TRIPURA, TRIPURA</div>`)[0];
+            popup_72777a20aca94b6cbed6b39c673f725c.setContent(html_3966195de94844bfaa1d31192c70c882);
+        
+
+        circle_marker_041a1e674fed43dbb0fd9320f6615473.bindPopup(popup_72777a20aca94b6cbed6b39c673f725c)
+        ;
+
+        
+    
+</script>
